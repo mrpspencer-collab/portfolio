@@ -4,6 +4,9 @@ on:
   push:
     branches: [main]
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -21,7 +24,10 @@ jobs:
       - name: Deploy to SiteGround
         run: |
           mkdir -p ~/.ssh
-          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          chmod 700 ~/.ssh
+          printf '%s\n' "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan -p 18765 ssh.paulamsbary.com >> ~/.ssh/known_hosts 2>/dev/null
-          rsync -az --delete -e "ssh -p 18765" dist/ u253-znw4txwqk8kk@ssh.paulamsbary.com:${{ secrets.DEPLOY_PATH }}/
+          rsync -az --delete \
+            -e "ssh -p 18765 -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no" \
+            dist/ u253-znw4txwqk8kk@ssh.paulamsbary.com:${{ secrets.DEPLOY_PATH }}/
