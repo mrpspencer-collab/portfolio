@@ -1,0 +1,98 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+
+const projects = (await getCollection('projects'))
+  .sort((a, b) => a.data.order - b.data.order);
+---
+<Base>
+  <Nav />
+  <main>
+    <section class="hero">
+      <p class="overline">UX Design · Research · Leadership</p>
+      <h1>I strive to design experiences that connect people.</h1>
+      <p class="lead">Throughout my career, I've led design and research teams while staying hands-on. Teaching is core to my practice.</p>
+      <div class="actions">
+        <a href="#" class="btn btn-primary btn-lg">Download Resume</a>
+        <a href="#" class="btn btn-outline btn-lg">Connect on LinkedIn</a>
+      </div>
+    </section>
+
+    <div class="divider-wrap"><div class="divider"></div></div>
+
+    <section class="work">
+      <p class="overline">Selected Work</p>
+      <div class="grid">
+        {projects.map(p => (
+          <ProjectCard
+            slug={p.slug}
+            title={p.data.title}
+            subtitle={p.data.subtitle}
+            tags={p.data.tags}
+            status={p.data.status}
+            thumb={p.data.thumb}
+            thumbBg={p.data.thumbBg}
+            thumbText={p.data.thumbText}
+            thumbTextColor={p.data.thumbTextColor}
+            metrics={p.data.metrics}
+            cta={p.data.cta}
+          />
+        ))}
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Base>
+
+<style>
+  main { padding-top: 64px; }
+
+  .hero {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 96px 40px 80px;
+  }
+  .hero h1 {
+    font-family: var(--font-display);
+    font-size: clamp(40px, 5vw, 72px);
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -0.04em;
+    color: var(--fg);
+    max-width: 700px;
+    margin: 20px 0 28px;
+  }
+  .lead {
+    font-size: 18px;
+    line-height: 1.65;
+    color: var(--fg-muted);
+    max-width: 540px;
+    margin-bottom: 36px;
+  }
+  .actions {
+    display: flex;
+    gap: 12px;
+  }
+
+  .divider-wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+  .divider { height: 1px; background: var(--border); }
+
+  .work {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 64px 40px 96px;
+  }
+  .work .overline { margin-bottom: 32px; }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 20px;
+  }
+</style>

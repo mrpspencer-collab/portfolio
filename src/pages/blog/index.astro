@@ -1,0 +1,107 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Nav from '../../components/Nav.astro';
+import Footer from '../../components/Footer.astro';
+
+const posts = (await getCollection('blog', ({ data }) => !data.draft))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+---
+<Base title="Blog">
+  <Nav />
+  <main>
+    <section class="header">
+      <p class="overline">Writing</p>
+      <h1>Blog</h1>
+    </section>
+
+    <div class="divider-wrap"><div class="divider"></div></div>
+
+    <section class="list">
+      {posts.length === 0 ? (
+        <p class="empty">No posts yet — check back soon.</p>
+      ) : (
+        posts.map(post => (
+          <a href={`/blog/${post.slug}`} class="post-row">
+            <div>
+              <div class="post-title">{post.data.title}</div>
+              {post.data.description && <div class="post-desc">{post.data.description}</div>}
+            </div>
+            <time class="post-date" datetime={post.data.date.toISOString()}>
+              {post.data.date.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}
+            </time>
+          </a>
+        ))
+      )}
+    </section>
+  </main>
+  <Footer />
+</Base>
+
+<style>
+  main { padding-top: 64px; }
+
+  .header {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 40px 48px;
+  }
+  .header h1 {
+    font-family: var(--font-display);
+    font-size: clamp(36px, 4vw, 56px);
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -0.04em;
+    color: var(--fg);
+    margin-top: 16px;
+  }
+
+  .divider-wrap { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
+  .divider { height: 1px; background: var(--border); }
+
+  .list {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px 96px;
+  }
+
+  .empty {
+    padding-top: 48px;
+    font-size: 16px;
+    color: var(--fg-muted);
+  }
+
+  .post-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 24px;
+    padding: 28px 0;
+    border-bottom: 1px solid var(--border);
+    text-decoration: none;
+    color: inherit;
+    transition: opacity 0.15s;
+  }
+  .post-row:hover .post-title { color: var(--accent); }
+
+  .post-title {
+    font-family: var(--font-display);
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: var(--fg);
+    transition: color 0.15s;
+    margin-bottom: 4px;
+  }
+  .post-desc {
+    font-size: 14px;
+    color: var(--fg-muted);
+    line-height: 1.5;
+  }
+  .post-date {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--fg-subtle);
+    white-space: nowrap;
+  }
+</style>

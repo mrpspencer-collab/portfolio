@@ -1,0 +1,39 @@
+---
+---
+<footer>
+  <span class="copy">&copy; 2026 Paul Amsbary</span>
+  <div class="links">
+    <a href="#">LinkedIn</a>
+    <a href="#">Resume</a>
+    <a href="#">Contact</a>
+  </div>
+</footer>
+
+<style>
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 24px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .copy {
+    font-size: 12px;
+    color: var(--fg-subtle);
+    font-family: var(--font-body);
+  }
+  .links {
+    display: flex;
+    gap: 24px;
+  }
+  .links a {
+    font-size: 12px;
+    color: var(--fg-muted);
+    text-decoration: none;
+    font-family: var(--font-body);
+    transition: color 0.15s;
+  }
+  .links a:hover { color: var(--fg); }
+</style>

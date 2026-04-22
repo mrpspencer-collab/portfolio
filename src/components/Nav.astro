@@ -1,0 +1,96 @@
+---
+const { pathname } = Astro.url;
+const isWork  = pathname === '/' || pathname.startsWith('/work');
+const isAbout = pathname === '/about';
+const isBlog  = pathname.startsWith('/blog');
+---
+<nav>
+  <a href="/" class="logo">Paul Amsbary</a>
+  <div class="nav-links">
+    <a href="/"      class:list={['nav-link', { active: isWork }]}>Work</a>
+    <a href="/about" class:list={['nav-link', { active: isAbout }]}>About</a>
+    <a href="/blog"  class:list={['nav-link', { active: isBlog }]}>Blog</a>
+    <div class="divider"></div>
+    <button id="theme-toggle" class="btn btn-sm theme-btn">◐ Dark</button>
+    <a href="#" class="btn btn-primary btn-sm" style="margin-left:8px">Download Resume</a>
+  </div>
+</nav>
+
+<script>
+  const btn = document.getElementById('theme-toggle');
+  function syncLabel() {
+    const theme = document.documentElement.getAttribute('data-theme') || 'light';
+    if (btn) btn.textContent = theme === 'light' ? '◐ Dark' : '◑ Light';
+  }
+  syncLabel();
+  btn?.addEventListener('click', () => {
+    const current = document.documentElement.getAttribute('data-theme') || 'light';
+    const next = current === 'light' ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('pa-theme', next);
+    syncLabel();
+  });
+</script>
+
+<style>
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    height: 64px;
+    border-bottom: 1px solid var(--border);
+    background: var(--bg);
+    transition: background 0.3s, border-color 0.3s;
+  }
+  .logo {
+    font-family: var(--font-display);
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    color: var(--fg);
+    text-decoration: none;
+  }
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .nav-link {
+    font-family: var(--font-body);
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--fg-muted);
+    padding: 6px 12px;
+    text-decoration: none;
+    border-bottom: 1.5px solid transparent;
+    transition: color 0.15s, border-color 0.15s;
+  }
+  .nav-link:hover { color: var(--fg); }
+  .nav-link.active {
+    color: var(--fg);
+    border-bottom-color: var(--accent);
+  }
+  .divider {
+    width: 1px;
+    height: 20px;
+    background: var(--border);
+    margin: 0 8px;
+  }
+  .theme-btn {
+    font-size: 12px;
+    padding: 6px 12px;
+    color: var(--fg-muted);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    background: transparent;
+    cursor: pointer;
+    font-family: var(--font-body);
+    font-weight: 500;
+    transition: border-color 0.15s, color 0.15s;
+  }
+  .theme-btn:hover { color: var(--fg); border-color: var(--border-strong); }
+</style>

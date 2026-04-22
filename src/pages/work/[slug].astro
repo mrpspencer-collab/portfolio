@@ -1,0 +1,158 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Nav from '../../components/Nav.astro';
+import Footer from '../../components/Footer.astro';
+
+export async function getStaticPaths() {
+  const projects = await getCollection('projects');
+  return projects.map(p => ({ params: { slug: p.slug }, props: { project: p } }));
+}
+
+const { project } = Astro.props;
+const { data: d } = project;
+const { Content } = await project.render();
+---
+<Base title={d.title}>
+  <Nav />
+  <main>
+    <div class="breadcrumb">
+      <a href="/">Work</a>
+      <span class="arrow">→</span>
+      <span class="current">{d.title}</span>
+    </div>
+
+    <div class="content-wrap">
+      <div class="thumb" style={`background:${d.thumbBg}`}>
+        {d.thumb
+          ? <img src={d.thumb} alt={d.title} />
+          : <span style={`font-family:var(--font-mono);font-size:14px;color:${d.thumbTextColor}`}>{d.title} — {d.subtitle}</span>}
+      </div>
+
+      <div class="content">
+        <div class="tags">
+          {d.tags.map(t => <span class="tag">{t}</span>)}
+          {d.status && <span class="tag tag-accent">{d.status}</span>}
+        </div>
+        <p class="overline">{d.title}</p>
+        <h1>{d.subtitle}</h1>
+
+        <div class="body">
+          <Content />
+        </div>
+
+        {d.metrics.length > 0 && (
+          <div class="outcomes">
+            <p class="overline" style="margin-bottom:16px">Outcomes</p>
+            <div class="metrics">
+              {d.metrics.map(m => (
+                <div class="metric">
+                  <span class="metric-val">
+                    {m.startsWith('+') ? m.split(' ')[0] : '→'}
+                  </span>
+                  <span class="metric-label">
+                    {m.startsWith('+') ? m.slice(m.indexOf(' ') + 1) : m}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        <div class="actions">
+          <a href="#" class="btn btn-primary btn-md">{d.cta} →</a>
+          <a href="/" class="btn btn-ghost btn-md">← Back to Work</a>
+        </div>
+      </div>
+    </div>
+  </main>
+  <Footer />
+</Base>
+
+<style>
+  main { padding-top: 64px; }
+
+  .breadcrumb {
+    border-bottom: 1px solid var(--border);
+    padding: 12px 40px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-body);
+    font-size: 12px;
+  }
+  .breadcrumb a { color: var(--fg-muted); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--fg); }
+  .arrow { color: var(--fg-subtle); }
+  .current { color: var(--fg); font-weight: 500; }
+
+  .content-wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+
+  .thumb {
+    height: 360px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin: 40px 0;
+    border-radius: 8px;
+  }
+  .thumb img {
+    width: 85%;
+    height: 85%;
+    object-fit: contain;
+    display: block;
+  }
+
+  .content { max-width: 680px; padding-bottom: 96px; }
+
+  .tags {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+  }
+  .content .overline { margin-bottom: 10px; }
+
+  h1 {
+    font-family: var(--font-display);
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    color: var(--fg);
+    margin-bottom: 24px;
+  }
+
+  .body {
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--fg-muted);
+    margin-bottom: 32px;
+  }
+  .body :global(p) { margin-bottom: 16px; }
+  .body :global(p:last-child) { margin-bottom: 0; }
+
+  .outcomes {
+    background: var(--bg-muted);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 24px 28px;
+    margin-bottom: 36px;
+  }
+  .metrics { display: flex; flex-direction: column; gap: 10px; }
+  .metric { display: flex; align-items: center; gap: 12px; }
+  .metric-val {
+    font-family: var(--font-mono);
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--accent);
+  }
+  .metric-label { font-size: 14px; color: var(--fg-muted); }
+
+  .actions { display: flex; gap: 12px; }
+</style>

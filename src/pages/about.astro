@@ -1,0 +1,112 @@
+---
+import Base from '../layouts/Base.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+
+const experience = [
+  ['ATLAS',            'Lead UX Designer',   '2024–Present'],
+  ['Coursera',         'Senior UX Designer', '2021–2024'],
+  ['Disney Streaming', 'UX Designer',        '2019–2021'],
+  ['NHL Digital',      'UX Designer',        '2018–2019'],
+];
+---
+<Base title="About">
+  <Nav />
+  <main>
+    <div class="layout">
+      <div class="bio">
+        <p class="overline">About</p>
+        <h1>Paul Amsbary</h1>
+        <p>I strive to design experiences that connect people, spark meaningful rituals, and encourage growth. Throughout my career, I've led design and research teams while staying hands-on.</p>
+        <p>Teaching is core to my practice, with experience as an instructor, course creator, and mentor.</p>
+        <div class="actions">
+          <a href="#" class="btn btn-primary btn-md">Download Resume</a>
+          <a href="#" class="btn btn-outline btn-md">LinkedIn →</a>
+        </div>
+      </div>
+
+      <div class="sidebar">
+        <div class="experience-card">
+          <p class="overline" style="margin-bottom:16px">Experience</p>
+          {experience.map(([co, role, yr]) => (
+            <div class="exp-row">
+              <div>
+                <div class="co">{co}</div>
+                <div class="role">{role}</div>
+              </div>
+              <div class="yr">{yr}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </main>
+  <Footer />
+</Base>
+
+<style>
+  main { padding-top: 64px; }
+
+  .layout {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 40px 96px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+
+  .bio h1 {
+    font-family: var(--font-display);
+    font-size: 52px;
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -0.04em;
+    color: var(--fg);
+    margin: 16px 0 28px;
+  }
+  .bio p {
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--fg-muted);
+    margin-bottom: 24px;
+  }
+  .actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 36px;
+  }
+
+  .experience-card {
+    background: var(--bg-muted);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 32px;
+  }
+  .exp-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-bottom: 14px;
+    margin-bottom: 14px;
+    border-bottom: 1px solid var(--border);
+  }
+  .exp-row:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .co {
+    font-family: var(--font-display);
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--fg);
+  }
+  .role { font-size: 13px; color: var(--fg-muted); margin-top: 2px; }
+  .yr {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--fg-subtle);
+  }
+
+  @media (max-width: 768px) {
+    .layout { grid-template-columns: 1fr; gap: 40px; }
+  }
+</style>

@@ -1,0 +1,45 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: public/images
+public_folder: /images
+
+collections:
+  - name: projects
+    label: Projects
+    folder: src/content/projects
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Subtitle, name: subtitle, widget: string }
+      - label: Tags
+        name: tags
+        widget: list
+        field: { label: Tag, name: tag, widget: string }
+      - { label: Status Badge, name: status, widget: string, required: false, hint: 'e.g. "Shipping in beta"' }
+      - { label: Order, name: order, widget: number, default: 99 }
+      - { label: Thumbnail URL, name: thumb, widget: string, required: false }
+      - { label: Thumbnail Background, name: thumbBg, widget: string, default: '#1A1713' }
+      - { label: Thumbnail Fallback Text, name: thumbText, widget: string, required: false }
+      - { label: Thumbnail Text Color, name: thumbTextColor, widget: string, default: '#5A5550' }
+      - label: Metrics
+        name: metrics
+        widget: list
+        required: false
+        field: { label: Metric, name: metric, widget: string }
+      - { label: CTA Text, name: cta, widget: string, default: Read Case Study }
+      - { label: Body, name: body, widget: markdown }
+
+  - name: blog
+    label: Blog
+    folder: src/content/blog
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Date, name: date, widget: datetime, date_format: YYYY-MM-DD, time_format: false }
+      - { label: Description, name: description, widget: string, required: false }
+      - { label: Draft, name: draft, widget: boolean, default: false }
+      - { label: Body, name: body, widget: markdown }
