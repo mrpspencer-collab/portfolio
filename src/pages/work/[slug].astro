@@ -364,6 +364,7 @@ const { Content } = await project.render();
     overflow: hidden;
     border-radius: 8px;
     border: 1px solid var(--border);
+    background: var(--bg-muted);
   }
   .body :global(.cs-carousel-track) {
     display: flex;
@@ -388,7 +389,12 @@ const { Content } = await project.render();
   }
 
   @media (max-width: 640px) {
-    .body :global(.cs-carousel-slide img) { height: 260px; }
+    .body :global(.cs-carousel-slide img) {
+      height: auto;
+      max-height: 280px;
+      object-fit: contain;
+      background: var(--bg-muted);
+    }
   }
   .body :global(.cs-carousel-caption) {
     padding: 16px 20px;
