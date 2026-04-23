@@ -60,9 +60,14 @@ As enrollments normalized post-pandemic, Coursera faced a critical challenge: le
 
 ## UX Debt
 
-Cross-team coordination eliminated redundant screens and reordered key steps, compressing a 12+ step journey into a focused 6-step flow. Content strategy played a crucial role: clear, purposeful copy did as much work as the UI.
-
-![Course enrollment flow — original step count](https://paulamsbary.com/wp-content/uploads/2025/06/Course-within-Meta-Specialization-Control-1-scaled.jpg)
+<div class="cs-split">
+  <div class="cs-split-body">
+    <p>Cross-team coordination eliminated redundant screens and reordered key steps, compressing a 12+ step journey into a focused 6-step flow. Content strategy played a crucial role: clear, purposeful copy did as much work as the UI.</p>
+  </div>
+  <div class="cs-split-image">
+    <figure><img src="https://paulamsbary.com/wp-content/uploads/2025/06/Course-within-Meta-Specialization-Control-1-scaled.jpg" alt="Course enrollment flow — original step count" /><figcaption>Original enrollment flow — 12+ steps before first lesson</figcaption></figure>
+  </div>
+</div>
 
 ## Design Explorations
 
