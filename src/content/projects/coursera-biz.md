@@ -45,11 +45,10 @@ Coursera's Business, Government, and Higher Ed sites were running on an outdated
 </div>
 
 ## Design Concepts
-
-Two divergent concepts were developed to explore opposite ends of the tone and content-density spectrum before converging on a direction.
 <div class="cs-split">                                                                                                
     <div class="cs-split-body">                             
-      <p>Two divergent concepts were developed...</p>
+           <p>With the scope defined and a content strategy in place, we designed the experience as a system that could hold a narrative/p>
+ <p>Through cross-functional workshops, we developed and prioritized a set of hypotheses around how buyers navigate, evaluate, and act. Two divergent concepts were developed to explore opposite ends of the tone and density spectrum before converging on a direction. These concepts were expressed through wireframes to get buy in.</p>
     </div>
     <div class="cs-split-image">                                                                                        
       <div class="cs-carousel cs-carousel--pan">
@@ -79,6 +78,7 @@ Two divergent concepts were developed to explore opposite ends of the tone and c
       </div>                                                                                                            
     </div>                                                  
   </div>
+
 ## Key Information Module
 
 The Key Information Module (KIM) sits horizontally beneath the primary headline, framing the value proposition while surfacing proof points at the highest-attention area of the page. Users engage heavily with above-the-fold content — the KIM was designed to do the most work in the least space.
