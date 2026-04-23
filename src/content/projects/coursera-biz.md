@@ -48,7 +48,7 @@ Coursera's Business, Government, and Higher Ed sites were running on an outdated
 
 Two divergent concepts were developed to explore opposite ends of the tone and content-density spectrum before converging on a direction.
 
-<div class="cs-carousel">
+<div class="cs-carousel cs-carousel--pan">
   <div class="cs-carousel-track-wrap">
     <div class="cs-carousel-track">
       <div class="cs-carousel-slide">

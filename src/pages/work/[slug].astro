@@ -388,12 +388,25 @@ const { Content } = await project.render();
     margin: 0 !important;
   }
 
+  /* Panning carousel — animates object-position top→bottom for tall screenshots */
+  .body :global(.cs-carousel--pan .cs-carousel-slide img) {
+    animation: cs-img-pan 8s ease-in-out infinite alternate;
+    object-position: center 0%;
+  }
+  @keyframes cs-img-pan {
+    0%, 8%   { object-position: center 0%; }
+    92%, 100% { object-position: center 100%; }
+  }
+
   @media (max-width: 640px) {
     .body :global(.cs-carousel-slide img) {
       height: auto;
       max-height: 280px;
       object-fit: contain;
       background: var(--bg-muted);
+    }
+    .body :global(.cs-carousel--pan .cs-carousel-slide img) {
+      animation: none;
     }
   }
   .body :global(.cs-carousel-caption) {
