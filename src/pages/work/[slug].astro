@@ -107,9 +107,9 @@ const { Content } = await project.render();
   .thumb img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    object-position: center;
+    object-fit: contain;
     display: block;
+    padding: 32px;
   }
 
   .content { max-width: 100%; padding-bottom: 96px; }
@@ -224,21 +224,49 @@ const { Content } = await project.render();
   .body :global(.cs-split-image img) {
     width: 100%;
     height: auto;
-    border-radius: 8px;
+    border-radius: 8px 8px 0 0;
     border: 1px solid var(--border);
+    border-bottom: none;
     margin: 0;
+    display: block;
+  }
+  .body :global(.cs-split-image figure) {
+    margin: 0;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .body :global(.cs-split-image figure img) {
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid var(--border);
+  }
+  .body :global(figcaption) {
+    font-size: 12px;
+    color: var(--fg-subtle);
+    padding: 8px 12px;
+    background: var(--bg-muted);
+    line-height: 1.4;
   }
   .body :global(.cs-image-pair) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 12px;
   }
+  .body :global(.cs-image-pair figure) {
+    margin: 0;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+  }
   .body :global(.cs-image-pair img) {
     width: 100%;
     height: auto;
-    border-radius: 8px;
-    border: 1px solid var(--border);
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid var(--border);
     margin: 0;
+    display: block;
   }
 
   @media (max-width: 640px) {

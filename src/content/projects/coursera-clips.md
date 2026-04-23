@@ -31,7 +31,7 @@ Clips are Coursera's short-form learning format: 2–10 minute videos pulled fro
     <p>The hypothesis: this was limiting discovery and engagement.</p>
   </div>
   <div class="cs-split-image">
-    <img src="https://staging4.paulamsbary.com/wp-content/uploads/2025/11/before.png" alt="Video Clip — Original Design" />
+    <figure><img src="https://staging4.paulamsbary.com/wp-content/uploads/2025/11/before.png" alt="Video Clip — Original Design" /><figcaption>Video Clip — Original Design</figcaption></figure>
   </div>
 </div>
 
@@ -66,7 +66,7 @@ Clips are Coursera's short-form learning format: 2–10 minute videos pulled fro
     <p>The wireframe explores how to maintain hierarchy while keeping the experience linear and low-friction.</p>
   </div>
   <div class="cs-split-image">
-    <img src="https://staging4.paulamsbary.com/wp-content/uploads/2025/11/mobile-web.png" alt="Clips Player Sketch — Enrollment CTA" />
+    <figure><img src="https://staging4.paulamsbary.com/wp-content/uploads/2025/11/mobile-web.png" alt="Clips Player Sketch — Enrollment CTA" /><figcaption>Clips Player Sketch — Enrollment CTA</figcaption></figure>
   </div>
 </div>
 
@@ -83,8 +83,8 @@ Clips are Coursera's short-form learning format: 2–10 minute videos pulled fro
   </div>
   <div class="cs-split-image">
     <div class="cs-image-pair">
-      <img src="https://staging4.paulamsbary.com/wp-content/uploads/2025/11/mobileweb1-1.png" alt="Mobile Web — Single Video Emphasis" />
-      <img src="https://staging4.paulamsbary.com/wp-content/uploads/2025/11/mobileweb2.png" alt="Mobile Web — Course Playlist Open" />
+      <figure><img src="https://staging4.paulamsbary.com/wp-content/uploads/2025/11/mobileweb1-1.png" alt="Single Video Emphasis" /><figcaption>Single Video Emphasis</figcaption></figure>
+      <figure><img src="https://staging4.paulamsbary.com/wp-content/uploads/2025/11/mobileweb2.png" alt="Course Playlist Open" /><figcaption>Course Playlist Open</figcaption></figure>
     </div>
   </div>
 </div>
@@ -139,7 +139,7 @@ Clips are Coursera's short-form learning format: 2–10 minute videos pulled fro
     <p>The original design lacked engagement affordances and failed to communicate what to watch next with enough clarity or urgency.</p>
   </div>
   <div class="cs-split-image">
-    <img src="https://staging4.paulamsbary.com/wp-content/uploads/2025/11/endcard-2.png" alt="End Card — Original Design" />
+    <figure><img src="https://staging4.paulamsbary.com/wp-content/uploads/2025/11/endcard-2.png" alt="End Card — Original Design" /><figcaption>End Card — Original Design</figcaption></figure>
   </div>
 </div>
 
