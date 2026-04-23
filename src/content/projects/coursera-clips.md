@@ -49,8 +49,17 @@ The original design prioritized the video player while underrepresenting course 
 
 <div class="cs-split">
   <div class="cs-split-body">
-    <p>Responsive design reordered elements while maintaining information hierarchy. The video remained the primary focus while keeping course context discoverable.</p>
-    <p>Key decisions on mobile:</p>
+    <p>The responsive design challenge was reordering page elements for a smaller screen without losing the context that makes Clips useful. On desktop, course structure, related content, and the player coexist. On mobile, those elements needed to be sequenced — not hidden.</p>
+    <p>The wireframe explores how to maintain hierarchy while keeping the experience linear and low-friction.</p>
+  </div>
+  <div class="cs-split-image">
+    <img src="https://staging4.paulamsbary.com/wp-content/uploads/2025/11/mobile-web.png" alt="Clips Player Sketch — Enrollment CTA" />
+  </div>
+</div>
+
+<div class="cs-split">
+  <div class="cs-split-body">
+    <p>Key decisions in the final design:</p>
     <ul>
       <li><strong>Video placement</strong> — top of page, full width</li>
       <li><strong>Player controls</strong> — native device controls; removed custom chrome to reduce friction</li>
@@ -60,13 +69,12 @@ The original design prioritized the video player while underrepresenting course 
     </ul>
   </div>
   <div class="cs-split-image">
-    <img src="https://staging4.paulamsbary.com/wp-content/uploads/2025/11/mobile-web.png" alt="Clips Player Sketch — Enrollment CTA" />
+    <div class="cs-image-pair">
+      <img src="https://staging4.paulamsbary.com/wp-content/uploads/2025/11/mobileweb1-1.png" alt="Mobile Web — Single Video Emphasis" />
+      <img src="https://staging4.paulamsbary.com/wp-content/uploads/2025/11/mobileweb2.png" alt="Mobile Web — Course Playlist Open" />
+    </div>
   </div>
 </div>
-
-![Mobile Web — Single Video Emphasis](https://staging4.paulamsbary.com/wp-content/uploads/2025/11/mobileweb1-1.png)
-
-![Mobile Web — Course Playlist Open](https://staging4.paulamsbary.com/wp-content/uploads/2025/11/mobileweb2.png)
 
 ## Desktop Explorations
 

@@ -221,9 +221,22 @@ const { Content } = await project.render();
     border: 1px solid var(--border);
     margin: 0;
   }
+  .body :global(.cs-image-pair) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  .body :global(.cs-image-pair img) {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    margin: 0;
+  }
 
   @media (max-width: 640px) {
     .body :global(.cs-split) { grid-template-columns: 1fr; }
+    .body :global(.cs-image-pair) { grid-template-columns: 1fr 1fr; }
   }
 
   .outcomes {
