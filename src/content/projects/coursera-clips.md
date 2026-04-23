@@ -216,13 +216,6 @@ Evolved the design patterns into a unified visual language across discovery surf
         </div>
       </div>
       <div class="cs-carousel-slide">
-        <img src="https://staging4.paulamsbary.com/wp-content/uploads/2025/11/Clips-Lesson.png" alt="Clips in Lesson" />
-        <div class="cs-carousel-caption">
-          <strong>Clips in Lesson</strong>
-          <p>Clips surfaced inline within course lessons, keeping learners in context.</p>
-        </div>
-      </div>
-      <div class="cs-carousel-slide">
         <img src="https://staging4.paulamsbary.com/wp-content/uploads/2025/11/search-dropdown.png" alt="Clips in Search Dropdown" />
         <div class="cs-carousel-caption">
           <strong>Search Dropdown</strong>
@@ -248,7 +241,7 @@ Evolved the design patterns into a unified visual language across discovery surf
   <div class="cs-carousel-nav">
     <button class="cs-carousel-btn cs-carousel-prev">←</button>
     <button class="cs-carousel-btn cs-carousel-next">→</button>
-    <span class="cs-carousel-counter">1 / 5</span>
+    <span class="cs-carousel-counter">1 / 4</span>
   </div>
 </div>
 
