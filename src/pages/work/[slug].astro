@@ -503,6 +503,7 @@ const { Content } = await project.render();
   }
   .lightbox-close:hover { color: #fff; }
   .body :global(img) { cursor: zoom-in; }
+  .body :global(.cs-carousel--pan img) { cursor: ns-resize; }
 </style>
 
 <div class="lightbox" id="lightbox" aria-modal="true" role="dialog">
@@ -528,6 +529,7 @@ const { Content } = await project.render();
   }
 
   document.querySelectorAll<HTMLImageElement>('.body img').forEach(img => {
+    if (img.closest('.cs-carousel--pan')) return;
     img.addEventListener('click', () => openLightbox(img.src, img.alt));
   });
 
