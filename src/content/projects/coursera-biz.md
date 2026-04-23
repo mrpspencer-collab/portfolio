@@ -56,17 +56,17 @@ Two divergent concepts were developed to explore opposite ends of the tone and c
         <div class="cs-carousel-track-wrap">                                                                            
           <div class="cs-carousel-track">                   
             <div class="cs-carousel-slide">                                                                             
-              <img src="https://...Concept-A-scaled.jpg" alt="Coffee Shop Concept" />
+              <img src="https://paulamsbary.com/wp-content/uploads/2024/11/Concept-A-scaled.jpg" alt="Coffee Shop Concept" />
               <div class="cs-carousel-caption">                                                                         
                 <strong>Coffee Shop Concept</strong>        
-                <p>Brief, inviting...</p>                                                                               
+                <p>Brief, inviting, and minimal. Concise content, clean design, and a fast conversion path. Built for buyers who already know what they want.</p>                                                                               
               </div>                                        
             </div>                                                                                                      
             <div class="cs-carousel-slide">                 
-              <img src="https://...Concept-B.png" alt="Conference Room Concept" />                                      
+              <img src="https://paulamsbary.com/wp-content/uploads/2024/11/Concept-B.png" alt="Conference Room Concept" />
               <div class="cs-carousel-caption">
                 <strong>Conference Room Concept</strong>                                                                
-                <p>In-depth and layered...</p>                                                                          
+                <p>In-depth and layered. Detailed messaging and content that supports sales-driven visits where buyers need to build a business case.</p>                                                                          
               </div>
             </div>                                                                                                      
           </div>                                            
