@@ -47,7 +47,7 @@ Coursera's Business, Government, and Higher Ed sites were running on an outdated
 ## Design Concepts
 
 Two divergent concepts were developed to explore opposite ends of the tone and content-density spectrum before converging on a direction.
-
+<!--
 <div class="cs-carousel cs-carousel--pan">
   <div class="cs-carousel-track-wrap">
     <div class="cs-carousel-track">
@@ -80,7 +80,39 @@ Two divergent concepts were developed to explore opposite ends of the tone and c
     <span class="cs-carousel-counter">1 / 2</span>
   </div>
 </div>
-
+-->
+<div class="cs-split">                                                                                                
+    <div class="cs-split-body">                             
+      <p>Two divergent concepts were developed...</p>
+    </div>
+    <div class="cs-split-image">                                                                                        
+      <div class="cs-carousel cs-carousel--pan">
+        <div class="cs-carousel-track-wrap">                                                                            
+          <div class="cs-carousel-track">                   
+            <div class="cs-carousel-slide">                                                                             
+              <img src="https://...Concept-A-scaled.jpg" alt="Coffee Shop Concept" />
+              <div class="cs-carousel-caption">                                                                         
+                <strong>Coffee Shop Concept</strong>        
+                <p>Brief, inviting...</p>                                                                               
+              </div>                                        
+            </div>                                                                                                      
+            <div class="cs-carousel-slide">                 
+              <img src="https://...Concept-B.png" alt="Conference Room Concept" />                                      
+              <div class="cs-carousel-caption">
+                <strong>Conference Room Concept</strong>                                                                
+                <p>In-depth and layered...</p>                                                                          
+              </div>
+            </div>                                                                                                      
+          </div>                                            
+        </div>
+        <div class="cs-carousel-nav">
+          <button class="cs-carousel-btn cs-carousel-prev">←</button>                                                   
+          <button class="cs-carousel-btn cs-carousel-next">→</button>
+          <span class="cs-carousel-counter">1 / 2</span>                                                                
+        </div>                                              
+      </div>                                                                                                            
+    </div>                                                  
+  </div>
 ## Key Information Module
 
 The Key Information Module (KIM) sits horizontally beneath the primary headline, framing the value proposition while surfacing proof points at the highest-attention area of the page. Users engage heavily with above-the-fold content — the KIM was designed to do the most work in the least space.
