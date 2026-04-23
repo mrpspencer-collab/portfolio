@@ -4,9 +4,60 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Content Manager — Paul Amsbary</title>
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <script>
+    CMS.init({
+      config: {
+        backend: {
+          name: 'github',
+          repo: 'mrpspencer-collab/portfolio',
+          branch: 'main',
+          auth_type: 'pkce',
+          app_id: 'Ov23lilNEFo3DggMnhR2',
+        },
+        media_folder: 'public/images',
+        public_folder: '/images',
+        collections: [
+          {
+            name: 'projects',
+            label: 'Projects',
+            folder: 'src/content/projects',
+            create: true,
+            slug: '{{slug}}',
+            fields: [
+              { label: 'Title', name: 'title', widget: 'string' },
+              { label: 'Subtitle', name: 'subtitle', widget: 'string' },
+              { label: 'Tags', name: 'tags', widget: 'list', field: { label: 'Tag', name: 'tag', widget: 'string' } },
+              { label: 'Status Badge', name: 'status', widget: 'string', required: false },
+              { label: 'Order', name: 'order', widget: 'number', default: 99 },
+              { label: 'Thumbnail URL', name: 'thumb', widget: 'string', required: false },
+              { label: 'Thumbnail Background', name: 'thumbBg', widget: 'string', default: '#1A1713' },
+              { label: 'Thumbnail Fallback Text', name: 'thumbText', widget: 'string', required: false },
+              { label: 'Thumbnail Text Color', name: 'thumbTextColor', widget: 'string', default: '#5A5550' },
+              { label: 'Metrics', name: 'metrics', widget: 'list', required: false, field: { label: 'Metric', name: 'metric', widget: 'string' } },
+              { label: 'CTA Text', name: 'cta', widget: 'string', default: 'Read Case Study' },
+              { label: 'Body', name: 'body', widget: 'markdown' },
+            ],
+          },
+          {
+            name: 'blog',
+            label: 'Blog',
+            folder: 'src/content/blog',
+            create: true,
+            slug: '{{slug}}',
+            fields: [
+              { label: 'Title', name: 'title', widget: 'string' },
+              { label: 'Date', name: 'date', widget: 'datetime', date_format: 'YYYY-MM-DD', time_format: false },
+              { label: 'Description', name: 'description', widget: 'string', required: false },
+              { label: 'Draft', name: 'draft', widget: 'boolean', default: false },
+              { label: 'Body', name: 'body', widget: 'markdown' },
+            ],
+          },
+        ],
+      },
+    });
+  </script>
 </body>
 </html>
