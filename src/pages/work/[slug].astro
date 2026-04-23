@@ -640,5 +640,10 @@ const { Content } = await project.render();
     });
 
     wrap.addEventListener('mouseleave', () => { hovered = false; });
+
+    wrap.addEventListener('wheel', (e: WheelEvent) => {
+      e.preventDefault();
+      setPos(pos + e.deltaY * 0.05);
+    }, { passive: false });
   });
 </script>
