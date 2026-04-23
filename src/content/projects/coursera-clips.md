@@ -27,6 +27,8 @@ Clips are Coursera's short-form learning format: 2–10 minute videos pulled fro
 
 The original design prioritized the video player while underrepresenting course structure. Users couldn't easily identify a clip's position within lessons, explore related clips, or transition to full courses. The hypothesis: this was limiting discovery and engagement.
 
+![Video Clip Original Design](https://staging4.paulamsbary.com/wp-content/uploads/2025/11/before.png)
+
 ## Design Opportunity
 
 ### For Learners
@@ -55,43 +57,67 @@ Key decisions on mobile:
 - **Call-to-action** — pinned enrollment button always in view
 - **Autoplay** — playlist set to autoplay next videos to reduce drop-off
 
+![Clips Player Sketch — Enrollment CTA](https://staging4.paulamsbary.com/wp-content/uploads/2025/11/mobile-web.png)
+
+![Mobile Web — Single Video Emphasis](https://staging4.paulamsbary.com/wp-content/uploads/2025/11/mobileweb1-1.png)
+
+![Mobile Web — Course Playlist Open](https://staging4.paulamsbary.com/wp-content/uploads/2025/11/mobileweb2.png)
+
 ## Desktop Explorations
 
 ### Theatre Mode
 
 Initial concept featured a video-first layout with a horizontal continuation rail below the player for clip browsing without leaving the video view. Abandoned due to concerns about responsiveness, layout complexity, and unclear ROI.
 
+![Clips Theatre Mode Early Sketch](https://staging4.paulamsbary.com/wp-content/uploads/2025/11/Clips-Video-stream-within-course-2.png)
+
 ### Context-First Design
 
 Added a right-hand vertical rail showing course structure and related content. Improved visibility of continuation paths and learner positioning within courses. Struggled with visual disconnection of related video navigation.
+
+![Clips Player Early Sketch — Sidebar](https://staging4.paulamsbary.com/wp-content/uploads/2025/11/videsidebarb.png)
 
 ### Toggle Panel
 
 Right-hand panel allowed switching between deep (full course) and broad (related) structures, with metadata below the player. Included image thumbnails for better information scent. Required additional engineering effort and didn't reach final build.
 
+![Clips Player — Enrollment CTA with Sidebar](https://staging4.paulamsbary.com/wp-content/uploads/2025/11/video-sidebar.png)
+
 ### V1 Desktop Release
 
 Enrollment CTA moved below the video because automatic enrollment occurred after viewing 10% of course content (per licensing agreement). Design emphasized video consumption over enrollment actions.
+
+![Desktop Redlines](https://staging4.paulamsbary.com/wp-content/uploads/2025/11/redline.png)
 
 ## End Cards
 
 End cards appear when clips finish, recommending additional content. They're a critical decision point for user retention and deeper discovery.
 
+![End Card Original Design](https://staging4.paulamsbary.com/wp-content/uploads/2025/11/endcard-2.png)
+
 ### Exploration 1 — Informative Card
 
 Displayed next video, course, and institution logo as a credibility cue. Reinforced the "trusted content" value proposition but was overloaded with metadata and CTAs within an eight-second window.
+
+![End Card Ideation 1](https://staging4.paulamsbary.com/wp-content/uploads/2025/11/ideation1.png)
 
 ### Exploration 2 — Card Overlay
 
 Featured next video thumbnail, play icon, and countdown timer — a familiar streaming pattern. Strong affordances but risked competing CTAs.
 
+![End Card Exploration 2 — Overlay](https://staging4.paulamsbary.com/wp-content/uploads/2025/11/endcardexplo12.png)
+
 ### Exploration 3 — Overlay with Light/Dark Handling
 
 Added an overlay to manage unpredictable end-frame lighting. Right-aligned module with secondary button. Balanced control but introduced potential text conflicts with end frames.
 
-### Exploration 4 — Choice Testing
+![End Card Exploration 3 — Overlay with Text](https://staging4.paulamsbary.com/wp-content/uploads/2025/11/endcardexpl2.png)
 
-Stacked two "next video" options to test whether choice improved engagement. Created unnecessary friction and contradicted Coursera's guided learning philosophy.
+### Exploration 4 — End of Course Variant
+
+Tested a variant for the end-of-course state, exploring how the recommendation experience should change when a learner completes the full course rather than a single clip.
+
+![End Card — End of Course Exploration](https://staging4.paulamsbary.com/wp-content/uploads/2025/11/endcard-endofcourseexpl.png)
 
 ### V1 Final Design
 
@@ -103,17 +129,21 @@ Stacked two "next video" options to test whether choice improved engagement. Cre
 - Autoplay as a player-level setting
 - Strong scrim for universal contrast
 
+![End Card V1 Final Design](https://staging4.paulamsbary.com/wp-content/uploads/2025/11/endcard-3.png)
+
 ## System Extension
 
 Evolved the design patterns into a unified visual language across discovery surfaces. Clips became instantly recognizable, trustworthy, and clearly connected to their parent courses.
 
-Applied across:
+![Post-Dogfooding — Updated Image Sizing](https://staging4.paulamsbary.com/wp-content/uploads/2025/11/post-dogfooding-Updated-image-sizing.png)
 
-- Course lesson integration
-- Search dropdown
-- Search results pages
-- Homepage recommendations
-- Skill page merchandising
+![Clips in Lesson](https://staging4.paulamsbary.com/wp-content/uploads/2025/11/Clips-Lesson.png)
+
+![Clips in Search Dropdown](https://staging4.paulamsbary.com/wp-content/uploads/2025/11/search-dropdown.png)
+
+![Clips in Search Results](https://staging4.paulamsbary.com/wp-content/uploads/2025/11/clipsinsearch.png)
+
+![Clips Extensions System](https://staging4.paulamsbary.com/wp-content/uploads/2025/11/clips-extensions-scaled.png)
 
 ## Strategic Impact
 

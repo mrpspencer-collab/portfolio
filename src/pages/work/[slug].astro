@@ -190,6 +190,14 @@ const { Content } = await project.render();
     border-top: 1px solid var(--border);
     margin: 40px 0;
   }
+  .body :global(img) {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    margin: 32px 0;
+    border: 1px solid var(--border);
+  }
 
   .outcomes {
     background: var(--bg-muted);
