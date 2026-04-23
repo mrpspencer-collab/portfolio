@@ -399,7 +399,7 @@ const { Content } = await project.render();
     object-position: center 0%;
   }
   .body :global(.cs-carousel--pan .cs-carousel-track-wrap) {
-    cursor: ns-resize;
+    cursor: default;
   }
 
   @media (max-width: 640px) {
@@ -565,7 +565,7 @@ const { Content } = await project.render();
   }
   .lightbox-close:hover { color: #fff; }
   .body :global(img) { cursor: zoom-in; }
-  .body :global(.cs-carousel--pan img) { cursor: ns-resize; }
+  .body :global(.cs-carousel--pan img) { cursor: default; }
 </style>
 
 <div class="lightbox" id="lightbox" aria-modal="true" role="dialog">
@@ -658,12 +658,7 @@ const { Content } = await project.render();
       requestAnimationFrame(tick);
     })();
 
-    wrap.addEventListener('mousemove', (e: MouseEvent) => {
-      hovered = true;
-      const r = wrap.getBoundingClientRect();
-      setPos(((e.clientY - r.top) / r.height) * 100);
-    });
-
+    wrap.addEventListener('mouseenter', () => { hovered = true; });
     wrap.addEventListener('mouseleave', () => { hovered = false; });
 
     wrap.addEventListener('wheel', (e: WheelEvent) => {
