@@ -388,14 +388,12 @@ const { Content } = await project.render();
     margin: 0 !important;
   }
 
-  /* Panning carousel — animates object-position top→bottom for tall screenshots */
+  /* Panning carousel — JS controls object-position; mouse overrides auto-pan */
   .body :global(.cs-carousel--pan .cs-carousel-slide img) {
-    animation: cs-img-pan 8s ease-in-out infinite alternate;
     object-position: center 0%;
   }
-  @keyframes cs-img-pan {
-    0%, 8%   { object-position: center 0%; }
-    92%, 100% { object-position: center 100%; }
+  .body :global(.cs-carousel--pan .cs-carousel-track-wrap) {
+    cursor: ns-resize;
   }
 
   @media (max-width: 640px) {
@@ -404,9 +402,6 @@ const { Content } = await project.render();
       max-height: 280px;
       object-fit: contain;
       background: var(--bg-muted);
-    }
-    .body :global(.cs-carousel--pan .cs-carousel-slide img) {
-      animation: none;
     }
   }
   .body :global(.cs-carousel-caption) {
@@ -560,5 +555,36 @@ const { Content } = await project.render();
     prev.addEventListener('click', () => go(current - 1));
     next.addEventListener('click', () => go(current + 1));
     go(0);
+  });
+
+  // Panning carousels — slow auto-pan; mouse position takes over on hover
+  document.querySelectorAll<HTMLElement>('.cs-carousel--pan').forEach(carousel => {
+    const wrap = carousel.querySelector<HTMLElement>('.cs-carousel-track-wrap')!;
+    const imgs = carousel.querySelectorAll<HTMLImageElement>('.cs-carousel-slide img');
+    let pos = 0;
+    let dir = 1;
+    let hovered = false;
+
+    function setPos(p: number) {
+      pos = Math.max(0, Math.min(100, p));
+      imgs.forEach(img => { img.style.objectPosition = `center ${pos}%`; });
+    }
+
+    (function tick() {
+      if (!hovered) {
+        if (pos >= 100) dir = -1;
+        if (pos <= 0) dir = 1;
+        setPos(pos + dir * 0.04);
+      }
+      requestAnimationFrame(tick);
+    })();
+
+    wrap.addEventListener('mousemove', (e: MouseEvent) => {
+      hovered = true;
+      const r = wrap.getBoundingClientRect();
+      setPos(((e.clientY - r.top) / r.height) * 100);
+    });
+
+    wrap.addEventListener('mouseleave', () => { hovered = false; });
   });
 </script>
