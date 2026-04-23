@@ -1,0 +1,4 @@
+<Files "config.yml">
+  Order allow,deny
+  Allow from all
+</Files>
