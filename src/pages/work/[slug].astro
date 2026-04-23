@@ -340,11 +340,17 @@ const { Content } = await project.render();
   }
   .body :global(.cs-carousel-slide img) {
     width: 100%;
-    height: auto;
+    height: 480px;
+    object-fit: cover;
+    object-position: top;
     display: block;
     border-radius: 0;
     border: none;
     margin: 0 !important;
+  }
+
+  @media (max-width: 640px) {
+    .body :global(.cs-carousel-slide img) { height: 260px; }
   }
   .body :global(.cs-carousel-caption) {
     padding: 16px 20px;
