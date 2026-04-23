@@ -154,5 +154,12 @@ const { Content } = await project.render();
   }
   .metric-label { font-size: 14px; color: var(--fg-muted); }
 
-  .actions { display: flex; gap: 12px; }
+  .actions { display: flex; gap: 12px; flex-wrap: wrap; }
+
+  @media (max-width: 640px) {
+    .breadcrumb { padding: 12px 20px; }
+    .content-wrap { padding: 0 20px; }
+    .thumb { height: 220px; margin: 24px 0; }
+    h1 { font-size: 32px; }
+  }
 </style>

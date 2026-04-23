@@ -6,29 +6,58 @@ const isBlog  = pathname.startsWith('/blog');
 ---
 <nav>
   <a href="/" class="logo">Paul Amsbary</a>
+
+  <!-- Desktop links -->
   <div class="nav-links">
     <a href="/"      class:list={['nav-link', { active: isWork }]}>Work</a>
     <a href="/about" class:list={['nav-link', { active: isAbout }]}>About</a>
     <a href="/blog"  class:list={['nav-link', { active: isBlog }]}>Blog</a>
     <div class="divider"></div>
-    <button id="theme-toggle" class="btn btn-sm theme-btn">◐ Dark</button>
-    <a href="#" class="btn btn-primary btn-sm" style="margin-left:8px">Download Resume</a>
+    <button id="theme-toggle" class="theme-btn">◐ Dark</button>
+    <a href="#" class="btn btn-primary btn-sm resume-btn">Download Resume</a>
+  </div>
+
+  <!-- Mobile right side -->
+  <div class="mobile-right">
+    <button id="theme-toggle-mobile" class="theme-btn">◐</button>
+    <button id="menu-toggle" class="menu-btn" aria-label="Menu">☰</button>
   </div>
 </nav>
 
+<!-- Mobile menu -->
+<div id="mobile-menu" class="mobile-menu">
+  <a href="/"      class:list={['mobile-link', { active: isWork }]}>Work</a>
+  <a href="/about" class:list={['mobile-link', { active: isAbout }]}>About</a>
+  <a href="/blog"  class:list={['mobile-link', { active: isBlog }]}>Blog</a>
+  <a href="#" class="mobile-link">Download Resume</a>
+</div>
+
 <script>
-  const btn = document.getElementById('theme-toggle');
-  function syncLabel() {
+  function syncTheme() {
     const theme = document.documentElement.getAttribute('data-theme') || 'light';
-    if (btn) btn.textContent = theme === 'light' ? '◐ Dark' : '◑ Light';
+    const btn  = document.getElementById('theme-toggle');
+    const btnM = document.getElementById('theme-toggle-mobile');
+    if (btn)  btn.textContent  = theme === 'light' ? '◐ Dark' : '◑ Light';
+    if (btnM) btnM.textContent = theme === 'light' ? '◐' : '◑';
   }
-  syncLabel();
-  btn?.addEventListener('click', () => {
+
+  function toggleTheme() {
     const current = document.documentElement.getAttribute('data-theme') || 'light';
     const next = current === 'light' ? 'dark' : 'light';
     document.documentElement.setAttribute('data-theme', next);
     localStorage.setItem('pa-theme', next);
-    syncLabel();
+    syncTheme();
+  }
+
+  syncTheme();
+  document.getElementById('theme-toggle')?.addEventListener('click', toggleTheme);
+  document.getElementById('theme-toggle-mobile')?.addEventListener('click', toggleTheme);
+
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  menuToggle?.addEventListener('click', () => {
+    const open = mobileMenu?.classList.toggle('open');
+    if (menuToggle) menuToggle.textContent = open ? '✕' : '☰';
   });
 </script>
 
@@ -53,6 +82,7 @@ const isBlog  = pathname.startsWith('/blog');
     letter-spacing: -0.025em;
     color: var(--fg);
     text-decoration: none;
+    flex-shrink: 0;
   }
   .nav-links {
     display: flex;
@@ -68,18 +98,11 @@ const isBlog  = pathname.startsWith('/blog');
     text-decoration: none;
     border-bottom: 1.5px solid transparent;
     transition: color 0.15s, border-color 0.15s;
+    white-space: nowrap;
   }
   .nav-link:hover { color: var(--fg); }
-  .nav-link.active {
-    color: var(--fg);
-    border-bottom-color: var(--accent);
-  }
-  .divider {
-    width: 1px;
-    height: 20px;
-    background: var(--border);
-    margin: 0 8px;
-  }
+  .nav-link.active { color: var(--fg); border-bottom-color: var(--accent); }
+  .divider { width: 1px; height: 20px; background: var(--border); margin: 0 8px; }
   .theme-btn {
     font-size: 12px;
     padding: 6px 12px;
@@ -91,6 +114,49 @@ const isBlog  = pathname.startsWith('/blog');
     font-family: var(--font-body);
     font-weight: 500;
     transition: border-color 0.15s, color 0.15s;
+    white-space: nowrap;
   }
   .theme-btn:hover { color: var(--fg); border-color: var(--border-strong); }
+  .resume-btn { white-space: nowrap; margin-left: 8px; text-decoration: none; }
+
+  /* Mobile */
+  .mobile-right { display: none; align-items: center; gap: 8px; }
+  .menu-btn {
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: var(--fg);
+    cursor: pointer;
+    padding: 6px;
+    line-height: 1;
+  }
+
+  .mobile-menu {
+    display: none;
+    position: fixed;
+    top: 64px; left: 0; right: 0;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+    flex-direction: column;
+    padding: 8px 0 16px;
+    z-index: 99;
+  }
+  .mobile-menu.open { display: flex; }
+  .mobile-link {
+    font-family: var(--font-body);
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--fg-muted);
+    padding: 12px 24px;
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+  .mobile-link:hover,
+  .mobile-link.active { color: var(--fg); }
+
+  @media (max-width: 640px) {
+    nav { padding: 0 20px; }
+    .nav-links { display: none; }
+    .mobile-right { display: flex; }
+  }
 </style>

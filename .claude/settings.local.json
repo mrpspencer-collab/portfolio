@@ -8,7 +8,8 @@
       "Read(//private/tmp/**)",
       "Bash(mkdir -p design_extract)",
       "Bash(tar -xzf /Users/paul/.claude/projects/-Users-paul-projects-portfolio/7aeb1ab3-632e-4b63-917c-fc6195297e36/tool-results/design.tar.gz -C design_extract)",
-      "Bash(npm run *)"
+      "Bash(npm run *)",
+      "Bash(ssh *)"
     ]
   }
 }

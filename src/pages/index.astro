@@ -57,7 +57,7 @@ const projects = (await getCollection('projects'))
   }
   .hero h1 {
     font-family: var(--font-display);
-    font-size: clamp(40px, 5vw, 72px);
+    font-size: clamp(36px, 5vw, 72px);
     font-weight: 700;
     line-height: 1.05;
     letter-spacing: -0.04em;
@@ -75,6 +75,7 @@ const projects = (await getCollection('projects'))
   .actions {
     display: flex;
     gap: 12px;
+    flex-wrap: wrap;
   }
 
   .divider-wrap {
@@ -92,7 +93,15 @@ const projects = (await getCollection('projects'))
   .work .overline { margin-bottom: 32px; }
   .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
+  }
+
+  @media (max-width: 640px) {
+    .hero { padding: 64px 20px 48px; }
+    .divider-wrap { padding: 0 20px; }
+    .work { padding: 48px 20px 64px; }
+    .lead { font-size: 16px; }
+    .grid { grid-template-columns: 1fr; }
   }
 </style>
