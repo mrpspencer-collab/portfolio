@@ -360,6 +360,12 @@ const { Content } = await project.render();
   .body :global(.cs-carousel) {
     margin: 32px 0;
   }
+  .body :global(.cs-split-image .cs-carousel) {
+    margin-top: 0;
+  }
+  .body :global(.cs-split-image .cs-carousel-slide img) {
+    height: 320px;
+  }
   .body :global(.cs-carousel-track-wrap) {
     overflow: hidden;
     border-radius: 8px;
