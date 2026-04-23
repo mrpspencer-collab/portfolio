@@ -47,7 +47,7 @@ Coursera's Business, Government, and Higher Ed sites were running on an outdated
 ## Design Concepts
 <div class="cs-split">                                                                                                
     <div class="cs-split-body">                             
-           <p>With the scope defined and a content strategy in place, we designed the experience as a system that could hold a narrative/p>
+           <p>With the scope defined and a content strategy in place, we designed the experience as a system that could hold a narrative</p>
  <p>Through cross-functional workshops, we developed and prioritized a set of hypotheses around how buyers navigate, evaluate, and act. Two divergent concepts were developed to explore opposite ends of the tone and density spectrum before converging on a direction. These concepts were expressed through wireframes to get buy in.</p>
     </div>
     <div class="cs-split-image">                                                                                        
