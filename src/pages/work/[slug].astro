@@ -36,6 +36,7 @@ const { Content } = await project.render();
         </div>
         <p class="overline">{d.title}</p>
         <h1>{d.subtitle}</h1>
+        {d.role && <p class="role">{d.role}</p>}
 
         <div class="body">
           <Content />
@@ -118,6 +119,14 @@ const { Content } = await project.render();
   }
   .content .overline { margin-bottom: 10px; }
 
+  .role {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--fg-subtle);
+    margin-bottom: 32px;
+    font-family: var(--font-body);
+  }
+
   h1 {
     font-family: var(--font-display);
     font-size: 44px;
@@ -136,6 +145,51 @@ const { Content } = await project.render();
   }
   .body :global(p) { margin-bottom: 16px; }
   .body :global(p:last-child) { margin-bottom: 0; }
+
+  .body :global(h2) {
+    font-family: var(--font-display);
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    color: var(--fg);
+    margin: 48px 0 16px;
+  }
+  .body :global(h3) {
+    font-family: var(--font-display);
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--fg);
+    margin: 32px 0 10px;
+  }
+  .body :global(h4) {
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--fg-subtle);
+    margin: 28px 0 8px;
+  }
+  .body :global(ul), .body :global(ol) {
+    padding-left: 20px;
+    margin-bottom: 16px;
+  }
+  .body :global(li) {
+    margin-bottom: 6px;
+    line-height: 1.6;
+  }
+  .body :global(li:last-child) { margin-bottom: 0; }
+  .body :global(strong) {
+    font-weight: 600;
+    color: var(--fg);
+  }
+  .body :global(hr) {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 40px 0;
+  }
 
   .outcomes {
     background: var(--bg-muted);

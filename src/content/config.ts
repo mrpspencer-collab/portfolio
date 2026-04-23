@@ -12,6 +12,7 @@ const projects = defineCollection({
     thumbText: z.string().optional(),
     thumbTextColor: z.string().default('#5A5550'),
     metrics: z.array(z.string()).default([]),
+    role: z.string().optional(),
     cta: z.string().default('Read Case Study'),
     order: z.number().default(99),
   }),
