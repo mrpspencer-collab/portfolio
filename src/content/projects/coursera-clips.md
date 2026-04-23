@@ -47,17 +47,22 @@ The original design prioritized the video player while underrepresenting course 
 
 ## Mobile Web
 
-Responsive design reordered elements while maintaining information hierarchy. The video remained the primary focus while keeping course context discoverable.
-
-Key decisions on mobile:
-
-- **Video placement** — top of page, full width
-- **Player controls** — native device controls; removed custom chrome to reduce friction
-- **Navigation** — simple shelf below player with title toggle
-- **Call-to-action** — pinned enrollment button always in view
-- **Autoplay** — playlist set to autoplay next videos to reduce drop-off
-
-![Clips Player Sketch — Enrollment CTA](https://staging4.paulamsbary.com/wp-content/uploads/2025/11/mobile-web.png)
+<div class="cs-split">
+  <div class="cs-split-body">
+    <p>Responsive design reordered elements while maintaining information hierarchy. The video remained the primary focus while keeping course context discoverable.</p>
+    <p>Key decisions on mobile:</p>
+    <ul>
+      <li><strong>Video placement</strong> — top of page, full width</li>
+      <li><strong>Player controls</strong> — native device controls; removed custom chrome to reduce friction</li>
+      <li><strong>Navigation</strong> — simple shelf below player with title toggle</li>
+      <li><strong>Call-to-action</strong> — pinned enrollment button always in view</li>
+      <li><strong>Autoplay</strong> — playlist set to autoplay next videos to reduce drop-off</li>
+    </ul>
+  </div>
+  <div class="cs-split-image">
+    <img src="https://staging4.paulamsbary.com/wp-content/uploads/2025/11/mobile-web.png" alt="Clips Player Sketch — Enrollment CTA" />
+  </div>
+</div>
 
 ![Mobile Web — Single Video Emphasis](https://staging4.paulamsbary.com/wp-content/uploads/2025/11/mobileweb1-1.png)
 

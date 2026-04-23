@@ -199,6 +199,33 @@ const { Content } = await project.render();
     border: 1px solid var(--border);
   }
 
+  .body :global(.cs-split) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+    margin: 32px 0;
+  }
+  .body :global(.cs-split-body) {
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--fg-muted);
+  }
+  .body :global(.cs-split-body p) { margin-bottom: 16px; }
+  .body :global(.cs-split-body ul) { padding-left: 20px; }
+  .body :global(.cs-split-body li) { margin-bottom: 6px; }
+  .body :global(.cs-split-image img) {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    margin: 0;
+  }
+
+  @media (max-width: 640px) {
+    .body :global(.cs-split) { grid-template-columns: 1fr; }
+  }
+
   .outcomes {
     background: var(--bg-muted);
     border: 1px solid var(--border);
