@@ -263,6 +263,65 @@ const { Content } = await project.render();
 
   .actions { display: flex; gap: 12px; flex-wrap: wrap; }
 
+  /* Two-column text layout */
+  .body :global(.cs-columns) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin: 24px 0 32px;
+  }
+  .body :global(.cs-col-label) {
+    font-family: var(--font-body);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--fg-subtle);
+    margin-bottom: 12px !important;
+    max-width: 100% !important;
+  }
+  .body :global(.cs-columns ul) {
+    padding-left: 16px;
+    margin: 0;
+    max-width: 100%;
+  }
+  .body :global(.cs-columns li) { margin-bottom: 8px; font-size: 15px; }
+
+  /* Featured final design */
+  .body :global(.cs-featured) {
+    background: var(--bg-muted);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 24px 0;
+  }
+  .body :global(.cs-featured img) {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid var(--border);
+    margin: 0;
+  }
+  .body :global(.cs-featured-body) {
+    padding: 20px 24px;
+  }
+  .body :global(.cs-featured-body ul) {
+    padding-left: 16px;
+    margin: 0;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px 24px;
+  }
+  .body :global(.cs-featured-body li) { font-size: 14px; margin-bottom: 4px; }
+
+  @media (max-width: 640px) {
+    .body :global(.cs-columns) { grid-template-columns: 1fr; }
+    .body :global(.cs-featured-body ul) { grid-template-columns: 1fr; }
+  }
+
   /* Carousel */
   .body :global(.cs-carousel) {
     margin: 32px 0;

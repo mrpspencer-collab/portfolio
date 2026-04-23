@@ -25,25 +25,38 @@ Clips are Coursera's short-form learning format: 2–10 minute videos pulled fro
 
 ## The Problem
 
-The original design prioritized the video player while underrepresenting course structure. Users couldn't easily identify a clip's position within lessons, explore related clips, or transition to full courses. The hypothesis: this was limiting discovery and engagement.
-
-![Video Clip Original Design](https://staging4.paulamsbary.com/wp-content/uploads/2025/11/before.png)
+<div class="cs-split">
+  <div class="cs-split-body">
+    <p>The original design prioritized the video player while underrepresenting course structure. Users couldn't identify a clip's position within lessons, explore related clips, or transition to full courses.</p>
+    <p>The hypothesis: this was limiting discovery and engagement.</p>
+  </div>
+  <div class="cs-split-image">
+    <img src="https://staging4.paulamsbary.com/wp-content/uploads/2025/11/before.png" alt="Video Clip — Original Design" />
+  </div>
+</div>
 
 ## Design Opportunity
 
-### For Learners
-
-- Get answers without committing to full courses
-- Quickly assess relevance by viewing clip placement in course structure
-- Maintain workflow momentum — learn focused content then return to tasks
-- Trust vetted, expert-led, high-quality content
-
-### For Business
-
-- Increase monthly active learners (MAL)
-- Expose course content to drive enrollments
-- Enable L&D teams to create job-relevant learning paths
-- Support enterprise customer acquisitions
+<div class="cs-columns">
+  <div>
+    <p class="cs-col-label">For Learners</p>
+    <ul>
+      <li>Get answers without committing to full courses</li>
+      <li>Quickly assess relevance by viewing clip placement in course structure</li>
+      <li>Maintain workflow momentum — learn focused content then return to tasks</li>
+      <li>Trust vetted, expert-led, high-quality content</li>
+    </ul>
+  </div>
+  <div>
+    <p class="cs-col-label">For Business</p>
+    <ul>
+      <li>Increase monthly active learners (MAL)</li>
+      <li>Expose course content to drive enrollments</li>
+      <li>Enable L&D teams to create job-relevant learning paths</li>
+      <li>Support enterprise customer acquisitions</li>
+    </ul>
+  </div>
+</div>
 
 ## Mobile Web
 
@@ -65,7 +78,7 @@ The original design prioritized the video player while underrepresenting course 
       <li><strong>Player controls</strong> — native device controls; removed custom chrome to reduce friction</li>
       <li><strong>Navigation</strong> — simple shelf below player with title toggle</li>
       <li><strong>Call-to-action</strong> — pinned enrollment button always in view</li>
-      <li><strong>Autoplay</strong> — playlist set to autoplay next videos to reduce drop-off</li>
+      <li><strong>Autoplay</strong> — playlist autoplay to reduce drop-off</li>
     </ul>
   </div>
   <div class="cs-split-image">
@@ -99,14 +112,14 @@ The original design prioritized the video player while underrepresenting course 
         <img src="https://staging4.paulamsbary.com/wp-content/uploads/2025/11/video-sidebar.png" alt="Toggle Panel" />
         <div class="cs-carousel-caption">
           <strong>Toggle Panel</strong>
-          <p>Panel switching between deep (full course) and broad (related) structures with image thumbnails. Required additional engineering effort and didn't reach final build.</p>
+          <p>Panel switching between deep (full course) and broad (related) structures with image thumbnails. Required additional engineering and didn't reach final build.</p>
         </div>
       </div>
       <div class="cs-carousel-slide">
         <img src="https://staging4.paulamsbary.com/wp-content/uploads/2025/11/redline.png" alt="V1 Desktop Release" />
         <div class="cs-carousel-caption">
           <strong>V1 Desktop Release</strong>
-          <p>Enrollment CTA moved below the video per licensing agreement — automatic enrollment triggered after 10% of content viewed. Design emphasised consumption over enrollment actions.</p>
+          <p>Enrollment CTA moved below the video per licensing agreement — automatic enrollment triggered after 10% of content viewed.</p>
         </div>
       </div>
     </div>
@@ -120,60 +133,125 @@ The original design prioritized the video player while underrepresenting course 
 
 ## End Cards
 
-End cards appear when clips finish, recommending additional content. They're a critical decision point for user retention and deeper discovery.
+<div class="cs-split">
+  <div class="cs-split-body">
+    <p>End cards appear when clips finish, recommending additional content. They're a critical decision point for user retention — the moment a learner either continues or leaves.</p>
+    <p>The original design lacked engagement affordances and failed to communicate what to watch next with enough clarity or urgency.</p>
+  </div>
+  <div class="cs-split-image">
+    <img src="https://staging4.paulamsbary.com/wp-content/uploads/2025/11/endcard-2.png" alt="End Card — Original Design" />
+  </div>
+</div>
 
-![End Card Original Design](https://staging4.paulamsbary.com/wp-content/uploads/2025/11/endcard-2.png)
+### Explorations
 
-### Exploration 1 — Informative Card
+<div class="cs-carousel">
+  <div class="cs-carousel-track-wrap">
+    <div class="cs-carousel-track">
+      <div class="cs-carousel-slide">
+        <img src="https://staging4.paulamsbary.com/wp-content/uploads/2025/11/ideation1.png" alt="End Card — Informative Card" />
+        <div class="cs-carousel-caption">
+          <strong>Informative Card</strong>
+          <p>Next video, course, and institution logo as a credibility cue. Overloaded with metadata and CTAs within an eight-second window.</p>
+        </div>
+      </div>
+      <div class="cs-carousel-slide">
+        <img src="https://staging4.paulamsbary.com/wp-content/uploads/2025/11/endcardexplo12.png" alt="End Card — Card Overlay" />
+        <div class="cs-carousel-caption">
+          <strong>Card Overlay</strong>
+          <p>Next video thumbnail, play icon, and countdown timer — familiar streaming pattern. Strong affordances but risked competing CTAs.</p>
+        </div>
+      </div>
+      <div class="cs-carousel-slide">
+        <img src="https://staging4.paulamsbary.com/wp-content/uploads/2025/11/endcardexpl2.png" alt="End Card — Overlay with Light/Dark Handling" />
+        <div class="cs-carousel-caption">
+          <strong>Overlay with Light/Dark Handling</strong>
+          <p>Overlay managing unpredictable end-frame lighting. Balanced control but introduced potential text conflicts.</p>
+        </div>
+      </div>
+      <div class="cs-carousel-slide">
+        <img src="https://staging4.paulamsbary.com/wp-content/uploads/2025/11/endcard-endofcourseexpl.png" alt="End Card — End of Course Variant" />
+        <div class="cs-carousel-caption">
+          <strong>End of Course Variant</strong>
+          <p>How should the recommendation experience change when a learner completes the full course, not just a single clip?</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="cs-carousel-nav">
+    <button class="cs-carousel-btn cs-carousel-prev">←</button>
+    <button class="cs-carousel-btn cs-carousel-next">→</button>
+    <span class="cs-carousel-counter">1 / 4</span>
+  </div>
+</div>
 
-Displayed next video, course, and institution logo as a credibility cue. Reinforced the "trusted content" value proposition but was overloaded with metadata and CTAs within an eight-second window.
+### Final Design
 
-![End Card Ideation 1](https://staging4.paulamsbary.com/wp-content/uploads/2025/11/ideation1.png)
-
-### Exploration 2 — Card Overlay
-
-Featured next video thumbnail, play icon, and countdown timer — a familiar streaming pattern. Strong affordances but risked competing CTAs.
-
-![End Card Exploration 2 — Overlay](https://staging4.paulamsbary.com/wp-content/uploads/2025/11/endcardexplo12.png)
-
-### Exploration 3 — Overlay with Light/Dark Handling
-
-Added an overlay to manage unpredictable end-frame lighting. Right-aligned module with secondary button. Balanced control but introduced potential text conflicts with end frames.
-
-![End Card Exploration 3 — Overlay with Text](https://staging4.paulamsbary.com/wp-content/uploads/2025/11/endcardexpl2.png)
-
-### Exploration 4 — End of Course Variant
-
-Tested a variant for the end-of-course state, exploring how the recommendation experience should change when a learner completes the full course rather than a single clip.
-
-![End Card — End of Course Exploration](https://staging4.paulamsbary.com/wp-content/uploads/2025/11/endcard-endofcourseexpl.png)
-
-### V1 Final Design
-
-- University logo for credibility
-- Countdown timer at top for visibility
-- Next-video title as primary focus
-- Thumbnail for intentional, engaging recommendation
-- Low-pressure tertiary "Play now" button
-- Autoplay as a player-level setting
-- Strong scrim for universal contrast
-
-![End Card V1 Final Design](https://staging4.paulamsbary.com/wp-content/uploads/2025/11/endcard-3.png)
+<div class="cs-featured">
+  <img src="https://staging4.paulamsbary.com/wp-content/uploads/2025/11/endcard-3.png" alt="End Card V1 Final Design" />
+  <div class="cs-featured-body">
+    <ul>
+      <li>University logo for credibility</li>
+      <li>Countdown timer at top for visibility</li>
+      <li>Next-video title as primary focus</li>
+      <li>Thumbnail for intentional, engaging recommendation</li>
+      <li>Low-pressure tertiary "Play now" button</li>
+      <li>Strong scrim for universal contrast</li>
+    </ul>
+  </div>
+</div>
 
 ## System Extension
 
 Evolved the design patterns into a unified visual language across discovery surfaces. Clips became instantly recognizable, trustworthy, and clearly connected to their parent courses.
 
-![Post-Dogfooding — Updated Image Sizing](https://staging4.paulamsbary.com/wp-content/uploads/2025/11/post-dogfooding-Updated-image-sizing.png)
-
-![Clips in Lesson](https://staging4.paulamsbary.com/wp-content/uploads/2025/11/Clips-Lesson.png)
-
-![Clips in Search Dropdown](https://staging4.paulamsbary.com/wp-content/uploads/2025/11/search-dropdown.png)
-
-![Clips in Search Results](https://staging4.paulamsbary.com/wp-content/uploads/2025/11/clipsinsearch.png)
-
-![Clips Extensions System](https://staging4.paulamsbary.com/wp-content/uploads/2025/11/clips-extensions-scaled.png)
+<div class="cs-carousel">
+  <div class="cs-carousel-track-wrap">
+    <div class="cs-carousel-track">
+      <div class="cs-carousel-slide">
+        <img src="https://staging4.paulamsbary.com/wp-content/uploads/2025/11/post-dogfooding-Updated-image-sizing.png" alt="Post-Dogfooding — Updated Image Sizing" />
+        <div class="cs-carousel-caption">
+          <strong>Post-Dogfooding Refinement</strong>
+          <p>Updated image sizing and proportions based on internal testing feedback.</p>
+        </div>
+      </div>
+      <div class="cs-carousel-slide">
+        <img src="https://staging4.paulamsbary.com/wp-content/uploads/2025/11/Clips-Lesson.png" alt="Clips in Lesson" />
+        <div class="cs-carousel-caption">
+          <strong>Clips in Lesson</strong>
+          <p>Clips surfaced inline within course lessons, keeping learners in context.</p>
+        </div>
+      </div>
+      <div class="cs-carousel-slide">
+        <img src="https://staging4.paulamsbary.com/wp-content/uploads/2025/11/search-dropdown.png" alt="Clips in Search Dropdown" />
+        <div class="cs-carousel-caption">
+          <strong>Search Dropdown</strong>
+          <p>Clips integrated into search suggestions for immediate, low-friction discovery.</p>
+        </div>
+      </div>
+      <div class="cs-carousel-slide">
+        <img src="https://staging4.paulamsbary.com/wp-content/uploads/2025/11/clipsinsearch.png" alt="Clips in Search Results" />
+        <div class="cs-carousel-caption">
+          <strong>Search Results</strong>
+          <p>Clips merchandised alongside full courses on search results pages.</p>
+        </div>
+      </div>
+      <div class="cs-carousel-slide">
+        <img src="https://staging4.paulamsbary.com/wp-content/uploads/2025/11/clips-extensions-scaled.png" alt="Clips Extensions System" />
+        <div class="cs-carousel-caption">
+          <strong>Extensions System</strong>
+          <p>The full system — a unified visual language across all discovery surfaces.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="cs-carousel-nav">
+    <button class="cs-carousel-btn cs-carousel-prev">←</button>
+    <button class="cs-carousel-btn cs-carousel-next">→</button>
+    <span class="cs-carousel-counter">1 / 5</span>
+  </div>
+</div>
 
 ## Strategic Impact
 
-The project validated short-form content driving long-form demand. It sparked dedicated manual curation, became the platform model for video surfacing, and strengthened customer confidence in bite-size learning pathways — contributing to enterprise customer renewals and expansions.
+The project validated short-form content driving long-form demand. It sparked dedicated manual curation, became the platform model for video surfacing, and strengthened customer confidence in bite-size learning pathways — contributing to enterprise renewals and expansions.
