@@ -453,6 +453,48 @@ const { Content } = await project.render();
     color: var(--fg-subtle);
   }
 
+  /* Auto-scroll toggle */
+  .body :global(.cs-pan-toggle) {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin-left: auto;
+    cursor: pointer;
+    user-select: none;
+  }
+  .body :global(.cs-pan-toggle-input) { display: none; }
+  .body :global(.cs-pan-toggle-track) {
+    width: 30px;
+    height: 17px;
+    background: var(--border-strong);
+    border-radius: 9px;
+    position: relative;
+    flex-shrink: 0;
+    transition: background 0.2s;
+  }
+  .body :global(.cs-pan-toggle-track::after) {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: var(--bg-surface);
+    transition: transform 0.2s;
+  }
+  .body :global(.cs-pan-toggle-input:checked ~ .cs-pan-toggle-track) {
+    background: var(--accent);
+  }
+  .body :global(.cs-pan-toggle-input:checked ~ .cs-pan-toggle-track::after) {
+    transform: translateX(13px);
+  }
+  .body :global(.cs-pan-toggle-text) {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--fg-subtle);
+  }
+
   @media (max-width: 640px) {
     .breadcrumb { padding: 12px 20px; }
     .content-wrap { padding: 0 20px; }
@@ -559,13 +601,23 @@ const { Content } = await project.render();
     go(0);
   });
 
-  // Panning carousels — slow auto-pan; mouse position takes over on hover
+  // Panning carousels — off by default; toggle enables auto-pan; mouse always controls on hover
   document.querySelectorAll<HTMLElement>('.cs-carousel--pan').forEach(carousel => {
     const wrap = carousel.querySelector<HTMLElement>('.cs-carousel-track-wrap')!;
     const imgs = carousel.querySelectorAll<HTMLImageElement>('.cs-carousel-slide img');
+    const nav = carousel.querySelector<HTMLElement>('.cs-carousel-nav')!;
     let pos = 0;
     let dir = 1;
     let hovered = false;
+    let autoPan = false;
+
+    // Inject toggle switch into nav
+    const label = document.createElement('label');
+    label.className = 'cs-pan-toggle';
+    label.innerHTML = `<input type="checkbox" class="cs-pan-toggle-input" /><span class="cs-pan-toggle-track"></span><span class="cs-pan-toggle-text">Auto-scroll</span>`;
+    nav.appendChild(label);
+    const input = label.querySelector<HTMLInputElement>('.cs-pan-toggle-input')!;
+    input.addEventListener('change', () => { autoPan = input.checked; });
 
     function setPos(p: number) {
       pos = Math.max(0, Math.min(100, p));
@@ -573,7 +625,7 @@ const { Content } = await project.render();
     }
 
     (function tick() {
-      if (!hovered) {
+      if (autoPan && !hovered) {
         if (pos >= 100) dir = -1;
         if (pos <= 0) dir = 1;
         setPos(pos + dir * 0.04);
