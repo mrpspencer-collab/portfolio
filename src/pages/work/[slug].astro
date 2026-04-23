@@ -265,6 +265,78 @@ const { Content } = await project.render();
 
   .actions { display: flex; gap: 12px; flex-wrap: wrap; max-width: 640px; }
 
+  /* Carousel */
+  .body :global(.cs-carousel) {
+    margin: 32px 0;
+  }
+  .body :global(.cs-carousel-track-wrap) {
+    overflow: hidden;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+  }
+  .body :global(.cs-carousel-track) {
+    display: flex;
+    transition: transform 0.35s ease;
+  }
+  .body :global(.cs-carousel-slide) {
+    min-width: 100%;
+  }
+  .body :global(.cs-carousel-slide img) {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 0;
+    border: none;
+    margin: 0;
+  }
+  .body :global(.cs-carousel-caption) {
+    padding: 16px 20px;
+    background: var(--bg-muted);
+    border-top: 1px solid var(--border);
+  }
+  .body :global(.cs-carousel-caption strong) {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--fg);
+    margin-bottom: 4px;
+  }
+  .body :global(.cs-carousel-caption p) {
+    font-size: 13px;
+    color: var(--fg-muted);
+    line-height: 1.5;
+    margin: 0;
+    max-width: 100%;
+  }
+  .body :global(.cs-carousel-nav) {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 12px;
+  }
+  .body :global(.cs-carousel-btn) {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-strong);
+    color: var(--fg);
+    width: 36px;
+    height: 36px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.15s;
+    flex-shrink: 0;
+  }
+  .body :global(.cs-carousel-btn:hover) { background: var(--bg-muted); }
+  .body :global(.cs-carousel-btn:disabled) { opacity: 0.35; cursor: default; }
+  .body :global(.cs-carousel-counter) {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--fg-subtle);
+  }
+
   @media (max-width: 640px) {
     .breadcrumb { padding: 12px 20px; }
     .content-wrap { padding: 0 20px; }
@@ -272,3 +344,26 @@ const { Content } = await project.render();
     h1 { font-size: 32px; }
   }
 </style>
+
+<script>
+  document.querySelectorAll<HTMLElement>('.cs-carousel').forEach(carousel => {
+    const track = carousel.querySelector<HTMLElement>('.cs-carousel-track')!;
+    const slides = carousel.querySelectorAll('.cs-carousel-slide');
+    const prev = carousel.querySelector<HTMLButtonElement>('.cs-carousel-prev')!;
+    const next = carousel.querySelector<HTMLButtonElement>('.cs-carousel-next')!;
+    const counter = carousel.querySelector<HTMLElement>('.cs-carousel-counter')!;
+    let current = 0;
+
+    function go(n: number) {
+      current = Math.max(0, Math.min(n, slides.length - 1));
+      track.style.transform = `translateX(-${current * 100}%)`;
+      counter.textContent = `${current + 1} / ${slides.length}`;
+      prev.disabled = current === 0;
+      next.disabled = current === slides.length - 1;
+    }
+
+    prev.addEventListener('click', () => go(current - 1));
+    next.addEventListener('click', () => go(current + 1));
+    go(0);
+  });
+</script>

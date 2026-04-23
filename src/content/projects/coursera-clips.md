@@ -78,29 +78,45 @@ The original design prioritized the video player while underrepresenting course 
 
 ## Desktop Explorations
 
-### Theatre Mode
-
-Initial concept featured a video-first layout with a horizontal continuation rail below the player for clip browsing without leaving the video view. Abandoned due to concerns about responsiveness, layout complexity, and unclear ROI.
-
-![Clips Theatre Mode Early Sketch](https://staging4.paulamsbary.com/wp-content/uploads/2025/11/Clips-Video-stream-within-course-2.png)
-
-### Context-First Design
-
-Added a right-hand vertical rail showing course structure and related content. Improved visibility of continuation paths and learner positioning within courses. Struggled with visual disconnection of related video navigation.
-
-![Clips Player Early Sketch — Sidebar](https://staging4.paulamsbary.com/wp-content/uploads/2025/11/videsidebarb.png)
-
-### Toggle Panel
-
-Right-hand panel allowed switching between deep (full course) and broad (related) structures, with metadata below the player. Included image thumbnails for better information scent. Required additional engineering effort and didn't reach final build.
-
-![Clips Player — Enrollment CTA with Sidebar](https://staging4.paulamsbary.com/wp-content/uploads/2025/11/video-sidebar.png)
-
-### V1 Desktop Release
-
-Enrollment CTA moved below the video because automatic enrollment occurred after viewing 10% of course content (per licensing agreement). Design emphasized video consumption over enrollment actions.
-
-![Desktop Redlines](https://staging4.paulamsbary.com/wp-content/uploads/2025/11/redline.png)
+<div class="cs-carousel">
+  <div class="cs-carousel-track-wrap">
+    <div class="cs-carousel-track">
+      <div class="cs-carousel-slide">
+        <img src="https://staging4.paulamsbary.com/wp-content/uploads/2025/11/Clips-Video-stream-within-course-2.png" alt="Theatre Mode Sketch" />
+        <div class="cs-carousel-caption">
+          <strong>Theatre Mode</strong>
+          <p>Video-first layout with a horizontal continuation rail below the player. Abandoned due to layout complexity and unclear ROI.</p>
+        </div>
+      </div>
+      <div class="cs-carousel-slide">
+        <img src="https://staging4.paulamsbary.com/wp-content/uploads/2025/11/videsidebarb.png" alt="Context-First Design" />
+        <div class="cs-carousel-caption">
+          <strong>Context-First Design</strong>
+          <p>Right-hand vertical rail showing course structure and related content. Improved learner positioning but struggled with visual disconnection of related navigation.</p>
+        </div>
+      </div>
+      <div class="cs-carousel-slide">
+        <img src="https://staging4.paulamsbary.com/wp-content/uploads/2025/11/video-sidebar.png" alt="Toggle Panel" />
+        <div class="cs-carousel-caption">
+          <strong>Toggle Panel</strong>
+          <p>Panel switching between deep (full course) and broad (related) structures with image thumbnails. Required additional engineering effort and didn't reach final build.</p>
+        </div>
+      </div>
+      <div class="cs-carousel-slide">
+        <img src="https://staging4.paulamsbary.com/wp-content/uploads/2025/11/redline.png" alt="V1 Desktop Release" />
+        <div class="cs-carousel-caption">
+          <strong>V1 Desktop Release</strong>
+          <p>Enrollment CTA moved below the video per licensing agreement — automatic enrollment triggered after 10% of content viewed. Design emphasised consumption over enrollment actions.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="cs-carousel-nav">
+    <button class="cs-carousel-btn cs-carousel-prev">←</button>
+    <button class="cs-carousel-btn cs-carousel-next">→</button>
+    <span class="cs-carousel-counter">1 / 4</span>
+  </div>
+</div>
 
 ## End Cards
 
