@@ -137,8 +137,12 @@ The experiment tested three variants to isolate which element drove the behavior
   </div>
 </div>
 
+<div class="cs-image-pair">
+  <figure><img src="https://paulamsbary.com/wp-content/uploads/2025/06/Step-1a-Loading-Screen-with-Benchmark-scaled.jpg" alt="Loading Screen with Benchmark" /><figcaption>Step 1 — Loading screen with 60-min benchmark</figcaption></figure>
+  <figure><img src="https://paulamsbary.com/wp-content/uploads/2025/06/Step-1-make-a-committment-weekly-goal-3-scaled.jpg" alt="Make a commitment — weekly goal" /><figcaption>Step 2 — Explicit commitment screen</figcaption></figure>
+</div>
+
 <div class="cs-featured">
-  <img src="https://paulamsbary.com/wp-content/uploads/2025/06/Step-1a-Loading-Screen-with-Benchmark-scaled.jpg" alt="Loading Screen with Benchmark — Final Design" />
   <div class="cs-featured-body">
     <ul>
       <li>Loading screen as commitment moment</li>
