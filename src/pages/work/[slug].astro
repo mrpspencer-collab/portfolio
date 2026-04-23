@@ -111,6 +111,9 @@ const { Content } = await project.render();
     display: block;
     padding: 32px;
   }
+  :global([data-theme="dark"]) .thumb {
+    background: var(--bg-subtle) !important;
+  }
 
   .content { max-width: 100%; padding-bottom: 96px; }
 
@@ -365,9 +368,13 @@ const { Content } = await project.render();
   .body :global(.cs-carousel-track) {
     display: flex;
     transition: transform 0.35s ease;
+    align-items: stretch;
   }
   .body :global(.cs-carousel-slide) {
     min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    background: var(--bg-surface);
   }
   .body :global(.cs-carousel-slide img) {
     width: 100%;
@@ -387,6 +394,7 @@ const { Content } = await project.render();
     padding: 16px 20px;
     background: var(--bg-muted);
     border-top: 1px solid var(--border);
+    flex: 1;
   }
   .body :global(.cs-carousel-caption strong) {
     display: block;
