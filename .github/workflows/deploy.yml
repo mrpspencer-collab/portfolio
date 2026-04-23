@@ -22,9 +22,11 @@ jobs:
       - run: npm run build
 
       - name: Deploy to SiteGround
+        env:
+          SSH_KEY: ${{ secrets.PORTFOLIOKEY }}
         run: |
           mkdir -p ~/.ssh
-          echo "${{ secrets.PORTFOLIOKEY }}" | base64 -d > ~/.ssh/id_rsa
+          echo "$SSH_KEY" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan -p 18765 ssh.paulamsbary.com >> ~/.ssh/known_hosts 2>/dev/null
           rsync -az --delete \
