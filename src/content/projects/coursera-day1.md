@@ -51,20 +51,16 @@ As enrollments normalized post-pandemic, Coursera faced a critical challenge: le
     <p>Rather than force a translation, I returned to the mobile design as foundational inspiration — iterating on what had already proven to work rather than rebuilding from scratch.</p>
   </div>
   <div class="cs-split-image">
-    <figure><img src="https://paulamsbary.com/wp-content/uploads/2025/07/day1-scaled.png" alt="Day 1 mobile flow" /><figcaption>Day 1 mobile flow — the proven baseline</figcaption></figure>
+    <div class="cs-image-pair">
+      <figure><img src="https://paulamsbary.com/wp-content/uploads/2025/07/day1-scaled.png" alt="Day 1 mobile flow" /><figcaption>Day 1 mobile flow — the proven baseline</figcaption></figure>
+      <figure><img src="https://paulamsbary.com/wp-content/uploads/2025/07/softgoal-scaled.png" alt="Soft goal-setting UI" /><figcaption>Soft goal-setting — reducing commitment friction</figcaption></figure>
+    </div>
   </div>
 </div>
 
 ## UX Debt
 
-<div class="cs-split">
-  <div class="cs-split-body">
-    <p>Cross-team coordination eliminated redundant screens and reordered key steps, compressing a multi-screen journey into a focused 6-step flow. Content strategy played a crucial role: clear, purposeful copy did as much work as the UI.</p>
-  </div>
-  <div class="cs-split-image">
-    <figure><img src="https://paulamsbary.com/wp-content/uploads/2025/07/softgoal-scaled.png" alt="Soft goal-setting UI" /><figcaption>Soft goal-setting — reducing friction at the commitment step</figcaption></figure>
-  </div>
-</div>
+Cross-team coordination eliminated redundant screens and reordered key steps, compressing a 12+ step journey into a focused 6-step flow. Content strategy played a crucial role: clear, purposeful copy did as much work as the UI.
 
 ## Design Explorations
 
