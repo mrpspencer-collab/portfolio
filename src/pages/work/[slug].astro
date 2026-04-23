@@ -109,15 +109,16 @@ const { Content } = await project.render();
     display: block;
   }
 
-  .content { max-width: 680px; padding-bottom: 96px; }
+  .content { max-width: 100%; padding-bottom: 96px; }
 
   .tags {
     display: flex;
     gap: 6px;
     flex-wrap: wrap;
     margin-bottom: 16px;
+    max-width: 640px;
   }
-  .content .overline { margin-bottom: 10px; }
+  .content .overline { margin-bottom: 10px; max-width: 640px; }
 
   .role {
     font-size: 13px;
@@ -125,6 +126,7 @@ const { Content } = await project.render();
     color: var(--fg-subtle);
     margin-bottom: 32px;
     font-family: var(--font-body);
+    max-width: 640px;
   }
 
   h1 {
@@ -135,6 +137,7 @@ const { Content } = await project.render();
     letter-spacing: -0.03em;
     color: var(--fg);
     margin-bottom: 24px;
+    max-width: 640px;
   }
 
   .body {
@@ -143,7 +146,7 @@ const { Content } = await project.render();
     color: var(--fg-muted);
     margin-bottom: 32px;
   }
-  .body :global(p) { margin-bottom: 16px; }
+  .body :global(p) { margin-bottom: 16px; max-width: 640px; }
   .body :global(p:last-child) { margin-bottom: 0; }
 
   .body :global(h2) {
@@ -154,6 +157,7 @@ const { Content } = await project.render();
     letter-spacing: -0.02em;
     color: var(--fg);
     margin: 48px 0 16px;
+    max-width: 640px;
   }
   .body :global(h3) {
     font-family: var(--font-display);
@@ -162,6 +166,7 @@ const { Content } = await project.render();
     line-height: 1.2;
     color: var(--fg);
     margin: 32px 0 10px;
+    max-width: 640px;
   }
   .body :global(h4) {
     font-family: var(--font-body);
@@ -175,6 +180,7 @@ const { Content } = await project.render();
   .body :global(ul), .body :global(ol) {
     padding-left: 20px;
     margin-bottom: 16px;
+    max-width: 640px;
   }
   .body :global(li) {
     margin-bottom: 6px;
@@ -240,6 +246,7 @@ const { Content } = await project.render();
   }
 
   .outcomes {
+    max-width: 640px;
     background: var(--bg-muted);
     border: 1px solid var(--border);
     border-radius: 8px;
@@ -256,7 +263,7 @@ const { Content } = await project.render();
   }
   .metric-label { font-size: 14px; color: var(--fg-muted); }
 
-  .actions { display: flex; gap: 12px; flex-wrap: wrap; }
+  .actions { display: flex; gap: 12px; flex-wrap: wrap; max-width: 640px; }
 
   @media (max-width: 640px) {
     .breadcrumb { padding: 12px 20px; }
