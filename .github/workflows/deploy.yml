@@ -24,8 +24,8 @@ jobs:
       - name: Write SSH key
         env:
           SSH_KEY: ${{ secrets.PORTFOLIOKEY }}
-        shell: python3
         run: |
+          python3 - <<'EOF'
           import os, stat
           key = os.environ['SSH_KEY'].strip().replace('\r\n', '\n').replace('\r', '\n')
           os.makedirs(os.path.expanduser('~/.ssh'), exist_ok=True)
@@ -33,6 +33,7 @@ jobs:
           with open(path, 'w') as f:
               f.write(key + '\n')
           os.chmod(path, stat.S_IRUSR | stat.S_IWUSR)
+          EOF
 
       - name: Validate key
         run: ssh-keygen -l -f ~/.ssh/id_rsa
