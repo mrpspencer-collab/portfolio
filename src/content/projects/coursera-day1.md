@@ -62,6 +62,8 @@ As enrollments normalized post-pandemic, Coursera faced a critical challenge: le
 
 Cross-team coordination eliminated redundant screens and reordered key steps, compressing a 12+ step journey into a focused 6-step flow. Content strategy played a crucial role: clear, purposeful copy did as much work as the UI.
 
+![Course enrollment flow — original step count](https://paulamsbary.com/wp-content/uploads/2025/06/Course-within-Meta-Specialization-Control-1-scaled.jpg)
+
 ## Design Explorations
 
 Four directions were tested before converging on the final approach. Each explored how much commitment and personalization to surface at the moment of enrollment.
