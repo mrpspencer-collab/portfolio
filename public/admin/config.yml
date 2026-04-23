@@ -2,7 +2,8 @@ backend:
   name: github
   repo: mrpspencer-collab/portfolio
   branch: main
-  base_url: https://YOUR_OAUTH_PROXY_URL
+  auth_type: pkce
+  app_id: Ov23lilNEFo3DggMnhR2
 
 media_folder: public/images
 public_folder: /images
