@@ -7,9 +7,11 @@
 </head>
 <body>
   <div id="nc-root"></div>
+  <script>
+    window.CMS_MANUAL_INIT = true;
+  </script>
   <script src="https://unpkg.com/@sveltia/cms/dist/sveltia-cms.js"></script>
   <script>
-    window.addEventListener('DOMContentLoaded', function () {
     CMS.init({
       config: {
         backend: {
@@ -59,7 +61,6 @@
           },
         ],
       },
-    });
     });
   </script>
 </body>
