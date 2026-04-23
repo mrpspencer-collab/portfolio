@@ -65,19 +65,19 @@ Two divergent concepts were developed to explore opposite ends of the tone and c
           <p>In-depth and layered. Detailed messaging and content that supports sales-driven visits where buyers need to build a business case.</p>
         </div>
       </div>
-      <div class="cs-carousel-slide">
+     <!-- <div class="cs-carousel-slide">
         <img src="https://paulamsbary.com/wp-content/uploads/2024/11/competitive-analysis.png" alt="Competitive analysis" />
         <div class="cs-carousel-caption">
           <strong>Competitive Analysis</strong>
           <p>Benchmarking against comparable enterprise learning platforms to identify differentiation opportunities and content gaps.</p>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
   <div class="cs-carousel-nav">
     <button class="cs-carousel-btn cs-carousel-prev">←</button>
     <button class="cs-carousel-btn cs-carousel-next">→</button>
-    <span class="cs-carousel-counter">1 / 3</span>
+    <span class="cs-carousel-counter">1 / 2</span>
   </div>
 </div>
 
