@@ -85,38 +85,27 @@ Two divergent concepts were developed to explore opposite ends of the tone and c
 
 The Key Information Module (KIM) sits horizontally beneath the primary headline, framing the value proposition while surfacing proof points at the highest-attention area of the page. Users engage heavily with above-the-fold content — the KIM was designed to do the most work in the least space.
 
-<div class="cs-carousel">
-  <div class="cs-carousel-track-wrap">
-    <div class="cs-carousel-track">
-      <div class="cs-carousel-slide">
-        <img src="https://paulamsbary.com/wp-content/uploads/2024/11/kim4.jpg" alt="KIM — Early Direction" />
-        <div class="cs-carousel-caption">
-          <strong>KIM — Early Direction</strong>
-          <p>Initial exploration of the above-fold proof-point structure. Testing hierarchy, density, and scan patterns.</p>
-        </div>
-      </div>
-      <div class="cs-carousel-slide">
-        <img src="https://paulamsbary.com/wp-content/uploads/2024/11/kim.jpg" alt="KIM — Refined Layout" />
-        <div class="cs-carousel-caption">
-          <strong>KIM — Refined Layout</strong>
-          <p>Tightening the module for legibility and faster scanning — distilling proof points to their essential forms.</p>
-        </div>
-      </div>
-      <div class="cs-carousel-slide">
-        <img src="https://paulamsbary.com/wp-content/uploads/2024/11/kim5-2.png" alt="KIM — Final Direction" />
-        <div class="cs-carousel-caption">
-          <strong>KIM — Final Direction</strong>
-          <p>Contextual proof points aligned with buyer personas — credibility, ROI, and scale surfaced at first glance.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="cs-carousel-nav">
-    <button class="cs-carousel-btn cs-carousel-prev">←</button>
-    <button class="cs-carousel-btn cs-carousel-next">→</button>
-    <span class="cs-carousel-counter">1 / 3</span>
+<div class="cs-featured">
+  <img src="https://paulamsbary.com/wp-content/uploads/2024/11/kim4.jpg" alt="KIM — Early Direction" />
+  <div class="cs-featured-body">
+    <p style="font-size:13px;color:var(--fg-muted);margin:0"><strong style="color:var(--fg)">Early Direction</strong> — Initial exploration of the above-fold proof-point structure. Testing hierarchy, density, and scan patterns.</p>
   </div>
 </div>
+
+<div class="cs-featured">
+  <img src="https://paulamsbary.com/wp-content/uploads/2024/11/kim.jpg" alt="KIM — Refined Layout" />
+  <div class="cs-featured-body">
+    <p style="font-size:13px;color:var(--fg-muted);margin:0"><strong style="color:var(--fg)">Refined Layout</strong> — Tightening the module for legibility and faster scanning — distilling proof points to their essential forms.</p>
+  </div>
+</div>
+
+<div class="cs-featured">
+  <img src="https://paulamsbary.com/wp-content/uploads/2024/11/kim5-2.png" alt="KIM — Final Direction" />
+  <div class="cs-featured-body">
+    <p style="font-size:13px;color:var(--fg-muted);margin:0"><strong style="color:var(--fg)">Final Direction</strong> — Contextual proof points aligned with buyer personas — credibility, ROI, and scale surfaced at first glance.</p>
+  </div>
+</div>
+
 
 ## Navigation & Information Architecture
 
