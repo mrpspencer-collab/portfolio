@@ -21,13 +21,24 @@ jobs:
       - run: npm ci
       - run: npm run build
 
-      - name: Deploy to SiteGround
+      - name: Write SSH key
         env:
           SSH_KEY: ${{ secrets.PORTFOLIOKEY }}
+        shell: python3
         run: |
-          mkdir -p ~/.ssh
-          echo "$SSH_KEY" > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
+          import os, stat
+          key = os.environ['SSH_KEY'].strip().replace('\r\n', '\n').replace('\r', '\n')
+          os.makedirs(os.path.expanduser('~/.ssh'), exist_ok=True)
+          path = os.path.expanduser('~/.ssh/id_rsa')
+          with open(path, 'w') as f:
+              f.write(key + '\n')
+          os.chmod(path, stat.S_IRUSR | stat.S_IWUSR)
+
+      - name: Validate key
+        run: ssh-keygen -l -f ~/.ssh/id_rsa
+
+      - name: Deploy to SiteGround
+        run: |
           ssh-keyscan -p 18765 ssh.paulamsbary.com >> ~/.ssh/known_hosts 2>/dev/null
           rsync -az --delete \
             -e "ssh -p 18765 -i ~/.ssh/id_rsa" \
