@@ -12,6 +12,7 @@ const projects = (await getCollection('projects'))
   <Nav />
   <main>
     <section class="hero">
+      <canvas id="hero-canvas" aria-hidden="true"></canvas>
       <p class="overline">UX Design · Research · Leadership</p>
       <h1>Product design for data, AI, and complex systems.</h1>
       <div class="actions">
@@ -53,6 +54,20 @@ const projects = (await getCollection('projects'))
     max-width: 1200px;
     margin: 0 auto;
     padding: 96px 40px 80px;
+    position: relative;
+    overflow: hidden;
+  }
+  #hero-canvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+  }
+  .hero > :not(canvas) {
+    position: relative;
+    z-index: 1;
   }
   .hero h1 {
     font-family: var(--font-display);
@@ -104,3 +119,107 @@ const projects = (await getCollection('projects'))
     .grid { grid-template-columns: 1fr; }
   }
 </style>
+
+<script>
+  const canvas = document.getElementById('hero-canvas') as HTMLCanvasElement;
+  const ctx = canvas.getContext('2d')!;
+  const NODES = 28;
+  const CONN_DIST = 160;
+  const PACKET_SPEED = 0.004;
+
+  type Node = { x: number; y: number; vx: number; vy: number };
+  type Packet = { a: number; b: number; t: number };
+
+  const nodes: Node[] = [];
+  const packets: Packet[] = [];
+
+  function resize() {
+    const r = canvas.parentElement!.getBoundingClientRect();
+    canvas.width = r.width;
+    canvas.height = r.height;
+    nodes.length = 0;
+    for (let i = 0; i < NODES; i++) {
+      nodes.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        vx: (Math.random() - 0.5) * 0.25,
+        vy: (Math.random() - 0.5) * 0.25,
+      });
+    }
+  }
+
+  function spawnPackets() {
+    if (packets.length > 12) return;
+    for (let i = 0; i < NODES; i++) {
+      for (let j = i + 1; j < NODES; j++) {
+        const dx = nodes[j].x - nodes[i].x;
+        const dy = nodes[j].y - nodes[i].y;
+        if (Math.sqrt(dx*dx + dy*dy) < CONN_DIST && Math.random() < 0.003) {
+          packets.push({ a: i, b: j, t: 0 });
+        }
+      }
+    }
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    const dark = document.documentElement.getAttribute('data-theme') === 'dark';
+
+    // Move nodes
+    nodes.forEach(n => {
+      n.x += n.vx; n.y += n.vy;
+      if (n.x < 0 || n.x > canvas.width)  n.vx *= -1;
+      if (n.y < 0 || n.y > canvas.height) n.vy *= -1;
+    });
+
+    // Connections
+    for (let i = 0; i < NODES; i++) {
+      for (let j = i + 1; j < NODES; j++) {
+        const dx = nodes[j].x - nodes[i].x;
+        const dy = nodes[j].y - nodes[i].y;
+        const dist = Math.sqrt(dx*dx + dy*dy);
+        if (dist < CONN_DIST) {
+          const a = (1 - dist / CONN_DIST) * (dark ? 0.07 : 0.06);
+          ctx.strokeStyle = dark ? `rgba(255,255,255,${a})` : `rgba(0,0,0,${a})`;
+          ctx.lineWidth = 1;
+          ctx.beginPath();
+          ctx.moveTo(nodes[i].x, nodes[i].y);
+          ctx.lineTo(nodes[j].x, nodes[j].y);
+          ctx.stroke();
+        }
+      }
+    }
+
+    // Nodes
+    nodes.forEach(n => {
+      ctx.fillStyle = dark ? 'rgba(255,255,255,0.15)' : 'rgba(0,0,0,0.1)';
+      ctx.beginPath();
+      ctx.arc(n.x, n.y, 2, 0, Math.PI * 2);
+      ctx.fill();
+    });
+
+    // Packets
+    for (let i = packets.length - 1; i >= 0; i--) {
+      const p = packets[i];
+      p.t += PACKET_SPEED;
+      if (p.t >= 1) { packets.splice(i, 1); continue; }
+      const na = nodes[p.a], nb = nodes[p.b];
+      const x = na.x + (nb.x - na.x) * p.t;
+      const y = na.y + (nb.y - na.y) * p.t;
+      const fade = Math.sin(p.t * Math.PI);
+      ctx.fillStyle = dark
+        ? `rgba(212,144,78,${fade * 0.55})`
+        : `rgba(192,122,58,${fade * 0.45})`;
+      ctx.beginPath();
+      ctx.arc(x, y, 2.5, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    spawnPackets();
+    requestAnimationFrame(draw);
+  }
+
+  resize();
+  window.addEventListener('resize', resize);
+  draw();
+</script>
