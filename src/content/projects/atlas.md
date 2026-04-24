@@ -16,111 +16,196 @@ cta: Explore the case study
 order: 1
 ---
 
+"Data you navigate" vs "Insight that arrives"
+
 Same data. One requires interpretation. The other can be read.
 
 ## The Hypothesis
 
-<div class="cs-split">
-  <div class="cs-split-body">
-    <p>Atlas began with a straightforward concept: consolidate multiple data sources, create visually appealing dashboards with fast performance, and operator engagement would follow naturally.</p>
-    <p>This proved partially valid. Data-sophisticated users — OEM executives and performance analysts — benefited from consolidated reporting. But day-to-day dealership operators displayed far less enthusiasm for charts. They wanted actionable insights, not data to interpret.</p>
+Atlas began with a straightforward concept: consolidate multiple data sources, create visually appealing dashboards with fast performance, and owner engagement would follow naturally.
+
+This assumption proved partially valid. Extended work on visualization refinement and data source connections showed promise for data-sophisticated users (OEM executives, performance analysts) who benefited from consolidated reporting. However, day-to-day dealership operators displayed less enthusiasm for charts and prioritized actionable insights instead.
+
+<div class="cs-carousel">
+  <div class="cs-carousel-track-wrap">
+    <div class="cs-carousel-track">
+      <div class="cs-carousel-slide">
+        <img src="http://paulamsbary.com/wp-content/uploads/2026/04/inventorySection.png" alt="Inventory and demand — model-level view" />
+        <div class="cs-carousel-caption">
+          <strong>Inventory & demand</strong>
+          <p>Model-level view</p>
+        </div>
+      </div>
+      <div class="cs-carousel-slide">
+        <img src="http://paulamsbary.com/wp-content/uploads/2026/04/Visitor-Locations-States-scaled.jpg" alt="Visitor Location States — dark theme" />
+        <div class="cs-carousel-caption">
+          <strong>Visitor Location States</strong>
+          <p>Dark theme</p>
+        </div>
+      </div>
+      <div class="cs-carousel-slide">
+        <img src="http://paulamsbary.com/wp-content/uploads/2026/04/leads-scaled.jpg" alt="Inventory Leads" />
+        <div class="cs-carousel-caption">
+          <strong>Inventory Leads</strong>
+          <p></p>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="cs-split-image">
-    <figure><img src="https://staging4.paulamsbary.com/wp-content/uploads/2026/04/Macbook-Pro-Light-Background-1.png" alt="Atlas dashboard alongside plain-language insight report" /><figcaption>Dense dashboard on desktop alongside plain-language insight report on mobile</figcaption></figure>
+  <div class="cs-carousel-nav">
+    <button class="cs-carousel-btn cs-carousel-prev">←</button>
+    <button class="cs-carousel-btn cs-carousel-next">→</button>
+    <span class="cs-carousel-counter">1 / 3</span>
   </div>
 </div>
 
 ## Three Personas. One Platform.
 
-Post-launch findings revealed consultants rather than intended dealers comprised primary platform usage. Consultants conducted monthly dealer meetings reviewing reports and explaining data implications. Operators avoided independent platform usage despite making daily decisions where data would provide value.
+Post-launch findings revealed consultants rather than intended dealers comprised primary platform usage. Consultants conducted monthly dealer meetings reviewing reports and explaining data implications. While effective for that use case, operators avoided independent platform usage despite making daily decisions where data analysis would provide value, maintaining consultant reliance for interpretation.
 
 <div class="cs-columns">
   <div>
-    <p class="cs-col-label">OEM Stakeholders</p>
+    <p class="cs-col-label">Audience 01 — OEM Stakeholders</p>
     <ul>
-      <li>Data fluent</li>
-      <li>Regular platform users</li>
-      <li>Dashboard-native</li>
-      <li>The product works for them as built</li>
+      <li>Data fluent. Regular platform users. Dashboard-native.</li>
+      <li>The product works for them as built.</li>
     </ul>
   </div>
   <div>
-    <p class="cs-col-label">Performance Consultants</p>
+    <p class="cs-col-label">Audience 02 — Performance Consultants</p>
     <ul>
-      <li>Read dashboards, translate data</li>
-      <li>Deliver recommendations to dealers monthly</li>
-      <li>The human translation layer</li>
+      <li>Read dashboards, translate data, deliver recommendations to dealers in monthly meetings.</li>
+      <li>The human translation layer.</li>
     </ul>
   </div>
 </div>
 
 <div class="cs-featured">
   <div class="cs-featured-body">
-    <p style="font-size:15px;color:var(--fg);margin:0 0 8px"><strong>Dealership Operators — the gap</strong></p>
-    <p style="font-size:13px;color:var(--fg-muted);margin:0">Running a business daily. Real questions about real performance. Responsible for the most seats. Getting the least value.</p>
+    <p style="font-size:13px;color:var(--fg-subtle);font-weight:600;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:8px">Audience 03 — Dealership Operators (the gap)</p>
+    <p style="font-size:14px;color:var(--fg-muted);margin:0">Running a business daily. Real questions about real performance. Responsible for the most seats. Getting the least value.</p>
   </div>
 </div>
 
-**Design prompt:** How might we deliver the same insights as a consultant on a recurring basis, without the data literacy the platform demands?
+**How might we deliver the same insights as a consultant on a recurring basis, without the data literacy the platform demands?**
 
 ## Jobs to be Done
 
 <div class="cs-columns">
   <div>
     <p class="cs-col-label">Dealer Operator</p>
-    <ul>
-      <li>"Help me sell more cars and spend less getting there."</li>
-    </ul>
-    <p class="cs-col-label" style="margin-top:20px">Performance Consultant</p>
-    <ul>
-      <li>"Give me insights that make me look like a hero to my dealers."</li>
-    </ul>
+    <p>"Help me sell more cars and spend less getting there."</p>
+    <p class="cs-col-label" style="margin-top:24px">Performance Consultant</p>
+    <p>"Give me insights that make me look like a hero to my dealers."</p>
   </div>
   <div>
     <p class="cs-col-label">OEM Stakeholder</p>
-    <ul>
-      <li>"Show me what's working across the network so I can move dealers forward."</li>
-    </ul>
-    <p class="cs-col-label" style="margin-top:20px">The Shared Job</p>
-    <ul>
-      <li>"Sell more cars. Spend less. Understand why."</li>
-    </ul>
+    <p>"Show me what's working across the network so I can move dealers forward."</p>
+    <p class="cs-col-label" style="margin-top:24px">The Shared Job</p>
+    <p>"Sell more cars. Spend less. Understand why."</p>
   </div>
 </div>
 
+Our focus shifted to the operator persona and increasing adoption.
+
 ## The Design Problem
 
-For many operators, engaging with data parallels joining a fitness facility — everyone recognizes its benefits, yet few maintain commitment until developing sufficient competence to experience advantages. When dealers attempted Atlas usage, they encountered a system demanding data literacy they hadn't yet acquired. Internal analytics indicated most dealers completed single login sessions without returning.
+For many proprietors, engaging with data parallels joining a fitness facility—everyone recognizes its benefits, yet few maintain commitment until developing sufficient competence to experience advantages. When dealers attempted Atlas usage, they encountered a system demanding data literacy they hadn't yet acquired. Internal analytics indicated most dealers completed single login sessions without returning.
 
-> "…we wanna teach the dealers 'how to fish'… so they're not just relying on us once a month, but they're engaging with their data more frequently…" — Audi MRC
+> "…we wanna teach the dealers 'how to fish'… so they're not just relying on us once a month, but they're engaging with [their data] more frequently…" — Audi MRC (Modern Retail Consultant)
 
 ## Opportunity Mapping
 
 <div class="cs-split">
   <div class="cs-split-body">
-    <p>Collaborative workshops across product, data analysis, design, and executive teams clarified research findings and identified five key thematic areas — distinguishing commercial challenges from user-centered problems.</p>
-    <p>One area stood out: <strong>Deliver</strong>. Insights were stopping at the consultant. Dealers never received them independently, and no amount of dashboard improvement would fix a distribution problem.</p>
+    <p>Collaborative workshops across product, data analysis, design, and executive teams aimed to clarify research findings and pinpoint focus areas. Each session distinguished commercial challenges from user-centered problems, yielding five key thematic areas.</p>
+    <ul>
+      <li><strong>Discover</strong> — Users waste time finding relevant data. → Unify exploration into a single workspace.</li>
+      <li><strong>Create</strong> — Insights get lost across tools. → Proactive AI guidance during analysis.</li>
+      <li><strong>Scale</strong> — Knowledge stays siloed, effort is duplicated. → Turn past analysis into reusable context.</li>
+      <li><strong>Deliver ★</strong> — Insights stop at the consultant. → Plain-language summaries pushed to dealers.</li>
+      <li><strong>Foundations</strong> — Broad adoption requires a solid base. → Invest in integration, adaptive UX.</li>
+    </ul>
   </div>
   <div class="cs-split-image">
-    <figure><img src="https://staging4.paulamsbary.com/wp-content/uploads/2026/04/Screenshot-2026-04-18-at-1.30.39-PM-scaled.png" alt="Opportunity mapping workshop" /><figcaption>Opportunity mapping workshop — five thematic areas</figcaption></figure>
+    <figure><img src="https://staging4.paulamsbary.com/wp-content/uploads/2026/04/Screenshot-2026-04-18-at-1.30.39-PM-scaled.png" alt="Opportunity mapping workshop" /><figcaption>Workshop — five thematic areas</figcaption></figure>
   </div>
 </div>
 
-<div class="cs-columns">
-  <div>
-    <p class="cs-col-label">Theme → Bet</p>
-    <ul>
-      <li><strong>Discover</strong> — Unify exploration into a single workspace</li>
-      <li><strong>Create</strong> — Proactive AI guidance during analysis</li>
-      <li><strong>Scale</strong> — Turn past analysis into reusable context</li>
-    </ul>
+## Concepts
+
+<div class="cs-carousel">
+  <div class="cs-carousel-track-wrap">
+    <div class="cs-carousel-track">
+      <div class="cs-carousel-slide">
+        <img src="http://paulamsbary.com/wp-content/uploads/2026/04/Boards-Keyframe-13.png" alt="Concept 01 — Discover: Unified exploration workspace" />
+        <div class="cs-carousel-caption">
+          <strong>Discover — Unified Exploration Workspace</strong>
+          <p>A single surface for analysts to explore, annotate, and contextualize data — removing fragmentation across tools and reducing the cost of jumping between views.</p>
+        </div>
+      </div>
+      <div class="cs-carousel-slide">
+        <img src="http://paulamsbary.com/wp-content/uploads/2026/04/Screenshot-2026-04-18-at-2.51.41-PM.png" alt="Concept 02 — Create: Intelligent guidance and support" />
+        <div class="cs-carousel-caption">
+          <strong>Create — Intelligent Guidance & Support</strong>
+          <p>AI assisting analysts mid-workflow — proactively surfacing relevant context, related patterns, and historical comparisons so less time is spent hunting for meaning.</p>
+        </div>
+      </div>
+      <div class="cs-carousel-slide">
+        <img src="http://paulamsbary.com/wp-content/uploads/2026/04/Screenshot-2026-04-19-at-6.34.27-PM.png" alt="Concept 03 — Create: Natural language interaction" />
+        <div class="cs-carousel-caption">
+          <strong>Create — Natural Language Interaction</strong>
+          <p>Let analysts query Atlas in plain language. Not a chatbot — a way to reduce the cost of asking the next question and keeping analysis moving.</p>
+        </div>
+      </div>
+      <div class="cs-carousel-slide">
+        <img src="http://paulamsbary.com/wp-content/uploads/2026/04/anaomaly-dark.png" alt="Concept 04 — Create: Anomaly detection" />
+        <div class="cs-carousel-caption">
+          <strong>Create — Anomaly Detection</strong>
+          <p>Surface meaningful deviations automatically. Instead of analysts hunting for what changed, Atlas flags it — with context about why it might matter.</p>
+        </div>
+      </div>
+      <div class="cs-carousel-slide">
+        <img src="http://paulamsbary.com/wp-content/uploads/2026/04/Screenshot-2026-04-20-at-10.34.21-AM.png" alt="Concept 05 — Scale: Knowledge repository" />
+        <div class="cs-carousel-caption">
+          <strong>Scale — Knowledge Repository</strong>
+          <p>A searchable library of past analysis — semantic search over decisions, findings, and rationale. The goal: stop redoing work the team already did.</p>
+        </div>
+      </div>
+      <div class="cs-carousel-slide">
+        <img src="http://paulamsbary.com/wp-content/uploads/2026/04/Screenshot-2026-04-20-at-10.48.13-AM.png" alt="Concept 06 — Scale: Integrated communication" />
+        <div class="cs-carousel-caption">
+          <strong>Scale — Integrated Communication</strong>
+          <p>Bring discussion inside the tool. When decisions live in Slack and the data lives in Atlas, context is lost. This keeps them together.</p>
+        </div>
+      </div>
+      <div class="cs-carousel-slide">
+        <img src="http://paulamsbary.com/wp-content/uploads/2026/04/Screenshot-2026-04-20-at-10.54.45-AM.png" alt="Concept 07 — Deliver: One-click report builder" />
+        <div class="cs-carousel-caption">
+          <strong>Deliver — One-click Report Builder</strong>
+          <p>Close the first- and last-mile problem. Analysts spend hours reformatting data for stakeholders — this automated the polish so insights reached the audience faster.</p>
+        </div>
+      </div>
+      <div class="cs-carousel-slide">
+        <img src="http://paulamsbary.com/wp-content/uploads/2026/04/analyze-mvp.png" alt="Concept 08 — Deliver: Atlas Analyze (Shipped)" />
+        <div class="cs-carousel-caption">
+          <strong>Deliver — Atlas Analyze (Shipped)</strong>
+          <p>Plain-language summaries surfaced in a scannable card format. This is the concept that became Atlas Analyze — directly addressing the adoption problem.</p>
+        </div>
+      </div>
+      <div class="cs-carousel-slide">
+        <img src="http://paulamsbary.com/wp-content/uploads/2026/04/Screenshot-2026-04-20-at-11.15.58-AM.png" alt="Concept 09 — Deliver: Mobile companion" />
+        <div class="cs-carousel-caption">
+          <strong>Deliver — Mobile Companion</strong>
+          <p>A dealer checking their performance between meetings, on a lot, at a showroom — not at a desk. Mobile-first design for the audience that would rarely sit in front of a laptop.</p>
+        </div>
+      </div>
+    </div>
   </div>
-  <div>
-    <p class="cs-col-label">&nbsp;</p>
-    <ul>
-      <li><strong>Deliver ★</strong> — Plain-language summaries pushed to dealers</li>
-      <li><strong>Foundations</strong> — Integration, adaptive UX for broad adoption</li>
-    </ul>
+  <div class="cs-carousel-nav">
+    <button class="cs-carousel-btn cs-carousel-prev">←</button>
+    <button class="cs-carousel-btn cs-carousel-next">→</button>
+    <span class="cs-carousel-counter">1 / 9</span>
   </div>
 </div>
 
@@ -128,24 +213,27 @@ For many operators, engaging with data parallels joining a fitness facility — 
 
 <div class="cs-split">
   <div class="cs-split-body">
-    <p>Collaborative sessions with product, data analysis, and field teams converged on one direction: stop trying to bring dealers to Atlas. Years of platform development had produced low dealership session frequency with no improvement trajectory.</p>
-    <p>To secure leadership support, a workflow storyboard followed Jennifer — a performance consultant — through her existing process and how a push-based approach would change it. Late-night prep and monthly insight delivery became same-day action on emerging concerns.</p>
-    <p>The storyboard clarified that the core challenge wasn't simplifying dashboards. It was transforming when and how insights reached decision-makers.</p>
+    <p>Collaborative sessions with product, data analysis, and field teams converged on one direction: discontinue attempting to attract dealers to Atlas. Years of platform development had generated low dealership session frequency without improvement trajectory. The strategic recommendation shifted from optimizing platform engagement to delivering insights through channels dealers already utilized.</p>
+    <p>To secure leadership support, workflow analysis alongside proposed concepts was created. The narrative follows Jennifer, a performance consultant, through her existing procedures and resulting modifications through a push-based methodology.</p>
+    <p>Previously involved late-night preparation, hurried presentations, and monthly insight delivery. Now Jennifer enters meetings already informed by data, enabling dealers to act on emerging concerns the same day.</p>
+    <p>The storyboard clarified that the fundamental challenge wasn't simplifying dashboard readability—it was transforming the timing and distribution method of insights reaching decision-makers.</p>
   </div>
   <div class="cs-split-image">
-    <figure><img src="https://staging4.paulamsbary.com/wp-content/uploads/2026/04/Screenshot-2026-04-18-at-4.37.52-PM.png" alt="Storyboard — push-based insight delivery" /><figcaption>Storyboard — mapping Jennifer's workflow before and after</figcaption></figure>
+    <figure><img src="https://staging4.paulamsbary.com/wp-content/uploads/2026/04/Screenshot-2026-04-18-at-4.37.52-PM.png" alt="Storyboard — push-based insight delivery" /><figcaption>Storyboard — Jennifer's workflow before and after</figcaption></figure>
   </div>
 </div>
 
 ## Atlas Analyze
 
-Analyze was the first product shipped from this direction. Months of exploring RAG-based methodologies had produced limited demonstrable outcomes. After defining the core problem clearly, Analyze launched within weeks.
+Analyze represented the initial product delivered following this approach. Months exploring RAG-based methodologies had produced limited demonstrable outcomes. After defining the core issue, Analyze launched within weeks.
 
-The team implemented it within the existing system as an MVP. Mobile was the ultimate destination, but initial validation used the simplest feasible interaction — a single control generating plain-language summaries of dashboard activity across user accounts.
+The team implemented it within the existing system as an MVP. Mobile represented the ultimate destination, though initial validation used the simplest feasible interaction—a single control generating plain-language summaries of dashboard activity across user accounts.
 
 Output required trustworthiness, not generic templates. A context layer trained on automotive retail captured relevant metrics, meaningful benchmarks, and consultant terminology. The summary communicated what shifted, what warranted attention, and recommended next moves.
 
-### Design Process
+For operators, this resolved genuine friction. Accessing Atlas meant confronting a dashboard without apparent entry point. Analyze offered direction.
+
+**Bring intelligence to where attention already is.**
 
 <div class="cs-split">
   <div class="cs-split-body">
@@ -154,46 +242,40 @@ Output required trustworthiness, not generic templates. A context layer trained 
     <p><strong>Why plain language:</strong> The output mirrors what a consultant says in a meeting — not what a dashboard shows. Observation, context, action. No data literacy required.</p>
   </div>
   <div class="cs-split-image">
-    <figure><img src="https://staging4.paulamsbary.com/wp-content/uploads/2026/04/wire-scaled.png" alt="Sidebar concept wireframe" /><figcaption>Sidebar concept — where to place intelligence without disrupting the workflow</figcaption></figure>
+    <figure><img src="https://staging4.paulamsbary.com/wp-content/uploads/2026/04/wire-scaled.png" alt="Sidebar concept wireframe" /><figcaption>The sidebar concept — where to place intelligence without disrupting the existing workflow.</figcaption></figure>
   </div>
 </div>
 
 <div class="cs-split">
   <div class="cs-split-body">
-    <figure><img src="https://staging4.paulamsbary.com/wp-content/uploads/2026/04/layout.png" alt="Early redlines — sidebar proportions" /><figcaption>Early redlines exploring sidebar proportions and content hierarchy</figcaption></figure>
+    <figure><img src="https://staging4.paulamsbary.com/wp-content/uploads/2026/04/layout.png" alt="Early redlines — sidebar proportions" /><figcaption>Early redlines exploring sidebar proportions and content hierarchy.</figcaption></figure>
   </div>
   <div class="cs-split-image">
-    <figure><img src="https://staging4.paulamsbary.com/wp-content/uploads/2026/04/implementation-1-scaled.png" alt="Analyze as a sidebar in the live platform" /><figcaption>Implementation — Analyze as a sidebar inside the live platform</figcaption></figure>
+    <figure><img src="https://staging4.paulamsbary.com/wp-content/uploads/2026/04/implementation-1-scaled.png" alt="Analyze as a sidebar in the live platform" /><figcaption>The implementation — Analyze as a sidebar inside the live platform.</figcaption></figure>
   </div>
 </div>
-
-### Final Design
 
 <div class="cs-featured">
   <img src="https://staging4.paulamsbary.com/wp-content/uploads/2026/04/analyze-assistant.png" alt="Analyze in production" />
   <div class="cs-featured-body">
-    <ul>
-      <li>Single control — one button, plain-language output</li>
-      <li>Context layer trained on automotive retail benchmarks</li>
-      <li>Sidebar placement — insight arrives without leaving the dashboard</li>
-      <li>Consultant-quality language — observation, context, action</li>
-      <li>No data literacy required</li>
-      <li>MVP shipped within weeks of problem definition</li>
-    </ul>
+    <p style="font-size:13px;color:var(--fg-muted);margin:0">Analyze in production — intelligence delivered in context, without leaving the dashboard.</p>
   </div>
 </div>
 
 ## Impact
 
-Analyze transformed operator engagement with Atlas. Monthly usage increased progressively as operators began acting on insights without requiring dashboard navigation. Consultants noted resolution of the blank canvas obstacle. At NADA, prospective buyers immediately grasped the offering's significance.
+Analyze transformed operator engagement patterns with Atlas. Monthly usage increased progressively as operators began acting on insights without requiring dashboard navigation. Consultants noted resolution of the blank canvas obstacle. At NADA, prospective buyers immediately grasped the offering's significance.
 
-This also substantiated a deeper strategic principle. The most valuable contribution wasn't better dashboards — it was something resembling a text notification. A plain-language alert, at the right moment, on the device operators already used.
+This also substantiated a more profound strategic principle. The most beneficial contribution wasn't enhanced dashboards but something resembling a text notification—a plain-language alert, at precise timing, delivered through operators' preferred devices.
+
+However, this surfaced a critical question: if standard LLMs can summarize dashboards, what constitutes sustainable competitive advantage?
+
+**Answer: Context.** Fifteen years of automotive consulting background informed data interpretation methodology, signal presentation, and recommendation generation. That contextual foundation—industry-specific significance, applicable benchmarks, consultant communication approaches—resists straightforward replication. This distinction separates meaningful summaries from generic outputs.
+
+The MVP confirmed the push methodology functioned effectively while demonstrating summarization represents fundamental requirements. Trustworthy recommendations depend on contextual understanding. Reliability flows from uniformity. Further development advances from information provision to decision facilitation—contextually informed intelligence supporting genuine business choices, woven into operational workflows.
 
 <div class="cs-featured">
   <div class="cs-featured-body">
-    <p style="font-size:14px;color:var(--fg);margin:0 0 8px;font-weight:600">The competitive advantage isn't the summary. It's the context.</p>
-    <p style="font-size:13px;color:var(--fg-muted);margin:0">Fifteen years of automotive consulting informed how signals are interpreted, benchmarks applied, and recommendations framed. That contextual foundation resists straightforward replication — and separates meaningful summaries from generic LLM output.</p>
+    <p style="font-size:14px;color:var(--fg-muted);margin:0">Summarization is table stakes.<br />Reliable recommendations require context.<br />Trust depends on consistency.</p>
   </div>
 </div>
-
-Summarization is table stakes. Reliable recommendations require context. Trust depends on consistency. The MVP confirmed the push methodology worked — and pointed toward the next frontier: not delivering information, but supporting decisions.
