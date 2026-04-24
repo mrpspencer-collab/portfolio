@@ -399,11 +399,19 @@ const { Content } = await project.render();
   }
 
   /* Contain carousel — shows full image without cropping */
+  .body :global(.cs-carousel--contain .cs-carousel-track-wrap) {
+    background: none;
+    border: none;
+  }
+  .body :global(.cs-carousel--contain .cs-carousel-slide) {
+    background: none;
+  }
   .body :global(.cs-carousel--contain .cs-carousel-slide img) {
     object-fit: contain;
     height: auto;
     max-height: 520px;
-    background: var(--bg-muted);
+    background: none;
+    border: none;
   }
 
   /* Panning carousel — JS controls object-position; mouse overrides auto-pan */
