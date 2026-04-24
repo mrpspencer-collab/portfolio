@@ -7,7 +7,7 @@ tags:
   - Product Strategy
   - '2025'
 status: Shipping
-thumb: 'http://paulamsbary.com/wp-content/uploads/2026/04/ai.png'
+thumb: 'http://paulamsbary.com/wp-content/uploads/2026/04/audi-sales-alert.png'
 thumbBg: '#C4BEB6'
 thumbFit: cover
 thumbText: Atlas
