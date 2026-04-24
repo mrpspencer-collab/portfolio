@@ -271,18 +271,18 @@ The output needed to be trustworthy, not generic. We built a context layer train
 
 For dealers, this addressed a real friction point. Opening Atlas meant facing a dashboard with no clear starting point. Analyze gave them one.
 
-**Bring intelligence to where attention already is.**
-
-<div class="cs-split">
-  <div class="cs-split-body">
-    <p><strong>Why a sidebar:</strong> Operators are already looking at their data. A sidebar brings the insight to where attention already is — no context switch, no new screen to learn.</p>
-    <p><strong>Why one button:</strong> The interaction had to be simple enough that a dealer who logged in once would try it. Complexity was the enemy of the first win.</p>
-    <p><strong>Why plain language:</strong> The output mirrors what a consultant says in a meeting — not what a dashboard shows. Observation, context, action. No data literacy required.</p>
-  </div>
-  <div class="cs-split-image">
-    <figure><img src="https://staging4.paulamsbary.com/wp-content/uploads/2026/04/wire-scaled.png" alt="Sidebar concept wireframe" /><figcaption>The sidebar concept — where to place intelligence without disrupting the existing workflow.</figcaption></figure>
+<div class="cs-featured">
+  <img src="https://staging4.paulamsbary.com/wp-content/uploads/2026/04/wire-scaled.png" alt="Sidebar concept wireframe" />
+  <div class="cs-featured-body">
+    <p style="font-size:13px;color:var(--fg-muted);margin:0">The sidebar concept — where to place intelligence without disrupting the existing workflow.</p>
   </div>
 </div>
+
+**Bring intelligence to where attention already is.**
+
+<p><strong>Why a sidebar:</strong> Operators are already looking at their data. A sidebar brings the insight to where attention already is — no context switch, no new screen to learn.</p>
+<p><strong>Why one button:</strong> The interaction had to be simple enough that a dealer who logged in once would try it. Complexity was the enemy of the first win.</p>
+<p><strong>Why plain language:</strong> The output mirrors what a consultant says in a meeting — not what a dashboard shows. Observation, context, action. No data literacy required.</p>
 
 <div class="cs-featured">
   <img src="https://staging4.paulamsbary.com/wp-content/uploads/2026/04/layout.png" alt="Early redlines — sidebar proportions" />
