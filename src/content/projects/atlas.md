@@ -21,6 +21,13 @@ order: 1
 
 Same data. One requires interpretation. The other can be read.
 
+<div class="cs-featured">
+  <img src="https://paulamsbary.com/wp-content/uploads/2026/04/Macbook-Pro-Light-Background-1.png" alt="Atlas — Same data. One requires interpretation. The other can be read." />
+  <div class="cs-featured-body">
+    <p style="font-size:13px;color:var(--fg-muted);margin:0">Same data. One requires interpretation. The other can be read.</p>
+  </div>
+</div>
+
 ## The Hypothesis
 
 Atlas began with a straightforward concept: consolidate multiple data sources, create visually appealing dashboards with fast performance, and owner engagement would follow naturally.
