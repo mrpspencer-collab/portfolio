@@ -84,7 +84,7 @@ Post-launch findings revealed consultants rather than intended dealers comprised
   </div>
 </div>
 
-**How might we deliver the same insights as a consultant on a recurring basis, without the data literacy the platform demands?**
+> How might we deliver the same insights as a consultant on a recurring basis, without the data literacy the platform demands?
 
 ## Jobs to be Done
 Research with dealers and consultants made the jobs clear. Stripped of platform language each persona wanted the same thing.
