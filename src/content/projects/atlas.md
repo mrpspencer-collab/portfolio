@@ -1,7 +1,7 @@
 ---
 title: Atlas
 subtitle: From Pull to Push
-role: UX & Product Strategy
+role: Lead Product Designer
 tags:
   - AI / ML
   - Product Strategy
@@ -111,13 +111,19 @@ Our focus shifted to the operator persona and increasing adoption.
 
 ## The Design Problem
 
-For many proprietors, engaging with data parallels joining a fitness facility—everyone recognizes its benefits, yet few maintain commitment until developing sufficient competence to experience advantages. When dealers attempted Atlas usage, they encountered a system demanding data literacy they hadn't yet acquired. Internal analytics indicated most dealers completed single login sessions without returning.
+For many business owners, looking at data is like joining a gym. Everyone knows it’s good for them; but few stick with it until they build enough competence to feel the benefit.
+
+When dealers tried to use Atlas, they landed on a platform that required data literacy they didn’t have yet. Our own analytics showed most dealers logged in once and then never came back.
+
+After launch, the design challenge shifted from making useable, useful dashboards to getting operators enough data competence and value that they wanted to use Atlas.
 
 > "…we wanna teach the dealers 'how to fish'… so they're not just relying on us once a month, but they're engaging with [their data] more frequently…" — Audi MRC (Modern Retail Consultant)
 
 ## Opportunity Mapping
 
-Collaborative workshops across product, data analysis, design, and executive teams aimed to clarify research findings and pinpoint focus areas. Each session distinguished commercial challenges from user-centered problems, yielding five key thematic areas.
+I ran a series of opportunity mapping workshops with product, data analysts, design, and executives. The goal was to frame the research clearly and identify where to focus.
+
+Each session separated the business problem from the user problem. Five themes emerged.
 
 <div class="cs-table-wrap">
   <table class="cs-table">
@@ -243,10 +249,15 @@ Collaborative workshops across product, data analysis, design, and executive tea
 
 <div class="cs-split">
   <div class="cs-split-body">
-    <p>Collaborative sessions with product, data analysis, and field teams converged on one direction: discontinue attempting to attract dealers to Atlas. Years of platform development had generated low dealership session frequency without improvement trajectory. The strategic recommendation shifted from optimizing platform engagement to delivering insights through channels dealers already utilized.</p>
-    <p>To secure leadership support, workflow analysis alongside proposed concepts was created. The narrative follows Jennifer, a performance consultant, through her existing procedures and resulting modifications through a push-based methodology.</p>
-    <p>Previously involved late-night preparation, hurried presentations, and monthly insight delivery. Now Jennifer enters meetings already informed by data, enabling dealers to act on emerging concerns the same day.</p>
-    <p>The storyboard clarified that the fundamental challenge wasn't simplifying dashboard readability—it was transforming the timing and distribution method of insights reaching decision-makers.</p>
+    Workshops and conversations across product, data, and the field pointed in one direction: stop trying to get dealers to come to Atlas.
+
+The company had invested years in building a desktop BI platform. Dealer session frequency was low and wasn’t improving. My recommendation was to stop optimizing for platform engagement and start delivering insights wherever dealers already were.
+
+To get leadership on board, I mapped the workflow alongside the concepts. This storyboard follows Jennifer, a performance consultant, through her current process and what changes with a push-based model.
+
+Before: late-night prep, a rushed deck, insights delivered once a month. After: Jennifer walks into every meeting already ahead of the data. Dealers act on issues the same day they surface.
+
+The storyboard made one thing clear: our job wasn’t making dashboards easier to read. It was to change when and how insight reached the people who needed it.
   </div>
   <div class="cs-split-image">
     <figure><img src="https://staging4.paulamsbary.com/wp-content/uploads/2026/04/Screenshot-2026-04-18-at-4.37.52-PM.png" alt="Storyboard — push-based insight delivery" /><figcaption>Storyboard — Jennifer's workflow before and after</figcaption></figure>
@@ -255,13 +266,13 @@ Collaborative workshops across product, data analysis, design, and executive tea
 
 ## Atlas Analyze
 
-Analyze represented the initial product delivered following this approach. Months exploring RAG-based methodologies had produced limited demonstrable outcomes. After defining the core issue, Analyze launched within weeks.
+Analyze was the first product we shipped toward this strategy. We had spent months exploring RAG-based approaches without anything to show users. Once we defined the right problem, Analyze shipped in weeks.
 
-The team implemented it within the existing system as an MVP. Mobile represented the ultimate destination, though initial validation used the simplest feasible interaction—a single control generating plain-language summaries of dashboard activity across user accounts.
+We built it inside the existing platform as an MVP. Mobile was the destination but we started with the simplest possible interaction to prove the concept — a single button that generated a plain-language summary of what was happening across a user’s dashboards.
 
-Output required trustworthiness, not generic templates. A context layer trained on automotive retail captured relevant metrics, meaningful benchmarks, and consultant terminology. The summary communicated what shifted, what warranted attention, and recommended next moves.
+The output needed to be trustworthy, not generic. We built a context layer trained on automotive retail — the metrics that matter, the benchmarks that are meaningful, the language consultants use with dealers. The summary told dealers what changed, what was worth paying attention to, and what to do next.
 
-For operators, this resolved genuine friction. Accessing Atlas meant confronting a dashboard without apparent entry point. Analyze offered direction.
+For dealers, this addressed a real friction point. Opening Atlas meant facing a dashboard with no clear starting point. Analyze gave them one.
 
 **Bring intelligence to where attention already is.**
 
@@ -299,12 +310,15 @@ For operators, this resolved genuine friction. Accessing Atlas meant confronting
 
 ## Impact
 
-Analyze transformed operator engagement patterns with Atlas. Monthly usage increased progressively as operators began acting on insights without requiring dashboard navigation. Consultants noted resolution of the blank canvas obstacle. At NADA, prospective buyers immediately grasped the offering's significance.
+Analyze changed how dealers engaged with Atlas. Month over month usage increased as dealers started acting on insights without needing to work through dashboards first. Consultants reported it solved the blank canvas problem.  At NADA, prospective customers understood the value immediately.
 
-This also substantiated a more profound strategic principle. The most beneficial contribution wasn't enhanced dashboards but something resembling a text notification—a plain-language alert, at precise timing, delivered through operators' preferred devices.
+It also validated something more fundamental about the strategy. The most impactful thing we could deliver wasn’t a better dashboard. It was closer to a text message — a plain-language signal, at the right moment, on the device dealers already use.
 
-However, this surfaced a critical question: if standard LLMs can summarize dashboards, what constitutes sustainable competitive advantage?
+But that raised an obvious question: if any LLM can summarize a dashboard, where’s the defensible value?
 
+The answer is context. Fifteen years of automotive consulting experience informed how the system interprets data, frames signals, and generates recommendations. That context layer — what matters in this industry, what benchmarks are meaningful, how consultants talk to dealers — can’t be easily reproduced. It’s what will separate a useful summary from a generic one.
+
+The MVP showed the push model worked. It also showed that summarization is table stakes. Reliable recommendations require context. Trust depends on consistency. The next phase moves from answering questions to enabling action — context-aware insights that support real decisions, delivered in the flow of work.
 **Answer: Context.** Fifteen years of automotive consulting background informed data interpretation methodology, signal presentation, and recommendation generation. That contextual foundation—industry-specific significance, applicable benchmarks, consultant communication approaches—resists straightforward replication. This distinction separates meaningful summaries from generic outputs.
 
 The MVP confirmed the push methodology functioned effectively while demonstrating summarization represents fundamental requirements. Trustworthy recommendations depend on contextual understanding. Reliability flows from uniformity. Further development advances from information provision to decision facilitation—contextually informed intelligence supporting genuine business choices, woven into operational workflows.
