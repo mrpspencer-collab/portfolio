@@ -64,7 +64,7 @@ That bet was partially right. We spent months iterating on visualizations and in
 
 ## Three Personas. One Platform.
 
-Post-launch findings revealed consultants rather than intended dealers comprised primary platform usage. Consultants conducted monthly dealer meetings reviewing reports and explaining data implications. While effective for that use case, operators avoided independent platform usage despite making daily decisions where data analysis would provide value, maintaining consultant reliance for interpretation.
+In our early research, we identified three distinct user types: OEM executives, consultants and business operators. Executives and consultants were getting value from Atlas, but dealers were an untapped opportunity.
 
 <div class="cs-persona-grid">
   <div class="cs-persona-card">
@@ -83,7 +83,7 @@ Post-launch findings revealed consultants rather than intended dealers comprised
     <p class="cs-persona-body">Running a business daily. Real questions about real performance. Responsible for the most seats. Getting the least value.</p>
   </div>
 </div>
-
+After launch, we realized Atlas was mostly being used by consultants, not the dealers it was meant to help. Consultants would meet with dealers once a month, walk through the reports, and explain what the data meant. Atlas worked well for that. But dealers weren’t using it on their own — even though they were making decisions every day where data would have helped. They stayed reliant on the consultant to interpret things for them.
 > How might we deliver the same insights as a consultant on a recurring basis, without the data literacy the platform demands?
 
 ## Jobs to be Done
