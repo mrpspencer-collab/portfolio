@@ -8,6 +8,7 @@ tags:
   - '2023'
 thumb: 'https://paulamsbary.com/wp-content/uploads/2025/11/coursera-for-business-scaled.png'
 thumbBg: '#B8B2A9'
+thumbFit: cover
 thumbText: Coursera Biz
 thumbTextColor: '#4A4540'
 metrics:
