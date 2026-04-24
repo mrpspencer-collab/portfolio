@@ -7,7 +7,7 @@ tags:
   - Product Strategy
   - '2025'
 status: Shipping
-thumb: 'https://paulamsbary.com/wp-content/uploads/2026/04/Macbook-Pro-Light-Background-1.png'
+thumb: 'http://paulamsbary.com/wp-content/uploads/2026/04/audi-sales-alert-1.png'
 thumbBg: '#C4BEB6'
 thumbFit: cover
 thumbText: Atlas
