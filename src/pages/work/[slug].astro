@@ -325,6 +325,54 @@ const { Content } = await project.render();
   }
   .body :global(.cs-columns li) { margin-bottom: 8px; font-size: 15px; }
 
+  /* Persona cards */
+  .body :global(.cs-persona-grid) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin: 24px 0 32px;
+  }
+  .body :global(.cs-persona-card) {
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 24px;
+    background: var(--bg-surface);
+  }
+  .body :global(.cs-persona-card--accent) {
+    border-color: var(--accent);
+    background: color-mix(in srgb, var(--accent) 8%, var(--bg-surface));
+  }
+  .body :global(.cs-persona-label) {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--fg-subtle);
+    margin: 0 0 12px !important;
+    max-width: 100% !important;
+  }
+  .body :global(.cs-persona-card--accent .cs-persona-label) {
+    color: var(--accent);
+  }
+  .body :global(.cs-persona-name) {
+    font-family: var(--font-display);
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--fg);
+    margin: 0 0 12px !important;
+    max-width: 100% !important;
+  }
+  .body :global(.cs-persona-body) {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--fg-muted);
+    margin: 0 !important;
+    max-width: 100% !important;
+  }
+  @media (max-width: 640px) {
+    .body :global(.cs-persona-grid) { grid-template-columns: 1fr; }
+  }
+
   /* Featured final design */
   .body :global(.cs-featured) {
     background: var(--bg-muted);

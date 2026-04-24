@@ -66,27 +66,21 @@ That bet was partially right. We spent months iterating on visualizations and in
 
 Post-launch findings revealed consultants rather than intended dealers comprised primary platform usage. Consultants conducted monthly dealer meetings reviewing reports and explaining data implications. While effective for that use case, operators avoided independent platform usage despite making daily decisions where data analysis would provide value, maintaining consultant reliance for interpretation.
 
-<div class="cs-columns">
-  <div>
-    <p class="cs-col-label">Audience 01 — OEM Stakeholders</p>
-    <ul>
-      <li>Data fluent. Regular platform users. Dashboard-native.</li>
-      <li>The product works for them as built.</li>
-    </ul>
+<div class="cs-persona-grid">
+  <div class="cs-persona-card">
+    <p class="cs-persona-label">Audience 01</p>
+    <p class="cs-persona-name">OEM Stakeholders</p>
+    <p class="cs-persona-body">Data fluent. Regular platform users. Dashboard-native. The product works for them as built.</p>
   </div>
-  <div>
-    <p class="cs-col-label">Audience 02 — Performance Consultants</p>
-    <ul>
-      <li>Read dashboards, translate data, deliver recommendations to dealers in monthly meetings.</li>
-      <li>The human translation layer.</li>
-    </ul>
+  <div class="cs-persona-card">
+    <p class="cs-persona-label">Audience 02</p>
+    <p class="cs-persona-name">Performance Consultants</p>
+    <p class="cs-persona-body">Read dashboards, translate data, deliver recommendations to dealers in monthly meetings. The human translation layer.</p>
   </div>
-</div>
-
-<div class="cs-featured">
-  <div class="cs-featured-body">
-    <p style="font-size:13px;color:var(--fg-subtle);font-weight:600;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:8px">Audience 03 — Dealership Operators (the gap)</p>
-    <p style="font-size:14px;color:var(--fg-muted);margin:0">Running a business daily. Real questions about real performance. Responsible for the most seats. Getting the least value.</p>
+  <div class="cs-persona-card cs-persona-card--accent">
+    <p class="cs-persona-label">Audience 03 — The Gap</p>
+    <p class="cs-persona-name">Dealership Operators</p>
+    <p class="cs-persona-body">Running a business daily. Real questions about real performance. Responsible for the most seats. Getting the least value.</p>
   </div>
 </div>
 
