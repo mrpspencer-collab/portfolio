@@ -8,7 +8,7 @@ tags:
   - '2025'
 status: Shipping
 thumb: 'https://paulamsbary.com/wp-content/uploads/2026/04/atlas.png'
-thumbBg: '#FFFFFF'
+thumbBg: '#1A1713'
 thumbText: Atlas
 thumbTextColor: '#5A5550'
 metrics: []
