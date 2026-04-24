@@ -16,11 +16,6 @@ metrics: []
 cta: Explore the case study
 order: 1
 ---
-
-"Data you navigate" vs "Insight that arrives"
-
-Same data. One requires interpretation. The other can be read.
-
 <div class="cs-featured">
   <img src="https://paulamsbary.com/wp-content/uploads/2026/04/Macbook-Pro-Light-Background-1.png" alt="Atlas — Same data. One requires interpretation. The other can be read." />
   <div class="cs-featured-body">
@@ -30,9 +25,9 @@ Same data. One requires interpretation. The other can be read.
 
 ## The Hypothesis
 
-Atlas began with a straightforward concept: consolidate multiple data sources, create visually appealing dashboards with fast performance, and owner engagement would follow naturally.
+Atlas started with a simple premise: bring together multiple data sources, make dashboards beautiful and fast, and business owners will show up with questions.
 
-This assumption proved partially valid. Extended work on visualization refinement and data source connections showed promise for data-sophisticated users (OEM executives, performance analysts) who benefited from consolidated reporting. However, day-to-day dealership operators displayed less enthusiasm for charts and prioritized actionable insights instead.
+That bet was partially right. We spent months iterating on visualizations and integrating data sources. For data-literate users — OEM execs and performance analysts — Atlas worked. One log-in delivered a single source of truth. But the operators running dealerships day to day were less interested in charts. They needed insights. 
 
 <div class="cs-carousel cs-carousel--contain">
   <div class="cs-carousel-track-wrap">
