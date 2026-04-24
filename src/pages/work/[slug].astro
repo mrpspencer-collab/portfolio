@@ -397,6 +397,8 @@ const { Content } = await project.render();
   /* Contain carousel — shows full image without cropping */
   .body :global(.cs-carousel--contain .cs-carousel-slide img) {
     object-fit: contain;
+    height: auto;
+    max-height: 520px;
     background: var(--bg-muted);
   }
 
