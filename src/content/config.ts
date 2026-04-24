@@ -14,6 +14,7 @@ const projects = defineCollection({
     metrics: z.array(z.string()).default([]),
     role: z.string().optional(),
     cta: z.string().default('Read Case Study'),
+    thumbFit: z.enum(['contain', 'cover']).default('contain'),
     order: z.number().default(99),
   }),
 });

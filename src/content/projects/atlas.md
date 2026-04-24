@@ -7,8 +7,9 @@ tags:
   - Product Strategy
   - '2025'
 status: Shipping
-thumb: 'http://paulamsbary.com/wp-content/uploads/2026/04/investigate.png'
+thumb: 'http://paulamsbary.com/wp-content/uploads/2026/04/ai.png'
 thumbBg: '#C4BEB6'
+thumbFit: cover
 thumbText: Atlas
 thumbTextColor: '#5A5550'
 metrics: []
