@@ -27,7 +27,7 @@ order: 1
 
 Atlas started with a simple premise: bring together multiple data sources, make dashboards beautiful and fast, and business owners will show up with questions.
 
-That bet was partially right. We spent months iterating on visualizations and integrating data sources. For data-literate users — OEM execs and performance analysts — Atlas worked. One log-in delivered a single source of truth. But the operators running dealerships day to day were less interested in charts. They needed insights. 
+That bet was partially right. We spent months iterating on visualizations and integrating data sources. For data-literate users — OEM execs and performance analysts — Atlas worked. One log-in delivered a single source of truth. But the operators running dealerships were less interested in charts. They needed insights. 
 
 <div class="cs-carousel cs-carousel--contain">
   <div class="cs-carousel-track-wrap">
