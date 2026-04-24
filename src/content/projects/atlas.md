@@ -114,9 +114,7 @@ Our focus shifted to the operator persona and increasing adoption.
 
 For many business owners, looking at data is like joining a gym. Everyone knows it’s good for them; but few stick with it until they build enough competence to feel the benefit.
 
-When dealers tried to use Atlas, they landed on a platform that required data literacy they didn’t have yet. Our own analytics showed most dealers logged in once and then never came back.
-
-After launch, the design challenge shifted from making useable, useful dashboards to getting operators enough data competence and value that they wanted to use Atlas.
+After launch, the design problem shifted from making useable, useful dashboards to getting operators enough data competence and value that they wanted to use Atlas.
 
 > "…we wanna teach the dealers 'how to fish'… so they're not just relying on us once a month, but they're engaging with [their data] more frequently…" — Audi MRC (Modern Retail Consultant)
 
