@@ -254,7 +254,7 @@ The company had invested years in building a desktop BI platform. Dealer session
 
 To get leadership on board, I mapped the workflow alongside the concepts.
 
-The storyboard made one thing clear: our job wasn’t making dashboards easier to read. It was to change how insights reach people with business questions.
+Our job wasn’t making dashboards easier to read. It was to change how insights reach people.
   </div>
   <div class="cs-split-image">
     <figure><img src="https://staging4.paulamsbary.com/wp-content/uploads/2026/04/Screenshot-2026-04-18-at-4.37.52-PM.png" alt="Storyboard — push-based insight delivery" /><figcaption>Storyboard — Jennifer's workflow before and after</figcaption></figure>
