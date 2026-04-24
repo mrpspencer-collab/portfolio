@@ -88,18 +88,22 @@ Post-launch findings revealed consultants rather than intended dealers comprised
 
 ## Jobs to be Done
 
-<div class="cs-columns">
-  <div>
-    <p class="cs-col-label">Dealer Operator</p>
-    <p>"Help me sell more cars and spend less getting there."</p>
-    <p class="cs-col-label" style="margin-top:24px">Performance Consultant</p>
-    <p>"Give me insights that make me look like a hero to my dealers."</p>
+<div class="cs-persona-grid">
+  <div class="cs-persona-card">
+    <p class="cs-persona-label">Dealer Operator</p>
+    <p class="cs-persona-body">"Help me sell more cars and spend less getting there."</p>
   </div>
-  <div>
-    <p class="cs-col-label">OEM Stakeholder</p>
-    <p>"Show me what's working across the network so I can move dealers forward."</p>
-    <p class="cs-col-label" style="margin-top:24px">The Shared Job</p>
-    <p>"Sell more cars. Spend less. Understand why."</p>
+  <div class="cs-persona-card">
+    <p class="cs-persona-label">Performance Consultant</p>
+    <p class="cs-persona-body">"Give me insights that make me look like a hero to my dealers."</p>
+  </div>
+  <div class="cs-persona-card">
+    <p class="cs-persona-label">OEM Stakeholder</p>
+    <p class="cs-persona-body">"Show me what's working across the network so I can move dealers forward."</p>
+  </div>
+  <div class="cs-persona-card cs-persona-card--accent" style="grid-column: 1 / -1;">
+    <p class="cs-persona-label">The Shared Job</p>
+    <p class="cs-persona-body">"Sell more cars. Spend less. Understand why."</p>
   </div>
 </div>
 
@@ -113,20 +117,49 @@ For many proprietors, engaging with data parallels joining a fitness facility—
 
 ## Opportunity Mapping
 
-<div class="cs-split">
-  <div class="cs-split-body">
-    <p>Collaborative workshops across product, data analysis, design, and executive teams aimed to clarify research findings and pinpoint focus areas. Each session distinguished commercial challenges from user-centered problems, yielding five key thematic areas.</p>
-    <ul>
-      <li><strong>Discover</strong> — Users waste time finding relevant data. → Unify exploration into a single workspace.</li>
-      <li><strong>Create</strong> — Insights get lost across tools. → Proactive AI guidance during analysis.</li>
-      <li><strong>Scale</strong> — Knowledge stays siloed, effort is duplicated. → Turn past analysis into reusable context.</li>
-      <li><strong>Deliver ★</strong> — Insights stop at the consultant. → Plain-language summaries pushed to dealers.</li>
-      <li><strong>Foundations</strong> — Broad adoption requires a solid base. → Invest in integration, adaptive UX.</li>
-    </ul>
-  </div>
-  <div class="cs-split-image">
-    <figure><img src="https://staging4.paulamsbary.com/wp-content/uploads/2026/04/Screenshot-2026-04-18-at-1.30.39-PM-scaled.png" alt="Opportunity mapping workshop" /><figcaption>Workshop — five thematic areas</figcaption></figure>
-  </div>
+Collaborative workshops across product, data analysis, design, and executive teams aimed to clarify research findings and pinpoint focus areas. Each session distinguished commercial challenges from user-centered problems, yielding five key thematic areas.
+
+<div class="cs-table-wrap">
+  <table class="cs-table">
+    <thead>
+      <tr>
+        <th>Theme</th>
+        <th>Problem</th>
+        <th>Direction</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Discover</td>
+        <td>Users waste time finding relevant data</td>
+        <td>Unify exploration into a single workspace</td>
+      </tr>
+      <tr>
+        <td>Create</td>
+        <td>Insights get lost across tools</td>
+        <td>Proactive AI guidance during analysis</td>
+      </tr>
+      <tr>
+        <td>Scale</td>
+        <td>Knowledge stays siloed, effort is duplicated</td>
+        <td>Turn past analysis into reusable context</td>
+      </tr>
+      <tr class="cs-table-row--accent">
+        <td>Deliver ★</td>
+        <td>Insights stop at the consultant</td>
+        <td>Plain-language summaries pushed to dealers</td>
+      </tr>
+      <tr>
+        <td>Foundations</td>
+        <td>Broad adoption requires a solid base</td>
+        <td>Invest in integration, adaptive UX</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="cs-split-image" style="margin-top:24px">
+  <figure><img src="https://staging4.paulamsbary.com/wp-content/uploads/2026/04/Screenshot-2026-04-18-at-1.30.39-PM-scaled.png" alt="Opportunity mapping workshop" /><figcaption>Workshop — five thematic areas</figcaption></figure>
 </div>
 
 ## Concepts

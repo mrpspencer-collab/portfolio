@@ -325,6 +325,53 @@ const { Content } = await project.render();
   }
   .body :global(.cs-columns li) { margin-bottom: 8px; font-size: 15px; }
 
+  /* Data table */
+  .body :global(.cs-table-wrap) {
+    margin: 24px 0;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .body :global(.cs-table) {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+  }
+  .body :global(.cs-table thead) {
+    background: var(--bg-muted);
+  }
+  .body :global(.cs-table th) {
+    text-align: left;
+    padding: 10px 16px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--fg-subtle);
+    border-bottom: 1px solid var(--border);
+  }
+  .body :global(.cs-table td) {
+    padding: 12px 16px;
+    color: var(--fg-muted);
+    border-bottom: 1px solid var(--border);
+    line-height: 1.5;
+    vertical-align: top;
+  }
+  .body :global(.cs-table td:first-child) {
+    font-weight: 600;
+    color: var(--fg);
+    white-space: nowrap;
+  }
+  .body :global(.cs-table tbody tr:last-child td) {
+    border-bottom: none;
+  }
+  .body :global(.cs-table-row--accent td) {
+    background: color-mix(in srgb, var(--accent) 8%, var(--bg-surface));
+  }
+  .body :global(.cs-table-row--accent td:first-child) {
+    color: var(--accent);
+  }
+
   /* Persona cards */
   .body :global(.cs-persona-grid) {
     display: grid;
