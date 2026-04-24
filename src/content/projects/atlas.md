@@ -307,19 +307,16 @@ For dealers, this addressed a real friction point. Opening Atlas meant facing a 
 
 ## Impact
 
-Analyze changed how dealers engaged with Atlas. Month over month usage increased as dealers started acting on insights without needing to work through dashboards first. Consultants reported it solved the blank canvas problem.  At NADA, prospective customers understood the value immediately.
-
-It also validated something more fundamental about the strategy. The most impactful thing we could deliver wasn’t a better dashboard. It was closer to a text message — a plain-language signal, at the right moment, on the device dealers already use.
-
-But that raised an obvious question: if any LLM can summarize a dashboard, where’s the defensible value?
-
-The answer is context. Fifteen years of automotive consulting experience informed how the system interprets data, frames signals, and generates recommendations. That context layer — what matters in this industry, what benchmarks are meaningful, how consultants talk to dealers — can’t be easily reproduced. It’s what will separate a useful summary from a generic one.
-
-The MVP showed the push model worked. It also showed that summarization is table stakes. Reliable recommendations require context. Trust depends on consistency. The next phase moves from answering questions to enabling action — context-aware insights that support real decisions, delivered in the flow of work.
-**Answer: Context.** Fifteen years of automotive consulting background informed data interpretation methodology, signal presentation, and recommendation generation. That contextual foundation—industry-specific significance, applicable benchmarks, consultant communication approaches—resists straightforward replication. This distinction separates meaningful summaries from generic outputs.
-
-The MVP confirmed the push methodology functioned effectively while demonstrating summarization represents fundamental requirements. Trustworthy recommendations depend on contextual understanding. Reliability flows from uniformity. Further development advances from information provision to decision facilitation—contextually informed intelligence supporting genuine business choices, woven into operational workflows.
-
+Month-over-month usage increased as dealers began acting on insights directly. Consultants said it solved the blank canvas problem. At NADA, prospective customers got the value immediately.
+It also validated something more fundamental: the most impactful thing we could deliver wasn't a better dashboard — it was closer to a text message.
+<div class="cs-split">
+  <div class="cs-split-body">
+The simplicity of the solution raised an obvious question: if any LLM can summarize a dashboard, where's the defensible value? The answer is context. That context layer — what matters in this industry, what benchmarks are meaningful, how consultants talk to dealers — can’t be easily reproduced. That's what separates a useful insight from a generic one and it can't be easily reproduced.
+  </div>
+  <div class="cs-split-image">
+    <figure><img src="http://paulamsbary.com/wp-content/uploads/2026/04/imageai.png" alt="table stakes" /><figcaption>Atlas Analyze makes summarization easy. Context makes it unique.</figcaption></figure>
+  </div>
+</div>
 <div class="cs-featured">
   <div class="cs-featured-body">
     <p style="font-size:14px;color:var(--fg-muted);margin:0">Summarization is table stakes.<br />Reliable recommendations require context.<br />Trust depends on consistency.</p>
