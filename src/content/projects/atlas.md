@@ -122,7 +122,7 @@ After launch, the design problem shifted from making useable, useful dashboards 
 
 I ran a series of opportunity mapping workshops with product, data analysts, design, and executives. The goal was to frame the research clearly and identify where to focus.
 
-Each session separated the business problem from the user problem. Five themes emerged.
+Five themes emerged.
 
 <div class="cs-table-wrap">
   <table class="cs-table">
