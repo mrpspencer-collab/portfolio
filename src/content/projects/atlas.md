@@ -246,12 +246,17 @@ For operators, this resolved genuine friction. Accessing Atlas meant confronting
   </div>
 </div>
 
-<div class="cs-split">
-  <div class="cs-split-body">
-    <figure><img src="https://staging4.paulamsbary.com/wp-content/uploads/2026/04/layout.png" alt="Early redlines — sidebar proportions" /><figcaption>Early redlines exploring sidebar proportions and content hierarchy.</figcaption></figure>
+<div class="cs-featured">
+  <img src="https://staging4.paulamsbary.com/wp-content/uploads/2026/04/layout.png" alt="Early redlines — sidebar proportions" />
+  <div class="cs-featured-body">
+    <p style="font-size:13px;color:var(--fg-muted);margin:0">Early redlines exploring sidebar proportions and content hierarchy.</p>
   </div>
-  <div class="cs-split-image">
-    <figure><img src="https://staging4.paulamsbary.com/wp-content/uploads/2026/04/implementation-1-scaled.png" alt="Analyze as a sidebar in the live platform" /><figcaption>The implementation — Analyze as a sidebar inside the live platform.</figcaption></figure>
+</div>
+
+<div class="cs-featured">
+  <img src="https://staging4.paulamsbary.com/wp-content/uploads/2026/04/implementation-1-scaled.png" alt="Analyze as a sidebar in the live platform" />
+  <div class="cs-featured-body">
+    <p style="font-size:13px;color:var(--fg-muted);margin:0">The implementation — Analyze as a sidebar inside the live platform.</p>
   </div>
 </div>
 
