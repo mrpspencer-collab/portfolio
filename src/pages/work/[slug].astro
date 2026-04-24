@@ -394,6 +394,12 @@ const { Content } = await project.render();
     margin: 0 !important;
   }
 
+  /* Contain carousel — shows full image without cropping */
+  .body :global(.cs-carousel--contain .cs-carousel-slide img) {
+    object-fit: contain;
+    background: var(--bg-muted);
+  }
+
   /* Panning carousel — JS controls object-position; mouse overrides auto-pan */
   .body :global(.cs-carousel--pan .cs-carousel-slide img) {
     object-position: center 0%;

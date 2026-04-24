@@ -26,7 +26,7 @@ Atlas began with a straightforward concept: consolidate multiple data sources, c
 
 This assumption proved partially valid. Extended work on visualization refinement and data source connections showed promise for data-sophisticated users (OEM executives, performance analysts) who benefited from consolidated reporting. However, day-to-day dealership operators displayed less enthusiasm for charts and prioritized actionable insights instead.
 
-<div class="cs-carousel">
+<div class="cs-carousel cs-carousel--contain">
   <div class="cs-carousel-track-wrap">
     <div class="cs-carousel-track">
       <div class="cs-carousel-slide">
@@ -134,7 +134,7 @@ For many proprietors, engaging with data parallels joining a fitness facility—
 
 ## Concepts
 
-<div class="cs-carousel">
+<div class="cs-carousel cs-carousel--contain">
   <div class="cs-carousel-track-wrap">
     <div class="cs-carousel-track">
       <div class="cs-carousel-slide">
