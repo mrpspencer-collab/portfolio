@@ -25,8 +25,8 @@ Coursera's Business, Government, and Higher Ed sites were running on an outdated
 
 <div class="cs-split">
   <div class="cs-split-body">
-    <p>Research identified enterprise buyer personas and I used a Jobs-to-be-Done framework to surface both functional jobs (assessing credibility, building a business case) and emotional jobs (securing leadership buy-in, justifying ROI).</p>
-    <p>The JTBD approach shaped every design decision and content strategy. I also audited the site’s flows and content, showing they hindered conversion and were overly product-language-centric, then proposed an SEO-safe restructuring centered on customer needs and clear paths to conversion..</p>
+    <p>Research identified enterprise buyer personas and I used a Jobs-to-be-Done framework to surface both functional jobs (assessing credibility, building a business case) and emotional jobs (securing leadership buy-in, justifying ROI).The JTBD framework shaped design and content strategy decisions. </p>
+    <p>I also audited the site’s flows and content, showing they hindered conversion and were overly product-language-centric, then proposed an SEO-safe restructuring centered on customer needs and clear paths to conversion.</p>
   </div>
   <div class="cs-split-image">
     <figure><img src="https://paulamsbary.com/wp-content/uploads/2024/11/audit.png" alt="Site audit" /><figcaption>Site audit — mapping content and structural gaps</figcaption></figure>
