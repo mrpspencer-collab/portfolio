@@ -12,6 +12,11 @@ export async function getStaticPaths() {
 const { project } = Astro.props;
 const { data: d } = project;
 const { Content } = await project.render();
+
+const allProjects = (await getCollection('projects')).sort((a, b) => a.data.order - b.data.order);
+const currentIndex = allProjects.findIndex(p => p.slug === project.slug);
+const prevProject = currentIndex > 0 ? allProjects[currentIndex - 1] : null;
+const nextProject = currentIndex < allProjects.length - 1 ? allProjects[currentIndex + 1] : null;
 ---
 <Base title={d.title}>
   <Nav />
@@ -60,8 +65,24 @@ const { Content } = await project.render();
           </div>
         )}
 
-        <div class="actions">
-          <a href="/" class="btn btn-ghost btn-md">← Back to Work</a>
+        <div class="case-nav">
+          <div class="case-nav-item">
+            {prevProject && (
+              <a href={`/work/${prevProject.slug}`} class="case-nav-link case-nav-prev">
+                <span class="case-nav-label">← Previous</span>
+                <span class="case-nav-title">{prevProject.data.title}</span>
+              </a>
+            )}
+          </div>
+          <a href="/" class="case-nav-home">All work</a>
+          <div class="case-nav-item case-nav-item--right">
+            {nextProject && (
+              <a href={`/work/${nextProject.slug}`} class="case-nav-link case-nav-next">
+                <span class="case-nav-label">Next →</span>
+                <span class="case-nav-title">{nextProject.data.title}</span>
+              </a>
+            )}
+          </div>
         </div>
       </div>
     </div>
@@ -311,7 +332,61 @@ const { Content } = await project.render();
   }
   .metric-label { font-size: 14px; color: var(--fg-muted); }
 
-  .actions { display: flex; gap: 12px; flex-wrap: wrap; }
+  .case-nav {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 16px;
+    padding-top: 48px;
+    border-top: 1px solid var(--border);
+    margin-top: 16px;
+  }
+  .case-nav-item { display: flex; }
+  .case-nav-item--right { justify-content: flex-end; }
+  .case-nav-link {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    text-decoration: none;
+    transition: opacity 0.15s;
+  }
+  .case-nav-link:hover { opacity: 0.65; }
+  .case-nav-prev { align-items: flex-start; }
+  .case-nav-next { align-items: flex-end; }
+  .case-nav-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--fg-subtle);
+    font-family: var(--font-body);
+  }
+  .case-nav-title {
+    font-family: var(--font-display);
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--fg);
+  }
+  .case-nav-home {
+    font-size: 12px;
+    color: var(--fg-subtle);
+    text-decoration: none;
+    font-family: var(--font-body);
+    white-space: nowrap;
+  }
+  .case-nav-home:hover { color: var(--fg); }
+  @media (max-width: 640px) {
+    .case-nav {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto;
+    }
+    .case-nav-home {
+      grid-column: 1 / -1;
+      text-align: center;
+      order: -1;
+    }
+    .case-nav-item--right { justify-content: flex-end; }
+  }
 
   /* Two-column text layout */
   .body :global(.cs-columns) {
