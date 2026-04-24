@@ -6,7 +6,7 @@ tags:
   - Streaming
   - Prototyping
   - '2020'
-thumb: 'https://paulamsbary.com/wp-content/uploads/2025/06/disney-streaming.png'
+thumb: 'https://paulamsbary.com/wp-content/uploads/2021/08/final-olv-design-scaled.jpg'
 thumbBg: '#0B1120'
 thumbText: Disney+
 thumbTextColor: '#4A5570'
