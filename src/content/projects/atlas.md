@@ -84,6 +84,7 @@ In our early research, we identified three distinct user types: OEM executives, 
   </div>
 </div>
 After launch, we realized Atlas was mostly being used by consultants, not the dealers it was meant to help. Consultants would meet with dealers once a month, walk through the reports, and explain what the data meant. Atlas worked well for that. But dealers weren’t using it on their own — even though they were making decisions every day where data would have helped. They stayed reliant on the consultant to interpret things for them.
+
 > How might we deliver the same insights as a consultant on a recurring basis, without the data literacy the platform demands?
 
 ## Jobs to be Done
