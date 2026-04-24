@@ -249,15 +249,13 @@ Each session separated the business problem from the user problem. Five themes e
 
 <div class="cs-split">
   <div class="cs-split-body">
-    Workshops and conversations across product, data, and the field pointed in one direction: stop trying to get dealers to come to Atlas.
+Workshops and conversations across product, data, and the field pointed in one direction: stop struggling to get dealers to come to Atlas.
 
 The company had invested years in building a desktop BI platform. Dealer session frequency was low and wasn’t improving. My recommendation was to stop optimizing for platform engagement and start delivering insights wherever dealers already were.
 
-To get leadership on board, I mapped the workflow alongside the concepts. This storyboard follows Jennifer, a performance consultant, through her current process and what changes with a push-based model.
+To get leadership on board, I mapped the workflow alongside the concepts.
 
-Before: late-night prep, a rushed deck, insights delivered once a month. After: Jennifer walks into every meeting already ahead of the data. Dealers act on issues the same day they surface.
-
-The storyboard made one thing clear: our job wasn’t making dashboards easier to read. It was to change when and how insight reached the people who needed it.
+The storyboard made one thing clear: our job wasn’t making dashboards easier to read. It was to change how insights reach people with business questions.
   </div>
   <div class="cs-split-image">
     <figure><img src="https://staging4.paulamsbary.com/wp-content/uploads/2026/04/Screenshot-2026-04-18-at-4.37.52-PM.png" alt="Storyboard — push-based insight delivery" /><figcaption>Storyboard — Jennifer's workflow before and after</figcaption></figure>
