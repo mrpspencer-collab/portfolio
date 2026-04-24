@@ -17,7 +17,7 @@ cta: Explore the case study
 order: 1
 ---
 <div class="cs-featured">
-  <img src="https://paulamsbary.com/wp-content/uploads/2026/04/Macbook-Pro-Light-Background-1.png" alt="Atlas — Same data. One requires interpretation. The other can be read." />
+  <img src="http://paulamsbary.com/wp-content/uploads/2026/04/atlas.png" alt="Atlas — Same data. One requires interpretation. The other can be read." />
   <div class="cs-featured-body">
     <p style="font-size:13px;color:var(--fg-muted);margin:0">Same data. One requires interpretation. The other can be read.</p>
   </div>
