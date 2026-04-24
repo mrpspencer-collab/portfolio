@@ -8,7 +8,7 @@ tags:
   - '2025'
 status: Shipping
 thumb: 'https://staging4.paulamsbary.com/wp-content/uploads/2026/04/Macbook-Pro-Light-Background-1.png'
-thumbBg: '#1A1713'
+thumbBg: '#FFFFFF'
 thumbText: Atlas
 thumbTextColor: '#5A5550'
 metrics: []
