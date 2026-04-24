@@ -7,7 +7,7 @@ tags:
   - Product Strategy
   - '2025'
 status: Shipping
-thumb: 'http://paulamsbary.com/wp-content/uploads/2026/04/ai-abstraction.png'
+thumb: 'http://paulamsbary.com/wp-content/uploads/2026/04/investigate.png'
 thumbBg: '#1A1713'
 thumbText: Atlas
 thumbTextColor: '#5A5550'
