@@ -317,8 +317,6 @@ The simplicity of the solution raised an obvious question: if any LLM can summar
     <figure><img src="http://paulamsbary.com/wp-content/uploads/2026/04/imageai.png" alt="table stakes" /><figcaption>Atlas Analyze makes summarization easy. Context makes it unique.</figcaption></figure>
   </div>
 </div>
-<div class="cs-featured">
-  <div class="cs-featured-body">
-    <p style="font-size:14px;color:var(--fg-muted);margin:0">Summarization is table stakes.<br />Reliable recommendations require context.<br />Trust depends on consistency.</p>
-  </div>
-</div>
+
+>Summarization is table stakes.<br />Reliable recommendations require context.<br />Trust depends on consistency.
+
