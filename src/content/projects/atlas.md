@@ -307,13 +307,18 @@ For dealers, this addressed a real friction point. Opening Atlas meant facing a 
 ## Impact
 <div class="cs-split">
   <div class="cs-split-body">
-Month-over-month usage increased as dealers began acting on insights directly. Consultants said it solved the blank canvas problem. At NADA, prospective customers got the value immediately.
-It also validated something more fundamental: the most impactful thing we could deliver wasn't a better dashboard — it was closer to a text message.
+Month-over-month usage increased as dealers began acting on insights directly. Consultants said it solved the blank canvas problem. At NADA, prospective customers understood the value immediately.
 
-The simplicity of the solution raised an obvious question: if any LLM can summarize a dashboard, where's the defensible value? The answer is context. That context layer — what matters in this industry, what benchmarks are meaningful, how consultants talk to dealers — can’t be easily reproduced. That's what separates a useful insight from a generic one and it can't be easily reproduced.
+It also validated something more fundamental: the most impactful thing we could deliver wasn’t a better dashboard. It was closer to a text message.
+
+The simplicity of the solution raised an obvious question: if any LLM can summarize a dashboard, where’s the defensible value?
+
+The answer is context. What matters in this industry. Which benchmarks are meaningful. How consultants actually solve customer problems. That context layer can’t be easily reproduced. It’s what separates a useful insight from a generic one.
+
+As we extend the solution to agents, that context becomes critical.
   </div>
   <div class="cs-split-image">
-    <figure><img src="http://paulamsbary.com/wp-content/uploads/2026/04/imageai.png" alt="table stakes" /><figcaption>Atlas Analyze makes summarization easy. Context makes it unique.</figcaption></figure>
+    <figure><img src="http://paulamsbary.com/wp-content/uploads/2026/04/imageai.png" alt="table stakes" /><figcaption>Atlas Analyze makes summarization easy. Context makes it useful.</figcaption></figure>
   </div>
 </div>
 
