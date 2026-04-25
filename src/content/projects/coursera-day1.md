@@ -7,9 +7,9 @@ tags:
   - Research
   - '2023'
 thumb: '/images/Step-1-make-a-committment-weekly-goal-3-scaled.jpg'
-thumbBg: '#D4CEC6'
+thumbBg: '#FFFFFF'
 thumbText: Day 1
-thumbTextColor: '#FFFFFF'
+thumbTextColor: '#6B6660'
 metrics:
   - '+4% Day 1 engagement lift on mobile'
   - '+3% Day 1 engagement lift on desktop'
