@@ -1091,6 +1091,7 @@ const nextProject = currentIndex < allProjects.length - 1 ? allProjects[currentI
 
   document.querySelectorAll<HTMLImageElement>('.body img').forEach(img => {
     if (img.closest('.cs-carousel--pan')) return;
+    if (img.closest('.cs-ext-card')) return;
     img.addEventListener('click', () => openLightbox(img.src, img.alt));
   });
 
