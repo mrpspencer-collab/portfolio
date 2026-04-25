@@ -11,8 +11,8 @@ Options -Indexes
   RewriteRule ^coursera-enterprise-website-redesign/?$ /work/coursera-biz [R=301,L]
   RewriteRule ^offline-viewing/?$ /work/disney [R=301,L]
   RewriteRule ^nhl-tv-team-home/?$ /work/nhl [R=301,L]
-  RewriteRule ^hero-iteration/?$ / [R=301,L]
-  RewriteRule ^lucasfilm-casestudy/?$ / [R=301,L]
+  RewriteRule ^hero-iteration/?$ https://wp.paulamsbary.com/hero-iteration/ [R=301,L]
+  RewriteRule ^lucasfilm-casestudy/?$ https://wp.paulamsbary.com/lucasfilm-casestudy/ [R=301,L]
 
   # Remove trailing slash (except root)
   RewriteCond %{REQUEST_FILENAME} !-d
