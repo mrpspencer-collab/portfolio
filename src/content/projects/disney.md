@@ -6,7 +6,7 @@ tags:
   - Streaming
   - Prototyping
   - '2020'
-thumb: '/images/disney-streaming.png'
+thumb: '/images/final-olv-design-scaled.jpg'
 thumbBg: '#0B1120'
 thumbText: Disney+
 thumbTextColor: '#4A5570'
