@@ -30,7 +30,7 @@ const nextProject = currentIndex < allProjects.length - 1 ? allProjects[currentI
     <div class="content-wrap">
       <div class="thumb" style={`background:${d.thumbBg}`}>
         {d.thumb
-          ? <img src={d.thumb} alt={d.title} class={d.thumbFit === 'cover' ? 'thumb-cover' : ''} />
+          ? <img src={d.thumb} alt={d.title} />
           : <span style={`font-family:var(--font-mono);font-size:14px;color:${d.thumbTextColor}`}>{d.title} — {d.subtitle}</span>}
       </div>
 
@@ -130,10 +130,6 @@ const nextProject = currentIndex < allProjects.length - 1 ? allProjects[currentI
     object-fit: contain;
     display: block;
     padding: 32px;
-  }
-  .thumb img.thumb-cover {
-    object-fit: cover;
-    padding: 0;
   }
   :global([data-theme="dark"]) .thumb {
     background: var(--bg-subtle) !important;
