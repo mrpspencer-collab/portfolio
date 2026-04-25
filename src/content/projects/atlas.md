@@ -284,11 +284,11 @@ For dealers, this addressed a real friction point. Opening Atlas meant facing a 
   </div>
 </div>
 
-**Bring intelligence to where attention already is.**
+**Desiging Analyze.**
 
-<p><strong>Why a sidebar:</strong> Operators are already looking at their data. A sidebar brings the insight to where attention already is — no context switch, no new screen to learn.</p>
-<p><strong>Why one button:</strong> The interaction had to be simple enough that a dealer who logged in once would try it. Complexity was the enemy of the first win.</p>
-<p><strong>Why plain language:</strong> The output mirrors what a consultant says in a meeting — not what a dashboard shows. Observation, context, action. No data literacy required.</p>
+<p><strong>A sidebar:</strong> Bring the insight to where attention already is — no context switch, no new screen to learn.</p>
+<p><strong>One button interaction:</strong>Simple enough that a user who logs in once would try it. Complexity was the enemy of the first win.</p>
+<p><strong>Plain language:</strong> The output mirrors what a consultant says in a meeting. Observation, context, action.</p>
 
 <div class="cs-featured">
   <img src="https://staging4.paulamsbary.com/wp-content/uploads/2026/04/layout.png" alt="Early redlines — sidebar proportions" />
