@@ -15,7 +15,7 @@ metrics:
   - '+3% Day 1 engagement lift on desktop'
   - Hundreds of thousands more learners reaching activation threshold
 cta: Explore the case study
-order: 3
+order: 4
 ---
 As enrollments normalized post-pandemic, Coursera faced a critical challenge: learners were signing up but not sticking with their courses long enough to see results. I led the shift from one-size-fits-all nudges toward behavioral science-informed retention strategy.
 

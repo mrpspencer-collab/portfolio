@@ -13,7 +13,7 @@ thumbText: Disney+
 thumbTextColor: '#4A5570'
 metrics: []
 cta: Explore the case study
-order: 5
+order: 6
 ---
 
 Offline viewing can be a poor experience on some streaming services — usage rules and availability feel confusing and arbitrary. I led the foundational research, journey mapping, and prototyping that defined Disney+'s early offline viewing feature: a capability that ultimately launched with unlimited downloads across up to 10 devices and no annual constraints.

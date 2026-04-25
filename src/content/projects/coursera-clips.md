@@ -18,7 +18,7 @@ metrics:
   - '+24.25% lift in explicit enrollment actions'
   - '+1.5% increase in Enterprise Enrollment Rate'
 cta: Explore the case study
-order: 2
+order: 3
 ---
 
 Clips are Coursera's short-form learning format: 2–10 minute videos pulled from full courses. I led the redesign of the end-to-end Clips experience to increase video consumption, continuation rates, and course enrollments — ultimately unlocking new enterprise wins and long-term revenue.

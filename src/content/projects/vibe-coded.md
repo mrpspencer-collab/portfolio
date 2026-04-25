@@ -13,7 +13,7 @@ thumbTextColor: '#D4904E'
 thumbFit: contain
 metrics: []
 cta: See the experiments
-order: 7
+order: 2
 ---
 
 Claude Code and Figma Make have changed how I prototype. What used to take a sprint of back-and-forth now takes an afternoon. The experiments below range from functioning tools in active use to interactive prototypes that made abstract concepts tangible enough to ship or kill. None took more than a day.

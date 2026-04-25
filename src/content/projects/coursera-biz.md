@@ -15,7 +15,7 @@ metrics:
   - Migrated WordPress to Contentful headless CMS
   - Unified design language across Business, Government and Higher Ed
 cta: Explore the case study
-order: 4
+order: 5
 ---
 
 Coursera's Business, Government, and Higher Ed sites were running on an outdated WordPress foundation that limited flexibility, constrained content management, and couldn't adapt to the demands of enterprise buyers. I led the design of a full rebuild targeting a 20% increase in Marketing Qualified Leads.

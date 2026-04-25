@@ -15,7 +15,7 @@ metrics:
   - Positive fan feedback via social at launch
   - No redesign backlash — Scores preference preserved via customization
 cta: Explore the case study
-order: 6
+order: 7
 ---
 
 Following the NHL.tv app redesign for connected devices, user research revealed a consistent pattern: fans used the app primarily for live games while consuming highlights and team content elsewhere. I led the design of a team-centric experience — shifting the app from league-first to fan-first.
