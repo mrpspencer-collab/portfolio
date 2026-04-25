@@ -4,6 +4,16 @@ Options -Indexes
   RewriteEngine On
   RewriteBase /
 
+  # Legacy WordPress URL redirects
+  RewriteRule ^atlas-showcase/?$ /work/atlas [R=301,L]
+  RewriteRule ^coursera-clips-short-form-content/?$ /work/coursera-clips [R=301,L]
+  RewriteRule ^coursera-day-1/?$ /work/coursera-day1 [R=301,L]
+  RewriteRule ^coursera-enterprise-website-redesign/?$ /work/coursera-biz [R=301,L]
+  RewriteRule ^offline-viewing/?$ /work/disney [R=301,L]
+  RewriteRule ^nhl-tv-team-home/?$ /work/nhl [R=301,L]
+  RewriteRule ^hero-iteration/?$ / [R=301,L]
+  RewriteRule ^lucasfilm-casestudy/?$ / [R=301,L]
+
   # Remove trailing slash (except root)
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteRule ^(.+)/$ /$1 [R=301,L]
