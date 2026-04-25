@@ -701,187 +701,158 @@ const nextProject = currentIndex < allProjects.length - 1 ? allProjects[currentI
     color: var(--fg-subtle);
   }
 
-  /* Vibe Coded — card grid */
-  .body :global(.cs-exp-grid) {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
-    margin: 32px 0;
-  }
-  .body :global(.cs-exp-card) {
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    overflow: hidden;
-    background: var(--bg-surface);
+  /* Vibe Coded — chrome-store-style cards */
+  .body :global(.cs-ext-list) {
     display: flex;
     flex-direction: column;
-    transition: box-shadow 0.2s ease;
+    gap: 20px;
+    margin: 32px 0;
   }
-  .body :global(.cs-exp-card:hover) {
-    box-shadow: var(--shadow-lg);
+  .body :global(.cs-ext-card) {
+    background: var(--bg-surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.06);
   }
-  .body :global(.cs-exp-card-image) {
-    aspect-ratio: 16 / 10;
+  .body :global(.cs-ext-header) {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 20px 24px 14px;
+  }
+  .body :global(.cs-ext-icon) {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    background: var(--accent);
+    color: #fff;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    letter-spacing: 0.02em;
+  }
+  .body :global(.cs-ext-title) {
+    font-family: var(--font-display);
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--fg);
+    margin: 0;
+    letter-spacing: -0.02em;
+    max-width: 100% !important;
+  }
+  .body :global(.cs-ext-demo) {
+    margin-left: auto;
+    background: var(--accent);
+    color: #fff !important;
+    text-decoration: none !important;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    font-family: var(--font-body);
+    white-space: nowrap;
+    flex-shrink: 0;
+    transition: opacity 0.15s;
+  }
+  .body :global(.cs-ext-demo:hover) { opacity: 0.8; }
+  .body :global(.cs-ext-tags) {
+    display: flex;
+    gap: 8px;
+    padding: 0 24px 16px;
+    flex-wrap: wrap;
+  }
+  .body :global(.cs-ext-tag) {
+    font-size: 12px;
+    font-family: var(--font-body);
+    color: var(--fg-muted);
+    background: var(--bg-muted);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 3px 10px;
+  }
+  .body :global(.cs-ext-body) {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    border-top: 1px solid var(--border);
+    min-height: 280px;
+  }
+  .body :global(.cs-ext-text) {
+    padding: 20px 24px;
+    border-right: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+  }
+  .body :global(.cs-ext-text p) {
+    font-size: 14px;
+    line-height: 1.65;
+    color: var(--fg-muted);
+    margin-bottom: 14px !important;
+    max-width: 100% !important;
+  }
+  .body :global(.cs-ext-takeaway) {
+    font-size: 13px;
+    font-style: italic;
+    color: var(--fg) !important;
+    margin-top: auto !important;
+    margin-bottom: 0 !important;
+    padding-left: 12px;
+    border-left: 2px solid var(--accent);
+    line-height: 1.5;
+    max-width: 100% !important;
+  }
+  .body :global(.cs-ext-images) {
+    display: flex;
+    background: var(--bg-muted);
+    overflow: hidden;
+  }
+  .body :global(.cs-ext-main) {
+    flex: 1;
     overflow: hidden;
     background: var(--bg-muted);
-    border-bottom: 1px solid var(--border);
   }
-  .body :global(.cs-exp-card-image img) {
+  .body :global(.cs-ext-main-img) {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: top;
     display: block;
-    border-radius: 0;
-    border: none;
+    border-radius: 0 !important;
+    border: none !important;
     margin: 0 !important;
   }
-  .body :global(.cs-exp-card-body) {
-    padding: 20px 22px 22px;
+  .body :global(.cs-ext-thumbs) {
+    width: 96px;
+    flex-shrink: 0;
+    border-left: 1px solid var(--border);
+    background: var(--bg-subtle, var(--bg-muted));
     display: flex;
     flex-direction: column;
-    flex: 1;
+    gap: 6px;
+    padding: 8px;
+    overflow-y: auto;
   }
-  .body :global(.cs-exp-type) {
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: .09em;
-    text-transform: uppercase;
-    color: var(--accent);
-    font-family: var(--font-body);
-    margin-bottom: 8px;
-    display: block;
-  }
-  .body :global(.cs-exp-title) {
-    font-family: var(--font-display);
-    font-size: 19px;
-    font-weight: 700;
-    color: var(--fg);
-    margin: 0 0 12px;
-    letter-spacing: -0.02em;
-    line-height: 1.2;
-    max-width: 100% !important;
-  }
-  .body :global(.cs-exp-desc) {
-    font-size: 14px;
-    line-height: 1.65;
-    color: var(--fg-muted);
-    margin: 0 0 16px !important;
-    max-width: 100% !important;
-    flex: 1;
-  }
-  .body :global(.cs-exp-takeaway) {
-    font-size: 13px;
-    font-style: italic;
-    color: var(--fg) !important;
-    margin: 0 0 16px !important;
-    padding-left: 12px;
-    border-left: 2px solid var(--accent);
-    max-width: 100% !important;
-    line-height: 1.5;
-  }
-  .body :global(.cs-exp-cta) {
-    display: inline-block;
-    font-size: 13px;
-    font-weight: 600;
-    color: var(--accent);
-    text-decoration: none;
-    font-family: var(--font-body);
-    margin-top: auto;
-  }
-  .body :global(.cs-exp-cta:hover) { text-decoration: underline; }
-  @media (max-width: 640px) {
-    .body :global(.cs-exp-grid) { grid-template-columns: 1fr; }
-  }
-
-  /* Vibe Coded experiments (legacy vertical) */
-  .body :global(.cs-experiment-list) {
-    margin-top: 40px;
-  }
-  .body :global(.cs-experiment) {
-    border-top: 1px solid var(--border);
-    padding: 40px 0;
-  }
-  .body :global(.cs-experiment-meta) {
-    display: flex;
-    align-items: baseline;
-    gap: 16px;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
-  }
-  .body :global(.cs-experiment-type) {
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: .1em;
-    text-transform: uppercase;
-    color: var(--accent);
-    font-family: var(--font-body);
-    white-space: nowrap;
-  }
-  .body :global(.cs-experiment-title) {
-    font-family: var(--font-display);
-    font-size: 22px;
-    font-weight: 700;
-    color: var(--fg);
-    margin: 0;
-    letter-spacing: -0.02em;
-  }
-  .body :global(.cs-experiment-link) {
-    margin-left: auto;
-    font-size: 13px;
-    color: var(--accent);
-    text-decoration: none;
-    white-space: nowrap;
-    font-family: var(--font-body);
-  }
-  .body :global(.cs-experiment-link:hover) { text-decoration: underline; }
-  .body :global(.cs-experiment-body) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    align-items: start;
-  }
-  .body :global(.cs-experiment-text p) {
-    font-size: 15px;
-    line-height: 1.65;
-    color: var(--fg-muted);
-    margin-bottom: 12px;
-    max-width: 100% !important;
-  }
-  .body :global(.cs-experiment-takeaway) {
-    font-size: 14px;
-    font-weight: 600;
-    color: var(--fg) !important;
-    font-style: italic;
-    margin-top: 16px;
-    padding-left: 16px;
-    border-left: 3px solid var(--accent);
-  }
-  .body :global(.cs-experiment-media figure) {
-    margin: 0 0 12px;
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    overflow: hidden;
-  }
-  .body :global(.cs-experiment-media img) {
+  .body :global(.cs-ext-thumb) {
     width: 100%;
-    height: auto;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 2px solid transparent !important;
+    opacity: 0.55;
+    transition: opacity 0.15s, border-color 0.15s;
     display: block;
-    border-radius: 0;
-    border: none;
-    border-bottom: 1px solid var(--border);
     margin: 0 !important;
   }
-  .body :global(.cs-experiment-media figcaption) {
-    font-size: 12px;
-    color: var(--fg-subtle);
-    padding: 8px 12px;
-    background: var(--bg-muted);
-  }
-  .body :global(.cs-experiment-media.cs-image-pair) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
+  .body :global(.cs-ext-thumb:hover) { opacity: 0.85; }
+  .body :global(.cs-ext-thumb--active) {
+    border-color: var(--accent) !important;
+    opacity: 1;
   }
 
   @media (max-width: 640px) {
@@ -890,8 +861,9 @@ const nextProject = currentIndex < allProjects.length - 1 ? allProjects[currentI
     .thumb { height: 50vw; min-height: 260px; margin: 24px 0; }
     h1 { font-size: 28px; }
     .body :global(p), .body :global(ul), .body :global(ol) { max-width: 100%; }
-    .body :global(.cs-experiment-body) { grid-template-columns: 1fr; }
-    .body :global(.cs-experiment-media.cs-image-pair) { grid-template-columns: 1fr; }
+    .body :global(.cs-ext-body) { grid-template-columns: 1fr; }
+    .body :global(.cs-ext-text) { border-right: none; border-bottom: 1px solid var(--border); }
+    .body :global(.cs-ext-thumbs) { display: none; }
   }
 
   /* Lightbox */
@@ -1255,4 +1227,17 @@ const nextProject = currentIndex < allProjects.length - 1 ? allProjects[currentI
       });
     }
   }
+
+  // Experiment card thumbnail switching
+  document.querySelectorAll<HTMLElement>('.cs-ext-card').forEach(card => {
+    const mainImg = card.querySelector<HTMLImageElement>('.cs-ext-main-img');
+    const thumbs  = card.querySelectorAll<HTMLImageElement>('.cs-ext-thumb');
+    thumbs.forEach(thumb => {
+      thumb.addEventListener('click', () => {
+        if (mainImg) mainImg.src = thumb.src;
+        thumbs.forEach(t => t.classList.remove('cs-ext-thumb--active'));
+        thumb.classList.add('cs-ext-thumb--active');
+      });
+    });
+  });
 </script>
