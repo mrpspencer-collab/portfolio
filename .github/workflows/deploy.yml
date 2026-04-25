@@ -22,7 +22,7 @@ jobs:
         with:
           ssh-private-key: ${{ secrets.PORTFOLIOKEY }}
 
-      - name: Deploy to SiteGround
+      - name: Deploy to SiteGround (paulamsbary.com)
         run: |
           ssh-keyscan -p 18765 ssh.paulamsbary.com >> ~/.ssh/known_hosts 2>/dev/null
           rsync -az --delete \
