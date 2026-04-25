@@ -4,7 +4,7 @@ subtitle: Day 1 Commitment
 role: Principal Product Designer
 tags:
   - Behavioral Design
-  - Research
+  - Interaction Design
   - '2023'
 thumb: '/images/Step-1-make-a-committment-weekly-goal-3-scaled.jpg'
 thumbBg: '#FFFFFF'
