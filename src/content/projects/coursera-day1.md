@@ -17,8 +17,7 @@ metrics:
 cta: Explore the case study
 order: 3
 ---
-
-As enrollments normalized post-pandemic, Coursera faced a critical challenge: learners were signing up but not sticking with their courses long enough to see results. My work focused on shifting our retention strategy away from one-size-fits-all nudges toward behavioral science-informed design.
+As enrollments normalized post-pandemic, Coursera faced a critical challenge: learners were signing up but not sticking with their courses long enough to see results. I led the shift from one-size-fits-all nudges toward behavioral science-informed retention strategy.
 
 ## Engagement Decline
 
@@ -36,7 +35,7 @@ As enrollments normalized post-pandemic, Coursera faced a critical challenge: le
 <div class="cs-split">
   <div class="cs-split-body">
     <p>Learners abandoned courses when encountering friction points, particularly assessments. Only 15% of enrollees reached their first lesson, and the typical journey required 12+ steps before any real learning occurred.</p>
-    <p>The opportunity was to design a streamlined 6-step flow — meeting learners with intention and removing every unnecessary obstacle before Day 1 momentum could form.</p>
+    <p>I reframed the problem as reducing the path to momentum, redesigning the onboarding flow.</p>
   </div>
   <div class="cs-split-image">
     <figure><img src="/images/lal-2.png" alt="Learner activation data" /><figcaption>Learner activation data — illustrative trend</figcaption></figure>
@@ -47,8 +46,8 @@ As enrollments normalized post-pandemic, Coursera faced a critical challenge: le
 
 <div class="cs-split">
   <div class="cs-split-body">
-    <p>The mobile team had already achieved 5–6% Day 1 and Day 7 engagement gains. The instinct was to adapt that approach for desktop, but mobile's vertical flow conflicted with desktop's information density.</p>
-    <p>Rather than force a translation, I returned to the mobile design as foundational inspiration — iterating on what had already proven to work rather than rebuilding from scratch.</p>
+    <p>We had already achieved 5–6% Day 1 and Day 7 engagement gains on mobile. The instinct was to adapt that approach for desktop, but mobile's vertical flow conflicted with desktop's information density.</p>
+    <p>Rather than translate mobile directly, I used it as a baseline and reworked the flow for desktop constraints.</p>
   </div>
   <div class="cs-split-image">
     <div class="cs-image-pair">
@@ -62,7 +61,7 @@ As enrollments normalized post-pandemic, Coursera faced a critical challenge: le
 
 <div class="cs-split">
   <div class="cs-split-body">
-    <p>Cross-team coordination eliminated redundant screens and reordered key steps, compressing a 12+ step journey into a focused 6-step flow. Content strategy played a crucial role: clear, purposeful copy did as much work as the UI.</p>
+    <p>I aligned teams to remove redundant screens and reorder key steps, compressing the journey from 12+ steps to 6. Content strategy played a crucial role: clear, purposeful copy did as much work as the UI.</p>
   </div>
   <div class="cs-split-image">
     <figure><img src="/images/Course-within-Meta-Specialization-Control-1-scaled.jpg" alt="Course enrollment flow — original step count" /><figcaption>Original enrollment flow — 12+ steps before first lesson</figcaption></figure>
@@ -166,7 +165,7 @@ The experiment tested three variants to isolate which element drove the behavior
 
 ## Strategic Outcomes
 
-The results validated a broader shift in how Coursera thought about early engagement — from feature additions to friction removal, and from isolated nudges to coordinated interventions at meaningful moments.
+The results validated the approach I introduced—shifting from feature add ons to friction reduction at high-intent moments.
 
 <div class="cs-columns">
   <div>
