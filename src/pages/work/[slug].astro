@@ -699,12 +699,104 @@ const nextProject = currentIndex < allProjects.length - 1 ? allProjects[currentI
     color: var(--fg-subtle);
   }
 
+  /* Vibe Coded experiments */
+  .body :global(.cs-experiment-list) {
+    margin-top: 40px;
+  }
+  .body :global(.cs-experiment) {
+    border-top: 1px solid var(--border);
+    padding: 40px 0;
+  }
+  .body :global(.cs-experiment-meta) {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  .body :global(.cs-experiment-type) {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-family: var(--font-body);
+    white-space: nowrap;
+  }
+  .body :global(.cs-experiment-title) {
+    font-family: var(--font-display);
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--fg);
+    margin: 0;
+    letter-spacing: -0.02em;
+  }
+  .body :global(.cs-experiment-link) {
+    margin-left: auto;
+    font-size: 13px;
+    color: var(--accent);
+    text-decoration: none;
+    white-space: nowrap;
+    font-family: var(--font-body);
+  }
+  .body :global(.cs-experiment-link:hover) { text-decoration: underline; }
+  .body :global(.cs-experiment-body) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+  }
+  .body :global(.cs-experiment-text p) {
+    font-size: 15px;
+    line-height: 1.65;
+    color: var(--fg-muted);
+    margin-bottom: 12px;
+    max-width: 100% !important;
+  }
+  .body :global(.cs-experiment-takeaway) {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--fg) !important;
+    font-style: italic;
+    margin-top: 16px;
+    padding-left: 16px;
+    border-left: 3px solid var(--accent);
+  }
+  .body :global(.cs-experiment-media figure) {
+    margin: 0 0 12px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .body :global(.cs-experiment-media img) {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid var(--border);
+    margin: 0 !important;
+  }
+  .body :global(.cs-experiment-media figcaption) {
+    font-size: 12px;
+    color: var(--fg-subtle);
+    padding: 8px 12px;
+    background: var(--bg-muted);
+  }
+  .body :global(.cs-experiment-media.cs-image-pair) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
   @media (max-width: 640px) {
     .breadcrumb { padding: 12px 20px; }
     .content-wrap { padding: 0 20px; }
     .thumb { height: 50vw; min-height: 260px; margin: 24px 0; }
     h1 { font-size: 28px; }
     .body :global(p), .body :global(ul), .body :global(ol) { max-width: 100%; }
+    .body :global(.cs-experiment-body) { grid-template-columns: 1fr; }
+    .body :global(.cs-experiment-media.cs-image-pair) { grid-template-columns: 1fr; }
   }
 
   /* Lightbox */
