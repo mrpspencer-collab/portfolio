@@ -767,7 +767,7 @@ const nextProject = currentIndex < allProjects.length - 1 ? allProjects[currentI
 </style>
 
 {project.slug === 'atlas' && (
-<div id="pg-overlay" style="display:none">
+<div id="pg-overlay">
   <div id="pg-box">
     <p id="pg-logo">PA</p>
     <h2 id="pg-heading">This case study is password protected.</h2>
@@ -1010,7 +1010,6 @@ const nextProject = currentIndex < allProjects.length - 1 ? allProjects[currentI
     if (localStorage.getItem(KEY) === '1') {
       overlay.remove();
     } else {
-      overlay.style.display = 'flex';
       document.body.style.overflow = 'hidden';
 
       const input  = document.getElementById('pg-input') as HTMLInputElement;
