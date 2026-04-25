@@ -28,9 +28,9 @@ Claude Code and Figma Make have changed how I prototype. What used to take a spr
     <a href="https://paula331.sg-host.com" target="_blank" rel="noopener" class="cs-ext-demo">Live Demo →</a>
   </div>
   <div class="cs-ext-tags">
-    <span class="cs-ext-tag">Working Tool</span>
-    <span class="cs-ext-tag">Marketing</span>
-    <span class="cs-ext-tag">~30 min build</span>
+    <span class="tag">Working Tool</span>
+    <span class="tag">Marketing</span>
+    <span class="tag">~30 min build</span>
   </div>
   <div class="cs-ext-body">
     <div class="cs-ext-text">
@@ -59,10 +59,10 @@ Claude Code and Figma Make have changed how I prototype. What used to take a spr
     <a href="https://whirl-finder-90280024.figma.site" target="_blank" rel="noopener" class="cs-ext-demo">Live Demo →</a>
   </div>
   <div class="cs-ext-tags">
-    <span class="cs-ext-tag">Prototype</span>
-    <span class="cs-ext-tag">Accessibility</span>
-    <span class="cs-ext-tag">14 Concepts</span>
-    <span class="cs-ext-tag">Color Blindness Simulation</span>
+    <span class="tag">Prototype</span>
+    <span class="tag">Accessibility</span>
+    <span class="tag">14 Concepts</span>
+    <span class="tag">Color Blindness Simulation</span>
   </div>
   <div class="cs-ext-body">
     <div class="cs-ext-text">
@@ -90,9 +90,9 @@ Claude Code and Figma Make have changed how I prototype. What used to take a spr
     <a href="https://atlasimagemaker.netlify.app" target="_blank" rel="noopener" class="cs-ext-demo">Live Demo →</a>
   </div>
   <div class="cs-ext-tags">
-    <span class="cs-ext-tag">Working Prototype</span>
-    <span class="cs-ext-tag">AI-Generated</span>
-    <span class="cs-ext-tag">Social Media</span>
+    <span class="tag">Working Prototype</span>
+    <span class="tag">AI-Generated</span>
+    <span class="tag">Social Media</span>
   </div>
   <div class="cs-ext-body">
     <div class="cs-ext-text">
@@ -119,9 +119,9 @@ Claude Code and Figma Make have changed how I prototype. What used to take a spr
     <a href="https://paula329.sg-host.com/index.html" target="_blank" rel="noopener" class="cs-ext-demo">Live Demo →</a>
   </div>
   <div class="cs-ext-tags">
-    <span class="cs-ext-tag">Personal Tool</span>
-    <span class="cs-ext-tag">Finance</span>
-    <span class="cs-ext-tag">Scenario Modeling</span>
+    <span class="tag">Personal Tool</span>
+    <span class="tag">Finance</span>
+    <span class="tag">Scenario Modeling</span>
   </div>
   <div class="cs-ext-body">
     <div class="cs-ext-text">
@@ -147,9 +147,9 @@ Claude Code and Figma Make have changed how I prototype. What used to take a spr
     </div>
   </div>
   <div class="cs-ext-tags">
-    <span class="cs-ext-tag">Prototype</span>
-    <span class="cs-ext-tag">BI</span>
-    <span class="cs-ext-tag">LLM-Powered</span>
+    <span class="tag">Prototype</span>
+    <span class="tag">BI</span>
+    <span class="tag">LLM-Powered</span>
   </div>
   <div class="cs-ext-body">
     <div class="cs-ext-text">
