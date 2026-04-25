@@ -28,11 +28,13 @@ const nextProject = currentIndex < allProjects.length - 1 ? allProjects[currentI
     </div>
 
     <div class="content-wrap">
-      <div class="thumb" style={`background:${d.thumbBg}`}>
-        {d.thumb
-          ? <img src={d.thumb} alt={d.title} />
-          : <span style={`font-family:var(--font-mono);font-size:14px;color:${d.thumbTextColor}`}>{d.title} — {d.subtitle}</span>}
-      </div>
+      {d.heroThumb !== false && (
+        <div class="thumb" style={`background:${d.thumbBg}`}>
+          {d.thumb
+            ? <img src={d.thumb} alt={d.title} />
+            : <span style={`font-family:var(--font-mono);font-size:14px;color:${d.thumbTextColor}`}>{d.title} — {d.subtitle}</span>}
+        </div>
+      )}
 
       <div class="content">
         <div class="tags">
@@ -699,7 +701,100 @@ const nextProject = currentIndex < allProjects.length - 1 ? allProjects[currentI
     color: var(--fg-subtle);
   }
 
-  /* Vibe Coded experiments */
+  /* Vibe Coded — card grid */
+  .body :global(.cs-exp-grid) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin: 32px 0;
+  }
+  .body :global(.cs-exp-card) {
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+    background: var(--bg-surface);
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow 0.2s ease;
+  }
+  .body :global(.cs-exp-card:hover) {
+    box-shadow: var(--shadow-lg);
+  }
+  .body :global(.cs-exp-card-image) {
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    background: var(--bg-muted);
+    border-bottom: 1px solid var(--border);
+  }
+  .body :global(.cs-exp-card-image img) {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+    border-radius: 0;
+    border: none;
+    margin: 0 !important;
+  }
+  .body :global(.cs-exp-card-body) {
+    padding: 20px 22px 22px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+  .body :global(.cs-exp-type) {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .09em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-family: var(--font-body);
+    margin-bottom: 8px;
+    display: block;
+  }
+  .body :global(.cs-exp-title) {
+    font-family: var(--font-display);
+    font-size: 19px;
+    font-weight: 700;
+    color: var(--fg);
+    margin: 0 0 12px;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    max-width: 100% !important;
+  }
+  .body :global(.cs-exp-desc) {
+    font-size: 14px;
+    line-height: 1.65;
+    color: var(--fg-muted);
+    margin: 0 0 16px !important;
+    max-width: 100% !important;
+    flex: 1;
+  }
+  .body :global(.cs-exp-takeaway) {
+    font-size: 13px;
+    font-style: italic;
+    color: var(--fg) !important;
+    margin: 0 0 16px !important;
+    padding-left: 12px;
+    border-left: 2px solid var(--accent);
+    max-width: 100% !important;
+    line-height: 1.5;
+  }
+  .body :global(.cs-exp-cta) {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--accent);
+    text-decoration: none;
+    font-family: var(--font-body);
+    margin-top: auto;
+  }
+  .body :global(.cs-exp-cta:hover) { text-decoration: underline; }
+  @media (max-width: 640px) {
+    .body :global(.cs-exp-grid) { grid-template-columns: 1fr; }
+  }
+
+  /* Vibe Coded experiments (legacy vertical) */
   .body :global(.cs-experiment-list) {
     margin-top: 40px;
   }
