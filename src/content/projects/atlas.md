@@ -266,8 +266,7 @@ Our job wasn’t making dashboards easier to read. It was to change how insights
 Analyze was the first product we shipped toward this strategy. We had spent months exploring RAG-based approaches without anything to show users. Once we defined the right problem, Analyze shipped in weeks.
 
 We built it inside the existing platform as an MVP. Mobile was the destination but we started with the simplest possible interaction to prove the concept — a single button that generated a plain-language summary of what was happening across a user’s dashboards.
-
-The output needed to be trustworthy, not generic. We built a context layer trained on automotive retail — the metrics that matter, the benchmarks that are meaningful, the language consultants use with dealers. The summary told dealers what changed, what was worth paying attention to, and what to do next.
+The summary told dealers what changed, what was worth paying attention to, and what to do next.
 
 For dealers, this addressed a real friction point. Opening Atlas meant facing a dashboard with no clear starting point. Analyze gave them one.
 
@@ -278,18 +277,17 @@ For dealers, this addressed a real friction point. Opening Atlas meant facing a 
   </div>
 </div>
 
-**Bring intelligence to where attention already is.**
-
-<p><strong>Why a sidebar:</strong> Operators are already looking at their data. A sidebar brings the insight to where attention already is — no context switch, no new screen to learn.</p>
-<p><strong>Why one button:</strong> The interaction had to be simple enough that a dealer who logged in once would try it. Complexity was the enemy of the first win.</p>
-<p><strong>Why plain language:</strong> The output mirrors what a consultant says in a meeting — not what a dashboard shows. Observation, context, action. No data literacy required.</p>
-
 <div class="cs-featured">
   <img src="https://staging4.paulamsbary.com/wp-content/uploads/2026/04/layout.png" alt="Early redlines — sidebar proportions" />
   <div class="cs-featured-body">
     <p style="font-size:13px;color:var(--fg-muted);margin:0">Early redlines exploring sidebar proportions and content hierarchy.</p>
   </div>
 </div>
+**Bring intelligence to where attention already is.**
+
+<p><strong>Why a sidebar:</strong> Operators are already looking at their data. A sidebar brings the insight to where attention already is — no context switch, no new screen to learn.</p>
+<p><strong>Why one button:</strong> The interaction had to be simple enough that a dealer who logged in once would try it. Complexity was the enemy of the first win.</p>
+<p><strong>Why plain language:</strong> The output mirrors what a consultant says in a meeting — not what a dashboard shows. Observation, context, action. No data literacy required.</p>
 
 <div class="cs-featured">
   <img src="https://staging4.paulamsbary.com/wp-content/uploads/2026/04/implementation-1-scaled.png" alt="Analyze as a sidebar in the live platform" />
