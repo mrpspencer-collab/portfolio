@@ -6,7 +6,7 @@ tags:
   - Streaming
   - Prototyping
   - '2020'
-thumb: '/images/final-olv-design-scaled.jpg'
+thumb: 'https://paulamsbary.com/images/final-olv-design-scaled.jpg'
 thumbBg: '#FFFFFF'
 thumbFit: cover
 thumbText: Disney+
