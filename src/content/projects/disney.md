@@ -6,7 +6,7 @@ tags:
   - Streaming
   - Prototyping
   - '2020'
-thumb: 'https://paulamsbary.com/wp-content/uploads/2021/08/final-olv-design-scaled.jpg'
+thumb: '/images/disney-streaming.png'
 thumbBg: '#0B1120'
 thumbText: Disney+
 thumbTextColor: '#4A5570'
@@ -24,7 +24,7 @@ Offline viewing can be a poor experience on some streaming services — usage ru
     <p>Users with paid subscriptions expected seamless access whether streaming or playing local files. The team recognized offline viewing as a competitive opportunity — but the UX territory was largely unexplored. We needed to understand user behavior, identify pain points, and prototype a foundation before product design began in earnest.</p>
   </div>
   <div class="cs-split-image">
-    <figure><img src="https://paulamsbary.com/wp-content/uploads/2021/08/olv-scaled.jpg" alt="Offline Viewing — the challenge" /><figcaption>Offline viewing — the UX challenge</figcaption></figure>
+    <figure><img src="/images/olv-scaled.jpg" alt="Offline Viewing — the challenge" /><figcaption>Offline viewing — the UX challenge</figcaption></figure>
   </div>
 </div>
 
@@ -61,7 +61,7 @@ I conducted foundational research capturing diverse user experiences — identif
     <p>Key use cases shaped the journey: city commuters, parents downloading content for car trips, and air travelers planning ahead. Each had distinct storage behaviors and failure modes.</p>
   </div>
   <div class="cs-split-image">
-    <figure><img src="https://paulamsbary.com/wp-content/uploads/2021/04/PORTFOLIO-offlineViewing-User-journey-scaled.jpg" alt="Offline Viewing User Journey Map" /><figcaption>User journey map — offline viewing end-to-end</figcaption></figure>
+    <figure><img src="/images/PORTFOLIO-offlineViewing-User-journey-scaled.jpg" alt="Offline Viewing User Journey Map" /><figcaption>User journey map — offline viewing end-to-end</figcaption></figure>
   </div>
 </div>
 
@@ -73,28 +73,28 @@ The prototype covered the four critical flows that collectively defined the offl
   <div class="cs-carousel-track-wrap">
     <div class="cs-carousel-track">
       <div class="cs-carousel-slide">
-        <img src="https://paulamsbary.com/wp-content/uploads/2021/08/demo-flow-offline-viewing1.jpg" alt="Demo Flow 1 — Download Red Route" />
+        <img src="/images/demo-flow-offline-viewing1.jpg" alt="Demo Flow 1 — Download Red Route" />
         <div class="cs-carousel-caption">
           <strong>Red Route — Download & Play</strong>
           <p>Content discovery, download initiation, download status view, and playback of downloaded content. The core happy path.</p>
         </div>
       </div>
       <div class="cs-carousel-slide">
-        <img src="https://paulamsbary.com/wp-content/uploads/2021/08/demo-flow-offline-viewing-2.jpg" alt="Demo Flow 2 — Empty State" />
+        <img src="/images/demo-flow-offline-viewing-2.jpg" alt="Demo Flow 2 — Empty State" />
         <div class="cs-carousel-caption">
           <strong>Empty State & Awareness</strong>
           <p>Creating downloadable content awareness from a cold start — with notification for completed downloads driving re-entry.</p>
         </div>
       </div>
       <div class="cs-carousel-slide">
-        <img src="https://paulamsbary.com/wp-content/uploads/2021/08/nhl-demo-flow-offline-viewing-3.jpg" alt="Demo Flow 3 — Downloads Management" />
+        <img src="/images/nhl-demo-flow-offline-viewing-3.jpg" alt="Demo Flow 3 — Downloads Management" />
         <div class="cs-carousel-caption">
           <strong>Downloads Management</strong>
           <p>Mixed in-progress and completed items. Designed states: In Progress, Pause/Cancel, Error/Retry, Paused/Resume, and Delete.</p>
         </div>
       </div>
       <div class="cs-carousel-slide">
-        <img src="https://paulamsbary.com/wp-content/uploads/2021/08/demo-flow-offline-viewing-4.jpg" alt="Demo Flow 4 — Download Settings" />
+        <img src="/images/demo-flow-offline-viewing-4.jpg" alt="Demo Flow 4 — Download Settings" />
         <div class="cs-carousel-caption">
           <strong>Download Settings</strong>
           <p>Storage preferences, download quality options, and device management — the controls users needed but competitors buried or omitted.</p>
@@ -114,7 +114,7 @@ The prototype covered the four critical flows that collectively defined the offl
 Research and prototyping were transferred to Disney+ product designers months later, validating the foundational work's quality and direction.
 
 <div class="cs-featured">
-  <img src="https://paulamsbary.com/wp-content/uploads/2021/08/final-olv-design-scaled.jpg" alt="Disney+ Offline Viewing — Final Product Design" />
+  <img src="/images/final-olv-design-scaled.jpg" alt="Disney+ Offline Viewing — Final Product Design" />
   <div class="cs-featured-body">
     <ul>
       <li>Unlimited downloads — no annual constraints</li>

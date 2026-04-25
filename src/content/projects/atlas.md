@@ -7,7 +7,7 @@ tags:
   - Product Strategy
   - '2025'
 status: Shipping
-thumb: 'http://paulamsbary.com/wp-content/uploads/2026/04/audi-sales-alert-1.png'
+thumb: '/images/audi-sales-alert-1.png'
 thumbBg: '#C4BEB6'
 thumbFit: cover
 thumbText: Atlas
@@ -17,7 +17,7 @@ cta: Explore the case study
 order: 1
 ---
 <div class="cs-featured">
-  <img src="http://paulamsbary.com/wp-content/uploads/2026/04/investigate-at.png" alt="Atlas — Same data. One requires interpretation. The other can be read." />
+  <img src="/images/investigate-at.png" alt="Atlas — Same data. One requires interpretation. The other can be read." />
   <div class="cs-featured-body">
     <p style="font-size:13px;color:var(--fg-muted);margin:0">Same data. One requires interpretation. The other can be read.</p>
   </div>
@@ -33,21 +33,21 @@ That bet was partially right. We spent months iterating on visualizations and in
   <div class="cs-carousel-track-wrap">
     <div class="cs-carousel-track">
       <div class="cs-carousel-slide">
-        <img src="http://paulamsbary.com/wp-content/uploads/2026/04/inventorySection.png" alt="Inventory and demand — model-level view" />
+        <img src="/images/inventorySection.png" alt="Inventory and demand — model-level view" />
         <div class="cs-carousel-caption">
           <strong>Inventory & demand</strong>
           <p>Model-level view</p>
         </div>
       </div>
       <div class="cs-carousel-slide">
-        <img src="http://paulamsbary.com/wp-content/uploads/2026/04/Visitor-Locations-States-scaled.jpg" alt="Visitor Location States — dark theme" />
+        <img src="/images/Visitor-Locations-States-scaled.jpg" alt="Visitor Location States — dark theme" />
         <div class="cs-carousel-caption">
           <strong>Visitor Location States</strong>
           <p>Dark theme</p>
         </div>
       </div>
       <div class="cs-carousel-slide">
-        <img src="http://paulamsbary.com/wp-content/uploads/2026/04/leads-scaled.jpg" alt="Inventory Leads" />
+        <img src="/images/leads-scaled.jpg" alt="Inventory Leads" />
         <div class="cs-carousel-caption">
           <strong>Inventory Leads</strong>
           <p></p>
@@ -164,7 +164,7 @@ Five themes emerged.
 </div>
 
 <div class="cs-split-image" style="margin-top:24px">
-  <figure><img src="https://staging4.paulamsbary.com/wp-content/uploads/2026/04/Screenshot-2026-04-18-at-1.30.39-PM-scaled.png" alt="Opportunity mapping workshop" /><figcaption>Workshop — five thematic areas</figcaption></figure>
+  <figure><img src="/images/Screenshot-2026-04-18-at-1.30.39-PM-scaled.png" alt="Opportunity mapping workshop" /><figcaption>Workshop — five thematic areas</figcaption></figure>
 </div>
 
 ## Concepts
@@ -173,63 +173,63 @@ Five themes emerged.
   <div class="cs-carousel-track-wrap">
     <div class="cs-carousel-track">
       <div class="cs-carousel-slide">
-        <img src="http://paulamsbary.com/wp-content/uploads/2026/04/Boards-Keyframe-13.png" alt="Concept 01 — Discover: Unified exploration workspace" />
+        <img src="/images/Boards-Keyframe-13.png" alt="Concept 01 — Discover: Unified exploration workspace" />
         <div class="cs-carousel-caption">
           <strong>Discover — Unified Exploration Workspace</strong>
           <p>A single surface for analysts to explore, annotate, and contextualize data — removing fragmentation across tools and reducing the cost of jumping between views.</p>
         </div>
       </div>
       <div class="cs-carousel-slide">
-        <img src="http://paulamsbary.com/wp-content/uploads/2026/04/Screenshot-2026-04-18-at-2.51.41-PM.png" alt="Concept 02 — Create: Intelligent guidance and support" />
+        <img src="/images/Screenshot-2026-04-18-at-2.51.41-PM.png" alt="Concept 02 — Create: Intelligent guidance and support" />
         <div class="cs-carousel-caption">
           <strong>Create — Intelligent Guidance & Support</strong>
           <p>AI assisting analysts mid-workflow — proactively surfacing relevant context, related patterns, and historical comparisons so less time is spent hunting for meaning.</p>
         </div>
       </div>
       <div class="cs-carousel-slide">
-        <img src="http://paulamsbary.com/wp-content/uploads/2026/04/Screenshot-2026-04-19-at-6.34.27-PM.png" alt="Concept 03 — Create: Natural language interaction" />
+        <img src="/images/Screenshot-2026-04-19-at-6.34.27-PM.png" alt="Concept 03 — Create: Natural language interaction" />
         <div class="cs-carousel-caption">
           <strong>Create — Natural Language Interaction</strong>
           <p>Let analysts query Atlas in plain language. Not a chatbot — a way to reduce the cost of asking the next question and keeping analysis moving.</p>
         </div>
       </div>
       <div class="cs-carousel-slide">
-        <img src="http://paulamsbary.com/wp-content/uploads/2026/04/anaomaly-dark.png" alt="Concept 04 — Create: Anomaly detection" />
+        <img src="/images/anaomaly-dark.png" alt="Concept 04 — Create: Anomaly detection" />
         <div class="cs-carousel-caption">
           <strong>Create — Anomaly Detection</strong>
           <p>Surface meaningful deviations automatically. Instead of analysts hunting for what changed, Atlas flags it — with context about why it might matter.</p>
         </div>
       </div>
       <div class="cs-carousel-slide">
-        <img src="http://paulamsbary.com/wp-content/uploads/2026/04/Screenshot-2026-04-20-at-10.34.21-AM.png" alt="Concept 05 — Scale: Knowledge repository" />
+        <img src="/images/Screenshot-2026-04-20-at-10.34.21-AM.png" alt="Concept 05 — Scale: Knowledge repository" />
         <div class="cs-carousel-caption">
           <strong>Scale — Knowledge Repository</strong>
           <p>A searchable library of past analysis — semantic search over decisions, findings, and rationale. The goal: stop redoing work the team already did.</p>
         </div>
       </div>
       <div class="cs-carousel-slide">
-        <img src="http://paulamsbary.com/wp-content/uploads/2026/04/Screenshot-2026-04-20-at-10.48.13-AM.png" alt="Concept 06 — Scale: Integrated communication" />
+        <img src="/images/Screenshot-2026-04-20-at-10.48.13-AM.png" alt="Concept 06 — Scale: Integrated communication" />
         <div class="cs-carousel-caption">
           <strong>Scale — Integrated Communication</strong>
           <p>Bring discussion inside the tool. When decisions live in Slack and the data lives in Atlas, context is lost. This keeps them together.</p>
         </div>
       </div>
       <div class="cs-carousel-slide">
-        <img src="http://paulamsbary.com/wp-content/uploads/2026/04/Screenshot-2026-04-20-at-10.54.45-AM.png" alt="Concept 07 — Deliver: One-click report builder" />
+        <img src="/images/Screenshot-2026-04-20-at-10.54.45-AM.png" alt="Concept 07 — Deliver: One-click report builder" />
         <div class="cs-carousel-caption">
           <strong>Deliver — One-click Report Builder</strong>
           <p>Close the first- and last-mile problem. Analysts spend hours reformatting data for stakeholders — this automated the polish so insights reached the audience faster.</p>
         </div>
       </div>
       <div class="cs-carousel-slide">
-        <img src="http://paulamsbary.com/wp-content/uploads/2026/04/analyze-mvp.png" alt="Concept 08 — Deliver: Atlas Analyze (Shipped)" />
+        <img src="/images/analyze-mvp.png" alt="Concept 08 — Deliver: Atlas Analyze (Shipped)" />
         <div class="cs-carousel-caption">
           <strong>Deliver — Atlas Analyze (Shipped)</strong>
           <p>Plain-language summaries surfaced in a scannable card format. This is the concept that became Atlas Analyze — directly addressing the adoption problem.</p>
         </div>
       </div>
       <div class="cs-carousel-slide">
-        <img src="http://paulamsbary.com/wp-content/uploads/2026/04/Screenshot-2026-04-20-at-11.15.58-AM.png" alt="Concept 09 — Deliver: Mobile companion" />
+        <img src="/images/Screenshot-2026-04-20-at-11.15.58-AM.png" alt="Concept 09 — Deliver: Mobile companion" />
         <div class="cs-carousel-caption">
           <strong>Deliver — Mobile Companion</strong>
           <p>A dealer checking their performance between meetings, on a lot, at a showroom — not at a desk. Mobile-first design for the audience that would rarely sit in front of a laptop.</p>
@@ -257,7 +257,7 @@ To get leadership on board, I mapped the workflow alongside the concepts.
 Our job wasn’t making dashboards easier to read. It was to change how insights reach people.
   </div>
   <div class="cs-split-image">
-    <figure><img src="https://staging4.paulamsbary.com/wp-content/uploads/2026/04/Screenshot-2026-04-18-at-4.37.52-PM.png" alt="Storyboard — push-based insight delivery" /><figcaption>Storyboard — Jennifer's workflow before and after</figcaption></figure>
+    <figure><img src="/images/Screenshot-2026-04-18-at-4.37.52-PM.png" alt="Storyboard — push-based insight delivery" /><figcaption>Storyboard — Jennifer's workflow before and after</figcaption></figure>
   </div>
 </div>
 
@@ -266,39 +266,40 @@ Our job wasn’t making dashboards easier to read. It was to change how insights
 Analyze was the first product we shipped toward this strategy. We had spent months exploring RAG-based approaches without anything to show users. Once we defined the right problem, Analyze shipped in weeks.
 
 We built it inside the existing platform as an MVP. Mobile was the destination but we started with the simplest possible interaction to prove the concept — a single button that generated a plain-language summary of what was happening across a user’s dashboards.
-The summary told dealers what changed, what was worth paying attention to, and what to do next.
+
+The output needed to be trustworthy, not generic. We built a context layer trained on automotive retail — the metrics that matter, the benchmarks that are meaningful, the language consultants use with dealers. The summary told dealers what changed, what was worth paying attention to, and what to do next.
 
 For dealers, this addressed a real friction point. Opening Atlas meant facing a dashboard with no clear starting point. Analyze gave them one.
 
 <div class="cs-featured">
-  <img src="https://staging4.paulamsbary.com/wp-content/uploads/2026/04/wire-scaled.png" alt="Sidebar concept wireframe" />
+  <img src="/images/wire-scaled.png" alt="Sidebar concept wireframe" />
   <div class="cs-featured-body">
     <p style="font-size:13px;color:var(--fg-muted);margin:0">The sidebar concept — where to place intelligence without disrupting the existing workflow.</p>
   </div>
 </div>
 
-<div class="cs-featured">
-  <img src="https://staging4.paulamsbary.com/wp-content/uploads/2026/04/implementation-1-scaled.png" alt="Analyze as a sidebar in the live platform" />
-  <div class="cs-featured-body">
-    <p style="font-size:13px;color:var(--fg-muted);margin:0">The implementation — Analyze as a sidebar inside the live platform.</p>
-  </div>
-</div>
+**Bring intelligence to where attention already is.**
 
-**Priorities**
-
-<p><strong>Sidebar layout:</strong> Bring the insight to where attention already is — no context switch, no new screen to learn.</p>
-<p><strong>One click:</strong>Simple enough that a user who logs in can understand it. Complexity was the enemy of the first win.</p>
-<p><strong>Plain language:</strong> The output mirrors what a consultant says in a meeting: Observation, context, action.</p>
+<p><strong>Why a sidebar:</strong> Operators are already looking at their data. A sidebar brings the insight to where attention already is — no context switch, no new screen to learn.</p>
+<p><strong>Why one button:</strong> The interaction had to be simple enough that a dealer who logged in once would try it. Complexity was the enemy of the first win.</p>
+<p><strong>Why plain language:</strong> The output mirrors what a consultant says in a meeting — not what a dashboard shows. Observation, context, action. No data literacy required.</p>
 
 <div class="cs-featured">
-  <img src="https://staging4.paulamsbary.com/wp-content/uploads/2026/04/layout.png" alt="Early redlines — sidebar proportions" />
+  <img src="/images/layout.png" alt="Early redlines — sidebar proportions" />
   <div class="cs-featured-body">
     <p style="font-size:13px;color:var(--fg-muted);margin:0">Early redlines exploring sidebar proportions and content hierarchy.</p>
   </div>
 </div>
 
 <div class="cs-featured">
-  <img src="https://staging4.paulamsbary.com/wp-content/uploads/2026/04/analyze-assistant.png" alt="Analyze in production" />
+  <img src="/images/implementation-1-scaled.png" alt="Analyze as a sidebar in the live platform" />
+  <div class="cs-featured-body">
+    <p style="font-size:13px;color:var(--fg-muted);margin:0">The implementation — Analyze as a sidebar inside the live platform.</p>
+  </div>
+</div>
+
+<div class="cs-featured">
+  <img src="/images/analyze-assistant.png" alt="Analyze in production" />
   <div class="cs-featured-body">
     <p style="font-size:13px;color:var(--fg-muted);margin:0">Analyze in production — intelligence delivered in context, without leaving the dashboard.</p>
   </div>
@@ -307,18 +308,13 @@ For dealers, this addressed a real friction point. Opening Atlas meant facing a 
 ## Impact
 <div class="cs-split">
   <div class="cs-split-body">
-Month-over-month usage increased as dealers began acting on insights directly. Consultants said it solved the blank canvas problem. At NADA, prospective customers understood the value immediately.
+Month-over-month usage increased as dealers began acting on insights directly. Consultants said it solved the blank canvas problem. At NADA, prospective customers got the value immediately.
+It also validated something more fundamental: the most impactful thing we could deliver wasn't a better dashboard — it was closer to a text message.
 
-It also validated something more fundamental: the most impactful thing we could deliver wasn’t a better dashboard. It was closer to a text message.
-
-The simplicity of the solution raised an obvious question: if any LLM can summarize a dashboard, where’s the defensible value?
-
-The answer is context. What matters in this industry. Which benchmarks are meaningful. How consultants actually solve customer problems. That context layer can’t be easily reproduced. It’s what separates a useful insight from a generic one.
-
-As we extend the solution to agents, that context becomes critical.
+The simplicity of the solution raised an obvious question: if any LLM can summarize a dashboard, where's the defensible value? The answer is context. That context layer — what matters in this industry, what benchmarks are meaningful, how consultants talk to dealers — can’t be easily reproduced. That's what separates a useful insight from a generic one and it can't be easily reproduced.
   </div>
   <div class="cs-split-image">
-    <figure><img src="http://paulamsbary.com/wp-content/uploads/2026/04/imageai.png" alt="table stakes" /><figcaption>Atlas Analyze makes summarization easy. Context makes it useful.</figcaption></figure>
+    <figure><img src="/images/imageai.png" alt="table stakes" /><figcaption>Atlas Analyze makes summarization easy. Context makes it unique.</figcaption></figure>
   </div>
 </div>
 

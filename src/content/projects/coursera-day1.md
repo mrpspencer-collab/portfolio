@@ -6,7 +6,7 @@ tags:
   - Behavioral Design
   - Research
   - '2023'
-thumb: 'https://paulamsbary.com/wp-content/uploads/2025/06/Step-1-make-a-committment-weekly-goal-3-scaled.jpg'
+thumb: '/images/Step-1-make-a-committment-weekly-goal-3-scaled.jpg'
 thumbBg: '#D4CEC6'
 thumbText: Day 1
 thumbTextColor: '#6B6660'
@@ -27,7 +27,7 @@ As enrollments normalized post-pandemic, Coursera faced a critical challenge: le
     <p>Millions were signing up, but very few were building momentum on Day 1 — the metric most correlated with long-term success. Reaching 60+ minutes on Day 1 was the threshold associated with becoming a persistent learner, and the gap between sign-up and that milestone was widening.</p>
   </div>
   <div class="cs-split-image">
-    <figure><img src="https://paulamsbary.com/wp-content/uploads/2025/05/Funnel-Performance-1.jpg" alt="Funnel Performance" /><figcaption>Illustrative trend of paid learner funnel performance</figcaption></figure>
+    <figure><img src="/images/Funnel-Performance-1.jpg" alt="Funnel Performance" /><figcaption>Illustrative trend of paid learner funnel performance</figcaption></figure>
   </div>
 </div>
 
@@ -39,7 +39,7 @@ As enrollments normalized post-pandemic, Coursera faced a critical challenge: le
     <p>The opportunity was to design a streamlined 6-step flow — meeting learners with intention and removing every unnecessary obstacle before Day 1 momentum could form.</p>
   </div>
   <div class="cs-split-image">
-    <figure><img src="https://paulamsbary.com/wp-content/uploads/2025/11/lal-2.png" alt="Learner activation data" /><figcaption>Learner activation data — illustrative trend</figcaption></figure>
+    <figure><img src="/images/lal-2.png" alt="Learner activation data" /><figcaption>Learner activation data — illustrative trend</figcaption></figure>
   </div>
 </div>
 
@@ -52,8 +52,8 @@ As enrollments normalized post-pandemic, Coursera faced a critical challenge: le
   </div>
   <div class="cs-split-image">
     <div class="cs-image-pair">
-      <figure><img src="https://paulamsbary.com/wp-content/uploads/2025/07/day1-scaled.png" alt="Day 1 mobile flow" /><figcaption>Day 1 mobile flow — the proven baseline</figcaption></figure>
-      <figure><img src="https://paulamsbary.com/wp-content/uploads/2025/07/softgoal-scaled.png" alt="Soft goal-setting UI" /><figcaption>Soft goal-setting — reducing commitment friction</figcaption></figure>
+      <figure><img src="/images/day1-scaled.png" alt="Day 1 mobile flow" /><figcaption>Day 1 mobile flow — the proven baseline</figcaption></figure>
+      <figure><img src="/images/softgoal-scaled.png" alt="Soft goal-setting UI" /><figcaption>Soft goal-setting — reducing commitment friction</figcaption></figure>
     </div>
   </div>
 </div>
@@ -65,7 +65,7 @@ As enrollments normalized post-pandemic, Coursera faced a critical challenge: le
     <p>Cross-team coordination eliminated redundant screens and reordered key steps, compressing a 12+ step journey into a focused 6-step flow. Content strategy played a crucial role: clear, purposeful copy did as much work as the UI.</p>
   </div>
   <div class="cs-split-image">
-    <figure><img src="https://paulamsbary.com/wp-content/uploads/2025/06/Course-within-Meta-Specialization-Control-1-scaled.jpg" alt="Course enrollment flow — original step count" /><figcaption>Original enrollment flow — 12+ steps before first lesson</figcaption></figure>
+    <figure><img src="/images/Course-within-Meta-Specialization-Control-1-scaled.jpg" alt="Course enrollment flow — original step count" /><figcaption>Original enrollment flow — 12+ steps before first lesson</figcaption></figure>
   </div>
 </div>
 
@@ -77,28 +77,28 @@ Four directions were tested before converging on the final approach. Each explor
   <div class="cs-carousel-track-wrap">
     <div class="cs-carousel-track">
       <div class="cs-carousel-slide">
-        <img src="https://paulamsbary.com/wp-content/uploads/2025/11/Group-316126178.png" alt="Full-screen commitment message" />
+        <img src="/images/Group-316126178.png" alt="Full-screen commitment message" />
         <div class="cs-carousel-caption">
           <strong>Full-screen Commitment</strong>
           <p>The eventual direction — clean, focused, and copy-led. A single clear ask without competing elements.</p>
         </div>
       </div>
       <div class="cs-carousel-slide">
-        <img src="https://paulamsbary.com/wp-content/uploads/2025/11/2.png" alt="Segmented personalization design" />
+        <img src="/images/2.png" alt="Segmented personalization design" />
         <div class="cs-carousel-caption">
           <strong>Segmented Personalization</strong>
           <p>Overcomplicated — too many choices at once. Personalization added friction rather than reducing it.</p>
         </div>
       </div>
       <div class="cs-carousel-slide">
-        <img src="https://paulamsbary.com/wp-content/uploads/2025/11/Group-single-select.png" alt="Single-select format" />
+        <img src="/images/Group-single-select.png" alt="Single-select format" />
         <div class="cs-carousel-caption">
           <strong>Single-select Format</strong>
           <p>Combined course and career goals into one interaction. Simpler, but still introduced ambiguity at the commitment moment.</p>
         </div>
       </div>
       <div class="cs-carousel-slide">
-        <img src="https://paulamsbary.com/wp-content/uploads/2025/11/Step-1-Youre-enrolledSet-a-weekly-goal-1.png" alt="Weekly goal-setting concept" />
+        <img src="/images/Step-1-Youre-enrolledSet-a-weekly-goal-1.png" alt="Weekly goal-setting concept" />
         <div class="cs-carousel-caption">
           <strong>Weekly Goal Setting</strong>
           <p>Shelved as an outlier — time-based goals didn't map cleanly to the Day 1 activation behavior we were optimizing for.</p>
@@ -138,14 +138,14 @@ The experiment tested three variants to isolate which element drove the behavior
 </div>
 
 <div class="cs-featured">
-  <img src="https://paulamsbary.com/wp-content/uploads/2025/06/Step-1a-Loading-Screen-with-Benchmark-scaled.jpg" alt="Loading Screen with Benchmark" />
+  <img src="/images/Step-1a-Loading-Screen-with-Benchmark-scaled.jpg" alt="Loading Screen with Benchmark" />
   <div class="cs-featured-body">
     <p style="font-size:13px;color:var(--fg-muted);margin:0">Step 1 — Loading screen with 60-minute benchmark</p>
   </div>
 </div>
 
 <div class="cs-featured">
-  <img src="https://paulamsbary.com/wp-content/uploads/2025/06/Step-1-make-a-committment-weekly-goal-3-scaled.jpg" alt="Make a commitment — weekly goal" />
+  <img src="/images/Step-1-make-a-committment-weekly-goal-3-scaled.jpg" alt="Make a commitment — weekly goal" />
   <div class="cs-featured-body">
     <p style="font-size:13px;color:var(--fg-muted);margin:0">Step 2 — Explicit commitment screen</p>
   </div>

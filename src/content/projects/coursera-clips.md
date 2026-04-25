@@ -6,7 +6,7 @@ tags:
   - UX Design
   - Enterprise
   - '2024'
-thumb: 'https://paulamsbary.com/wp-content/uploads/2025/11/mbip-clips.png'
+thumb: '/images/mbip-clips.png'
 thumbBg: '#EDE9E2'
 thumbText: Coursera Clips
 thumbTextColor: '#7C7771'
@@ -31,7 +31,7 @@ Clips are Coursera's short-form learning format: 2–10 minute videos pulled fro
     <p>The hypothesis: this was limiting discovery and engagement.</p>
   </div>
   <div class="cs-split-image">
-    <figure><img src="https://staging4.paulamsbary.com/wp-content/uploads/2025/11/before.png" alt="Video Clip — Original Design" /><figcaption>Video Clip — Original Design</figcaption></figure>
+    <figure><img src="/images/before.png" alt="Video Clip — Original Design" /><figcaption>Video Clip — Original Design</figcaption></figure>
   </div>
 </div>
 
@@ -66,7 +66,7 @@ Clips are Coursera's short-form learning format: 2–10 minute videos pulled fro
     <p>The wireframe explores how to maintain hierarchy while keeping the experience linear and low-friction.</p>
   </div>
   <div class="cs-split-image">
-    <figure><img src="https://staging4.paulamsbary.com/wp-content/uploads/2025/11/mobile-web.png" alt="Clips Player Sketch — Enrollment CTA" /><figcaption>Clips Player Sketch — Enrollment CTA</figcaption></figure>
+    <figure><img src="/images/mobile-web.png" alt="Clips Player Sketch — Enrollment CTA" /><figcaption>Clips Player Sketch — Enrollment CTA</figcaption></figure>
   </div>
 </div>
 
@@ -83,8 +83,8 @@ Clips are Coursera's short-form learning format: 2–10 minute videos pulled fro
   </div>
   <div class="cs-split-image">
     <div class="cs-image-pair">
-      <figure><img src="https://staging4.paulamsbary.com/wp-content/uploads/2025/11/mobileweb1-1.png" alt="Single Video Emphasis" /><figcaption>Single Video Emphasis</figcaption></figure>
-      <figure><img src="https://staging4.paulamsbary.com/wp-content/uploads/2025/11/mobileweb2.png" alt="Course Playlist Open" /><figcaption>Course Playlist Open</figcaption></figure>
+      <figure><img src="/images/mobileweb1-1.png" alt="Single Video Emphasis" /><figcaption>Single Video Emphasis</figcaption></figure>
+      <figure><img src="/images/mobileweb2.png" alt="Course Playlist Open" /><figcaption>Course Playlist Open</figcaption></figure>
     </div>
   </div>
 </div>
@@ -95,28 +95,28 @@ Clips are Coursera's short-form learning format: 2–10 minute videos pulled fro
   <div class="cs-carousel-track-wrap">
     <div class="cs-carousel-track">
       <div class="cs-carousel-slide">
-        <img src="https://staging4.paulamsbary.com/wp-content/uploads/2025/11/Clips-Video-stream-within-course-2.png" alt="Theatre Mode Sketch" />
+        <img src="/images/Clips-Video-stream-within-course-2.png" alt="Theatre Mode Sketch" />
         <div class="cs-carousel-caption">
           <strong>Theatre Mode</strong>
           <p>Video-first layout with a horizontal continuation rail below the player. Abandoned due to layout complexity and unclear ROI.</p>
         </div>
       </div>
       <div class="cs-carousel-slide">
-        <img src="https://staging4.paulamsbary.com/wp-content/uploads/2025/11/videsidebarb.png" alt="Context-First Design" />
+        <img src="/images/videsidebarb.png" alt="Context-First Design" />
         <div class="cs-carousel-caption">
           <strong>Context-First Design</strong>
           <p>Right-hand vertical rail showing course structure and related content. Improved learner positioning but struggled with visual disconnection of related navigation.</p>
         </div>
       </div>
       <div class="cs-carousel-slide">
-        <img src="https://staging4.paulamsbary.com/wp-content/uploads/2025/11/video-sidebar.png" alt="Toggle Panel" />
+        <img src="/images/video-sidebar.png" alt="Toggle Panel" />
         <div class="cs-carousel-caption">
           <strong>Toggle Panel</strong>
           <p>Panel switching between deep (full course) and broad (related) structures with image thumbnails. Required additional engineering and didn't reach final build.</p>
         </div>
       </div>
       <div class="cs-carousel-slide">
-        <img src="https://staging4.paulamsbary.com/wp-content/uploads/2025/11/redline.png" alt="V1 Desktop Release" />
+        <img src="/images/redline.png" alt="V1 Desktop Release" />
         <div class="cs-carousel-caption">
           <strong>V1 Desktop Release</strong>
           <p>Enrollment CTA moved below the video per licensing agreement — automatic enrollment triggered after 10% of content viewed.</p>
@@ -139,7 +139,7 @@ Clips are Coursera's short-form learning format: 2–10 minute videos pulled fro
     <p>The original design lacked engagement affordances and failed to communicate what to watch next with enough clarity or urgency.</p>
   </div>
   <div class="cs-split-image">
-    <figure><img src="https://staging4.paulamsbary.com/wp-content/uploads/2025/11/endcard-2.png" alt="End Card — Original Design" /><figcaption>End Card — Original Design</figcaption></figure>
+    <figure><img src="/images/endcard-2.png" alt="End Card — Original Design" /><figcaption>End Card — Original Design</figcaption></figure>
   </div>
 </div>
 
@@ -149,28 +149,28 @@ Clips are Coursera's short-form learning format: 2–10 minute videos pulled fro
   <div class="cs-carousel-track-wrap">
     <div class="cs-carousel-track">
       <div class="cs-carousel-slide">
-        <img src="https://staging4.paulamsbary.com/wp-content/uploads/2025/11/ideation1.png" alt="End Card — Informative Card" />
+        <img src="/images/ideation1.png" alt="End Card — Informative Card" />
         <div class="cs-carousel-caption">
           <strong>Informative Card</strong>
           <p>Next video, course, and institution logo as a credibility cue. Overloaded with metadata and CTAs within an eight-second window.</p>
         </div>
       </div>
       <div class="cs-carousel-slide">
-        <img src="https://staging4.paulamsbary.com/wp-content/uploads/2025/11/endcardexplo12.png" alt="End Card — Card Overlay" />
+        <img src="/images/endcardexplo12.png" alt="End Card — Card Overlay" />
         <div class="cs-carousel-caption">
           <strong>Card Overlay</strong>
           <p>Next video thumbnail, play icon, and countdown timer — familiar streaming pattern. Strong affordances but risked competing CTAs.</p>
         </div>
       </div>
       <div class="cs-carousel-slide">
-        <img src="https://staging4.paulamsbary.com/wp-content/uploads/2025/11/endcardexpl2.png" alt="End Card — Overlay with Light/Dark Handling" />
+        <img src="/images/endcardexpl2.png" alt="End Card — Overlay with Light/Dark Handling" />
         <div class="cs-carousel-caption">
           <strong>Overlay with Light/Dark Handling</strong>
           <p>Overlay managing unpredictable end-frame lighting. Balanced control but introduced potential text conflicts.</p>
         </div>
       </div>
       <div class="cs-carousel-slide">
-        <img src="https://staging4.paulamsbary.com/wp-content/uploads/2025/11/endcard-endofcourseexpl.png" alt="End Card — End of Course Variant" />
+        <img src="/images/endcard-endofcourseexpl.png" alt="End Card — End of Course Variant" />
         <div class="cs-carousel-caption">
           <strong>End of Course Variant</strong>
           <p>How should the recommendation experience change when a learner completes the full course, not just a single clip?</p>
@@ -188,7 +188,7 @@ Clips are Coursera's short-form learning format: 2–10 minute videos pulled fro
 ### Final Design
 
 <div class="cs-featured">
-  <img src="https://staging4.paulamsbary.com/wp-content/uploads/2025/11/endcard-3.png" alt="End Card V1 Final Design" />
+  <img src="/images/endcard-3.png" alt="End Card V1 Final Design" />
   <div class="cs-featured-body">
     <ul>
       <li>University logo for credibility</li>
@@ -209,28 +209,28 @@ Evolved the design patterns into a unified visual language across discovery surf
   <div class="cs-carousel-track-wrap">
     <div class="cs-carousel-track">
       <div class="cs-carousel-slide">
-        <img src="https://staging4.paulamsbary.com/wp-content/uploads/2025/11/post-dogfooding-Updated-image-sizing.png" alt="Post-Dogfooding — Updated Image Sizing" />
+        <img src="/images/post-dogfooding-Updated-image-sizing.png" alt="Post-Dogfooding — Updated Image Sizing" />
         <div class="cs-carousel-caption">
           <strong>Post-Dogfooding Refinement</strong>
           <p>Updated image sizing and proportions based on internal testing feedback.</p>
         </div>
       </div>
       <div class="cs-carousel-slide">
-        <img src="https://staging4.paulamsbary.com/wp-content/uploads/2025/11/search-dropdown.png" alt="Clips in Search Dropdown" />
+        <img src="/images/search-dropdown.png" alt="Clips in Search Dropdown" />
         <div class="cs-carousel-caption">
           <strong>Search Dropdown</strong>
           <p>Clips integrated into search suggestions for immediate, low-friction discovery.</p>
         </div>
       </div>
       <div class="cs-carousel-slide">
-        <img src="https://staging4.paulamsbary.com/wp-content/uploads/2025/11/clipsinsearch.png" alt="Clips in Search Results" />
+        <img src="/images/clipsinsearch.png" alt="Clips in Search Results" />
         <div class="cs-carousel-caption">
           <strong>Search Results</strong>
           <p>Clips merchandised alongside full courses on search results pages.</p>
         </div>
       </div>
       <div class="cs-carousel-slide">
-        <img src="https://staging4.paulamsbary.com/wp-content/uploads/2025/11/clips-extensions-scaled.png" alt="Clips Extensions System" />
+        <img src="/images/clips-extensions-scaled.png" alt="Clips Extensions System" />
         <div class="cs-carousel-caption">
           <strong>Extensions System</strong>
           <p>The full system — a unified visual language across all discovery surfaces.</p>

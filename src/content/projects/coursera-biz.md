@@ -6,7 +6,7 @@ tags:
   - Enterprise
   - Web Design
   - '2023'
-thumb: 'https://paulamsbary.com/wp-content/uploads/2025/11/coursera-for-business-scaled.png'
+thumb: '/images/coursera-for-business-scaled.png'
 thumbBg: '#FFFFFF'
 thumbText: Coursera Biz
 thumbTextColor: '#4A4540'
@@ -28,7 +28,7 @@ Coursera's Business, Government, and Higher Ed sites were running on an outdated
     <p>I also audited the site’s flows and content, showing they hindered conversion and were overly product-language-centric, then proposed an SEO-safe restructuring centered on customer needs and clear paths to conversion.</p>
   </div>
   <div class="cs-split-image">
-    <figure><img src="https://paulamsbary.com/wp-content/uploads/2024/11/audit.png" alt="Site audit" /><figcaption>Site audit — mapping content and structural gaps</figcaption></figure>
+    <figure><img src="/images/audit.png" alt="Site audit" /><figcaption>Site audit — mapping content and structural gaps</figcaption></figure>
   </div>
 </div>
 
@@ -40,7 +40,7 @@ Coursera's Business, Government, and Higher Ed sites were running on an outdated
     <p>Migrating to Contentful gave content teams the flexibility to assemble and update pages without developer involvement.</p>
   </div>
   <div class="cs-split-image">
-    <figure><img src="https://paulamsbary.com/wp-content/uploads/2024/11/Value-Proposition-up.gif" alt="Value proposition module" /><figcaption>Value proposition module — Why, How, Proof storytelling arc</figcaption></figure>
+    <figure><img src="/images/Value-Proposition-up.gif" alt="Value proposition module" /><figcaption>Value proposition module — Why, How, Proof storytelling arc</figcaption></figure>
   </div>
 </div>
 
@@ -55,14 +55,14 @@ Coursera's Business, Government, and Higher Ed sites were running on an outdated
         <div class="cs-carousel-track-wrap">                                                                            
           <div class="cs-carousel-track">                   
             <div class="cs-carousel-slide">                                                                             
-              <img src="https://paulamsbary.com/wp-content/uploads/2024/11/Concept-A-scaled.jpg" alt="Coffee Shop Concept" />
+              <img src="/images/Concept-A-scaled.jpg" alt="Coffee Shop Concept" />
               <div class="cs-carousel-caption">                                                                         
                 <strong>Coffee Shop Concept</strong>        
                 <p>Brief, inviting, and minimal. Concise content, clean design, and a fast conversion path. Built for buyers who already know what they want.</p>                                                                               
               </div>                                        
             </div>                                                                                                      
             <div class="cs-carousel-slide">                 
-              <img src="https://paulamsbary.com/wp-content/uploads/2024/11/Concept-B.png" alt="Conference Room Concept" />
+              <img src="/images/Concept-B.png" alt="Conference Room Concept" />
               <div class="cs-carousel-caption">
                 <strong>Conference Room Concept</strong>                                                                
                 <p>In-depth and layered. Detailed messaging and content that supports sales-driven visits where buyers need to build a business case.</p>                                                                          
@@ -84,21 +84,21 @@ Coursera's Business, Government, and Higher Ed sites were running on an outdated
 The Key Information Module (KIM) sits horizontally beneath the primary headline, framing the value proposition while surfacing proof points at the highest-attention area of the page. Users engage heavily with above-the-fold content — the KIM was designed to do the most work in the least space.
 
 <div class="cs-featured">
-  <img src="https://paulamsbary.com/wp-content/uploads/2024/11/kim4.jpg" alt="KIM — Early Direction" />
+  <img src="/images/kim4.jpg" alt="KIM — Early Direction" />
   <div class="cs-featured-body">
     <p style="font-size:13px;color:var(--fg-muted);margin:0"><strong style="color:var(--fg)">Early Direction</strong> — Initial exploration of the above-fold proof-point structure. Testing hierarchy, density, and scan patterns.</p>
   </div>
 </div>
 
 <div class="cs-featured">
-  <img src="https://paulamsbary.com/wp-content/uploads/2024/11/kim.jpg" alt="KIM — Refined Layout" />
+  <img src="/images/kim.jpg" alt="KIM — Refined Layout" />
   <div class="cs-featured-body">
     <p style="font-size:13px;color:var(--fg-muted);margin:0"><strong style="color:var(--fg)">Refined Layout</strong> — Tightening the module for legibility and faster scanning — distilling proof points to their essential forms.</p>
   </div>
 </div>
 
 <div class="cs-featured">
-  <img src="https://paulamsbary.com/wp-content/uploads/2024/11/kim5-2.png" alt="KIM — Final Direction" />
+  <img src="/images/kim5-2.png" alt="KIM — Final Direction" />
   <div class="cs-featured-body">
     <p style="font-size:13px;color:var(--fg-muted);margin:0"><strong style="color:var(--fg)">Final Direction</strong> — Contextual proof points aligned with buyer personas — credibility, ROI, and scale surfaced at first glance.</p>
   </div>
@@ -113,7 +113,7 @@ The Key Information Module (KIM) sits horizontally beneath the primary headline,
     <p>IA decisions were constrained by the Contentful migration timeline, requiring coordination across product, engineering, and content strategy teams.</p>
   </div>
   <div class="cs-split-image">
-    <figure><img src="https://paulamsbary.com/wp-content/uploads/2024/11/nav1.jpg" alt="Navigation exploration" /><figcaption>Navigation structure — phased rollout considerations</figcaption></figure>
+    <figure><img src="/images/nav1.jpg" alt="Navigation exploration" /><figcaption>Navigation structure — phased rollout considerations</figcaption></figure>
   </div>
 </div>
 
@@ -126,8 +126,8 @@ The Key Information Module (KIM) sits horizontally beneath the primary headline,
   </div>
   <div class="cs-split-image">
     <div class="cs-image-pair">
-      <figure><img src="https://paulamsbary.com/wp-content/uploads/2024/11/before-2-scaled.jpg" alt="Before — original site" /><figcaption>Before — WordPress original</figcaption></figure>
-      <figure><img src="https://paulamsbary.com/wp-content/uploads/2024/11/D-Home8-scaled.jpg" alt="After — redesigned site" /><figcaption>After — Contentful redesign</figcaption></figure>
+      <figure><img src="/images/before-2-scaled.jpg" alt="Before — original site" /><figcaption>Before — WordPress original</figcaption></figure>
+      <figure><img src="/images/D-Home8-scaled.jpg" alt="After — redesigned site" /><figcaption>After — Contentful redesign</figcaption></figure>
     </div>
   </div>
 </div>
