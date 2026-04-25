@@ -789,6 +789,7 @@ const nextProject = currentIndex < allProjects.length - 1 ? allProjects[currentI
       </form>
       <p id="pg-sent" style="display:none">Request sent — I'll be in touch.</p>
     </div>
+    <a href="/" id="pg-home">← Back to work</a>
   </div>
 </div>
 )}
@@ -890,6 +891,15 @@ const nextProject = currentIndex < allProjects.length - 1 ? allProjects[currentI
     margin-top: 4px;
   }
   #pg-request-toggle:hover { text-decoration: underline; }
+  #pg-home {
+    display: block;
+    margin-top: 24px;
+    font-size: 13px;
+    color: var(--fg-subtle, #888);
+    text-decoration: none;
+    text-align: center;
+  }
+  #pg-home:hover { color: var(--fg, #111); }
   #pg-request-form {
     display: flex;
     flex-direction: column;
