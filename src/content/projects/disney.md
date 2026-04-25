@@ -7,7 +7,8 @@ tags:
   - Prototyping
   - '2020'
 thumb: '/images/final-olv-design-scaled.jpg'
-thumbBg: '#0B1120'
+thumbBg: '#FFFFFF'
+thumbFit: cover
 thumbText: Disney+
 thumbTextColor: '#4A5570'
 metrics: []
