@@ -278,11 +278,12 @@ For dealers, this addressed a real friction point. Opening Atlas meant facing a 
 </div>
 
 <div class="cs-featured">
-  <img src="https://staging4.paulamsbary.com/wp-content/uploads/2026/04/layout.png" alt="Early redlines — sidebar proportions" />
+  <img src="https://staging4.paulamsbary.com/wp-content/uploads/2026/04/implementation-1-scaled.png" alt="Analyze as a sidebar in the live platform" />
   <div class="cs-featured-body">
-    <p style="font-size:13px;color:var(--fg-muted);margin:0">Early redlines exploring sidebar proportions and content hierarchy.</p>
+    <p style="font-size:13px;color:var(--fg-muted);margin:0">The implementation — Analyze as a sidebar inside the live platform.</p>
   </div>
 </div>
+
 **Bring intelligence to where attention already is.**
 
 <p><strong>Why a sidebar:</strong> Operators are already looking at their data. A sidebar brings the insight to where attention already is — no context switch, no new screen to learn.</p>
@@ -290,9 +291,9 @@ For dealers, this addressed a real friction point. Opening Atlas meant facing a 
 <p><strong>Why plain language:</strong> The output mirrors what a consultant says in a meeting — not what a dashboard shows. Observation, context, action. No data literacy required.</p>
 
 <div class="cs-featured">
-  <img src="https://staging4.paulamsbary.com/wp-content/uploads/2026/04/implementation-1-scaled.png" alt="Analyze as a sidebar in the live platform" />
+  <img src="https://staging4.paulamsbary.com/wp-content/uploads/2026/04/layout.png" alt="Early redlines — sidebar proportions" />
   <div class="cs-featured-body">
-    <p style="font-size:13px;color:var(--fg-muted);margin:0">The implementation — Analyze as a sidebar inside the live platform.</p>
+    <p style="font-size:13px;color:var(--fg-muted);margin:0">Early redlines exploring sidebar proportions and content hierarchy.</p>
   </div>
 </div>
 
