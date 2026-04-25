@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400">
+  <rect width="600" height="400" fill="#0A0A0C"/>
+
+  <!-- Background code layer -->
+  <text x="12"  y="22"  font-family="monospace" font-size="11" fill="white" opacity="0.13">const ask = (q) =&gt; llm.infer(q);</text>
+  <text x="12"  y="38"  font-family="monospace" font-size="11" fill="white" opacity="0.08">  return { metric, dimension, vizType };</text>
+  <text x="12"  y="54"  font-family="monospace" font-size="11" fill="white" opacity="0.11">function simulate(pnl, scenario) {</text>
+  <text x="12"  y="70"  font-family="monospace" font-size="11" fill="white" opacity="0.07">  const projection = model(pnl, rate);</text>
+  <text x="12"  y="86"  font-family="monospace" font-size="11" fill="white" opacity="0.13">viewport.crop({ width: 640, focus: true });</text>
+  <text x="12"  y="102" font-family="monospace" font-size="11" fill="white" opacity="0.09">colors.simulate('deuteranopia');</text>
+  <text x="12"  y="118" font-family="monospace" font-size="11" fill="white" opacity="0.12">if (a11y.pass(concept)) render(tile);</text>
+  <text x="12"  y="134" font-family="monospace" font-size="11" fill="white" opacity="0.08">const story = await ai.generate(data);</text>
+  <text x="12"  y="150" font-family="monospace" font-size="11" fill="white" opacity="0.11">&lt;Dashboard theme="status-layer" /&gt;</text>
+  <text x="12"  y="166" font-family="monospace" font-size="11" fill="white" opacity="0.07">scenario.recession({ factor: 0.8 });</text>
+  <text x="12"  y="182" font-family="monospace" font-size="11" fill="white" opacity="0.13">figma.make({ prompt: userQuery });</text>
+  <text x="12"  y="198" font-family="monospace" font-size="11" fill="white" opacity="0.09">.filter(c =&gt; c.colorBlind.safe);</text>
+  <text x="12"  y="214" font-family="monospace" font-size="11" fill="white" opacity="0.12">await claude.complete(systemPrompt);</text>
+  <text x="12"  y="230" font-family="monospace" font-size="11" fill="white" opacity="0.08">export const tools = [maker, sim, guide];</text>
+  <text x="12"  y="246" font-family="monospace" font-size="11" fill="white" opacity="0.11">const kpi = tiles.map(t =&gt; assess(t));</text>
+  <text x="12"  y="262" font-family="monospace" font-size="11" fill="white" opacity="0.07">npm run build &amp;&amp; rsync dist/ prod/</text>
+  <text x="12"  y="278" font-family="monospace" font-size="11" fill="white" opacity="0.13">git commit -m "ship it"</text>
+  <text x="12"  y="294" font-family="monospace" font-size="11" fill="white" opacity="0.09">const q = "where is traffic coming from?"</text>
+  <text x="12"  y="310" font-family="monospace" font-size="11" fill="white" opacity="0.12">p&amp;l.model({ shift: +1, growth: 0.05 });</text>
+  <text x="12"  y="326" font-family="monospace" font-size="11" fill="white" opacity="0.08">pwa.install({ target: "mobile" });</text>
+  <text x="12"  y="342" font-family="monospace" font-size="11" fill="white" opacity="0.11">export default GuidedAnalysis;</text>
+  <text x="12"  y="358" font-family="monospace" font-size="11" fill="white" opacity="0.07">  vizType: inferViz(question),</text>
+  <text x="12"  y="374" font-family="monospace" font-size="11" fill="white" opacity="0.10">const result = prototype.validate();</text>
+  <text x="12"  y="390" font-family="monospace" font-size="11" fill="white" opacity="0.13">// built in ~30 min</text>
+
+  <!-- Frosted contrast block behind title -->
+  <rect x="80" y="148" width="440" height="100" rx="8" fill="#0A0A0C" opacity="0.82"/>
+  <rect x="80" y="148" width="440" height="100" rx="8" fill="none" stroke="white" stroke-opacity="0.06" stroke-width="1"/>
+
+  <!-- Title -->
+  <text x="300" y="203" font-family="monospace" font-size="30" font-weight="700" fill="#D4904E" text-anchor="middle" letter-spacing="3">VIBE CODED</text>
+  <text x="300" y="228" font-family="monospace" font-size="11" fill="rgba(255,255,255,0.38)" text-anchor="middle" letter-spacing="2">AI-AUGMENTED DESIGN</text>
+</svg>

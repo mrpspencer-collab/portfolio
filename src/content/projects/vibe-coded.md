@@ -6,11 +6,9 @@ tags:
   - AI Tools
   - Prototyping
   - '2025–2026'
-thumb: ''
-thumbBg: '#0F1117'
-thumbText: 'VIBE CODED'
-thumbTextColor: '#D4904E'
-thumbFit: contain
+thumb: '/images/vibe-coded-thumb.svg'
+thumbBg: '#0A0A0C'
+thumbFit: cover
 metrics: []
 cta: See the experiments
 order: 2
