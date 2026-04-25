@@ -858,7 +858,7 @@ const nextProject = currentIndex < allProjects.length - 1 ? allProjects[currentI
   .body :global(.cs-carousel--pan img) { cursor: default; }
 </style>
 
-{project.slug === 'atlas' && (
+{(project.slug === 'atlas' || project.slug === 'vibe-coded') && (
 <div id="pg-overlay">
   <div id="pg-box">
     <p id="pg-logo">PA</p>
