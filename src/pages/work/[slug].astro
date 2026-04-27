@@ -765,7 +765,7 @@ const nextProject = currentIndex < allProjects.length - 1 ? allProjects[currentI
     display: grid;
     grid-template-columns: 1fr 2fr;
     border-top: 1px solid var(--border);
-    min-height: 280px;
+    min-height: 360px;
   }
   .body :global(.cs-ext-text) {
     padding: 20px 24px;
@@ -805,12 +805,15 @@ const nextProject = currentIndex < allProjects.length - 1 ? allProjects[currentI
     width: 100%;
     height: 100%;
     min-height: 200px;
-    object-fit: cover;
-    object-position: top;
+    object-fit: contain;
+    object-position: center;
+    padding: 16px;
     display: block;
     border-radius: 0 !important;
     border: none !important;
     margin: 0 !important;
+    box-sizing: border-box;
+    cursor: zoom-in;
   }
   .body :global(.cs-ext-thumbs) {
     width: 96px;
@@ -911,6 +914,33 @@ const nextProject = currentIndex < allProjects.length - 1 ? allProjects[currentI
     z-index: 10000;
   }
   .lightbox-close:hover { color: #fff; }
+  .lightbox-prev,
+  .lightbox-next {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.12);
+    border: none;
+    color: #fff;
+    font-size: 22px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    transition: background 0.15s;
+  }
+  .lightbox-prev { left: 20px; }
+  .lightbox-next { right: 20px; }
+  .lightbox-prev:hover,
+  .lightbox-next:hover { background: rgba(255, 255, 255, 0.22); }
+  .lightbox-prev:disabled,
+  .lightbox-next:disabled { opacity: 0.3; cursor: default; }
+  .lightbox.has-nav .lightbox-prev,
+  .lightbox.has-nav .lightbox-next { display: flex; }
   .body :global(img) { cursor: zoom-in; }
   .body :global(.cs-carousel--pan img) { cursor: default; }
 </style>
@@ -945,7 +975,9 @@ const nextProject = currentIndex < allProjects.length - 1 ? allProjects[currentI
 
 <div class="lightbox" id="lightbox" aria-modal="true" role="dialog">
   <button class="lightbox-close" id="lightbox-close" aria-label="Close">×</button>
+  <button class="lightbox-prev" id="lightbox-prev" aria-label="Previous">←</button>
   <img id="lightbox-img" src="" alt="" />
+  <button class="lightbox-next" id="lightbox-next" aria-label="Next">→</button>
 </div>
 
 <style>
@@ -1065,10 +1097,30 @@ const nextProject = currentIndex < allProjects.length - 1 ? allProjects[currentI
   // Lightbox
   const lightbox = document.getElementById('lightbox')!;
   const lightboxImg = document.getElementById('lightbox-img') as HTMLImageElement;
+  const lbPrev = document.getElementById('lightbox-prev') as HTMLButtonElement;
+  const lbNext = document.getElementById('lightbox-next') as HTMLButtonElement;
 
-  function openLightbox(src: string, alt: string) {
-    lightboxImg.src = src;
-    lightboxImg.alt = alt;
+  let lbImages: { src: string; alt: string }[] = [];
+  let lbIndex = 0;
+
+  function showLightboxImage(index: number) {
+    lbIndex = Math.max(0, Math.min(index, lbImages.length - 1));
+    lightboxImg.src = lbImages[lbIndex].src;
+    lightboxImg.alt = lbImages[lbIndex].alt;
+    lbPrev.disabled = lbIndex === 0;
+    lbNext.disabled = lbIndex === lbImages.length - 1;
+  }
+
+  function openLightbox(src: string, alt: string, images?: { src: string; alt: string }[]) {
+    lbImages = images || [{ src, alt }];
+    lbIndex = lbImages.findIndex(img => img.src === src);
+    if (lbIndex === -1) lbIndex = 0;
+    showLightboxImage(lbIndex);
+    if (lbImages.length > 1) {
+      lightbox.classList.add('has-nav');
+    } else {
+      lightbox.classList.remove('has-nav');
+    }
     lightbox.classList.add('open');
     lightbox.classList.remove('zoomed');
     document.body.style.overflow = 'hidden';
@@ -1085,6 +1137,20 @@ const nextProject = currentIndex < allProjects.length - 1 ? allProjects[currentI
     img.addEventListener('click', () => openLightbox(img.src, img.alt));
   });
 
+  // Experiment card main images — open lightbox with full image set for navigation
+  document.querySelectorAll<HTMLElement>('.cs-ext-card').forEach(card => {
+    const mainImg = card.querySelector<HTMLImageElement>('.cs-ext-main-img');
+    const thumbs = card.querySelectorAll<HTMLImageElement>('.cs-ext-thumb');
+    if (!mainImg) return;
+    mainImg.addEventListener('click', () => {
+      const images = Array.from(thumbs).map(t => ({ src: t.src, alt: t.alt }));
+      openLightbox(mainImg.src, mainImg.alt, images.length > 0 ? images : undefined);
+    });
+  });
+
+  lbPrev.addEventListener('click', e => { e.stopPropagation(); showLightboxImage(lbIndex - 1); });
+  lbNext.addEventListener('click', e => { e.stopPropagation(); showLightboxImage(lbIndex + 1); });
+
   lightbox.addEventListener('click', closeLightbox);
   lightboxImg.addEventListener('click', e => {
     e.stopPropagation();
@@ -1092,7 +1158,11 @@ const nextProject = currentIndex < allProjects.length - 1 ? allProjects[currentI
     lightbox.scrollTop = 0;
   });
   document.getElementById('lightbox-close')!.addEventListener('click', closeLightbox);
-  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') showLightboxImage(lbIndex - 1);
+    if (e.key === 'ArrowRight') showLightboxImage(lbIndex + 1);
+  });
 
   document.querySelectorAll<HTMLElement>('.cs-carousel').forEach(carousel => {
     const track = carousel.querySelector<HTMLElement>('.cs-carousel-track')!;
