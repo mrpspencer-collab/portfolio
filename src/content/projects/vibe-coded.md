@@ -63,7 +63,6 @@ Design has always been about making thinking visible. Tools like Claude Code and
   <div class="cs-ext-body">
     <div class="cs-ext-text">
       <p>A client needed a way to quickly see what was up or down across key metrics. I used Figma Make to prototype an interactive dashboard, combining multiple design directions into a single testable artifact. Stakeholders explored variations in real time—including color blindness simulation—making accessibility and tradeoffs immediately clear. What took days in static comps took minutes, What once took days of static comps took minutes, enabling a faster response to customer pain points.</p>
-      
     </div>
     <div class="cs-ext-images">
       <div class="cs-ext-main">
@@ -150,7 +149,6 @@ Design has always been about making thinking visible. Tools like Claude Code and
   <div class="cs-ext-body">
     <div class="cs-ext-text">
       <p>Most BI users know the question they want to answer, but non-technical users struggle with the data literacy required to use the tools. I prototyped a guided flow that translates plain-language questions into recommended metrics, dimensions, and chart types. It acts as training wheels—starting simple, then gradually exposing the underlying structure as users learn.</p>
-     
     </div>
     <div class="cs-ext-images">
       <div class="cs-ext-main">
