@@ -14,7 +14,7 @@ const isBlog  = pathname.startsWith('/blog');
     <a href="/blog"  class:list={['nav-link', { active: isBlog }]}>Blog</a>
     <div class="divider"></div>
     <button id="theme-toggle" class="theme-btn">◐ Dark</button>
-    <a href="#" class="btn btn-primary btn-sm resume-btn">Download Resume</a>
+    <a href="https://wp.paulamsbary.com/wp-content/uploads/2026/04/PAUL-AMSBARY-CV-2026-web-2.pdf" target="_blank" rel="noopener" class="btn btn-primary btn-sm resume-btn">Download Resume</a>
   </div>
 
   <!-- Mobile right side -->
@@ -29,7 +29,7 @@ const isBlog  = pathname.startsWith('/blog');
   <a href="/"      class:list={['mobile-link', { active: isWork }]}>Work</a>
   <a href="/about" class:list={['mobile-link', { active: isAbout }]}>About</a>
   <a href="/blog"  class:list={['mobile-link', { active: isBlog }]}>Blog</a>
-  <a href="#" class="mobile-link">Download Resume</a>
+  <a href="https://wp.paulamsbary.com/wp-content/uploads/2026/04/PAUL-AMSBARY-CV-2026-web-2.pdf" target="_blank" rel="noopener" class="mobile-link">Download Resume</a>
 </div>
 
 <script>
@@ -108,7 +108,7 @@ const isBlog  = pathname.startsWith('/blog');
     padding: 6px 12px;
     color: var(--fg-muted);
     border: 1px solid var(--border);
-    border-radius: 4px;
+    border-radius: var(--radius-sm);
     background: transparent;
     cursor: pointer;
     font-family: var(--font-body);

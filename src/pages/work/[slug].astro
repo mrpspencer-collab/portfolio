@@ -124,7 +124,7 @@ const nextProject = currentIndex < allProjects.length - 1 ? allProjects[currentI
     justify-content: center;
     overflow: hidden;
     margin: 40px 0;
-    border-radius: 8px;
+    border-radius: var(--radius);
   }
   .thumb img {
     width: 100%;
@@ -238,7 +238,7 @@ const nextProject = currentIndex < allProjects.length - 1 ? allProjects[currentI
   .body :global(img) {
     width: 100%;
     height: auto;
-    border-radius: 8px;
+    border-radius: var(--radius);
     display: block;
     margin: 32px 0;
     border: 1px solid var(--border);
@@ -262,7 +262,7 @@ const nextProject = currentIndex < allProjects.length - 1 ? allProjects[currentI
   .body :global(.cs-split-image img) {
     width: 100%;
     height: auto;
-    border-radius: 8px 8px 0 0;
+    border-radius: var(--radius) var(--radius) 0 0;
     border: 1px solid var(--border);
     border-bottom: none;
     margin: 0;
@@ -271,7 +271,7 @@ const nextProject = currentIndex < allProjects.length - 1 ? allProjects[currentI
   .body :global(.cs-split-image figure) {
     margin: 0;
     border: 1px solid var(--border);
-    border-radius: 8px;
+    border-radius: var(--radius);
     overflow: hidden;
   }
   .body :global(.cs-split-image figure img) {
@@ -294,7 +294,7 @@ const nextProject = currentIndex < allProjects.length - 1 ? allProjects[currentI
   .body :global(.cs-image-pair figure) {
     margin: 0;
     border: 1px solid var(--border);
-    border-radius: 8px;
+    border-radius: var(--radius);
     overflow: hidden;
   }
   .body :global(.cs-image-pair img) {
@@ -316,7 +316,7 @@ const nextProject = currentIndex < allProjects.length - 1 ? allProjects[currentI
     max-width: 100%;
     background: var(--bg-muted);
     border: 1px solid var(--border);
-    border-radius: 8px;
+    border-radius: var(--radius);
     padding: 24px 28px;
     margin-bottom: 36px;
   }
@@ -414,7 +414,7 @@ const nextProject = currentIndex < allProjects.length - 1 ? allProjects[currentI
   .body :global(.cs-table-wrap) {
     margin: 24px 0;
     border: 1px solid var(--border);
-    border-radius: 8px;
+    border-radius: var(--radius);
     overflow: hidden;
   }
   .body :global(.cs-table) {
@@ -509,7 +509,7 @@ const nextProject = currentIndex < allProjects.length - 1 ? allProjects[currentI
   .body :global(.cs-featured) {
     background: var(--bg-muted);
     border: 1px solid var(--border);
-    border-radius: 8px;
+    border-radius: var(--radius);
     overflow: hidden;
     margin: 24px 0;
   }
@@ -552,7 +552,7 @@ const nextProject = currentIndex < allProjects.length - 1 ? allProjects[currentI
   }
   .body :global(.cs-carousel-track-wrap) {
     overflow: hidden;
-    border-radius: 8px;
+    border-radius: var(--radius);
     border: 1px solid var(--border);
     background: var(--bg-muted);
   }
@@ -642,7 +642,7 @@ const nextProject = currentIndex < allProjects.length - 1 ? allProjects[currentI
     color: var(--fg);
     width: 36px;
     height: 36px;
-    border-radius: 4px;
+    border-radius: var(--radius-sm);
     cursor: pointer;
     font-size: 16px;
     display: flex;
@@ -711,7 +711,7 @@ const nextProject = currentIndex < allProjects.length - 1 ? allProjects[currentI
   .body :global(.cs-ext-card) {
     background: var(--bg-surface);
     border: 1px solid var(--border);
-    border-radius: 8px;
+    border-radius: var(--radius);
     overflow: hidden;
     box-shadow: 0 1px 6px rgba(0,0,0,0.06);
   }
@@ -720,6 +720,16 @@ const nextProject = currentIndex < allProjects.length - 1 ? allProjects[currentI
     align-items: center;
     gap: 14px;
     padding: 20px 24px 14px;
+  }
+  .body :global(.cs-ext-header-info) {
+    flex: 1;
+    min-width: 0;
+  }
+  .body :global(.cs-ext-header .btn) {
+    margin-left: auto;
+    flex-shrink: 0;
+    text-decoration: none !important;
+    white-space: nowrap;
   }
   .body :global(.cs-ext-icon) {
     width: 44px;
@@ -745,22 +755,6 @@ const nextProject = currentIndex < allProjects.length - 1 ? allProjects[currentI
     letter-spacing: -0.02em;
     max-width: 100% !important;
   }
-  .body :global(.cs-ext-demo) {
-    margin-left: auto;
-    background: var(--fg);
-    color: var(--bg) !important;
-    text-decoration: none !important;
-    padding: 8px 16px;
-    border-radius: 0;
-    font-size: 12px;
-    font-weight: 500;
-    font-family: var(--font-body);
-    white-space: nowrap;
-    flex-shrink: 0;
-    transition: opacity 0.15s;
-    letter-spacing: 0.02em;
-  }
-  .body :global(.cs-ext-demo:hover) { opacity: 0.7; }
   .body :global(.cs-ext-tags) {
     display: flex;
     gap: 8px;
@@ -799,17 +793,18 @@ const nextProject = currentIndex < allProjects.length - 1 ? allProjects[currentI
   }
   .body :global(.cs-ext-images) {
     display: flex;
-    background: var(--bg-muted);
+    background: var(--bg-surface);
     overflow: hidden;
   }
   .body :global(.cs-ext-main) {
     flex: 1;
     overflow: hidden;
-    background: var(--bg-muted);
+    background: var(--bg-surface);
   }
   .body :global(.cs-ext-main-img) {
     width: 100%;
     height: 100%;
+    min-height: 200px;
     object-fit: cover;
     object-position: top;
     display: block;
@@ -821,7 +816,7 @@ const nextProject = currentIndex < allProjects.length - 1 ? allProjects[currentI
     width: 96px;
     flex-shrink: 0;
     border-left: 1px solid var(--border);
-    background: var(--bg-subtle, var(--bg-muted));
+    background: var(--bg-surface) !important;
     display: flex;
     flex-direction: column;
     gap: 6px;
@@ -833,7 +828,7 @@ const nextProject = currentIndex < allProjects.length - 1 ? allProjects[currentI
     aspect-ratio: 16 / 10;
     object-fit: cover;
     object-position: top;
-    border-radius: 4px;
+    border-radius: var(--radius-sm);
     cursor: pointer;
     border: 2px solid transparent !important;
     opacity: 0.55;
@@ -853,9 +848,12 @@ const nextProject = currentIndex < allProjects.length - 1 ? allProjects[currentI
     .thumb { height: 50vw; min-height: 260px; margin: 24px 0; }
     h1 { font-size: 28px; }
     .body :global(p), .body :global(ul), .body :global(ol) { max-width: 100%; }
-    .body :global(.cs-ext-body) { grid-template-columns: 1fr; }
+    .body :global(.cs-ext-body) { grid-template-columns: 1fr; min-height: unset; }
     .body :global(.cs-ext-text) { border-right: none; border-bottom: 1px solid var(--border); }
     .body :global(.cs-ext-thumbs) { display: none; }
+    .body :global(.cs-ext-header) { flex-wrap: wrap; padding-bottom: 12px; }
+    .body :global(.cs-ext-header .btn) { margin-left: 58px; width: calc(100% - 58px); text-align: center; justify-content: center; }
+    .body :global(.cs-ext-title) { font-size: 17px; }
   }
 
   /* Lightbox */
@@ -888,7 +886,7 @@ const nextProject = currentIndex < allProjects.length - 1 ? allProjects[currentI
     max-width: 100%;
     max-height: 90vh;
     object-fit: contain;
-    border-radius: 4px;
+    border-radius: var(--radius-sm);
     box-shadow: 0 24px 80px rgba(0, 0, 0, 0.6);
     cursor: zoom-in;
     transition: max-width 0.2s ease, max-height 0.2s ease;
@@ -917,7 +915,7 @@ const nextProject = currentIndex < allProjects.length - 1 ? allProjects[currentI
   .body :global(.cs-carousel--pan img) { cursor: default; }
 </style>
 
-{(project.slug === 'atlas' || project.slug === 'vibe-coded') && (
+{project.slug === 'atlas' && (
 <div id="pg-overlay">
   <div id="pg-box">
     <p id="pg-logo">PA</p>

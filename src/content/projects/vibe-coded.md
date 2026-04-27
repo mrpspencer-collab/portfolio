@@ -25,7 +25,7 @@ Claude Code and Figma Make have changed how I prototype. What used to take a spr
     <div class="cs-ext-header-info">
       <h3 class="cs-ext-title">Screenshot Maker</h3>
     </div>
-    <a href="https://paula331.sg-host.com" target="_blank" rel="noopener" class="cs-ext-demo">Live Demo →</a>
+    <a href="https://paula331.sg-host.com" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Live Demo →</a>
   </div>
   <div class="cs-ext-tags">
     <span class="tag">Working Tool</span>
@@ -56,7 +56,7 @@ Claude Code and Figma Make have changed how I prototype. What used to take a spr
     <div class="cs-ext-header-info">
       <h3 class="cs-ext-title">KPI Status Layer</h3>
     </div>
-    <a href="https://whirl-finder-90280024.figma.site" target="_blank" rel="noopener" class="cs-ext-demo">Live Demo →</a>
+    <a href="https://whirl-finder-90280024.figma.site" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Live Demo →</a>
   </div>
   <div class="cs-ext-tags">
     <span class="tag">Prototype</span>
@@ -87,7 +87,7 @@ Claude Code and Figma Make have changed how I prototype. What used to take a spr
     <div class="cs-ext-header-info">
       <h3 class="cs-ext-title">Data Story Maker</h3>
     </div>
-    <a href="https://atlasimagemaker.netlify.app" target="_blank" rel="noopener" class="cs-ext-demo">Live Demo →</a>
+    <a href="https://atlasimagemaker.netlify.app" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Live Demo →</a>
   </div>
   <div class="cs-ext-tags">
     <span class="tag">Working Prototype</span>
@@ -116,7 +116,7 @@ Claude Code and Figma Make have changed how I prototype. What used to take a spr
     <div class="cs-ext-header-info">
       <h3 class="cs-ext-title">Acquisition Simulator</h3>
     </div>
-    <a href="https://paula329.sg-host.com/index.html" target="_blank" rel="noopener" class="cs-ext-demo">Live Demo →</a>
+    <a href="https://paula329.sg-host.com/index.html" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Live Demo →</a>
   </div>
   <div class="cs-ext-tags">
     <span class="tag">Personal Tool</span>

@@ -4,6 +4,8 @@
   --font-display: 'Syne', sans-serif;
   --font-body: 'DM Sans', sans-serif;
   --font-mono: 'DM Mono', monospace;
+  --radius: 8px;
+  --radius-sm: 4px;
 }
 
 [data-theme="light"] {
@@ -95,6 +97,14 @@ a { color: inherit; }
   background: rgba(192,122,58,0.12);
   color: var(--accent);
   border: 1px solid rgba(192,122,58,0.25);
+}
+
+/* Surface card */
+.card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
 }
 
 /* Overline label */
