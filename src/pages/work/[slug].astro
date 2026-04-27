@@ -854,8 +854,19 @@ const nextProject = currentIndex < allProjects.length - 1 ? allProjects[currentI
     .body :global(.cs-ext-body) { grid-template-columns: 1fr; min-height: unset; }
     .body :global(.cs-ext-text) { border-right: none; border-bottom: 1px solid var(--border); }
     .body :global(.cs-ext-thumbs) { display: none; }
-    .body :global(.cs-ext-header) { flex-wrap: wrap; padding-bottom: 12px; }
-    .body :global(.cs-ext-header .btn) { margin-left: 58px; width: calc(100% - 58px); text-align: center; justify-content: center; }
+    .body :global(.cs-ext-header) { flex-wrap: nowrap; padding-bottom: 12px; }
+    .body :global(.cs-ext-title) { font-size: 17px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .body :global(.cs-ext-header .btn) {
+      background: transparent;
+      border: none;
+      box-shadow: none;
+      color: var(--accent);
+      padding: 0;
+      font-size: 12px;
+      font-weight: 500;
+      white-space: nowrap;
+      margin-left: auto;
+    }
     .body :global(.cs-ext-title) { font-size: 17px; }
   }
 
