@@ -66,7 +66,7 @@ Claude Code and Figma Make have changed how I prototype. What used to take a spr
   </div>
   <div class="cs-ext-body">
     <div class="cs-ext-text">
-      <p>A neutral-palette analytics dashboard needed positive/negative signaling that survived all four common types of color vision deficiency. 14 treatment concepts — scrims, edge bars, hatching, glow shadows, shape coding — each viewable through live simulation with a per-concept A11y audit.</p>
+      <p>A client needed a way to quickly see what was up or down across key metrics. I used Figma Make to prototype an interactive dashboard, combining multiple design directions into a single testable artifact. Stakeholders explored variations in real time—including color blindness simulation—making accessibility and tradeoffs immediately clear. What took days in static comps took minutes, What once took days of static comps took minutes, enabling a faster response to customer pain points.</p>
       <p class="cs-ext-takeaway">Color is decoration. Shape and motion are signal.</p>
     </div>
     <div class="cs-ext-images">
