@@ -2,8 +2,8 @@
 title: Vibe Coding
 subtitle: Experiments in AI-Augmented Design
 role: Design, Prototyping, Development
-tags:
-  
+tags: []
+
 thumb: '/images/vibe-coded-thumb.svg'
 thumbBg: '#0A0A0C'
 thumbFit: cover
