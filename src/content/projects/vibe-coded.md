@@ -1,11 +1,9 @@
 ---
-title: Vibe Coded
+title: Vibe Coding
 subtitle: Experiments in AI-Augmented Design
 role: Design, Prototyping, Development
 tags:
-  - AI Tools
-  - Prototyping
-  - '2025–2026'
+  
 thumb: '/images/vibe-coded-thumb.svg'
 thumbBg: '#0A0A0C'
 thumbFit: cover
@@ -15,7 +13,7 @@ cta: See the experiments
 order: 2
 ---
 
-Claude Code and Figma Make have changed how I prototype. What used to take a sprint now takes an afternoon — sometimes 30 minutes. The experiments below range from functioning tools in active use to interactive prototypes that made abstract concepts tangible enough to ship or kill.
+Design has always been about making thinking visible. Tools like Claude Code and Figma Make compress that process from days to minutes. The experiments below aren’t polished products—they show how quickly ideas can be made tangible, whether solving internal problems, exploring concepts, or building interactive prototypes to move decisions forward.
 
 <div class="cs-ext-list">
 
@@ -28,14 +26,13 @@ Claude Code and Figma Make have changed how I prototype. What used to take a spr
     <a href="https://paula331.sg-host.com" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Live Demo →</a>
   </div>
   <div class="cs-ext-tags">
-    <span class="tag">Working Tool</span>
+    <span class="tag">Internal Tool</span>
     <span class="tag">Marketing</span>
-    <span class="tag">~30 min build</span>
   </div>
   <div class="cs-ext-body">
     <div class="cs-ext-text">
-      <p>Marketing emails relied on full-screen product screenshots that buried the detail worth communicating. I built a lightweight cropping and styling tool that forces a focused viewport — analysts produce clear, on-brand visuals without design support.</p>
-      <p class="cs-ext-takeaway">Constraints improve clarity.</p>
+      <p>Marketing emails were being sent with full-screen product screenshots that made it difficult to see details worth communicating. I built a lightweight cropping and styling tool that forces a focused viewport. This helps anyone produce clear, on-brand visuals without design support.</p>
+      <p class="cs-ext-takeaway"></p>
     </div>
     <div class="cs-ext-images">
       <div class="cs-ext-main">
@@ -61,13 +58,12 @@ Claude Code and Figma Make have changed how I prototype. What used to take a spr
   <div class="cs-ext-tags">
     <span class="tag">Prototype</span>
     <span class="tag">Accessibility</span>
-    <span class="tag">14 Concepts</span>
     <span class="tag">Color Blindness Simulation</span>
   </div>
   <div class="cs-ext-body">
     <div class="cs-ext-text">
-      <p>A neutral-palette analytics dashboard needed positive/negative signaling that survived all four common types of color vision deficiency. 14 treatment concepts — scrims, edge bars, hatching, glow shadows, shape coding — each viewable through live simulation with a per-concept A11y audit.</p>
-      <p class="cs-ext-takeaway">Color is decoration. Shape and motion are signal.</p>
+      <p>A client needed a way to quickly see what was up or down across key metrics. I used Figma Make to prototype an interactive dashboard, combining multiple design directions into a single testable artifact. Stakeholders explored variations in real time—including color blindness simulation—making accessibility and tradeoffs immediately clear. What took days in static comps took minutes, What once took days of static comps took minutes, enabling a faster response to customer pain points.</p>
+      
     </div>
     <div class="cs-ext-images">
       <div class="cs-ext-main">
@@ -96,7 +92,7 @@ Claude Code and Figma Make have changed how I prototype. What used to take a spr
   </div>
   <div class="cs-ext-body">
     <div class="cs-ext-text">
-      <p>Data stories in the product were limited to dashboard screenshots annotated with text. I built a prototype that lets an analyst or AI assemble visual narratives using templates, uploaded media, and generated imagery. When developers saw the working demo, several adopted AI tooling into their workflows for the first time.</p>
+      <p>Data stories were static—dashboard screenshots with long explanations. We hypothesized that social storytelling could make insights more engaging without losing rigor. I built a working, Canva-like tool using templates, Unsplash imagery, and generated media. Built with Claude Code, the demo showed how quickly ideas could become working software—and developers began adopting AI workflows.</p>
       <p class="cs-ext-takeaway">The best way to change how a team works is to show them something that already works.</p>
     </div>
     <div class="cs-ext-images">
@@ -153,8 +149,8 @@ Claude Code and Figma Make have changed how I prototype. What used to take a spr
   </div>
   <div class="cs-ext-body">
     <div class="cs-ext-text">
-      <p>Most BI users know the question they're trying to answer — not the metric or visualization to start with. I prototyped a guided flow that accepts a plain-language question and recommends the right metric, dimension, and chart type. An LLM did the interpretation; the UI surfaced the recommendation. Two flows were fully functional; the rest drove roadmap conversations.</p>
-      <p class="cs-ext-takeaway">Starting with a question is more intuitive than starting with a metric.</p>
+      <p>Most BI users know the question they want to answer, but non-technical users struggle with the data literacy required to use the tools. I prototyped a guided flow that translates plain-language questions into recommended metrics, dimensions, and chart types. It acts as training wheels—starting simple, then gradually exposing the underlying structure as users learn.</p>
+     
     </div>
     <div class="cs-ext-images">
       <div class="cs-ext-main">
