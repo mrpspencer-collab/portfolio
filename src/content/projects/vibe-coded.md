@@ -146,20 +146,6 @@ Design has always been about making thinking visible. Tools like Claude Code and
     <span class="tag">BI</span>
     <span class="tag">LLM-Powered</span>
   </div>
-  <div class="cs-ext-body">
-    <div class="cs-ext-text">
-      <p>Most BI users know the question they want to answer, but non-technical users struggle with the data literacy required to use the tools. I prototyped a guided flow that translates plain-language questions into recommended metrics, dimensions, and chart types. It acts as training wheels—starting simple, then gradually exposing the underlying structure as users learn.</p>
-    </div>
-    <div class="cs-ext-images">
-      <div class="cs-ext-main">
-        <img class="cs-ext-main-img" src="/images/guided-analysis-question.jpg" alt="Guided Analysis — question step" />
-      </div>
-      <div class="cs-ext-thumbs">
-        <img class="cs-ext-thumb cs-ext-thumb--active" src="/images/guided-analysis-question.jpg" alt="Question step" />
-        <img class="cs-ext-thumb" src="/images/guided-analysis-recommendation.jpg" alt="Recommendation step" />
-      </div>
-    </div>
-  </div>
-</div>
+
 
 </div>
