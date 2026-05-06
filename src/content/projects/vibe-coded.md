@@ -134,18 +134,7 @@ Design has always been about making thinking visible. Tools like Claude Code and
   </div>
 </div>
 
-<div class="cs-ext-card">
-  <div class="cs-ext-header">
-    <div class="cs-ext-icon">GA</div>
-    <div class="cs-ext-header-info">
-      <h3 class="cs-ext-title">Guided Analysis</h3>
-    </div>
-  </div>
-  <div class="cs-ext-tags">
-    <span class="tag">Prototype</span>
-    <span class="tag">BI</span>
-    <span class="tag">LLM-Powered</span>
-  </div>
+
 
 
 </div>
