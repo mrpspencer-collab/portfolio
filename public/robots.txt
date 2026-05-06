@@ -1,5 +1,2 @@
 User-agent: *
 Allow: /
-
-Disallow: /images/atlas/
-Disallow: /work/atlas/

@@ -1,3 +1,5 @@
 import { defineConfig } from 'astro/config';
 
-export default defineConfig({});
+export default defineConfig({
+  base: process.env.BASE_PATH || undefined,
+});

@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  deploy:
+  deploy-public:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4.2.2
@@ -20,7 +20,7 @@ jobs:
 
       - run: npm run build
         env:
-          ATLAS_PASSWORD: ${{ secrets.ATLAS_PASSWORD }}
+          PUBLIC_BUILD: 'true'
 
       - name: Deploy files (preserve images)
         uses: burnett01/rsync-deployments@7.0.1
@@ -39,6 +39,34 @@ jobs:
           switches: -avz
           path: dist/images/
           remote_path: www/paulamsbary.com/public_html/images/
+          remote_host: ssh.paulamsbary.com
+          remote_port: 18765
+          remote_user: u253-znw4txwqk8kk
+          remote_key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+  deploy-private:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4.2.2
+
+      - uses: actions/setup-node@v4.4.0
+        with:
+          node-version: 24
+          cache: npm
+
+      - run: npm ci
+
+      - run: npm run build
+        env:
+          ATLAS_PASSWORD: ${{ secrets.ATLAS_PASSWORD }}
+          BASE_PATH: /abf1c7795b242823
+
+      - name: Deploy private site (preserve images)
+        uses: burnett01/rsync-deployments@7.0.1
+        with:
+          switches: -avz --delete --exclude '/images/'
+          path: dist/
+          remote_path: www/paulamsbary.com/public_html/abf1c7795b242823/
           remote_host: ssh.paulamsbary.com
           remote_port: 18765
           remote_user: u253-znw4txwqk8kk
