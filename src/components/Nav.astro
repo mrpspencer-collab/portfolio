@@ -1,17 +1,19 @@
 ---
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const { pathname } = Astro.url;
-const isWork  = pathname === '/' || pathname.startsWith('/work');
-const isAbout = pathname === '/about';
-const isBlog  = pathname.startsWith('/blog');
+const path = base && pathname.startsWith(base) ? pathname.slice(base.length) || '/' : pathname;
+const isWork  = path === '/' || path.startsWith('/work');
+const isAbout = path === '/about';
+const isBlog  = path.startsWith('/blog');
 ---
 <nav>
-  <a href="/" class="logo">Paul Amsbary</a>
+  <a href={import.meta.env.BASE_URL} class="logo">Paul Amsbary</a>
 
   <!-- Desktop links -->
   <div class="nav-links">
-    <a href="/"      class:list={['nav-link', { active: isWork }]}>Work</a>
-    <a href="/about" class:list={['nav-link', { active: isAbout }]}>About</a>
-    <a href="/blog"  class:list={['nav-link', { active: isBlog }]}>Blog</a>
+    <a href={import.meta.env.BASE_URL}                   class:list={['nav-link', { active: isWork }]}>Work</a>
+    <a href={`${import.meta.env.BASE_URL}about`}         class:list={['nav-link', { active: isAbout }]}>About</a>
+    <a href={`${import.meta.env.BASE_URL}blog`}          class:list={['nav-link', { active: isBlog }]}>Blog</a>
     <div class="divider"></div>
     <button id="theme-toggle" class="theme-btn">◐ Dark</button>
     <a href="https://wp.paulamsbary.com/wp-content/uploads/2026/04/PAUL-AMSBARY-CV-2026-web-2.pdf" target="_blank" rel="noopener" class="btn btn-primary btn-sm resume-btn">Download Resume</a>
@@ -26,9 +28,9 @@ const isBlog  = pathname.startsWith('/blog');
 
 <!-- Mobile menu -->
 <div id="mobile-menu" class="mobile-menu">
-  <a href="/"      class:list={['mobile-link', { active: isWork }]}>Work</a>
-  <a href="/about" class:list={['mobile-link', { active: isAbout }]}>About</a>
-  <a href="/blog"  class:list={['mobile-link', { active: isBlog }]}>Blog</a>
+  <a href={import.meta.env.BASE_URL}           class:list={['mobile-link', { active: isWork }]}>Work</a>
+  <a href={`${import.meta.env.BASE_URL}about`} class:list={['mobile-link', { active: isAbout }]}>About</a>
+  <a href={`${import.meta.env.BASE_URL}blog`}  class:list={['mobile-link', { active: isBlog }]}>Blog</a>
   <a href="https://wp.paulamsbary.com/wp-content/uploads/2026/04/PAUL-AMSBARY-CV-2026-web-2.pdf" target="_blank" rel="noopener" class="mobile-link">Download Resume</a>
 </div>
 
