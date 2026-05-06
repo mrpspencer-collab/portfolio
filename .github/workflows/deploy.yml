@@ -19,6 +19,8 @@ jobs:
       - run: npm ci
 
       - run: npm run build
+        env:
+          ATLAS_PASSWORD: ${{ secrets.ATLAS_PASSWORD }}
 
       - name: Deploy files (preserve images)
         uses: burnett01/rsync-deployments@7.0.1

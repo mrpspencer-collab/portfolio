@@ -27,6 +27,7 @@ const nextProject = currentIndex < allProjects.length - 1 ? allProjects[currentI
       <span class="current">{d.title}</span>
     </div>
 
+    {project.slug === 'atlas' && <span id="atlas-encrypt-start" aria-hidden="true" style="display:none"></span>}
     <div class="content-wrap">
       {d.heroThumb !== false && (
         <div class="thumb" style={`background:${d.thumbBg}`}>
@@ -88,6 +89,7 @@ const nextProject = currentIndex < allProjects.length - 1 ? allProjects[currentI
         </div>
       </div>
     </div>
+    {project.slug === 'atlas' && <span id="atlas-encrypt-end" aria-hidden="true" style="display:none"></span>}
   </main>
   <Footer />
 </Base>
@@ -1105,11 +1107,10 @@ const nextProject = currentIndex < allProjects.length - 1 ? allProjects[currentI
 </style>
 
 <script>
-  // Lightbox
-  const lightbox = document.getElementById('lightbox')!;
+  const lightbox    = document.getElementById('lightbox')!;
   const lightboxImg = document.getElementById('lightbox-img') as HTMLImageElement;
-  const lbPrev = document.getElementById('lightbox-prev') as HTMLButtonElement;
-  const lbNext = document.getElementById('lightbox-next') as HTMLButtonElement;
+  const lbPrev      = document.getElementById('lightbox-prev') as HTMLButtonElement;
+  const lbNext      = document.getElementById('lightbox-next') as HTMLButtonElement;
 
   let lbImages: { src: string; alt: string }[] = [];
   let lbIndex = 0;
@@ -1127,11 +1128,7 @@ const nextProject = currentIndex < allProjects.length - 1 ? allProjects[currentI
     lbIndex = lbImages.findIndex(img => img.src === src);
     if (lbIndex === -1) lbIndex = 0;
     showLightboxImage(lbIndex);
-    if (lbImages.length > 1) {
-      lightbox.classList.add('has-nav');
-    } else {
-      lightbox.classList.remove('has-nav');
-    }
+    lightbox.classList.toggle('has-nav', lbImages.length > 1);
     lightbox.classList.add('open');
     lightbox.classList.remove('zoomed');
     document.body.style.overflow = 'hidden';
@@ -1142,26 +1139,25 @@ const nextProject = currentIndex < allProjects.length - 1 ? allProjects[currentI
     document.body.style.overflow = '';
   }
 
-  document.querySelectorAll<HTMLImageElement>('.body img').forEach(img => {
-    if (img.closest('.cs-carousel--pan')) return;
-    if (img.closest('.cs-ext-card')) return;
-    img.addEventListener('click', () => openLightbox(img.src, img.alt));
-  });
-
-  // Experiment card main images — open lightbox with full image set for navigation
-  document.querySelectorAll<HTMLElement>('.cs-ext-card').forEach(card => {
-    const mainImg = card.querySelector<HTMLImageElement>('.cs-ext-main-img');
-    const thumbs = card.querySelectorAll<HTMLImageElement>('.cs-ext-thumb');
-    if (!mainImg) return;
-    mainImg.addEventListener('click', () => {
-      const images = Array.from(thumbs).map(t => ({ src: t.src, alt: t.alt }));
-      openLightbox(mainImg.src, mainImg.alt, images.length > 0 ? images : undefined);
+  function initLightbox() {
+    document.querySelectorAll<HTMLImageElement>('.body img').forEach(img => {
+      if (img.closest('.cs-carousel--pan')) return;
+      if (img.closest('.cs-ext-card')) return;
+      img.addEventListener('click', () => openLightbox(img.src, img.alt));
     });
-  });
+    document.querySelectorAll<HTMLElement>('.cs-ext-card').forEach(card => {
+      const mainImg = card.querySelector<HTMLImageElement>('.cs-ext-main-img');
+      const thumbs  = card.querySelectorAll<HTMLImageElement>('.cs-ext-thumb');
+      if (!mainImg) return;
+      mainImg.addEventListener('click', () => {
+        const images = Array.from(thumbs).map(t => ({ src: t.src, alt: t.alt }));
+        openLightbox(mainImg.src, mainImg.alt, images.length > 0 ? images : undefined);
+      });
+    });
+  }
 
   lbPrev.addEventListener('click', e => { e.stopPropagation(); showLightboxImage(lbIndex - 1); });
   lbNext.addEventListener('click', e => { e.stopPropagation(); showLightboxImage(lbIndex + 1); });
-
   lightbox.addEventListener('click', closeLightbox);
   lightboxImg.addEventListener('click', e => {
     e.stopPropagation();
@@ -1175,103 +1171,145 @@ const nextProject = currentIndex < allProjects.length - 1 ? allProjects[currentI
     if (e.key === 'ArrowRight') showLightboxImage(lbIndex + 1);
   });
 
-  document.querySelectorAll<HTMLElement>('.cs-carousel').forEach(carousel => {
-    const track = carousel.querySelector<HTMLElement>('.cs-carousel-track')!;
-    const slides = carousel.querySelectorAll('.cs-carousel-slide');
-    const prev = carousel.querySelector<HTMLButtonElement>('.cs-carousel-prev')!;
-    const next = carousel.querySelector<HTMLButtonElement>('.cs-carousel-next')!;
-    const counter = carousel.querySelector<HTMLElement>('.cs-carousel-counter')!;
-    let current = 0;
+  function initCarousels() {
+    document.querySelectorAll<HTMLElement>('.cs-carousel').forEach(carousel => {
+      const track   = carousel.querySelector<HTMLElement>('.cs-carousel-track')!;
+      const slides  = carousel.querySelectorAll('.cs-carousel-slide');
+      const prev    = carousel.querySelector<HTMLButtonElement>('.cs-carousel-prev')!;
+      const next    = carousel.querySelector<HTMLButtonElement>('.cs-carousel-next')!;
+      const counter = carousel.querySelector<HTMLElement>('.cs-carousel-counter')!;
+      let current = 0;
 
-    function go(n: number) {
-      current = Math.max(0, Math.min(n, slides.length - 1));
-      track.style.transform = `translateX(-${current * 100}%)`;
-      counter.textContent = `${current + 1} / ${slides.length}`;
-      prev.disabled = current === 0;
-      next.disabled = current === slides.length - 1;
-    }
-
-    prev.addEventListener('click', () => go(current - 1));
-    next.addEventListener('click', () => go(current + 1));
-    go(0);
-  });
-
-  // Panning carousels — off by default; toggle enables auto-pan; mouse always controls on hover
-  document.querySelectorAll<HTMLElement>('.cs-carousel--pan').forEach(carousel => {
-    const wrap = carousel.querySelector<HTMLElement>('.cs-carousel-track-wrap')!;
-    const imgs = carousel.querySelectorAll<HTMLImageElement>('.cs-carousel-slide img');
-    const nav = carousel.querySelector<HTMLElement>('.cs-carousel-nav')!;
-    let pos = 0;
-    let dir = 1;
-    let hovered = false;
-    let autoPan = false;
-
-    // Inject toggle switch into nav
-    const label = document.createElement('label');
-    label.className = 'cs-pan-toggle';
-    label.innerHTML = `<input type="checkbox" class="cs-pan-toggle-input" /><span class="cs-pan-toggle-track"></span><span class="cs-pan-toggle-text">Auto-scroll</span>`;
-    nav.appendChild(label);
-    const input = label.querySelector<HTMLInputElement>('.cs-pan-toggle-input')!;
-    input.addEventListener('change', () => { autoPan = input.checked; });
-
-    function setPos(p: number) {
-      pos = Math.max(0, Math.min(100, p));
-      imgs.forEach(img => { img.style.objectPosition = `center ${pos}%`; });
-    }
-
-    (function tick() {
-      if (autoPan && !hovered) {
-        if (pos >= 100) dir = -1;
-        if (pos <= 0) dir = 1;
-        setPos(pos + dir * 0.04);
+      function go(n: number) {
+        current = Math.max(0, Math.min(n, slides.length - 1));
+        track.style.transform = `translateX(-${current * 100}%)`;
+        counter.textContent = `${current + 1} / ${slides.length}`;
+        prev.disabled = current === 0;
+        next.disabled = current === slides.length - 1;
       }
-      requestAnimationFrame(tick);
-    })();
 
-    wrap.addEventListener('mouseenter', () => { hovered = true; });
-    wrap.addEventListener('mouseleave', () => { hovered = false; });
+      prev.addEventListener('click', () => go(current - 1));
+      next.addEventListener('click', () => go(current + 1));
+      go(0);
+    });
+  }
 
-    wrap.addEventListener('wheel', (e: WheelEvent) => {
-      e.preventDefault();
-      setPos(pos + e.deltaY * 0.05);
-    }, { passive: false });
-  });
+  function initPanCarousels() {
+    document.querySelectorAll<HTMLElement>('.cs-carousel--pan').forEach(carousel => {
+      const wrap = carousel.querySelector<HTMLElement>('.cs-carousel-track-wrap')!;
+      const imgs = carousel.querySelectorAll<HTMLImageElement>('.cs-carousel-slide img');
+      const nav  = carousel.querySelector<HTMLElement>('.cs-carousel-nav')!;
+      let pos = 0, dir = 1, hovered = false, autoPan = false;
 
-  // Atlas password gate
-  const overlay = document.getElementById('pg-overlay');
-  if (overlay) {
-    const HASH = '8f40d29c6591983ace8fd1bf3b517cbe7290e2fc26d2cab47739510b40b75ea7';
-    const KEY  = 'pa-atlas-auth';
+      const label = document.createElement('label');
+      label.className = 'cs-pan-toggle';
+      label.innerHTML = `<input type="checkbox" class="cs-pan-toggle-input" /><span class="cs-pan-toggle-track"></span><span class="cs-pan-toggle-text">Auto-scroll</span>`;
+      nav.appendChild(label);
+      const input = label.querySelector<HTMLInputElement>('.cs-pan-toggle-input')!;
+      input.addEventListener('change', () => { autoPan = input.checked; });
 
-    async function sha256(str: string) {
-      const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(str));
-      return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, '0')).join('');
+      function setPos(p: number) {
+        pos = Math.max(0, Math.min(100, p));
+        imgs.forEach(img => { img.style.objectPosition = `center ${pos}%`; });
+      }
+
+      (function tick() {
+        if (autoPan && !hovered) {
+          if (pos >= 100) dir = -1;
+          if (pos <= 0) dir = 1;
+          setPos(pos + dir * 0.04);
+        }
+        requestAnimationFrame(tick);
+      })();
+
+      wrap.addEventListener('mouseenter', () => { hovered = true; });
+      wrap.addEventListener('mouseleave', () => { hovered = false; });
+      wrap.addEventListener('wheel', (e: WheelEvent) => {
+        e.preventDefault();
+        setPos(pos + e.deltaY * 0.05);
+      }, { passive: false });
+    });
+  }
+
+  function initExtCards() {
+    document.querySelectorAll<HTMLElement>('.cs-ext-card').forEach(card => {
+      const mainImg = card.querySelector<HTMLImageElement>('.cs-ext-main-img');
+      const thumbs  = card.querySelectorAll<HTMLImageElement>('.cs-ext-thumb');
+      thumbs.forEach(thumb => {
+        thumb.addEventListener('click', () => {
+          if (mainImg) mainImg.src = thumb.src;
+          thumbs.forEach(t => t.classList.remove('cs-ext-thumb--active'));
+          thumb.classList.add('cs-ext-thumb--active');
+        });
+      });
+    });
+  }
+
+  // Atlas encrypted content gate
+  const encScript = document.getElementById('atlas-enc') as HTMLScriptElement | null;
+  const overlay   = document.getElementById('pg-overlay') as HTMLElement | null;
+
+  if (encScript) {
+    // Content is encrypted — requires decryption before init
+    const SESSION_KEY = 'pa-atlas-content';
+
+    function fromB64(s: string): Uint8Array {
+      return Uint8Array.from(atob(s), c => c.charCodeAt(0));
     }
 
-    if (localStorage.getItem(KEY) === '1') {
+    async function decryptContent(password: string): Promise<string> {
+      const { s, i, c } = JSON.parse(encScript!.textContent!);
+      const km = await crypto.subtle.importKey(
+        'raw', new TextEncoder().encode(password), 'PBKDF2', false, ['deriveKey']
+      );
+      const key = await crypto.subtle.deriveKey(
+        { name: 'PBKDF2', salt: fromB64(s), iterations: 200000, hash: 'SHA-256' },
+        km,
+        { name: 'AES-GCM', length: 256 },
+        false,
+        ['decrypt']
+      );
+      const plain = await crypto.subtle.decrypt({ name: 'AES-GCM', iv: fromB64(i) }, key, fromB64(c));
+      return new TextDecoder().decode(plain);
+    }
+
+    function injectContent(html: string) {
+      encScript!.insertAdjacentHTML('afterend', html);
+      encScript!.remove();
+      initLightbox();
+      initCarousels();
+      initPanCarousels();
+      initExtCards();
+    }
+
+    const cached = sessionStorage.getItem(SESSION_KEY);
+    if (cached && overlay) {
+      injectContent(cached);
       overlay.remove();
-    } else {
+      document.body.style.overflow = '';
+    } else if (overlay) {
       document.body.style.overflow = 'hidden';
 
-      const input  = document.getElementById('pg-input') as HTMLInputElement;
-      const submit = document.getElementById('pg-submit')!;
-      const error  = document.getElementById('pg-error')!;
+      const pwInput = document.getElementById('pg-input') as HTMLInputElement;
+      const submit  = document.getElementById('pg-submit')!;
+      const error   = document.getElementById('pg-error')!;
 
       async function attempt() {
-        const h = await sha256(input.value.trim());
-        if (h === HASH) {
-          localStorage.setItem(KEY, '1');
+        try {
+          const html = await decryptContent(pwInput.value.trim());
+          sessionStorage.setItem(SESSION_KEY, html);
+          injectContent(html);
           overlay!.remove();
           document.body.style.overflow = '';
-        } else {
+        } catch {
           error.style.display = 'block';
-          input.value = '';
-          input.focus();
+          pwInput.value = '';
+          pwInput.focus();
         }
       }
 
       submit.addEventListener('click', attempt);
-      input.addEventListener('keydown', (e: KeyboardEvent) => { if (e.key === 'Enter') attempt(); });
+      pwInput.addEventListener('keydown', (e: KeyboardEvent) => { if (e.key === 'Enter') attempt(); });
 
       const toggle      = document.getElementById('pg-request-toggle')!;
       const requestForm = document.getElementById('pg-request-form')!;
@@ -1298,18 +1336,14 @@ const nextProject = currentIndex < allProjects.length - 1 ? allProjects[currentI
         } catch (_) {}
       });
     }
+  } else if (overlay) {
+    // Overlay present but content not encrypted — hard-block the page.
+    // This state means the build ran without ATLAS_PASSWORD set.
+    document.body.style.overflow = 'hidden';
+  } else {
+    initLightbox();
+    initCarousels();
+    initPanCarousels();
+    initExtCards();
   }
-
-  // Experiment card thumbnail switching
-  document.querySelectorAll<HTMLElement>('.cs-ext-card').forEach(card => {
-    const mainImg = card.querySelector<HTMLImageElement>('.cs-ext-main-img');
-    const thumbs  = card.querySelectorAll<HTMLImageElement>('.cs-ext-thumb');
-    thumbs.forEach(thumb => {
-      thumb.addEventListener('click', () => {
-        if (mainImg) mainImg.src = thumb.src;
-        thumbs.forEach(t => t.classList.remove('cs-ext-thumb--active'));
-        thumb.classList.add('cs-ext-thumb--active');
-      });
-    });
-  });
 </script>
