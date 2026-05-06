@@ -18,7 +18,7 @@ const currentIndex = allProjects.findIndex(p => p.slug === project.slug);
 const prevProject = currentIndex > 0 ? allProjects[currentIndex - 1] : null;
 const nextProject = currentIndex < allProjects.length - 1 ? allProjects[currentIndex + 1] : null;
 ---
-<Base title={d.title}>
+<Base title={d.title} noindex={project.slug === 'atlas'}>
   <Nav />
   <main>
     <div class="breadcrumb">
