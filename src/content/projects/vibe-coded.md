@@ -31,7 +31,7 @@ Design has always been about making thinking visible. Tools like Claude Code and
   </div>
   <div class="cs-ext-body">
     <div class="cs-ext-text">
-      <p>Marketing emails were being sent with full-screen product screenshots that made it difficult to see details worth communicating. I built a lightweight cropping and styling tool that forces a focused viewport. This helps anyone produce clear, on-brand visuals without design support.</p>
+      <p>Marketing emails sent with full-screen product screenshots make it difficult to see details worth communicating. I built a lightweight cropping and styling tool that forces a focused viewport. This helps anyone produce clear, on-brand visuals without design support.</p>
       <p class="cs-ext-takeaway"></p>
     </div>
     <div class="cs-ext-images">
@@ -53,7 +53,7 @@ Design has always been about making thinking visible. Tools like Claude Code and
     <div class="cs-ext-header-info">
       <h3 class="cs-ext-title">KPI Status Layer</h3>
     </div>
-    <a href="https://whirl-finder-90280024.figma.site" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Live Demo →</a>
+    <a href="https://paula332.sg-host.com/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Live Demo →</a>
   </div>
   <div class="cs-ext-tags">
     <span class="tag">Prototype</span>
@@ -82,7 +82,7 @@ Design has always been about making thinking visible. Tools like Claude Code and
     <div class="cs-ext-header-info">
       <h3 class="cs-ext-title">Data Story Maker</h3>
     </div>
-    <a href="https://atlasimagemaker.netlify.app" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Live Demo →</a>
+    <a href="#" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Live Demo →</a>
   </div>
   <div class="cs-ext-tags">
     <span class="tag">Working Prototype</span>
