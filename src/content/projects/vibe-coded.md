@@ -53,7 +53,7 @@ Design has always been about making thinking visible. Tools like Claude Code and
     <div class="cs-ext-header-info">
       <h3 class="cs-ext-title">KPI Status Layer</h3>
     </div>
-    <a href="https://paula332.sg-host.com/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Live Demo →</a>
+    <a href="https://whirl-finder-90280024.figma.site/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Live Demo →</a>
   </div>
   <div class="cs-ext-tags">
     <span class="tag">Prototype</span>
