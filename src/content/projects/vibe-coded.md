@@ -13,7 +13,7 @@ cta: See the experiments
 order: 2
 ---
 
-Design has always been about making thinking visible. Tools like Claude Code and Figma Make compress that process from days to minutes. The experiments below aren’t polished products—they show how quickly ideas can be made tangible, whether solving internal problems, exploring concepts, or building interactive prototypes to move decisions forward.
+Design has always been about making thinking visible. Tools like Claude Code and Figma Make compress that process from days to minutes. The experiments below aren’t polished products. They show how quickly ideas can be made tangible, whether solving internal problems, exploring concepts, or building interactive prototypes to move decisions forward.
 
 <div class="cs-ext-list">
 
@@ -31,7 +31,7 @@ Design has always been about making thinking visible. Tools like Claude Code and
   </div>
   <div class="cs-ext-body">
     <div class="cs-ext-text">
-      <p>Marketing emails sent with full-screen product screenshots make it difficult to see details worth communicating. I built a lightweight cropping and styling tool that forces a focused viewport. This helps anyone produce clear, on-brand visuals without design support.</p>
+      <p>Marketing emails sent with full-screen product screenshots can make it difficult to see details worth communicating. I built a lightweight cropping and styling tool that forces a focused viewport. This helps anyone produce clear, on-brand visuals without design support.</p>
       <p class="cs-ext-takeaway"></p>
     </div>
     <div class="cs-ext-images">
@@ -62,7 +62,7 @@ Design has always been about making thinking visible. Tools like Claude Code and
   </div>
   <div class="cs-ext-body">
     <div class="cs-ext-text">
-      <p>A client needed a way to quickly see what was up or down across key metrics. I used Figma Make to prototype an interactive dashboard, combining multiple design directions into a single testable artifact. Stakeholders explored variations in real time—including color blindness simulation—making accessibility and tradeoffs immediately clear. What took days in static comps took minutes, What once took days of static comps took minutes, enabling a faster response to customer pain points.</p>
+      <p>A client needed a way to quickly see what was trending up or down across key metrics. I used Figma Make to prototype an interactive dashboard, combining multiple design directions into a single testable artifact. Stakeholders explored variations in real time, including color blindness simulations making accessibility tradeoffs immediately clear. What might take days to mock static comps took minutes, enabling a faster response to customer pain points.</p>
     </div>
     <div class="cs-ext-images">
       <div class="cs-ext-main">
@@ -91,8 +91,7 @@ Design has always been about making thinking visible. Tools like Claude Code and
   </div>
   <div class="cs-ext-body">
     <div class="cs-ext-text">
-      <p>Data stories were static—dashboard screenshots with long explanations. We hypothesized that social storytelling could make insights more engaging without losing rigor. I built a working, Canva-like tool using templates, Unsplash imagery, and generated media. Built with Claude Code, the demo showed how quickly ideas could become working software—and developers began adopting AI workflows.</p>
-      <p class="cs-ext-takeaway">The best way to change how a team works is to show them something that already works.</p>
+      <p>Data insights were being delivered as dashbaord screenshots with long explanations. We hypothesized that social media-like imagery could make insights more engaging without losing rigor. I built a Canva-like tool using templates, Unsplash imagery, and AI generated media with Claude Code. The demo showed how quickly ideas could become working software and encouraged our team to adopt AI workflows.</p>
     </div>
     <div class="cs-ext-images">
       <div class="cs-ext-main">
@@ -120,7 +119,7 @@ Design has always been about making thinking visible. Tools like Claude Code and
   </div>
   <div class="cs-ext-body">
     <div class="cs-ext-text">
-      <p>Evaluating a business acquisition means stress-testing financials across scenarios that spreadsheets make tedious. I built a tool that accepts P&amp;L inputs and models outcomes across conditions — recession, operational changes, added capacity — producing a 12-month projection formatted for a business plan and loan application.</p>
+      <p>Evaluating a business acquisition means stress-testing financials across scenarios that spreadsheets make tedious. I built a tool that accepts P&amp;L inputs and models outcomes across different economic conditions: recession, operational changes, added capacity. The tool can then produce a 12-month projection formatted for a business plan or loan application.</p>
       <p class="cs-ext-takeaway">The best tools solve the problem you have right now.</p>
     </div>
     <div class="cs-ext-images">
