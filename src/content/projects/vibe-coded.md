@@ -82,7 +82,7 @@ Design has always been about making thinking visible. Tools like Claude Code and
     <div class="cs-ext-header-info">
       <h3 class="cs-ext-title">Data Story Maker</h3>
     </div>
-    <a href="#" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Live Demo →</a>
+    <a href="https://paula334.sg-host.com/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Live Demo →</a>
   </div>
   <div class="cs-ext-tags">
     <span class="tag">Working Prototype</span>
