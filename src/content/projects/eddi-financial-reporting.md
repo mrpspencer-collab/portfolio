@@ -27,7 +27,7 @@ At Eddi, I designed an AI-assisted financial reporting experience that helped us
 
 Released in nine weeks, Eddi helps school districts turn financial data into budgets they can share with their communities. Finance teams can present different scenarios, make the assumptions behind them visible, and gather feedback to inform budget decisions.
 
-By reducing the manual work of assembling reports and preparing scenarios, the feature saves finance teams hundreds of hours and gives them more time to evaluate options and engage their communities.
+Districts rely on data scientists and technical users to produce these reports. By streamlining that workflow, the feature will save finance teams hundreds of hours and give them more time to evaluate options and engage their communities.
 
 ## From understanding data to sharing decisions
 
