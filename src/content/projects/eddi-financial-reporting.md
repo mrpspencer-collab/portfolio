@@ -23,7 +23,7 @@ password: true
 <section class="cs-split-section">
 <h2 class="cs-label">The problem</h2>
 <div>
-<p class="cs-statement">Districts could already ask Eddi about their financial data. What they couldn't easily do was produce something to share.</p>
+<p class="cs-statement">Districts could ask Eddi about their finances. Sharing the answers was the hard part.</p>
 <p class="cs-small">A budget, a report or a scenario comparison meant translating account codes, combining datasets and applying financial rules, then repeating much of it for every new scenario. The opportunity was to turn Eddi's connected data into reports districts could use to explain their budgets and gather community feedback, with the calculations and assumptions in view.</p>
 </div>
 </section>
