@@ -538,6 +538,128 @@ const nextProject = currentIndex < allProjects.length - 1 ? allProjects[currentI
   }
   .body :global(.cs-featured-body li) { font-size: 14px; margin-bottom: 4px; }
 
+  /* Simplified case study layout: small section labels, statements, cards, steps, features */
+  .body :global(.cs-simple) {
+    display: flex;
+    flex-direction: column;
+    gap: 88px;
+    margin-top: 8px;
+  }
+  .body :global(.cs-simple p) { margin: 0; max-width: none; }
+  .body :global(.cs-simple h2.cs-label) {
+    font-family: var(--font-body);
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+    letter-spacing: 0;
+    color: var(--accent);
+    margin: 0;
+  }
+  .body :global(.cs-simple h3) { margin: 0; }
+  .body :global(.cs-lead) { display: flex; flex-direction: column; gap: 28px; }
+  .body :global(.cs-lead > p) { font-size: 18px; line-height: 28px; max-width: 720px; }
+  .body :global(.cs-figure) { margin: 0; display: flex; flex-direction: column; gap: 10px; }
+  .body :global(.cs-figure img) { margin: 0; border-radius: 12px; }
+  .body :global(.cs-figure figcaption) {
+    background: none;
+    padding: 0;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--fg-muted);
+  }
+  .body :global(.cs-split-section) { display: flex; flex-wrap: wrap; gap: 16px 56px; }
+  .body :global(.cs-split-section > h2) { flex: 1 1 160px; }
+  .body :global(.cs-split-section > div) {
+    flex: 999 1 520px;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .body :global(.cs-statement) {
+    font-size: 22px !important;
+    line-height: 32px;
+    font-weight: 500;
+    color: var(--fg);
+  }
+  .body :global(.cs-small) { font-size: 16px; line-height: 26px; }
+  .body :global(.cs-stack) { display: flex; flex-direction: column; gap: 28px; }
+  .body :global(.cs-cards) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+    gap: 20px;
+  }
+  .body :global(.cs-card) {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .body :global(.cs-card h3) { font-size: 19px; line-height: 24px; }
+  .body :global(.cs-card p) { font-size: 15px; line-height: 23px; }
+  .body :global(.cs-steps) {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-width: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
+    gap: 28px 56px;
+  }
+  .body :global(.cs-steps li) { display: flex; gap: 16px; margin: 0; }
+  .body :global(.cs-step-num), .body :global(.cs-num) {
+    flex: none;
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: 600;
+    color: var(--accent);
+    font-variant-numeric: tabular-nums;
+  }
+  .body :global(.cs-steps p) { font-size: 16px; line-height: 26px; }
+  .body :global(.cs-trio) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+    gap: 20px;
+    align-items: start;
+  }
+  .body :global(.cs-trio .cs-figure img) { border-radius: 8px; }
+  .body :global(.cs-features) { display: flex; flex-direction: column; gap: 64px; }
+  .body :global(.cs-feature) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
+    gap: 24px 40px;
+    align-items: start;
+  }
+  .body :global(.cs-feature-text) { display: flex; flex-direction: column; gap: 12px; }
+  .body :global(.cs-feature-text h3), .body :global(.cs-feature-pair h3) { font-size: 23px; line-height: 30px; }
+  .body :global(.cs-feature-pair) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
+    gap: 24px 40px;
+  }
+  .body :global(.cs-feature-pair > div) {
+    border-top: 1px solid var(--border);
+    padding-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .body :global(.cs-panel) {
+    background: var(--bg-muted);
+    border-radius: 12px;
+    padding: 44px 32px;
+  }
+  .body :global(.cs-panel-next) {
+    border-top: 1px solid var(--border);
+    padding-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .body :global(.cs-panel-next h3) { font-family: var(--font-body); font-size: 16px; line-height: 24px; font-weight: 600; }
+
   /* Wide diagram, scrolls sideways */
   .body :global(.cs-scroll-track) {
     overflow-x: auto;
@@ -1289,7 +1411,8 @@ const nextProject = currentIndex < allProjects.length - 1 ? allProjects[currentI
 
   if (encScript) {
     // Content is encrypted — requires decryption before init
-    const SESSION_KEY = `pa-${overlay?.dataset.slug}-content`;
+    // Key on the build's random salt so a new deploy doesn't show an older unlocked copy
+    const SESSION_KEY = `pa-${overlay?.dataset.slug}-${JSON.parse(encScript.textContent!).s}`;
 
     function fromB64(s: string): Uint8Array {
       return Uint8Array.from(atob(s), c => c.charCodeAt(0));
