@@ -11,6 +11,7 @@ heroThumb: false
 metrics: []
 cta: Read Case Study
 order: 2
+visibility: private
 ---
 Finance teams have the records they need in their enterprise resource planning (ERP) systems. An ERP is the software where a district keeps its books: what it pays, what it's owed and what it has budgeted. But turning those records into meaningful reports takes work. In some districts, it takes a team of data analysts and SQL experts to organize the raw data, apply financial definitions, and produce reports people can use.
 

@@ -11,7 +11,7 @@ heroThumb: false
 metrics: []
 cta: See the experiments
 order: 2
-visibility: hidden
+visibility: public
 ---
 
 Design has always been about making thinking visible. Tools like Claude Code and Figma Make compress that process from days to minutes. The experiments below aren’t polished products. They show how quickly ideas can be made tangible, whether solving internal problems, exploring concepts, or building interactive prototypes to move decisions forward.
