@@ -23,8 +23,9 @@ password: true
 <section class="cs-split-section">
 <h2 class="cs-label">The problem</h2>
 <div>
-<p class="cs-statement">Districts could ask Eddi about their finances. Sharing the answers was the hard part.</p>
-<p class="cs-small">A budget, a report or a scenario comparison meant translating account codes, combining datasets and applying financial rules, then repeating much of it for every new scenario. The opportunity was to turn Eddi's connected data into reports districts could use to explain their budgets and gather community feedback, with the calculations and assumptions in view.</p>
+<p class="cs-small">Eddi helps school districts make sense of their data through AI. With existing integrations connecting their financial systems, districts could already ask questions and explore their data. Financial reporting extended that capability into tangible artifacts: budgets, reports, and scenario comparisons they could review and share.</p>
+<p class="cs-small">Creating those artifacts traditionally required finance teams to translate account codes, combine datasets, and apply financial rules. In some districts, that work depended on data analysts and SQL experts.</p>
+<p class="cs-small">The opportunity was to turn Eddi’s connected data into clear, reusable reports, giving districts a way to explain their budgets, present alternatives, and gather community feedback, with the calculations and assumptions visible.</p>
 </div>
 </section>
 
