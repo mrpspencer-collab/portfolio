@@ -50,6 +50,7 @@ password: true
 <figure class="cs-figure"><img src="/images/eddi-financial-reporting/v3.webp" width="1524" height="582" loading="lazy" alt="Early prototype: data sources and the report as modules, with tags showing where each part came from" /><figcaption>Second: the report as modules, tagged by where each part came from.</figcaption></figure>
 <figure class="cs-figure"><img src="/images/eddi-financial-reporting/v5.webp" width="1488" height="1010" loading="lazy" alt="Early prototype: logic chips on each row and a model diagram showing which datasets feed each row" /><figcaption>Third: logic chips on each row and a model diagram of its datasets.</figcaption></figure>
 </div>
+<p class="cs-small" style="max-width:720px">The early AI prototypes captured what the product needed to do almost word for word. But they looked like most outdated enterprise software: crowded and overcomplicated. The workflow really is complex, so the answer wasn't to strip it down. It was to keep everything people need and make it clearer and easier to use.</p>
 </section>
 
 <section class="cs-stack">
