@@ -111,13 +111,13 @@ password: true
 <figure class="cs-figure cs-wide"><div class="cs-figure-stack"><img src="/images/eddi-financial-reporting/format-compact.webp" width="1185" height="338" loading="lazy" alt="Report rows in a compact format, with a negative shown as a red minus sign: -$9,704.60" /><img src="/images/eddi-financial-reporting/format-roomy.webp" width="949" height="453" style="width:80.1%" loading="lazy" alt="The same report rows in a roomier format, with the negative shown in parentheses: ($9,704.60)" /></div><figcaption>The same rows in two formats: compact with a red minus sign, and roomier with the negative in parentheses.</figcaption></figure>
 </article>
 
-<article class="cs-feature cs-feature--side">
+<article class="cs-feature">
 <div class="cs-feature-text">
 <span class="cs-num">05</span>
 <h3>Chat</h3>
 <p class="cs-small">Not every question needs a report. The same data answers quick questions in plain language, main point first, and an answer can grow into a report when it's ready to share.</p>
 </div>
-<figure class="cs-figure"><img src="/images/eddi-financial-reporting/chat-answer.webp" width="440" height="622" loading="lazy" alt="An Ask Eddi answer titled Top Spending Categories by Fund, with a one-line framing and a table ranking five funds by revised budget" /><figcaption>An answer in the Ask Eddi panel: the headline first, then a ranked table.</figcaption></figure>
+<figure class="cs-figure cs-wide"><img src="/images/eddi-financial-reporting/chat-report.webp" width="1972" height="632" loading="lazy" alt="Budget vs. Actuals by Fund beside an Ask Eddi answer titled Top Spending Categories by Fund, with a one-line framing and a table ranking five funds by revised budget" /><figcaption>An answer in the Ask Eddi panel, beside the report it draws on: the headline first, then a ranked table.</figcaption></figure>
 </article>
 
 </div>
