@@ -180,10 +180,10 @@ Districts there will use the export to HTML feature to publish budgets and budge
 
 ### Feedback & iteration
 
-We tested the experience against real users and use cases in QA, which started on 9/21. The biggest gap was source and mapping editing. Reviewers need to find a source or mapping, understand it, and edit it while they review a report, including through chat.
+The feature is released and already saving customers time. It's early days, and we're refining it as more districts use it.
 
-The next round of improvements follows from what QA found. Refine mode opens by default after a report is generated, so people can spot-check and approve mappings, confirm the calculations are correct, and see what AI flagged for review. A review indicator shows how many items need review and opens the review panel. Knowledge layer integration comes with it.
+The next round of improvements focuses on review. Refine mode opens by default after a report is generated, so people can spot-check and approve mappings, confirm the calculations are correct, and see what AI flagged for review. A review indicator shows how many items need review and opens the review panel. Knowledge layer integration comes with it.
 
 ### What's next
 
-The team will keep iterating on what QA and beta testing show, starting with source and mapping editing.
+We're building on it with additional budgeting workflows.
