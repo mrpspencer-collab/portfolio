@@ -31,9 +31,9 @@ password: true
 <section class="cs-stack">
 <h2 class="cs-label">What we needed to get right</h2>
 <div class="cs-cards">
-<div class="cs-card"><h3>Trust the numbers</h3><p>Sources, calculations and definitions anyone can inspect.</p></div>
-<div class="cs-card"><h3>Control the assumptions</h3><p>Adjust scenarios and compare them against a protected baseline.</p></div>
-<div class="cs-card"><h3>Share the reasoning</h3><p>Keep assumptions with the report so others can give informed feedback.</p></div>
+<div class="cs-card"><h3>Trust the numbers</h3><p>Anyone can see where each number came from and how it was worked out.</p></div>
+<div class="cs-card"><h3>Try different scenarios</h3><p>Change things like enrollment or raises and compare the result to the original budget, which stays untouched.</p></div>
+<div class="cs-card"><h3>Show the thinking</h3><p>Keep those choices with the report, so others can see why it says what it says and give useful feedback.</p></div>
 </div>
 </section>
 
