@@ -19,6 +19,8 @@ const projects = defineCollection({
     order: z.number().default(99),
     // 'private': private build only, password protected. 'public': public build only. 'hidden': neither.
     visibility: z.enum(['all', 'public', 'private', 'hidden']).default('all'),
+    // Lock the page behind the password screen. Private projects are always locked.
+    password: z.boolean().default(false),
   }),
 });
 

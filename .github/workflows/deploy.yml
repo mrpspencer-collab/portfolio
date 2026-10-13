@@ -21,6 +21,7 @@ jobs:
       - run: npm run build
         env:
           PUBLIC_BUILD: 'true'
+          ATLAS_PASSWORD: ${{ secrets.ATLAS_PASSWORD }}
 
       - name: Deploy files (preserve images)
         uses: burnett01/rsync-deployments@7.0.1
@@ -45,6 +46,9 @@ jobs:
           remote_key: ${{ secrets.SSH_PRIVATE_KEY }}
 
   deploy-private:
+    # The public deploy deletes anything it didn't build, including the private folder,
+    # so the private deploy has to run after it.
+    needs: deploy-public
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4.2.2

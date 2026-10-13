@@ -12,7 +12,7 @@ export async function getStaticPaths() {
 const { project } = Astro.props;
 const { data: d } = project;
 const { Content } = await project.render();
-const isProtected = d.visibility === 'private';
+const isProtected = d.visibility === 'private' || d.password;
 
 const allProjects = await getVisibleProjects();
 const currentIndex = allProjects.findIndex(p => p.slug === project.slug);

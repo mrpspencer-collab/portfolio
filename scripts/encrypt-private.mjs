@@ -3,13 +3,9 @@ import { readFileSync, writeFileSync, readdirSync, existsSync } from 'fs';
 const { subtle } = globalThis.crypto;
 const getRandomValues = (arr) => globalThis.crypto.getRandomValues(arr);
 
-// Encrypts every case study page built with visibility: private.
-// The password secret is still named ATLAS_PASSWORD so the deploy workflow doesn't change.
+// Encrypts every case study page built with visibility: private or password: true.
+// The password secret is still named ATLAS_PASSWORD.
 const password = process.env.ATLAS_PASSWORD;
-if (!password) {
-  console.log('ATLAS_PASSWORD not set — skipping encryption (private content will be visible in source)');
-  process.exit(0);
-}
 
 const workDir = new URL('../dist/work/', import.meta.url).pathname;
 if (!existsSync(workDir)) {
@@ -19,6 +15,20 @@ if (!existsSync(workDir)) {
 
 const START_ID = 'id="encrypt-start"';
 const END_ID   = 'id="encrypt-end"';
+
+const lockedPages = readdirSync(workDir).filter(slug => {
+  const filePath = `${workDir}${slug}/index.html`;
+  return existsSync(filePath) && readFileSync(filePath, 'utf-8').includes(START_ID);
+});
+if (!password) {
+  if (process.env.PUBLIC_BUILD === 'true' && lockedPages.length > 0) {
+    // Never publish locked pages unencrypted on the public site.
+    console.error(`ATLAS_PASSWORD not set but these pages need it: ${lockedPages.join(', ')}`);
+    process.exit(1);
+  }
+  console.log('ATLAS_PASSWORD not set — skipping encryption (locked content will be visible in source)');
+  process.exit(0);
+}
 
 const enc   = new TextEncoder();
 const toB64 = (buf) => Buffer.from(buf).toString('base64');
