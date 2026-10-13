@@ -12,7 +12,7 @@ metrics: []
 cta: Read Case Study
 order: 2
 ---
-Finance teams have the records they need in their ERPs, but turning those records into meaningful reports takes work. In some districts, it takes a team of data analysts and SQL experts to organize the raw data, apply financial definitions, and produce reports people can use.
+Finance teams have the records they need in their enterprise resource planning (ERP) systems, but turning those records into meaningful reports takes work. In some districts, it takes a team of data analysts and SQL experts to organize the raw data, apply financial definitions, and produce reports people can use.
 
 At Eddi, I designed an AI-assisted financial reporting experience that helped users build reports in minutes and inspect how the results were calculated. Working with the team, I helped take the product from concept to release in three months.
 
@@ -61,36 +61,26 @@ I designed a simple knowledge base around core definitions and structured rules.
 
 ### Early prototypes, built in Claude
 
-<div class="cs-carousel cs-carousel--contain">
-  <div class="cs-carousel-track-wrap">
-    <div class="cs-carousel-track">
-      <div class="cs-carousel-slide">
-        <img src="/images/eddi-financial-reporting/v1.webp" width="2400" height="1500" alt="Early prototype: a budget vs actual table with Data, Structure and Scenario menus and an Ask Eddi button" />
-        <div class="cs-carousel-caption">
-          <strong>First prototype</strong>
-          <p>The table, three menus and an Ask Eddi button.</p>
-        </div>
-      </div>
-      <div class="cs-carousel-slide">
-        <img src="/images/eddi-financial-reporting/v3.webp" width="2400" height="1500" alt="Early prototype: data sources and the report as modules, with an Eddi chat panel and tags showing where each part came from" />
-        <div class="cs-carousel-caption">
-          <strong>Second prototype</strong>
-          <p>Data sources and the report as modules, with an Eddi chat panel and tags for where each part came from.</p>
-        </div>
-      </div>
-      <div class="cs-carousel-slide">
-        <img src="/images/eddi-financial-reporting/v5.webp" width="2400" height="1500" alt="Early prototype: logic chips on each row and a model diagram showing which datasets feed each row" />
-        <div class="cs-carousel-caption">
-          <strong>Third prototype</strong>
-          <p>Logic chips on each row and a model diagram showing which datasets feed it.</p>
-        </div>
-      </div>
-    </div>
+I generated these prototypes in Claude to give the team something central to ideate around. Each one made an idea concrete enough to react to.
+
+<div class="cs-featured">
+  <img src="/images/eddi-financial-reporting/v1.webp" width="1518" height="498" loading="lazy" alt="Early prototype: a budget vs actual table with Data, Structure and Scenario menus" />
+  <div class="cs-featured-body">
+    <p style="font-size:13px;color:var(--fg-muted);margin:0"><strong>First prototype.</strong> The table and three menus: Data, Structure and Scenario.</p>
   </div>
-  <div class="cs-carousel-nav">
-    <button class="cs-carousel-btn cs-carousel-prev">←</button>
-    <button class="cs-carousel-btn cs-carousel-next">→</button>
-    <span class="cs-carousel-counter">1 / 3</span>
+</div>
+
+<div class="cs-featured">
+  <img src="/images/eddi-financial-reporting/v3.webp" width="1524" height="582" loading="lazy" alt="Early prototype: data sources and the report as modules, with tags showing whether each part was imported, AI-generated, SQL-calculated or manual" />
+  <div class="cs-featured-body">
+    <p style="font-size:13px;color:var(--fg-muted);margin:0"><strong>Second prototype.</strong> Data sources and the report as modules, with tags for where each part came from.</p>
+  </div>
+</div>
+
+<div class="cs-featured">
+  <img src="/images/eddi-financial-reporting/v5.webp" width="1488" height="1010" loading="lazy" alt="Early prototype: logic chips on each row showing its source and filter, and a model diagram showing which datasets feed each row and the fund total" />
+  <div class="cs-featured-body">
+    <p style="font-size:13px;color:var(--fg-muted);margin:0"><strong>Third prototype.</strong> Logic chips on each row and a model diagram showing which datasets feed it.</p>
   </div>
 </div>
 
