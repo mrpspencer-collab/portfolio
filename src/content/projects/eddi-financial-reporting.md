@@ -84,6 +84,36 @@ I generated these prototypes in Claude to give the team something central to ide
   </div>
 </div>
 
+A later prototype walked through the whole flow, from mapping codes to modeling a scenario.
+
+<div class="cs-featured">
+  <img src="/images/eddi-financial-reporting/proto-map.webp" width="1918" height="864" loading="lazy" alt="Prototype: a report generating with expenditure rows still loading, while the Ask Eddi panel lists unmapped codes, each with a suggested category and a Confirm and Continue button" />
+  <div class="cs-featured-body">
+    <p style="font-size:13px;color:var(--fg-muted);margin:0"><strong>Mapping codes.</strong> When Eddi finds account codes it has not seen, it suggests where each belongs, such as E-Rate Reimbursement under Federal Revenue, and waits for confirmation before finishing the report.</p>
+  </div>
+</div>
+
+<div class="cs-featured">
+  <img src="/images/eddi-financial-reporting/proto-report.webp" width="1918" height="864" loading="lazy" alt="Prototype: the finished Monthly Board Financial Report, with the Ask Eddi panel listing each step Eddi took to build it" />
+  <div class="cs-featured-body">
+    <p style="font-size:13px;color:var(--fg-muted);margin:0"><strong>The finished report.</strong> Eddi lists each step it took: applying the calculations, applying the board report format and rendering the report.</p>
+  </div>
+</div>
+
+<div class="cs-featured">
+  <img src="/images/eddi-financial-reporting/proto-inspect.webp" width="1918" height="868" loading="lazy" alt="Prototype: a popover on the Federal Revenue year-end projection showing what it was computed from, its status and its source" />
+  <div class="cs-featured-body">
+    <p style="font-size:13px;color:var(--fg-muted);margin:0"><strong>Inspecting a value.</strong> Clicking the Federal Revenue year-end projection shows what it was computed from, its status and its source.</p>
+  </div>
+</div>
+
+<div class="cs-featured">
+  <img src="/images/eddi-financial-reporting/proto-scenario.webp" width="1920" height="862" loading="lazy" alt="Prototype: a budget insight banner above the report, and the Ask Eddi panel showing sliders for enrollment change, COLA and Title I change" />
+  <div class="cs-featured-body">
+    <p style="font-size:13px;color:var(--fg-muted);margin:0"><strong>Trying a scenario.</strong> Eddi lays out the assumptions behind the report as sliders for enrollment, COLA and Title I. Moving one recalculates the report without rebuilding it.</p>
+  </div>
+</div>
+
 ## The solutions
 
 #### Solution one
