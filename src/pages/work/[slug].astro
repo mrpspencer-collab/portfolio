@@ -618,34 +618,25 @@ const nextProject = currentIndex < allProjects.length - 1 ? allProjects[currentI
     font-variant-numeric: tabular-nums;
   }
   .body :global(.cs-steps p) { font-size: 16px; line-height: 26px; }
-  .body :global(.cs-trio) {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
-    gap: 20px;
-    align-items: start;
+  /* Screenshots break out of the text column, up to 1040px */
+  .body :global(.cs-wide) {
+    width: min(1040px, calc(100vw - 48px));
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
   }
-  .body :global(.cs-trio .cs-figure img) { border-radius: 8px; }
-  .body :global(.cs-features) { display: flex; flex-direction: column; gap: 64px; }
-  .body :global(.cs-feature) {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
-    gap: 24px 40px;
-    align-items: start;
-  }
-  .body :global(.cs-feature-text) { display: flex; flex-direction: column; gap: 12px; }
-  .body :global(.cs-feature-text h3), .body :global(.cs-feature-pair h3) { font-size: 23px; line-height: 30px; }
-  .body :global(.cs-feature-pair) {
+  .body :global(.cs-figure-stack) { display: flex; flex-direction: column; gap: 12px; }
+  .body :global(.cs-features) { display: flex; flex-direction: column; gap: 80px; }
+  .body :global(.cs-feature) { display: flex; flex-direction: column; gap: 28px; }
+  .body :global(.cs-feature-text) { display: flex; flex-direction: column; gap: 12px; max-width: 720px; }
+  .body :global(.cs-feature-text h3) { font-size: 23px; line-height: 30px; }
+  .body :global(.cs-feature--side) {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
-    gap: 24px 40px;
+    gap: 28px 48px;
+    align-items: start;
   }
-  .body :global(.cs-feature-pair > div) {
-    border-top: 1px solid var(--border);
-    padding-top: 24px;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-  }
+  .body :global(.cs-feature--side .cs-figure) { max-width: 440px; }
   .body :global(.cs-panel) {
     background: var(--bg-muted);
     border-radius: 12px;

@@ -17,7 +17,7 @@ password: true
 
 <div class="cs-lead">
 <p>School districts keep their books in an enterprise resource planning (ERP) system: what they pay, what they're owed and what they've budgeted. Turning those records into a report people can use often takes data analysts and SQL experts. I designed an AI-assisted reporting experience in Eddi that builds a report in minutes and shows how every number was calculated. Working with the team, we took it from concept to release in three months.</p>
-<figure class="cs-figure"><img src="/images/eddi-financial-reporting/feature.webp" width="1780" height="883" alt="Budget vs. Actuals by Fund in Eddi, with Baseline and Scenario 1 tabs, assumption chips for COLA, Encumbrance and Spending Pace, a program table with variance against baseline, and the Eddi chat panel open on the right" /><figcaption>Budget vs. Actuals by Fund, built from ERP data, with scenario tabs, assumption chips and Eddi's chat alongside.</figcaption></figure>
+<figure class="cs-figure cs-wide"><img src="/images/eddi-financial-reporting/feature.webp" width="1780" height="883" alt="Budget vs. Actuals by Fund in Eddi, with Baseline and Scenario 1 tabs, assumption chips for COLA, Encumbrance and Spending Pace, a program table with variance against baseline, and the Eddi chat panel open on the right" /><figcaption>Budget vs. Actuals by Fund, built from ERP data, with scenario tabs, assumption chips and Eddi's chat alongside.</figcaption></figure>
 </div>
 
 <section class="cs-split-section">
@@ -45,10 +45,28 @@ password: true
 <li><span class="cs-step-num">03</span><p><strong>Made financial knowledge explicit.</strong> A simple knowledge base of definitions, like COLA, and rules, like which account codes map to expenses, gave reports a shared foundation people can inspect and correct.</p></li>
 <li><span class="cs-step-num">04</span><p><strong>Prototyped in Claude.</strong> Quick prototypes gave the team something concrete to react to, and a later one walked through the whole flow from mapping codes to modeling a scenario.</p></li>
 </ol>
-<div class="cs-trio">
-<figure class="cs-figure"><img src="/images/eddi-financial-reporting/v1.webp" width="1518" height="498" loading="lazy" alt="Early prototype: a budget vs actual table with Data, Structure and Scenario menus" /><figcaption>First: a table with Data, Structure and Scenario menus.</figcaption></figure>
-<figure class="cs-figure"><img src="/images/eddi-financial-reporting/v3.webp" width="1524" height="582" loading="lazy" alt="Early prototype: data sources and the report as modules, with tags showing where each part came from" /><figcaption>Second: the report as modules, tagged by where each part came from.</figcaption></figure>
-<figure class="cs-figure"><img src="/images/eddi-financial-reporting/v5.webp" width="1488" height="1010" loading="lazy" alt="Early prototype: logic chips on each row and a model diagram showing which datasets feed each row" /><figcaption>Third: logic chips on each row and a model diagram of its datasets.</figcaption></figure>
+<div class="cs-carousel cs-carousel--natural cs-wide">
+  <div class="cs-carousel-track-wrap">
+    <div class="cs-carousel-track">
+      <div class="cs-carousel-slide">
+        <img src="/images/eddi-financial-reporting/v1.webp" width="1518" height="498" alt="Early prototype: a budget vs actual table with Data, Structure and Scenario menus" />
+        <div class="cs-carousel-caption"><strong>First prototype</strong><p>A table with Data, Structure and Scenario menus.</p></div>
+      </div>
+      <div class="cs-carousel-slide">
+        <img src="/images/eddi-financial-reporting/v3.webp" width="1524" height="582" alt="Early prototype: data sources and the report as modules, with tags showing where each part came from" />
+        <div class="cs-carousel-caption"><strong>Second prototype</strong><p>The report as modules, tagged by where each part came from.</p></div>
+      </div>
+      <div class="cs-carousel-slide">
+        <img src="/images/eddi-financial-reporting/v5.webp" width="1488" height="1010" alt="Early prototype: logic chips on each row and a model diagram showing which datasets feed each row" />
+        <div class="cs-carousel-caption"><strong>Third prototype</strong><p>Logic chips on each row and a model diagram of its datasets.</p></div>
+      </div>
+    </div>
+  </div>
+  <div class="cs-carousel-nav">
+    <button class="cs-carousel-btn cs-carousel-prev">←</button>
+    <button class="cs-carousel-btn cs-carousel-next">→</button>
+    <span class="cs-carousel-counter">1 / 3</span>
+  </div>
 </div>
 <p class="cs-small" style="max-width:720px">The early AI prototypes captured what the product needed to do almost word for word. But they looked like most outdated enterprise software: crowded and overcomplicated. The workflow really is complex, so the answer wasn't to strip it down. It was to keep everything people need and make it clearer and easier to use.</p>
 </section>
@@ -63,7 +81,7 @@ password: true
 <h3>Guided report building</h3>
 <p class="cs-small">Finance teams describe the report they need and Eddi builds it from their ERP data. Every district codes its accounts differently, and a wrong guess quietly changes a total. So when Eddi meets a code it hasn't seen, it suggests where it belongs and waits for a person to confirm.</p>
 </div>
-<figure class="cs-figure"><img src="/images/eddi-financial-reporting/report.webp" width="1990" height="986" loading="lazy" alt="Budget vs. Actuals by Fund in Eddi: a generated report with Baseline and Scenario 1 tabs and a program table grouped under fund and campus" /><figcaption>A generated report, with programs rolled up under campus and fund.</figcaption></figure>
+<figure class="cs-figure cs-wide"><img src="/images/eddi-financial-reporting/report.webp" width="1990" height="986" loading="lazy" alt="Budget vs. Actuals by Fund in Eddi: a generated report with Baseline and Scenario 1 tabs and a program table grouped under fund and campus" /><figcaption>A generated report, with programs rolled up under campus and fund.</figcaption></figure>
 </article>
 
 <article class="cs-feature">
@@ -72,7 +90,7 @@ password: true
 <h3>Refine mode</h3>
 <p class="cs-small">Finance leaders answer for every figure, and most don't write SQL. In Refine mode, clicking any value explains it as a sentence: the sum of a field, from a dataset, with its filters. View SQL, Modify and Edit mapping let people correct the source. Accuracy was a key measure of success. An AI-built prototype explored the interaction, and the product ships a simpler version.</p>
 </div>
-<figure class="cs-figure"><img src="/images/eddi-financial-reporting/refine.webp" width="2000" height="1021" loading="lazy" alt="Refine mode in Eddi: a popover on a campus revised budget explains it as a sum from a dataset where fund, location and type match, with View SQL, Modify and Edit mapping actions" /><figcaption>A value explained in plain language, with ways to fix its source.</figcaption></figure>
+<figure class="cs-figure cs-wide"><img src="/images/eddi-financial-reporting/refine.webp" width="2000" height="1021" loading="lazy" alt="Refine mode in Eddi: a popover on a campus revised budget explains it as a sum from a dataset where fund, location and type match, with View SQL, Modify and Edit mapping actions" /><figcaption>A value explained in plain language, with ways to fix its source.</figcaption></figure>
 </article>
 
 <article class="cs-feature">
@@ -81,21 +99,26 @@ password: true
 <h3>Scenario planning</h3>
 <p class="cs-small">Boards ask what happens if enrollment drops or a raise goes through. In the first design, the variables lived in the chat and scrolled away as the conversation grew. I moved them into the interface as chips under the scenario tab, each with a baseline, an exact value and a slider. Scenarios sit beside a protected baseline, with variance on every row.</p>
 </div>
-<figure class="cs-figure"><img src="/images/eddi-financial-reporting/scenario.webp" width="2000" height="1019" loading="lazy" alt="Eddi scenario planning: assumption chips for COLA, Encumbrance and Spending Pace, and a popover on COLA with a baseline, a value field and a slider, above a table showing variance against baseline" /><figcaption>Assumption chips below the scenario tab, with variance against baseline.</figcaption></figure>
+<figure class="cs-figure cs-wide"><img src="/images/eddi-financial-reporting/scenario.webp" width="2000" height="1019" loading="lazy" alt="Eddi scenario planning: assumption chips for COLA, Encumbrance and Spending Pace, and a popover on COLA with a baseline, a value field and a slider, above a table showing variance against baseline" /><figcaption>Assumption chips below the scenario tab, with variance against baseline.</figcaption></figure>
 </article>
 
-<div class="cs-feature-pair">
-<div>
+<article class="cs-feature">
+<div class="cs-feature-text">
 <span class="cs-num">04</span>
 <h3>Formatting</h3>
 <p class="cs-small">A board packet, a working review and a public budget read differently. Density, striping, currency and negative formats change how a report looks without touching the calculations.</p>
 </div>
-<div>
+<figure class="cs-figure cs-wide"><div class="cs-figure-stack"><img src="/images/eddi-financial-reporting/format-compact.webp" width="1185" height="338" loading="lazy" alt="Report rows in a compact format, with a negative shown as a red minus sign: -$9,704.60" /><img src="/images/eddi-financial-reporting/format-roomy.webp" width="949" height="453" style="width:80.1%" loading="lazy" alt="The same report rows in a roomier format, with the negative shown in parentheses: ($9,704.60)" /></div><figcaption>The same rows in two formats: compact with a red minus sign, and roomier with the negative in parentheses.</figcaption></figure>
+</article>
+
+<article class="cs-feature cs-feature--side">
+<div class="cs-feature-text">
 <span class="cs-num">05</span>
 <h3>Chat</h3>
 <p class="cs-small">Not every question needs a report. The same data answers quick questions in plain language, main point first, and an answer can grow into a report when it's ready to share.</p>
 </div>
-</div>
+<figure class="cs-figure"><img src="/images/eddi-financial-reporting/chat-answer.webp" width="440" height="622" loading="lazy" alt="An Ask Eddi answer titled Top Spending Categories by Fund, with a one-line framing and a table ranking five funds by revised budget" /><figcaption>An answer in the Ask Eddi panel: the headline first, then a ranked table.</figcaption></figure>
+</article>
 
 </div>
 </section>
