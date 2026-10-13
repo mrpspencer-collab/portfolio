@@ -17,6 +17,8 @@ const projects = defineCollection({
     thumbFit: z.enum(['contain', 'cover']).default('contain'),
     heroThumb: z.boolean().default(true),
     order: z.number().default(99),
+    // 'private': private build only, password protected. 'public': public build only. 'hidden': neither.
+    visibility: z.enum(['all', 'public', 'private', 'hidden']).default('all'),
   }),
 });
 
