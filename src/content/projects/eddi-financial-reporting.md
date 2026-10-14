@@ -1,6 +1,6 @@
 ---
 title: Eddi Financial Reporting
-subtitle: Using AI to help school districts turn ERP data into financial reports people can trust
+subtitle: Using AI to help school districts turn ERP data into financial reports
 tags:
   - AI / ML
   - Enterprise
