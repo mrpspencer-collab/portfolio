@@ -722,6 +722,40 @@ const nextProject = currentIndex < allProjects.length - 1 ? allProjects[currentI
     border: none;
   }
 
+  /* Thumbnail strip under a carousel (built by JS for .cs-carousel--thumbs) */
+  .body :global(.cs-carousel-thumbs) {
+    display: flex;
+    gap: 8px;
+    margin-top: 12px;
+    overflow-x: auto;
+    padding-bottom: 4px;
+  }
+  .body :global(.cs-carousel-thumb) {
+    flex: 1 1 0;
+    min-width: 64px;
+    aspect-ratio: 16 / 10;
+    padding: 0;
+    border: 2px solid transparent;
+    border-radius: 6px;
+    overflow: hidden;
+    background: var(--bg-muted);
+    cursor: pointer;
+    opacity: 0.55;
+    transition: opacity 0.15s, border-color 0.15s;
+  }
+  .body :global(.cs-carousel-thumb:hover) { opacity: 0.85; }
+  .body :global(.cs-carousel-thumb--active) { border-color: var(--accent); opacity: 1; }
+  .body :global(.cs-carousel-thumb img) {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    margin: 0 !important;
+    border: none;
+    border-radius: 0;
+    display: block;
+  }
+
   /* Natural carousel — each image keeps its shape; JS sizes the frame to the current slide */
   .body :global(.cs-carousel--natural .cs-carousel-track) {
     align-items: flex-start;
@@ -1281,6 +1315,7 @@ const nextProject = currentIndex < allProjects.length - 1 ? allProjects[currentI
   function initLightbox() {
     document.querySelectorAll<HTMLImageElement>('.body img').forEach(img => {
       if (img.closest('.cs-carousel--pan')) return;
+      if (img.closest('.cs-carousel-thumbs')) return;
       if (img.closest('.cs-ext-card')) return;
       img.addEventListener('click', () => openLightbox(img.src, img.alt));
     });
@@ -1321,6 +1356,28 @@ const nextProject = currentIndex < allProjects.length - 1 ? allProjects[currentI
       const natural = carousel.classList.contains('cs-carousel--natural');
       let current = 0;
 
+      // Thumbnail strip built from the slide images, placed under the slides
+      let thumbs: HTMLButtonElement[] = [];
+      if (carousel.classList.contains('cs-carousel--thumbs')) {
+        const strip = document.createElement('div');
+        strip.className = 'cs-carousel-thumbs';
+        thumbs = Array.from(slides).map((slide, i) => {
+          const src = slide.querySelector<HTMLImageElement>('img')!;
+          const btn = document.createElement('button');
+          btn.type = 'button';
+          btn.className = 'cs-carousel-thumb';
+          btn.setAttribute('aria-label', `Show ${src.alt || `slide ${i + 1}`}`);
+          const img = document.createElement('img');
+          img.src = src.src;
+          img.alt = '';
+          btn.appendChild(img);
+          btn.addEventListener('click', () => go(i));
+          strip.appendChild(btn);
+          return btn;
+        });
+        wrap.after(strip);
+      }
+
       function fitHeight() {
         if (natural) wrap.style.height = `${(slides[current] as HTMLElement).offsetHeight}px`;
       }
@@ -1331,6 +1388,7 @@ const nextProject = currentIndex < allProjects.length - 1 ? allProjects[currentI
         counter.textContent = `${current + 1} / ${slides.length}`;
         prev.disabled = current === 0;
         next.disabled = current === slides.length - 1;
+        thumbs.forEach((t, i) => t.classList.toggle('cs-carousel-thumb--active', i === current));
         fitHeight();
       }
 

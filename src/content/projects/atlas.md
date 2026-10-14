@@ -170,7 +170,7 @@ Five themes emerged.
 
 ## Concepts
 
-<div class="cs-carousel cs-carousel--contain">
+<div class="cs-carousel cs-carousel--contain cs-carousel--thumbs">
   <div class="cs-carousel-track-wrap">
     <div class="cs-carousel-track">
       <div class="cs-carousel-slide">
