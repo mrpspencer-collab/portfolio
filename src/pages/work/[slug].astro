@@ -1472,20 +1472,31 @@ const nextProject = currentIndex < allProjects.length - 1 ? allProjects[currentI
       return Uint8Array.from(atob(s), c => c.charCodeAt(0));
     }
 
-    async function decryptContent(password: string): Promise<string> {
-      const { s, i, c } = JSON.parse(encScript!.textContent!);
+    // The content key is wrapped twice: by the password (p) and by the page's share-link key (k)
+    async function decryptContent(secret: string, via: 'p' | 'k'): Promise<string> {
+      const blob = JSON.parse(encScript!.textContent!);
+      const wrapped = blob[via];
       const km = await crypto.subtle.importKey(
-        'raw', new TextEncoder().encode(password), 'PBKDF2', false, ['deriveKey']
+        'raw', new TextEncoder().encode(secret), 'PBKDF2', false, ['deriveKey']
       );
-      const key = await crypto.subtle.deriveKey(
-        { name: 'PBKDF2', salt: fromB64(s), iterations: 200000, hash: 'SHA-256' },
+      const wrapKey = await crypto.subtle.deriveKey(
+        { name: 'PBKDF2', salt: fromB64(blob.s), iterations: via === 'p' ? 200000 : 1000, hash: 'SHA-256' },
         km,
         { name: 'AES-GCM', length: 256 },
         false,
         ['decrypt']
       );
-      const plain = await crypto.subtle.decrypt({ name: 'AES-GCM', iv: fromB64(i) }, key, fromB64(c));
+      const rawKey = await crypto.subtle.decrypt({ name: 'AES-GCM', iv: fromB64(wrapped.i) }, wrapKey, fromB64(wrapped.c));
+      const key = await crypto.subtle.importKey('raw', rawKey, 'AES-GCM', false, ['decrypt']);
+      const plain = await crypto.subtle.decrypt({ name: 'AES-GCM', iv: fromB64(blob.i) }, key, fromB64(blob.c));
       return new TextDecoder().decode(plain);
+    }
+
+    function unlock(html: string) {
+      try { sessionStorage.setItem(SESSION_KEY, html); } catch { /* storage full or blocked; ask again next visit */ }
+      injectContent(html);
+      overlay!.remove();
+      document.body.style.overflow = '';
     }
 
     function injectContent(html: string) {
@@ -1505,17 +1516,17 @@ const nextProject = currentIndex < allProjects.length - 1 ? allProjects[currentI
     } else if (overlay) {
       document.body.style.overflow = 'hidden';
 
+      // A share link carries its key after # (never sent to the server): #k=...
+      const shareKey = new URLSearchParams(location.hash.slice(1)).get('k');
+      if (shareKey) decryptContent(shareKey, 'k').then(unlock, () => { /* bad link: fall back to the password */ });
+
       const pwInput = document.getElementById('pg-input') as HTMLInputElement;
       const submit  = document.getElementById('pg-submit')!;
       const error   = document.getElementById('pg-error')!;
 
       async function attempt() {
         try {
-          const html = await decryptContent(pwInput.value.trim());
-          try { sessionStorage.setItem(SESSION_KEY, html); } catch { /* storage full or blocked; ask again next visit */ }
-          injectContent(html);
-          overlay!.remove();
-          document.body.style.overflow = '';
+          unlock(await decryptContent(pwInput.value.trim(), 'p'));
         } catch {
           error.style.display = 'block';
           pwInput.value = '';

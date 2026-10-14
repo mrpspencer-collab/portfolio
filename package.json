@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build && node scripts/encrypt-private.mjs",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "share-links": "node scripts/share-links.mjs"
   },
   "dependencies": {
     "astro": "^5.0.0"
