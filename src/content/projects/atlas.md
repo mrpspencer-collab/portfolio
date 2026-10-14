@@ -307,17 +307,11 @@ For dealers, this addressed a real friction point. Opening Atlas meant facing a 
 </div>
 
 ## Impact
-<div class="cs-split">
-  <div class="cs-split-body">
-Month-over-month usage increased as dealers began acting on insights directly. Consultants said it solved the blank canvas problem. At NADA, prospective customers got the value immediately.
-It also validated something more fundamental: the most impactful thing we could deliver wasn't a better dashboard — it was closer to a text message.
 
-The simplicity of the solution raised an obvious question: if any LLM can summarize a dashboard, where's the defensible value? The answer is context. That context layer — what matters in this industry, what benchmarks are meaningful, how consultants talk to dealers — can’t be easily reproduced. That's what separates a useful insight from a generic one and it can't be easily reproduced.
-  </div>
-  <div class="cs-split-image">
-    <figure><img src="/images/atlas/48e092fa6ce0cbbe.png" alt="table stakes" /><figcaption>Atlas Analyze makes summarization easy. Context makes it unique.</figcaption></figure>
-  </div>
-</div>
+Dealers started using Atlas more every month, because they could act on what it told them right away. Consultants said it solved the blank-page problem: they no longer had to start each dealer conversation from scratch. At NADA, prospective customers saw the value immediately.
 
->Summarization is table stakes.<br />Reliable recommendations require context.<br />Trust depends on consistency.
+The biggest lesson was that the most useful thing we could put in a dealer's hands wasn't a better dashboard. It was something closer to a text message.
 
+What makes those messages useful is context: what matters in this industry, which benchmarks mean something, and how consultants talk to dealers. That context turns a summary into advice a dealer can act on, and it's what makes Atlas hard to copy.
+
+> Summaries get attention.<br />Context makes them useful.<br />Consistency earns trust.
