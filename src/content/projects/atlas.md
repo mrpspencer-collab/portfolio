@@ -30,7 +30,7 @@ Atlas started with a simple premise: bring together multiple data sources, make 
 
 That bet was partially right. We spent months iterating on visualizations and integrating data sources. For data-literate users — OEM execs and performance analysts — Atlas worked. One log-in delivered a single source of truth. But the operators running dealerships were less interested in charts. They needed insights. 
 
-<div class="cs-carousel cs-carousel--contain">
+<div class="cs-carousel cs-carousel--contain cs-carousel--thumbs">
   <div class="cs-carousel-track-wrap">
     <div class="cs-carousel-track">
       <div class="cs-carousel-slide">
@@ -308,7 +308,7 @@ For dealers, this addressed a real friction point. Opening Atlas meant facing a 
 
 ## Impact
 
-Dealers started using Atlas more every month, because they could act on what it told them right away. Consultants said it solved the blank-page problem: they no longer had to start each dealer conversation from scratch. At NADA, prospective customers saw the value immediately.
+300 dealers across the US opted into Atlas Analyze, and they used it more every month, because they could act on what it told them right away. It also helped keep customers subscribed. Consultants said it solved the blank-page problem: they no longer had to start each dealer conversation from scratch, which saves them hundreds of hours a year in meeting prep. At NADA, prospective customers saw the value immediately.
 
 The biggest lesson was that the most useful thing we could put in a dealer's hands wasn't a better dashboard. It was something closer to a text message.
 
