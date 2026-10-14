@@ -1,6 +1,6 @@
 ---
 title: Atlas
-subtitle: From Pull to Push
+subtitle: From Pull to Push with AI
 role: Lead Product Designer
 tags:
   - AI / ML
