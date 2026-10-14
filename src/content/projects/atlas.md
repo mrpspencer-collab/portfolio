@@ -20,7 +20,7 @@ password: true
 <div class="cs-featured">
   <img src="/images/atlas/75e8ff4f7dc5719a.png" alt="Atlas — Same data. One requires interpretation. The other can be read." />
   <div class="cs-featured-body">
-    <p style="font-size:13px;color:var(--fg-muted);margin:0">Dashboards wait for someone to log in and work out what the charts mean, and busy dealers rarely do. The same data, sent as a short written report, tells them what changed and why it matters.</p>
+    <p style="font-size:13px;color:var(--fg-muted);margin:0">Dealers don't have time to dig through dashboards. Atlas uses AI to turn the same data into a short written story about what changed, so the insight gets to them fast. The dashboard is still there when they want the details.</p>
   </div>
 </div>
 
