@@ -15,7 +15,7 @@ thumbTextColor: '#5A5550'
 metrics: []
 cta: Explore the case study
 order: 1
-visibility: private
+password: true
 ---
 <div class="cs-featured">
   <img src="/images/atlas/75e8ff4f7dc5719a.png" alt="Atlas — Same data. One requires interpretation. The other can be read." />
