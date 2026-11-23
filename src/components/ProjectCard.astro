@@ -12,10 +12,11 @@ interface Props {
   metrics: string[];
   cta: string;
   thumbFit?: 'contain' | 'cover';
+  href?: string;
 }
-const { slug, title, subtitle, tags, status, thumb, thumbBg, thumbText, thumbTextColor, metrics, cta, thumbFit = 'contain' } = Astro.props;
+const { slug, title, subtitle, tags, status, thumb, thumbBg, thumbText, thumbTextColor, metrics, cta, thumbFit = 'contain', href } = Astro.props;
 ---
-<a href={`${import.meta.env.BASE_URL}work/${slug}`} class="card">
+<a href={href ?? `${import.meta.env.BASE_URL}work/${slug}`} class="card">
   <div class="thumb" style={`background:${thumbBg}`}>
     {thumb
       ? <img src={thumb} alt={title} style={thumbFit === 'cover' ? 'object-fit:cover;width:100%;height:100%' : ''} />
