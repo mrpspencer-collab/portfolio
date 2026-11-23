@@ -21,6 +21,8 @@ const projects = defineCollection({
     visibility: z.enum(['all', 'public', 'private', 'hidden']).default('all'),
     // Lock the page behind the password screen. Private projects are always locked.
     password: z.boolean().default(false),
+    // 'work': client case studies under /work. 'project': personal builds under /projects.
+    kind: z.enum(['work', 'project']).default('work'),
   }),
 });
 

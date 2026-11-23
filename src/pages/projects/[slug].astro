@@ -1,0 +1,19 @@
+---
+import { getVisibleProjects } from '../../utils/projects';
+import CaseStudy from '../../components/CaseStudy.astro';
+
+// Password protection is only applied to /work pages (scripts/encrypt-private.mjs),
+// so protected projects are left out here rather than published unencrypted.
+export async function getStaticPaths() {
+  const projects = (await getVisibleProjects('project'))
+    .filter(p => p.data.visibility !== 'private' && !p.data.password);
+  return projects.map(p => ({ params: { slug: p.slug }, props: { project: p, siblings: projects } }));
+}
+
+const { project, siblings } = Astro.props;
+---
+<CaseStudy
+  project={project}
+  siblings={siblings}
+  section={{ label: 'Projects', home: 'projects', path: 'projects', allLabel: 'All projects', backLabel: '← Back to projects' }}
+/>
