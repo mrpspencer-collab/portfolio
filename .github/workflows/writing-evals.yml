@@ -1,0 +1,62 @@
+# Eval for the writing reviewer itself.
+#
+# Runs the reviewer on cases with known right answers (evals/writing/cases.json):
+# writing that should be flagged, and plain writing that should pass. Fails if the
+# reviewer gets any case wrong. Runs when the reviewer, its prompt or the eval cases
+# change, on the first of each month (models and the guide drift), and on demand.
+
+name: Writing evals
+
+on:
+  pull_request:
+    paths:
+      - 'scripts/writing-review/**'
+      - 'evals/writing/**'
+      - '.github/workflows/writing-review.yml'
+      - '.github/workflows/writing-evals.yml'
+  schedule:
+    - cron: '17 13 1 * *'
+  workflow_dispatch:
+
+jobs:
+  evals:
+    name: Writing reviewer eval
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/checkout@v4
+        with:
+          repository: conorbronsdon/avoid-ai-writing
+          ref: aecf2680a56b9b19835a3e362af4ebdd2e8e92f1 # v3.39.0
+          path: .aaw
+          sparse-checkout: |
+            SKILL.md
+            references
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Run the eval set
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          if [ -z "$ANTHROPIC_API_KEY" ]; then
+            echo "::error::No ANTHROPIC_API_KEY secret, so the eval can't run."
+            exit 1
+          fi
+          node scripts/writing-review/run-evals.mjs
+
+      - name: Show results
+        if: always() && hashFiles('writing-eval.md') != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          cat writing-eval.md >> "$GITHUB_STEP_SUMMARY"
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            gh pr comment "${{ github.event.pull_request.number }}" --body-file writing-eval.md
+          fi
