@@ -40,6 +40,13 @@
         "ai agents",
         "roll their own"
       ]
+    },
+    {
+      "file": "clean-nothing.md",
+      "source": "Synthetic page with no AI tells and no voice: no opinion, no admitted limit, nothing a competitor wouldn't say. writing-for-humans calls this 'clean nothing'.",
+      "expect": "fix",
+      "must_catch": [],
+      "must_not_flag": []
     }
   ]
 }

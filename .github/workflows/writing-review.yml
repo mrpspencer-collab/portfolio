@@ -13,7 +13,8 @@
 #
 # Needs a repository secret named ANTHROPIC_API_KEY. Without it the review fails on
 # purpose, so nothing is published unreviewed.
-# Guide: https://github.com/conorbronsdon/avoid-ai-writing (MIT), pinned to v3.39.0.
+# Guides: https://github.com/conorbronsdon/avoid-ai-writing (MIT, pinned to v3.39.0) and
+# writing-for-humans from https://github.com/timharris707/skills (MIT, pinned).
 
 name: Writing review
 
@@ -63,6 +64,14 @@ jobs:
           sparse-checkout: |
             SKILL.md
             references
+
+      - uses: actions/checkout@v5
+        with:
+          repository: timharris707/skills
+          ref: 9e40ad347e4ead82089a045ef84a0f1e5e070d44 # writing-for-humans, Nov 2026
+          path: .wfh
+          sparse-checkout: |
+            skills/author/writing-for-humans
 
       - uses: actions/setup-node@v5
         with:
