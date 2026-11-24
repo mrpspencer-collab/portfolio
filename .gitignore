@@ -4,6 +4,6 @@ dist/
 .env
 .env.*
 *.local
-.aaw/
+.aaw
 writing-review.md
 writing-eval.md
