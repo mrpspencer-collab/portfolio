@@ -117,6 +117,9 @@ export async function review(items) {
   }
   if (!report) throw new Error('Reviewer returned no report');
   const out = report.input;
+  out.must_fix ??= [];
+  out.worth_a_look ??= [];
+  out.summary ??= '';
   // A "pass" with must-fix findings is inconsistent; the findings win.
   if (out.must_fix.length > 0) out.result = 'fix';
   return { ...out, model: MODEL, usage: data.usage };

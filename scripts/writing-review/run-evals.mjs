@@ -24,16 +24,20 @@ for (const c of cases) {
   try {
     r = await review([{ file: c.file, text, changed: null }]);
   } catch (e) {
+    console.log(`::error title=${c.file}::${String(e.stack || e.message).replace(/\n/g, ' ').slice(0, 900)}`);
     rows.push({ file: c.file, ok: false, notes: [`error: ${e.message}`] });
     failed++;
     continue;
   }
+  r.must_fix ??= [];
   const quotes = r.must_fix.map((f) => norm(f.quote)).join(' | ');
   const notes = [];
   if (r.result !== c.expect) notes.push(`expected ${c.expect}, got ${r.result}`);
   for (const p of c.must_catch) if (!quotes.includes(norm(p))) notes.push(`missed "${p}"`);
   for (const p of c.must_not_flag) if (quotes.includes(norm(p))) notes.push(`wrongly flagged "${p}"`);
   const ok = notes.length === 0;
+  const found = r.must_fix.map((f) => `"${f.quote}" (${f.pattern})`).join(' / ') || 'no must-fix findings';
+  console.log(`::${ok ? 'notice' : 'error'} title=${c.file} ${ok ? 'passed' : 'failed'}::${notes.join('; ') || 'as expected'}. Found: ${found}`.replace(/\n/g, ' ').slice(0, 1500));
   if (!ok) failed++;
   rows.push({ file: c.file, ok, expect: c.expect, got: r.result, mustFix: r.must_fix.length, notes, findings: r.must_fix });
 }
