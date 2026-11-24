@@ -1,6 +1,6 @@
 ---
 title: Ask Your Spreadsheet
-subtitle: Get answers you can check from your spreadsheet
+subtitle: Check what AI tells you about your spreadsheet
 tags:
   - AI / ML
   - Education
