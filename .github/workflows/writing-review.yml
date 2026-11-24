@@ -1,0 +1,147 @@
+# Writing review: runs on every pull request that changes words on the site.
+#
+# Two checks, like tests on code:
+#   1. "Writing gate"   — the avoid-ai-writing detector. Fast, rule-based, catches
+#                          stock phrases, em dashes and vocabulary. Fails over 6 hits a file.
+#   2. "Writing review" — Claude reads the guide's full pattern catalog and reviews the
+#                          changed text like an editor. Posts one comment on the PR and
+#                          fails if it finds anything marked "Fix before publishing".
+#
+# Neither check changes your files. You still decide what to merge.
+# Guide: https://github.com/conorbronsdon/avoid-ai-writing (MIT), pinned to v3.39.0.
+# The reviewer needs a repository secret named ANTHROPIC_API_KEY. Without it, the
+# review step is skipped with a note and the gate still runs.
+
+name: Writing review
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+    paths:
+      - 'src/content/**'
+      - 'src/pages/**'
+      - 'public/**/*.html'
+
+concurrency:
+  group: writing-review-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+env:
+  GUIDE_REF: aecf2680a56b9b19835a3e362af4ebdd2e8e92f1 # v3.39.0
+
+jobs:
+  gate:
+    name: Writing gate
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - uses: conorbronsdon/avoid-ai-writing@aecf2680a56b9b19835a3e362af4ebdd2e8e92f1 # v3.39.0
+        with:
+          glob: 'src/content/**/*.md'
+          threshold: '6'
+          context: general
+          source-mode: rendered-markdown
+
+  review:
+    name: Writing review
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+      id-token: write
+    env:
+      HAS_KEY: ${{ secrets.ANTHROPIC_API_KEY != '' }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Get the guide
+        uses: actions/checkout@v4
+        with:
+          repository: conorbronsdon/avoid-ai-writing
+          ref: ${{ env.GUIDE_REF }}
+          path: .aaw
+          sparse-checkout: |
+            SKILL.md
+            references
+
+      - name: No API key yet
+        if: env.HAS_KEY != 'true'
+        run: |
+          echo "::warning::Writing review skipped: add a repository secret named ANTHROPIC_API_KEY to turn it on."
+
+      - name: Review the writing
+        if: env.HAS_KEY == 'true'
+        uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          prompt: |
+            REPO: ${{ github.repository }}
+            PR NUMBER: ${{ github.event.pull_request.number }}
+
+            You are an editor reviewing writing for Paul Amsbary's portfolio site before it is
+            published. The PR branch is checked out in the working directory. Do not edit any
+            site files.
+
+            1. Read .aaw/SKILL.md, then .aaw/references/patterns.md in full (read it in
+               sections; it is long). This is the guide you review against.
+            2. Run `gh pr diff ${{ github.event.pull_request.number }} --name-only` and
+               `gh pr diff ${{ github.event.pull_request.number }}`. Review only prose that this
+               PR adds or changes: Markdown in src/content, visible text in src/pages/*.astro,
+               and visible text in public/**/*.html. Ignore code, CSS, frontmatter keys,
+               alt-text length, and lines the PR did not touch.
+            3. Read each changed file in full so you judge sentences in context, the way the
+               guide asks (rhythm, repeated reversals and structure are judged across a passage).
+            4. Apply the judgment patterns, not just word lists: aphorism formulas, colon into a
+               triple, compulsive rule of three, "it's not X, it's Y" contrasts, manufactured
+               punchlines and staccato drama, negation chains, same-opener runs, performed-insight
+               phrases, significance inflation, copula avoidance, false agency, hedge stacks,
+               moral adjectives on objects, treadmill paragraphs, and rhythm uniformity.
+               Also flag claims the text can't support (overstated results, invented users or
+               numbers, "we" where it is one person).
+            5. Respect the guide's carve-outs. Do not flag accurate lists that really have three
+               items, product names, quotations, or deliberate voice. Paul writes plainly in first
+               person; keep that. Fewer, solid findings beat many weak ones.
+
+            Post exactly one top-level comment with `gh pr comment ${{ github.event.pull_request.number }} --body-file .writing-comment.md` (write the comment to that file first)
+            in this shape:
+
+            ## Writing review
+            **Result: Pass** or **Result: Fix before publishing**
+
+            One or two sentences on how the piece reads overall.
+
+            ### Fix before publishing
+            For each: the file, the exact sentence quoted, the pattern name from the guide,
+            why it reads as written-by-AI or overclaims, and a suggested rewrite that uses only
+            facts already in the text. If none, write "Nothing."
+
+            ### Worth a look
+            Lower-confidence notes in the same format, at most five. If none, write "Nothing."
+
+            Use "Fix before publishing" only for clear hits on a guide pattern or an unsupported
+            claim. Then write the single word PASS or FAIL (FAIL if anything is under Fix before
+            publishing) to the file .writing-verdict in the working directory.
+          claude_args: |
+            --max-turns 40
+            --allowedTools "Read,Glob,Grep,Write(.writing-verdict),Write(.writing-comment.md),Bash(gh pr diff:*),Bash(gh pr view:*),Bash(gh pr comment:*)"
+
+      - name: Result
+        if: env.HAS_KEY == 'true'
+        run: |
+          if [ ! -f .writing-verdict ]; then
+            echo "::error::The reviewer did not record a result. Check the review step's log."
+            exit 1
+          fi
+          verdict="$(tr -d '[:space:]' < .writing-verdict)"
+          echo "Verdict: $verdict"
+          if [ "$verdict" != "PASS" ]; then
+            echo "::error::Writing review found things to fix before publishing. See the PR comment."
+            exit 1
+          fi
