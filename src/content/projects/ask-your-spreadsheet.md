@@ -1,6 +1,6 @@
 ---
 title: Ask Your Spreadsheet
-subtitle: A free course for getting answers you can check from your own spreadsheet
+subtitle: Get answers you can check from your spreadsheet
 tags:
   - AI / ML
   - Education
