@@ -18,8 +18,8 @@ kind: project
 <div class="cs-simple">
 
 <div class="cs-lead">
-<p>Small organizations often keep their most important data in spreadsheets, and more of them are asking AI to read it. Most people upload the file, ask once and take the answer. The answer sounds just as sure when it's wrong.</p>
-<p>You don't need a data team or a BI tool to do better. For some small organizations, the $20-a-month ChatGPT or Claude plan they already pay for could be enough if they change how they ask. I made a free course, a practice workbook and a Claude skill that teach seven habits for getting answers you can check. It's meant for one or two spreadsheets. It won't replace a real data system for an organization with many sources.</p>
+<p>Small organizations often keep their most important data in spreadsheets, and more of them are asking AI to read it.</p>
+<p>There are levels to doing this. At the bottom, you upload the spreadsheet to ChatGPT or Claude, ask once and take the answer, which sounds just as sure when it's wrong. At the top, an organization builds a data system with its own definitions, access rules and checks. This course is the next level up from the bottom. It teaches seven habits for getting answers you can check, with the AI you already use, and comes with a practice workbook and a Claude skill.</p>
 <p><a href="/projects/ask-your-spreadsheet/course/" class="btn btn-primary btn-md">Take the course</a> <a href="/projects/ask-your-spreadsheet/riverbend-practice-workbook.xlsx" class="btn btn-outline btn-md" download>Practice workbook</a> <a href="/projects/ask-your-spreadsheet/ask-your-spreadsheet.zip" class="btn btn-outline btn-md" download>Claude skill</a></p>
 <figure class="cs-figure cs-wide"><img src="/images/ask-your-spreadsheet/hero.webp" width="1780" height="744" alt="The course's opening screen: the question How many members are active?, answered About 45 members are active without the habits and 18 members are active with them, followed by what was counted, left out and checked" /><figcaption>The course's first screen: the same question with and without the habits.</figcaption></figure>
 </div>
