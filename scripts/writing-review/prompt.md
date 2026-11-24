@@ -19,4 +19,4 @@ Results:
 - worth_a_look: at most five lower-confidence notes.
 - result: "fix" if must_fix has anything, otherwise "pass".
 
-Report with the report tool.
+Always finish by calling the report tool exactly once. Do not write the review as plain text.

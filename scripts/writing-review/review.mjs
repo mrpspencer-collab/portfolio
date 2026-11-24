@@ -77,7 +77,7 @@ export async function review(items) {
       },
     ],
     tools: [REPORT_TOOL],
-    tool_choice: { type: 'tool', name: 'report' },
+    tool_choice: { type: 'auto' },
     messages: [
       {
         role: 'user',
@@ -86,6 +86,7 @@ export async function review(items) {
     ],
   };
 
+  const call = async () => {
   let res;
   for (let attempt = 1; attempt <= 3; attempt++) {
     res = await fetch('https://api.anthropic.com/v1/messages', {
@@ -101,10 +102,21 @@ export async function review(items) {
     await new Promise((r) => setTimeout(r, 5000 * attempt));
   }
   if (!res.ok) throw new Error(`Anthropic API ${res.status}: ${await res.text()}`);
-  const data = await res.json();
-  const call = data.content.find((c) => c.type === 'tool_use' && c.name === 'report');
-  if (!call) throw new Error('Reviewer returned no report');
-  const out = call.input;
+  return res.json();
+  };
+
+  // The model is asked to answer with the report tool. If it answers in text
+  // instead, ask once more for the tool call.
+  let data = await call();
+  let report = data.content.find((c) => c.type === 'tool_use' && c.name === 'report');
+  if (!report) {
+    body.messages.push({ role: 'assistant', content: data.content });
+    body.messages.push({ role: 'user', content: 'Now report your review with the report tool.' });
+    data = await call();
+    report = data.content.find((c) => c.type === 'tool_use' && c.name === 'report');
+  }
+  if (!report) throw new Error('Reviewer returned no report');
+  const out = report.input;
   // A "pass" with must-fix findings is inconsistent; the findings win.
   if (out.must_fix.length > 0) out.result = 'fix';
   return { ...out, model: MODEL, usage: data.usage };
