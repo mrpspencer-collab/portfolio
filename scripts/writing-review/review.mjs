@@ -115,6 +115,27 @@ export async function review(items) {
     data = await call();
     report = data.content.find((c) => c.type === 'tool_use' && c.name === 'report');
   }
+  // If the findings came back malformed (a string instead of a list, or "fix"
+  // with no findings), ask once more for a clean report.
+  const malformed = (r) =>
+    !Array.isArray(r?.input?.must_fix) ||
+    !Array.isArray(r?.input?.worth_a_look) ||
+    (r.input.result === 'fix' && r.input.must_fix.length === 0);
+  if (report && malformed(report)) {
+    console.error('Reviewer report was malformed; asking again.');
+    body.messages.push({ role: 'assistant', content: data.content });
+    body.messages.push({
+      role: 'user',
+      content: [{
+        type: 'tool_result',
+        tool_use_id: report.id,
+        is_error: true,
+        content: 'must_fix and worth_a_look must be JSON arrays of objects (not strings), and "fix" needs at least one must_fix item. Call the report tool again with the same review.',
+      }],
+    });
+    data = await call();
+    report = data.content.find((c) => c.type === 'tool_use' && c.name === 'report') || report;
+  }
   if (!report) throw new Error('Reviewer returned no report');
   const out = report.input;
   // Models sometimes send an array field as a JSON string; accept either.
