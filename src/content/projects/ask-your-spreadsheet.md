@@ -38,7 +38,7 @@ kind: project
 <div>
 <p class="cs-small">Every tool that answers questions about data, from a chatbot to a BI platform, runs on the same parts: data sources, definitions, access rules, a way to trace each answer, and checks against answers you already know.</p>
 <p class="cs-small">Upload a spreadsheet to a chat and you've supplied one of those parts, the data. The other four still have to come from somewhere. If you don't provide them, the AI fills them in without telling you.</p>
-<p class="cs-small">The seven habits are those parts, done by hand in a chat window.</p>
+<p class="cs-small">The seven habits in the course cover those parts by hand, in a chat window.</p>
 </div>
 </section>
 
