@@ -58,5 +58,5 @@ jobs:
         run: |
           cat writing-eval.md >> "$GITHUB_STEP_SUMMARY"
           if [ "${{ github.event_name }}" = "pull_request" ]; then
-            gh pr comment "${{ github.event.pull_request.number }}" --body-file writing-eval.md
+            scripts/writing-review/comment.sh "${{ github.event.pull_request.number }}" writing-eval writing-eval.md
           fi

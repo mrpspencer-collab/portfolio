@@ -86,5 +86,4 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           PR: ${{ github.event.pull_request.number }}
         run: |
-          gh pr comment "$PR" --body-file writing-review.md --edit-last --create-if-none \
-            || gh pr comment "$PR" --body-file writing-review.md
+          scripts/writing-review/comment.sh "$PR" writing-review writing-review.md
