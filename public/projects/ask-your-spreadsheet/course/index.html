@@ -36,6 +36,9 @@ button{font:inherit;cursor:pointer}
 .hero .lede{font-size:18px;color:#d9ebe5;margin-top:16px}
 .hero .more{font-size:16px;color:#cfe5dd;margin-top:14px}
 .story{list-style:none;margin:0;padding:0;display:grid;gap:14px;border-left:2px solid rgba(255,255,255,.25);padding-left:18px}
+.lesson .story{border-left-color:var(--rule);margin:8px 0 20px;max-width:680px}
+.lesson .story li p{color:var(--ink);font-size:16px}
+.lesson .story .reply{background:var(--card);color:var(--ink);border:1px solid var(--rule);font-size:15px;font-weight:600}
 .story li p{font-size:15px;color:#e3f0eb;margin:0}
 .story .reply{margin-top:8px;border-radius:10px;padding:10px 14px;background:#fff;color:#14201c;font-size:14px}
 .story .reply b{font:700 18px/1.2 "Inter Tight",Inter,sans-serif;margin-right:4px}
@@ -154,7 +157,7 @@ footer{border-top:1px solid var(--rule);padding:24px 0;font-size:13px;color:var(
    <li><b>Protect people.</b> Remove names, emails and IDs, and only use an AI tool your organization allows.</li>
    <li><b>Shape the sheet.</b> One header row, one row per record, no totals, one spelling per value.</li>
    <li><b>Write your definitions</b> on a Definitions tab.</li>
-   <li><b>Ask a sharp question:</b> who counts, when, compared with what.</li>
+   <li><b>Ask a specific question:</b> who counts, when, compared with what.</li>
    <li><b>Ask for the trace:</b> what was counted, what was left out, where it came from.</li>
    <li><b>Check known answers first.</b></li>
    <li><b>Save the rules</b> for next time.</li>
@@ -176,41 +179,27 @@ footer{border-top:1px solid var(--rule);padding:24px 0;font-size:13px;color:var(
 <script>
 {
 const lessons=[
-{id:'protect',t:'Protect people first',fail:'Spreadsheets often carry names, emails and IDs nobody needs for the question.',
- before:'<p>The messy tab has a <b>Name</b> and an <b>Email</b> column. Uploaded as is, every member’s contact details go into the chat, in a tool your organization may not have approved.</p>',
- after:'<p>Make a cleaned copy before you upload anything. You don’t have to work out what to remove on your own: give the AI only your column headers, no rows, and it can tell you which columns to delete and how.</p><p>Counting members, renewals and towns needs no names or emails. Use only the AI tool your organization allows for this kind of data, and ask for counts and groups, not individuals.</p>',
- tryp:'Copy only the header row of the Messy members tab, not any data, and ask: "These are the column headers in my spreadsheet: Name, Email, Joined, Plan, Last paid, Events, Town / notes, How heard. I want to count active members by town. For each column, tell me whether to keep it, delete it or replace it with a member ID, and why. Then give me step-by-step instructions for making a cleaned copy in Google Sheets or Excel. Don’t ask me for any rows of data."',
- take:'For counts and totals, the file doesn’t need names or emails.'},
-{id:'shape',t:'Shape the sheet',fail:'Claude reads every row as data. Title rows, TOTAL rows and three spellings of one value all end up in the answer.',
- before:'<div class="minis"><table class="mini"><tr><th>Plan</th><th>Events</th></tr><tr><td>Monthly</td><td>4</td></tr><tr><td class="bad">Mo.</td><td>2</td></tr><tr><td class="bad">monthly</td><td class="bad">n/a</td></tr><tr><td class="bad">TOTAL</td><td class="bad">163</td></tr></table></div><p style="margin-top:8px">Counted as data, the TOTAL row makes the events total roughly double. "Mo." and "monthly" become separate plans.</p>',
- after:'<ul><li>One header row, nothing above it</li><li>One row per member, no blank rows</li><li>No totals; ask for them instead</li><li>One spelling per value: Monthly, Annual</li><li>Real dates, one format</li><li>Duplicates removed</li></ul><p>The Members tab in the workbook is this, done for you.</p>',
- tryp:'Upload the workbook and ask: "Compare the Messy members tab with the Members tab. List every difference that would change a count."',
- take:'Tidy the sheet once, and every later question uses the clean version.'},
-{id:'define',t:'Write your definitions',fail:'Words like "active" sound obvious, but there are several reasonable meanings, and Claude has to pick one.',
- before:'<p>"How many members are active?" gets a different number depending on the guess:</p><ul><li><b>45</b> if active means attended any event this year</li><li><b>17</b> if it means paid this calendar year</li><li><b>18</b> if it means paid in the last 12 months</li></ul><p>All three are reasonable. Pick the one your organization means.</p>',
- after:'<p>A <b>Definitions</b> tab: one line per term, using the sheet’s columns.</p><p>"Active: last payment on or after the active cutoff (12 months before the as-of date)."</p><p>Now every answer, this month and next, uses the same rule.</p>',
- tryp:'Ask: "How many members are active?" with only the Members tab. Then upload the full workbook and ask again. Compare the two answers.',
- take:'If two people could define it differently, write it down.'},
-{id:'sharpen',t:'Ask a sharp question',fail:'A vague question lets the AI decide what to count, and a small group can produce a percentage that looks dramatic but rests on one or two people.',
- before:'<p>"Which town has the most engaged members?"</p><p>Answer: <b>Riverbend, 100% engaged.</b> Riverbend has one active member.</p>',
- after:'<p>"Among active members as of Oct 31, 2026, how many in each town attended 3 or more events? Show the count of members behind each number."</p><p>Answer: East Hollow 4 of 7, Cedar Falls 3 of 7, Millbrook 0 of 3, Riverbend 1 of 1, too few to compare.</p>',
- tryp:'Rewrite this question so it says who counts, when, and compared with what: "Are annual members better?"',
- take:'Who counts, when, compared with what, and how many.'},
-{id:'trace',t:'Ask for the trace',fail:'A number on its own doesn’t show whether it’s right.',
- before:'<p>"18 members are active."</p><p>Is it right? You can’t tell what was counted.</p>',
- after:'<ul><li><b>Answer:</b> 18 members are active</li><li><b>Counted:</b> last payment on or after Nov 1, 2025; 60 rows</li><li><b>Left out:</b> nothing</li><li><b>Source:</b> Members tab, last_payment column</li><li><b>How:</b> count of rows meeting the rule</li></ul>',
- tryp:'Add this to any question: "Show what you counted, what you left out, which columns you used, and how you calculated it."',
- take:'If you can’t see how the number was worked out, don’t use it yet.'},
-{id:'check',t:'Check known answers first',fail:'You only find out the setup is wrong when someone acts on a wrong number.',
- before:'<p>You ask a new question, get a number and send it to your board. Later someone notices the TOTAL row was counted.</p>',
- after:'<p>Before new questions, ask the ones you already know:</p><ul><li>Members in total: <b>60</b></li><li>Active: <b>18</b></li><li>New this year: <b>3</b></li><li>Active and engaged: <b>8</b></li></ul><p>All match, so carry on. Any miss means fix the sheet or the definitions first.</p>',
- tryp:'Upload the workbook and ask: "Answer the questions on the Checks tab and tell me whether each matches the known answer."',
- take:'If the AI gets a known answer wrong, fix the sheet or the definitions before asking anything new.'},
-{id:'repeat',t:'Save the rules for next time',fail:'Next month you start from scratch, and the definitions drift without anyone noticing.',
- before:'<p>Each month someone re-explains what "active" means, a little differently. The numbers drift and nobody knows why.</p>',
- after:'<p>At the end of the first session, ask Claude for an <b>instructions for next time</b> note: the definitions, the tidy-up rules, the checks.</p><p>Keep it with the sheet, or in a Claude Project, so every month starts from the same rules.</p>',
- tryp:'Ask: "Write an instructions-for-next-time note for this workbook: definitions, clean-up rules and the known-answer checks."',
- take:'Next month, start from the saved note instead of explaining everything again.'}
+{id:"protect",t:"Protect people first",story:[["You want to know how many members are active in each town, so you open the member list to upload it."], ["The sheet has a Name column and an Email column. Uploaded as it is, every member’s contact details go into the chat, maybe in a tool your organization hasn’t approved."], ["So before uploading anything, you copy only the header row and ask the AI which columns you need.", "Keep Joined, Plan, Last paid, Events and Town. Delete Name and Email. Check Town / notes, because some rows have notes about people mixed in, like “pays cash.”"], ["You make a cleaned copy and upload that instead. You get the same counts, and nobody’s name or email went into the chat."]],
+ tryp:"Copy only the header row of the Messy members tab, not any data, and ask: \"These are the column headers in my spreadsheet: Name, Email, Joined, Plan, Last paid, Events, Town / notes, How heard. I want to count active members by town. For each column, tell me whether to keep it, delete it or replace it with a member ID, and why. Then give me step-by-step instructions for making a cleaned copy in Google Sheets or Excel. Don’t ask me for any rows of data.\"",
+ take:"For counts and totals, the file doesn’t need names or emails."},
+{id:"shape",t:"Shape the sheet",story:[["You upload the messy tab and ask how many events members went to this year."], ["If the AI counts every row, it says:", "326."], ["That’s double the real number. At the bottom of the sheet is a TOTAL row showing 163, and it was added in as if it were one more member."], ["Ask about plans and you get eight instead of two, because Monthly is also written monthly, Mo. and M, and Annual is written four ways too."], ["So you tidy the sheet first: one header row, one row per member, no totals, one spelling per value. The Members tab in the workbook is the tidied version."]],
+ tryp:"Upload the workbook and ask: \"Compare the Messy members tab with the Members tab. List every difference that would change a count.\"",
+ take:"Tidy the sheet once, and every later question uses the clean version."},
+{id:"define",t:"Write your definitions",story:[["At the top of this page, the same question about active members got three answers: 45, 17 and 18. Each one used a different meaning of “active.”"], ["So you add a Definitions tab to the workbook, with one line for each word your questions depend on, written using the sheet’s own columns.", "Active: last payment on or after the active cutoff, which is 12 months before the as-of date."], ["Now when anyone asks about active members, the AI has the rule to follow, this month and next."], ["If you ask about a word that isn’t on the tab yet, like “engaged,” the AI should ask you what it means instead of guessing."]],
+ tryp:"Ask: \"How many members are active?\" with only the Members tab. Then upload the full workbook and ask again. Compare the two answers.",
+ take:"If two people could define it differently, write it down."},
+{id:"sharpen",t:"Ask a specific question",story:[["You ask, “Which town has the most engaged members?”", "Riverbend. 100% of its active members are engaged."], ["That sounds like news until you look closer. Riverbend has one active member, and that one person went to three or more events."], ["So you ask again and say who counts, when, and how many people are behind each number: “Among active members as of Oct 31, 2026, how many in each town went to 3 or more events? Show the count behind each number.”", "East Hollow 4 of 7, Cedar Falls 3 of 7, Millbrook 0 of 3, Riverbend 1 of 1."], ["Now you can see that Riverbend is too small to compare with the others."]],
+ tryp:"Rewrite this question so it says who counts, when, and compared with what: \"Are annual members better?\"",
+ take:"Who counts, when, compared with what, and how many."},
+{id:"trace",t:"Ask for the trace",story:[["You ask how many members are active and get one line back.", "18 members are active."], ["It might be right. You can’t tell, because it doesn’t say what it counted or what it left out."], ["So you ask it to show how it got the number.", "18. Counted: last payment on or after Nov 1, 2025. Out of: 60 rows on the Members tab. Left out: nothing. How: counted the rows that meet the rule."], ["Now you can check it against the sheet yourself, and so can anyone you send it to."]],
+ tryp:"Add this to any question: \"Show what you counted, what you left out, which columns you used, and how you calculated it.\"",
+ take:"If you can’t see how the number was worked out, don’t use it yet."},
+{id:"check",t:"Check known answers first",story:[["You ask a new question, get a number and send it to your board."], ["A week later someone notices the TOTAL row was counted as a member. The number was wrong, and it’s already out."], ["So next time, before asking anything new, you ask questions you already know the answers to. The Checks tab has four.", "Members in total: 60. Active: 18. New this year: 3. Active and engaged: 8."], ["All four match, so you carry on. If one didn’t, you’d fix the sheet or the definitions before trusting anything new."]],
+ tryp:"Upload the workbook and ask: \"Answer the questions on the Checks tab and tell me whether each matches the known answer.\"",
+ take:"If the AI gets a known answer wrong, fix the sheet or the definitions before asking anything new."},
+{id:"repeat",t:"Save the rules for next time",story:[["Next month you open a new chat with the updated sheet."], ["You explain what “active” means again, a little differently this time, and the number shifts. Nobody can tell whether the members changed or the rule did."], ["So at the end of the first session, you ask the AI to write a note for next time with the definitions, the tidy-up rules and the checks."], ["You keep the note with the sheet, or in a Claude Project. Next month you start from the note, and the rules stay the same."]],
+ tryp:"Ask: \"Write an instructions-for-next-time note for this workbook: definitions, clean-up rules and the known-answer checks.\"",
+ take:"Next month, start from the saved note instead of explaining everything again."}
 ];
 const quiz=[
 {q:'Two colleagues report different numbers of "active" members from the same sheet.',a:'define'},
@@ -221,8 +210,8 @@ const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'
 let done={};try{done=JSON.parse(localStorage.getItem('ays-done')||'{}')||{}}catch(e){done={}}
 const main=document.getElementById('lessons');
 main.innerHTML=lessons.map((l,i)=>`<section class="lesson band" id="${l.id}"><div class="wrap">
- <div class="lhead"><span class="num">${i+1}</span><div><h2>${esc(l.t)}</h2><p class="fail" style="margin-top:8px">${esc(l.fail)}</p></div></div>
- <div class="ba"><div class="side before"><div class="lab">Without it</div>${l.before}</div><div class="side after"><div class="lab">With it</div>${l.after}</div></div>
+ <div class="lhead"><span class="num">${i+1}</span><div><h2>${esc(l.t)}</h2></div></div>
+ <ol class="story">${l.story.map(([t,r])=>`<li><p>${esc(t)}</p>${r?`<div class="reply">${esc(r)}</div>`:''}</li>`).join('')}</ol>
  <div class="try"><span class="lab">Try it with the practice workbook</span><p class="prompt" id="p-${l.id}">${esc(l.tryp)}</p>
   <div class="row"><button class="btn ghost copy" data-target="p-${l.id}" type="button">Copy</button><span class="note" aria-live="polite"></span>
   <label class="check"><input type="checkbox" data-lesson="${l.id}"> Done</label></div></div>
