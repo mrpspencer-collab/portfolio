@@ -18,7 +18,7 @@ kind: project
 <div class="cs-simple">
 
 <div class="cs-lead">
-<p>Small organizations often keep their most important data in one spreadsheet, and more of them are asking AI to read it. Claude will answer, and the answer sounds just as sure when it's wrong. I made a free course, a practice workbook and a Claude skill that teach people how to get answers they can check.</p>
+<p>Small organizations often keep their most important data in spreadsheets, and more of them are asking AI to read it. Claude will answer, and the answer sounds just as sure when it's wrong. I made a free course, a practice workbook and a Claude skill that teach people how to get answers they can check.</p>
 <p><a href="/projects/ask-your-spreadsheet/course/" class="btn btn-primary btn-md">Take the course</a> <a href="/projects/ask-your-spreadsheet/riverbend-practice-workbook.xlsx" class="btn btn-outline btn-md" download>Practice workbook</a> <a href="/projects/ask-your-spreadsheet/ask-your-spreadsheet.zip" class="btn btn-outline btn-md" download>Claude skill</a></p>
 <figure class="cs-figure cs-wide"><img src="/images/ask-your-spreadsheet/hero.webp" width="1780" height="744" alt="The course's opening screen: the question How many members are active?, answered About 45 members are active without the habits and 18 members are active with them, followed by what was counted, left out and checked" /><figcaption>The course's first screen: the same question with and without the habits.</figcaption></figure>
 </div>
