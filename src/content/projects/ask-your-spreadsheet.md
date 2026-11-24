@@ -28,7 +28,7 @@ kind: project
 <section class="cs-split-section">
 <h2 class="cs-label">The problem</h2>
 <div>
-<p class="cs-small">You can upload a spreadsheet to Claude and ask it a question today. You get a number back, but nothing that shows how it was worked out.</p>
+<p class="cs-small">You can upload a spreadsheet to Claude and ask it a question today. You'll get an answer, but nothing that shows how it was worked out.</p>
 <p class="cs-small">In the practice data I made for the course, "How many members are active?" has three right answers, depending on what "active" means: 45 if it means came to an event this year, 17 if it means paid this calendar year, and 18 if it means paid in the last 12 months. A plain answer gives one of those numbers and doesn't say which definition it used.</p>
 <p class="cs-small">The practice file is also messy in the ways real ones are. A title row sits above the headers, a TOTAL row is mixed in with the data, and "Monthly" is spelled three ways. Every member's name and email is in it too, and most people would paste all of that into a chat without thinking.</p>
 </div>
