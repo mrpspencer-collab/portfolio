@@ -35,15 +35,11 @@ button{font:inherit;cursor:pointer}
 .hero .grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:clamp(24px,4vw,56px);align-items:center}
 .hero .lede{font-size:18px;color:#d9ebe5;margin-top:16px}
 .hero .more{font-size:16px;color:#cfe5dd;margin-top:14px}
-.pic{display:grid;gap:14px}
-.q{font-size:14px;color:#cfe5dd}
-.q b{color:#fff;font-weight:600}
-.ans{border-radius:12px;padding:16px 18px;background:#ffffff;color:#14201c}
-.ans .tag{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;margin-bottom:6px}
-.ans .tag::before{content:"";width:9px;height:9px;border-radius:9px;background:#c2412d}
-.ans.good .tag::before{background:#2f7d2a}
-.ans .big{font:700 22px/1.2 "Inter Tight",Inter,sans-serif}
-.ans .why{font-size:14px;color:#4f5d58;margin-top:4px}
+.story{list-style:none;margin:0;padding:0;display:grid;gap:14px;border-left:2px solid rgba(255,255,255,.25);padding-left:18px}
+.story li p{font-size:15px;color:#e3f0eb;margin:0}
+.story .reply{margin-top:8px;border-radius:10px;padding:10px 14px;background:#fff;color:#14201c;font-size:14px}
+.story .reply b{font:700 18px/1.2 "Inter Tight",Inter,sans-serif;margin-right:4px}
+.story .end p{color:#fff;font-weight:600}
 .trace{display:grid;grid-template-columns:auto minmax(0,1fr);gap:4px 12px;font-size:14px;margin-top:10px;border-top:1px solid #dfe6e3;padding-top:10px}
 .trace dt{color:#4f5d58;white-space:nowrap}.trace dd{margin:0}
 /* kit */
@@ -118,14 +114,18 @@ footer{border-top:1px solid var(--rule);padding:24px 0;font-size:13px;color:var(
   <div>
    <h1>Ask your spreadsheet</h1>
    <p class="lede">Asking ChatGPT or Claude about a spreadsheet can be a helpful first step if you’re new to data analysis. This short course adds seven small habits that improve the quality of the answers you get. You practice each one on a made-up member list.</p>
-   <p class="more">Here’s an example. Say you keep a spreadsheet of the people who have joined your club, and you ask the AI, “How many members are active?” The answer depends on what the AI decides “active” means. Came to an event this year? Paid this year? Paid in the last 12 months? Each one gives a different number.</p>
-   <p class="more">That may sound obvious, but data analysis gets stuck on definitions all the time. Every number an organization tracks rests on a definition people have to agree on, however basic it seems. When you use AI to answer questions about your data, it needs those definitions too.</p>
+   <p class="more">Here’s an example of why that matters.</p>
   </div>
-  <div class="pic" aria-label="The same question answered twice">
-   <div class="q">You ask: <b>"How many members are active?"</b></div>
-   <div class="ans"><span class="tag">Without the habits</span><div class="big">About 45 members are active.</div><div class="why">Claude assumed "active" meant came to an event, and the answer doesn't say so.</div></div>
-   <div class="ans good"><span class="tag">With the habits</span><div class="big">18 members are active.</div>
-    <dl class="trace"><dt>Counted</dt><dd>Paid in the 12 months to Oct 31, 2026, as the Definitions tab says</dd><dt>Of</dt><dd>60 members, 1 row each</dd><dt>Left out</dt><dd>Nothing; the sheet was tidied first</dd><dt>Checked</dt><dd>Matches the known answer on the Checks tab</dd></dl></div>
+  <ol class="story" aria-label="An example: the same question, asked twice">
+   <li><p>Say you keep a spreadsheet of the people who have joined your club. You ask the AI, “How many members are active?”</p>
+    <div class="reply"><b>About 45.</b> It counted anyone who came to an event this year.</div></li>
+   <li><p>A colleague asks the same question in a different chat.</p>
+    <div class="reply"><b>17.</b> This time it counted members who paid this calendar year.</div></li>
+   <li><p>Both answers are reasonable. Neither of you said what “active” means, so the AI picked.</p></li>
+   <li><p>You agree on a definition and write it in the sheet: active means paid in the last 12 months. Now the AI has a rule to follow, whoever asks, and the answer says what it counted.</p>
+    <div class="reply"><b>18.</b> Members who paid in the 12 months to Oct 31, 2026, as the Definitions tab says.</div></li>
+   <li class="end"><p>Without a definition, the answer can change depending on who asks. Every number an organization tracks needs a definition people agree on, however basic it seems. When you ask AI about your data, it needs those definitions too.</p></li>
+  </ol>
   </div>
  </div>
 </header>
