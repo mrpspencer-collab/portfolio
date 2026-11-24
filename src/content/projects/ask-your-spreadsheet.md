@@ -21,7 +21,7 @@ kind: project
 <p>Small organizations often keep their most important data in spreadsheets, and more of them are asking AI to read it.</p>
 <p>There are levels to doing this. At the most basic, you upload the spreadsheet to ChatGPT or Claude, ask a question and hope the answer is right. You've probably seen an AI answer that sounded convincing and turned out to be wrong.</p>
 <p>This course is the next level. It teaches seven habits for getting answers you can check, using the AI you already have, and comes with a practice workbook and a Claude skill.</p>
-<p><a href="/projects/ask-your-spreadsheet/course/" class="btn btn-primary btn-md">Take the course</a> <a href="/projects/ask-your-spreadsheet/riverbend-practice-workbook.xlsx" class="btn btn-outline btn-md" download>Practice workbook</a> <a href="/projects/ask-your-spreadsheet/ask-your-spreadsheet.zip" class="btn btn-outline btn-md" download>Claude skill</a></p>
+<p><a href="/projects/ask-your-spreadsheet/course/" class="btn btn-outline btn-md">Take the course</a> <a href="/projects/ask-your-spreadsheet/riverbend-practice-workbook.xlsx" class="btn btn-outline btn-md" download>Practice workbook</a> <a href="/projects/ask-your-spreadsheet/ask-your-spreadsheet.zip" class="btn btn-outline btn-md" download>Claude skill</a></p>
 <figure class="cs-figure cs-wide"><img src="/images/ask-your-spreadsheet/hero.webp" width="1780" height="744" alt="The course's opening screen: the question How many members are active?, answered About 45 members are active without the habits and 18 members are active with them, followed by what was counted, left out and checked" /><figcaption>The course's first screen: the same question with and without the habits.</figcaption></figure>
 </div>
 
