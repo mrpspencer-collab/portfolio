@@ -33,15 +33,6 @@ kind: project
 </div>
 </section>
 
-<section class="cs-stack">
-<h2 class="cs-label">What it had to do</h2>
-<div class="cs-cards">
-<div class="cs-card"><h3>No technical skills</h3><p>Everything works on the spreadsheet people already keep and the Claude they already use.</p></div>
-<div class="cs-card"><h3>Show the difference</h3><p>Each lesson asks the same question twice, once without the habit and once with it.</p></div>
-<div class="cs-card"><h3>Answers you can check</h3><p>An answer should say what was counted, what was left out and which columns it used.</p></div>
-</div>
-</section>
-
 <section class="cs-split-section">
 <h2 class="cs-label">How I approached it</h2>
 <div>
