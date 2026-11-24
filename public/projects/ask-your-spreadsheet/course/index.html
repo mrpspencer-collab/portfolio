@@ -34,8 +34,7 @@ button{font:inherit;cursor:pointer}
 .hero{background:var(--deep);color:var(--onDeep)}
 .hero .grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:clamp(24px,4vw,56px);align-items:center}
 .hero .lede{font-size:18px;color:#d9ebe5;margin-top:16px}
-.hero .meta{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:20px;font-size:14px;color:#cfe5dd}
-.hero .meta b{color:#fff}
+.hero .more{font-size:16px;color:#cfe5dd;margin-top:14px}
 .pic{display:grid;gap:14px}
 .q{font-size:14px;color:#cfe5dd}
 .q b{color:#fff;font-weight:600}
@@ -119,9 +118,11 @@ footer{border-top:1px solid var(--rule);padding:24px 0;font-size:13px;color:var(
   <div>
    <h1>Ask your spreadsheet</h1>
    <p class="lede">Asking ChatGPT or Claude about a spreadsheet can be a helpful first step if you’re new to data analysis. This short course adds seven small habits that improve the quality of the answers you get. You practice each one on a made-up member list.</p>
+   <p class="more">Here’s an example. Say you keep a spreadsheet of the people who have joined your club, and you ask the AI, “How many members are active?” The answer depends on what the AI decides “active” means. Came to an event this year? Paid this year? Paid in the last 12 months? Each one gives a different number.</p>
+   <p class="more">That may sound obvious, but data analysis gets stuck on definitions all the time. Every number an organization tracks rests on a definition people have to agree on, however basic it seems. When you use AI to answer questions about your data, it needs those definitions too.</p>
   </div>
   <div class="pic" aria-label="The same question answered twice">
-   <div class="q">The question: <b>"How many members are active?"</b></div>
+   <div class="q">You ask: <b>"How many members are active?"</b></div>
    <div class="ans"><span class="tag">Without the habits</span><div class="big">About 45 members are active.</div><div class="why">Claude assumed "active" meant came to an event, and the answer doesn't say so.</div></div>
    <div class="ans good"><span class="tag">With the habits</span><div class="big">18 members are active.</div>
     <dl class="trace"><dt>Counted</dt><dd>Paid in the 12 months to Oct 31, 2026, as the Definitions tab says</dd><dt>Of</dt><dd>60 members, 1 row each</dd><dt>Left out</dt><dd>Nothing; the sheet was tidied first</dd><dt>Checked</dt><dd>Matches the known answer on the Checks tab</dd></dl></div>
