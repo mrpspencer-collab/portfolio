@@ -117,8 +117,16 @@ export async function review(items) {
   }
   if (!report) throw new Error('Reviewer returned no report');
   const out = report.input;
-  out.must_fix ??= [];
-  out.worth_a_look ??= [];
+  // Models sometimes send an array field as a JSON string; accept either.
+  const asList = (v) => {
+    if (Array.isArray(v)) return v;
+    if (typeof v === 'string') {
+      try { const p = JSON.parse(v); return Array.isArray(p) ? p : []; } catch { return []; }
+    }
+    return [];
+  };
+  out.must_fix = asList(out.must_fix);
+  out.worth_a_look = asList(out.worth_a_look);
   out.summary ??= '';
   // A "pass" with must-fix findings is inconsistent; the findings win.
   if (out.must_fix.length > 0) out.result = 'fix';
