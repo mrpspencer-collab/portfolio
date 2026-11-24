@@ -33,10 +33,10 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
         with:
-          node-version: 20
+          node-version: 22
       - uses: conorbronsdon/avoid-ai-writing@aecf2680a56b9b19835a3e362af4ebdd2e8e92f1 # v3.39.0
         with:
           glob: 'src/content/**/*.md'
@@ -51,11 +51,11 @@ jobs:
       contents: read
       pull-requests: write
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           fetch-depth: 0
 
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           repository: conorbronsdon/avoid-ai-writing
           ref: aecf2680a56b9b19835a3e362af4ebdd2e8e92f1 # v3.39.0
@@ -64,9 +64,9 @@ jobs:
             SKILL.md
             references
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v5
         with:
-          node-version: 20
+          node-version: 22
 
       - name: Review changed prose
         env:
