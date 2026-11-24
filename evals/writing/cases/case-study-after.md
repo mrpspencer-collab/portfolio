@@ -27,7 +27,7 @@
 <section class="cs-split-section">
 <h2 class="cs-label">How I approached it</h2>
 <div>
-<p class="cs-small">This came out of a framework I've been working on since IXIS and Eddi. AI agents, BI tools and personal knowledge systems are made of the same parts: data sources, definitions, access rules, a way to trace each answer, and checks against answers you already know. A company has to buy or build every part. Someone with one spreadsheet can get most of the benefit from a few of them, done by hand.</p>
+<p class="cs-small">This came out of a framework I've been working on since IXIS and Eddi. AI agents, BI tools and personal knowledge systems are made of the same parts: data sources, definitions, access rules, a way to trace each answer, and checks against answers you already know. A company has to buy or build every part. Someone with one spreadsheet can start with a few of them, done by hand.</p>
 <p class="cs-small">I turned those parts into seven habits someone can do in a chat window. Remove personal details before uploading. Tidy the sheet. Write down what your words mean. Ask a specific question. Ask how the answer was calculated. Check it against answers you already know. Save the rules so you don't start over next month.</p>
 <p class="cs-small">I built the course, workbook and skill with Claude. The workbook's known answers are calculated by spreadsheet formulas, and I checked them a second way in code. I tested the course page on phone and desktop, in light and dark mode.</p>
 </div>

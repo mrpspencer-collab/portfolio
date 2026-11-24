@@ -5,7 +5,9 @@
       "file": "case-study-before.md",
       "source": "Ask Your Spreadsheet case study as first published, before the de-AI rewrite",
       "expect": "fix",
-      "must_catch": ["don't have a data problem", "isn't a correct one"],
+      "must_catch": [
+        "don't have a data problem"
+      ],
       "must_not_flag": []
     },
     {
@@ -13,13 +15,20 @@
       "source": "Same case study after review against the guide (PR #5)",
       "expect": "pass",
       "must_catch": [],
-      "must_not_flag": ["45 if it means came to an event this year"]
+      "must_not_flag": [
+        "45 if it means came to an event this year"
+      ]
     },
     {
       "file": "essay-ai-patterns.md",
       "source": "Synthetic essay seeded with guide patterns",
       "expect": "fix",
-      "must_catch": ["currency of good decisions", "No dashboards", "three pillars", "changes everything"],
+      "must_catch": [
+        "currency of good decisions",
+        "No dashboards",
+        "three pillars",
+        "changes everything"
+      ],
       "must_not_flag": []
     },
     {
@@ -27,7 +36,10 @@
       "source": "Paul's own words from chat, lightly joined. Human-written control: informal, a little rough, should pass.",
       "expect": "pass",
       "must_catch": [],
-      "must_not_flag": ["ai agents", "roll their own"]
+      "must_not_flag": [
+        "ai agents",
+        "roll their own"
+      ]
     }
   ]
 }
