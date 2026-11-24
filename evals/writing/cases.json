@@ -1,0 +1,45 @@
+{
+  "about": "Known-answer cases for the writing reviewer. Each case says what result a good reviewer should give. must_catch lists phrases that must appear in a 'Fix before publishing' quote. must_not_flag lists phrases that must not appear in any 'Fix before publishing' quote.",
+  "cases": [
+    {
+      "file": "case-study-before.md",
+      "source": "Ask Your Spreadsheet case study as first published, before the de-AI rewrite",
+      "expect": "fix",
+      "must_catch": [
+        "don't have a data problem"
+      ],
+      "must_not_flag": []
+    },
+    {
+      "file": "case-study-after.md",
+      "source": "Same case study after review against the guide (PR #5)",
+      "expect": "pass",
+      "must_catch": [],
+      "must_not_flag": [
+        "45 if it means came to an event this year"
+      ]
+    },
+    {
+      "file": "essay-ai-patterns.md",
+      "source": "Synthetic essay seeded with guide patterns",
+      "expect": "fix",
+      "must_catch": [
+        "currency of good decisions",
+        "No dashboards",
+        "three pillars",
+        "changes everything"
+      ],
+      "must_not_flag": []
+    },
+    {
+      "file": "paul-plain-notes.md",
+      "source": "Paul's own words from chat, lightly joined. Human-written control: informal, a little rough, should pass.",
+      "expect": "pass",
+      "must_catch": [],
+      "must_not_flag": [
+        "ai agents",
+        "roll their own"
+      ]
+    }
+  ]
+}

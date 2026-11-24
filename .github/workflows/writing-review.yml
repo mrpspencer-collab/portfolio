@@ -1,0 +1,89 @@
+# Writing review: an eval for writing. Runs on every pull request to main.
+#
+#   Writing gate    The avoid-ai-writing detector. Rule-based and fast: stock phrases,
+#                   em dashes, vocabulary. Fails when a page has more than 6 hits.
+#   Writing review  Claude reviews the changed prose against the guide's full pattern
+#                   catalog, posts one comment on the PR, and fails if anything is marked
+#                   "Fix before publishing".
+#
+# Both run on every PR (no path filters) so they can be required checks on main:
+# if no page text changed, the review passes straight away.
+# Neither check edits files. The reviewer and its eval set live in scripts/writing-review
+# and evals/writing; see writing-evals.yml.
+#
+# Needs a repository secret named ANTHROPIC_API_KEY. Without it the review fails on
+# purpose, so nothing is published unreviewed.
+# Guide: https://github.com/conorbronsdon/avoid-ai-writing (MIT), pinned to v3.39.0.
+
+name: Writing review
+
+on:
+  pull_request:
+    branches: [main]
+    types: [opened, synchronize, reopened, ready_for_review]
+
+concurrency:
+  group: writing-review-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  gate:
+    name: Writing gate
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+      - uses: conorbronsdon/avoid-ai-writing@aecf2680a56b9b19835a3e362af4ebdd2e8e92f1 # v3.39.0
+        with:
+          glob: 'src/content/**/*.md'
+          threshold: '6'
+          context: general
+          source-mode: rendered-markdown
+
+  review:
+    name: Writing review
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - uses: actions/checkout@v5
+        with:
+          repository: conorbronsdon/avoid-ai-writing
+          ref: aecf2680a56b9b19835a3e362af4ebdd2e8e92f1 # v3.39.0
+          path: .aaw
+          sparse-checkout: |
+            SKILL.md
+            references
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+
+      - name: Review changed prose
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          if [ -z "$ANTHROPIC_API_KEY" ]; then
+            echo "::error::No ANTHROPIC_API_KEY secret, so the writing can't be reviewed. Add it under Settings, Secrets and variables, Actions."
+            exit 1
+          fi
+          node scripts/writing-review/pr.mjs
+
+      - name: Post the review on the PR
+        if: always() && hashFiles('writing-review.md') != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR: ${{ github.event.pull_request.number }}
+        run: |
+          scripts/writing-review/comment.sh "$PR" writing-review writing-review.md
