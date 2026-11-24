@@ -20,35 +20,25 @@ kind: project
 <div class="cs-lead">
 <p>Small organizations often keep their most important data in spreadsheets, and more of them are asking AI to read it.</p>
 <p>There are levels to doing this. At the most basic, you upload the spreadsheet to ChatGPT or Claude, ask a question and hope the answer is right. You've probably seen an AI answer that sounded convincing and turned out to be wrong.</p>
-<p>This course is the next level. It teaches seven habits for getting answers you can check, using the AI you already have, and comes with a practice workbook and a Claude skill. Beyond that, an organization builds a data system with its own definitions, access rules and checks.</p>
-<p><a href="/projects/ask-your-spreadsheet/course/" class="btn btn-primary btn-md">Take the course</a> <a href="/projects/ask-your-spreadsheet/riverbend-practice-workbook.xlsx" class="btn btn-outline btn-md" download>Practice workbook</a> <a href="/projects/ask-your-spreadsheet/ask-your-spreadsheet.zip" class="btn btn-outline btn-md" download>Claude skill</a></p>
+<p>This course is the next level. It teaches seven habits for getting answers you can check, using the AI you already have, and comes with a practice workbook and a Claude skill.</p>
+<p><a href="/projects/ask-your-spreadsheet/course/" class="btn btn-outline btn-md">Take the course</a> <a href="/projects/ask-your-spreadsheet/riverbend-practice-workbook.xlsx" class="btn btn-outline btn-md" download>Practice workbook</a> <a href="/projects/ask-your-spreadsheet/ask-your-spreadsheet.zip" class="btn btn-outline btn-md" download>Claude skill</a></p>
 <figure class="cs-figure cs-wide"><img src="/images/ask-your-spreadsheet/hero.webp" width="1780" height="744" alt="The course's opening screen: the question How many members are active?, answered About 45 members are active without the habits and 18 members are active with them, followed by what was counted, left out and checked" /><figcaption>The course's first screen: the same question with and without the habits.</figcaption></figure>
 </div>
 
 <section class="cs-split-section">
 <h2 class="cs-label">The problem</h2>
 <div>
-<p class="cs-small">You can upload a spreadsheet to Claude and ask it a question today. You get a number back, but nothing that shows how it was worked out.</p>
-<p class="cs-small">In the practice data I made for the course, "How many members are active?" has three right answers, depending on what "active" means: 45 if it means came to an event this year, 17 if it means paid this calendar year, and 18 if it means paid in the last 12 months. A plain answer gives one of those numbers and doesn't say which definition it used.</p>
-<p class="cs-small">The practice file is also messy in the ways real ones are. A title row sits above the headers, a TOTAL row is mixed in with the data, and "Monthly" is spelled three ways. Every member's name and email is in it too, and most people would paste all of that into a chat without thinking.</p>
-</div>
-</section>
-
-<section class="cs-stack">
-<h2 class="cs-label">What it had to do</h2>
-<div class="cs-cards">
-<div class="cs-card"><h3>No technical skills</h3><p>Everything works on the spreadsheet people already keep and the Claude they already use.</p></div>
-<div class="cs-card"><h3>Show the difference</h3><p>Each lesson asks the same question twice, once without the habit and once with it.</p></div>
-<div class="cs-card"><h3>Answers you can check</h3><p>An answer should say what was counted, what was left out and which columns it used.</p></div>
+<p class="cs-small">You can upload a spreadsheet to Claude and ask it a question today. You'll get an answer, but nothing that shows how it was worked out.</p>
+<p class="cs-small">This short course shows how a few adjustments, in how you prepare the sheet and how you ask, can make the difference between an answer you can check and a guess.</p>
 </div>
 </section>
 
 <section class="cs-split-section">
 <h2 class="cs-label">How I approached it</h2>
 <div>
-<p class="cs-small">This came out of a framework I've been working on since IXIS and Eddi. AI agents, BI tools and personal knowledge systems are made of the same parts: data sources, definitions, access rules, a way to trace each answer, and checks against answers you already know. A company has to buy or build every part. Someone with one spreadsheet can start with a few of them, done by hand.</p>
-<p class="cs-small">I turned those parts into seven habits someone can do in a chat window. Remove personal details before uploading. Tidy the sheet. Write down what your words mean. Ask a specific question. Ask how the answer was calculated. Check it against answers you already know. Save the rules so you don't start over next month.</p>
-<p class="cs-small">I built the course, workbook and skill with Claude. The workbook's known answers are calculated by spreadsheet formulas, and I checked them a second way in code. I tested the course page on phone and desktop, in light and dark mode.</p>
+<p class="cs-small">Every tool that answers questions about data, from a chatbot to a BI platform, runs on the same parts: data sources, definitions, access rules, a way to trace each answer, and checks against answers you already know.</p>
+<p class="cs-small">Upload a spreadsheet to a chat and you've supplied one of those parts, the data. The other four still have to come from somewhere. If you don't provide them, the AI fills them in without telling you.</p>
+<p class="cs-small">The seven habits in the course cover those parts by hand, in a chat window.</p>
 </div>
 </section>
 

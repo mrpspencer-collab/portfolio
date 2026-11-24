@@ -5,7 +5,6 @@ const path = base && pathname.startsWith(base) ? pathname.slice(base.length) || 
 const isWork  = path === '/' || path.startsWith('/work');
 const isProjects = path.startsWith('/projects');
 const isAbout = path === '/about';
-const isBlog  = path.startsWith('/blog');
 ---
 <nav>
   <a href={import.meta.env.BASE_URL} class="logo">Paul Amsbary</a>
@@ -15,7 +14,6 @@ const isBlog  = path.startsWith('/blog');
     <a href={import.meta.env.BASE_URL}                   class:list={['nav-link', { active: isWork }]}>Work</a>
     <a href={`${import.meta.env.BASE_URL}projects`}      class:list={['nav-link', { active: isProjects }]}>Projects</a>
     <a href={`${import.meta.env.BASE_URL}about`}         class:list={['nav-link', { active: isAbout }]}>About</a>
-    <a href={`${import.meta.env.BASE_URL}blog`}          class:list={['nav-link', { active: isBlog }]}>Blog</a>
     <div class="divider"></div>
     <button id="theme-toggle" class="theme-btn">◐ Dark</button>
     <a href="/paul-amsbary-resume.pdf" target="_blank" rel="noopener" class="btn btn-primary btn-sm resume-btn">Download Resume</a>
@@ -33,7 +31,6 @@ const isBlog  = path.startsWith('/blog');
   <a href={import.meta.env.BASE_URL}           class:list={['mobile-link', { active: isWork }]}>Work</a>
   <a href={`${import.meta.env.BASE_URL}projects`} class:list={['mobile-link', { active: isProjects }]}>Projects</a>
   <a href={`${import.meta.env.BASE_URL}about`} class:list={['mobile-link', { active: isAbout }]}>About</a>
-  <a href={`${import.meta.env.BASE_URL}blog`}  class:list={['mobile-link', { active: isBlog }]}>Blog</a>
   <a href="/paul-amsbary-resume.pdf" target="_blank" rel="noopener" class="mobile-link">Download Resume</a>
 </div>
 
