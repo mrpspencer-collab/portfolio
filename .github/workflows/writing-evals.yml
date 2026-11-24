@@ -37,6 +37,14 @@ jobs:
             SKILL.md
             references
 
+      - uses: actions/checkout@v5
+        with:
+          repository: timharris707/skills
+          ref: 9e40ad347e4ead82089a045ef84a0f1e5e070d44 # writing-for-humans, Nov 2026
+          path: .wfh
+          sparse-checkout: |
+            skills/author/writing-for-humans
+
       - uses: actions/setup-node@v5
         with:
           node-version: 22

@@ -10,6 +10,7 @@ import path from 'node:path';
 
 const MODEL = process.env.WRITING_REVIEW_MODEL || 'claude-sonnet-5-5';
 const GUIDE_DIR = process.env.GUIDE_DIR || '.aaw';
+const HUMANS_DIR = process.env.HUMANS_DIR || '.wfh';
 const HERE = path.dirname(new URL(import.meta.url).pathname);
 
 const finding = {
@@ -40,12 +41,13 @@ const REPORT_TOOL = {
 };
 
 async function loadGuide() {
-  const [skill, patterns, prompt] = await Promise.all([
+  const [skill, patterns, prompt, humans] = await Promise.all([
     readFile(path.join(GUIDE_DIR, 'SKILL.md'), 'utf8'),
     readFile(path.join(GUIDE_DIR, 'references', 'patterns.md'), 'utf8'),
     readFile(path.join(HERE, 'prompt.md'), 'utf8'),
+    readFile(path.join(HUMANS_DIR, 'skills', 'author', 'writing-for-humans', 'SKILL.md'), 'utf8'),
   ]);
-  return { skill, patterns, prompt };
+  return { skill, patterns, prompt, humans };
 }
 
 // items: [{ file, text, changed }] where `changed` is the diff for that file,
@@ -53,7 +55,7 @@ async function loadGuide() {
 export async function review(items) {
   const key = process.env.ANTHROPIC_API_KEY;
   if (!key) throw new Error('ANTHROPIC_API_KEY is not set');
-  const { skill, patterns, prompt } = await loadGuide();
+  const { skill, patterns, prompt, humans } = await loadGuide();
 
   const docs = items
     .map(
@@ -72,7 +74,7 @@ export async function review(items) {
       { type: 'text', text: prompt },
       {
         type: 'text',
-        text: `<guide name="SKILL.md">\n${skill}\n</guide>\n\n<guide name="references/patterns.md">\n${patterns}\n</guide>`,
+        text: `<guide name="SKILL.md">\n${skill}\n</guide>\n\n<guide name="references/patterns.md">\n${patterns}\n</guide>\n\n<guide name="writing-for-humans/SKILL.md">\n${humans}\n</guide>`,
         cache_control: { type: 'ephemeral' },
       },
     ],
